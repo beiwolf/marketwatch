@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="300">
   <title>MarketWatch · Sector Flow + News</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -36,13 +35,15 @@
     .chip-green{background:var(--gdim);color:var(--green);border:1px solid rgba(0,240,130,0.25);}
     .chip-red{background:var(--rdim);color:var(--red);border:1px solid rgba(255,45,74,0.25);}
     .chip-amber{background:var(--adim);color:var(--amber);border:1px solid rgba(255,165,0,0.25);}
+    .chip-blue{background:var(--bdim);color:var(--blue);border:1px solid rgba(0,170,255,0.25);}
     .main-grid{display:grid;grid-template-columns:1fr 400px;gap:16px;margin-top:20px;}
     @media(max-width:900px){.main-grid{grid-template-columns:1fr;}}
     .card{background:var(--bg2);border:1px solid var(--border2);overflow:hidden;margin-bottom:16px;}
     .card:last-child{margin-bottom:0;}
-    .card-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:9px 16px;display:flex;justify-content:space-between;align-items:center;}
+    .card-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:9px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
     .card-title{font-size:9px;color:var(--dim);letter-spacing:3px;text-transform:uppercase;}
     .card-meta{font-size:9px;color:var(--dim);letter-spacing:1px;}
+    .card-badge{font-size:8px;letter-spacing:1px;padding:2px 7px;border-radius:2px;background:var(--bdim);color:var(--blue);border:1px solid rgba(0,170,255,0.2);}
     .state-box{text-align:center;padding:40px 20px;color:var(--dim);}
     .state-title{font-family:var(--display);font-size:16px;letter-spacing:3px;margin-bottom:8px;color:var(--mid);}
     .state-sub{font-size:10px;letter-spacing:1px;}
@@ -88,12 +89,16 @@
     .flow-col-hd{font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
     .flow-item{display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px;color:var(--dim);}
     .flow-item span:last-child{font-weight:bold;}
+    .sparkline-wrap{padding:10px 16px 12px;border-top:1px solid var(--border);}
+    .spark-label{font-size:9px;color:var(--dim);letter-spacing:2px;margin-bottom:6px;}
+    .spark-svg{width:100%;height:40px;display:block;}
     .breaking-bar{background:var(--rdim);border:1px solid rgba(255,45,74,0.3);overflow:hidden;height:32px;display:flex;align-items:center;}
     .breaking-label{background:var(--red);color:#fff;font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:2px;padding:0 12px;height:100%;display:flex;align-items:center;flex-shrink:0;text-transform:uppercase;}
     .breaking-ticker{overflow:hidden;flex:1;}
     .breaking-track{display:inline-flex;gap:48px;animation:ticker 30s linear infinite;white-space:nowrap;font-size:10px;color:var(--red);letter-spacing:0.5px;}
     @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
     .news-summary{font-size:11px;line-height:1.8;color:var(--muted);padding:14px 16px;}
+    .news-update-badge{font-size:8px;color:var(--dim);letter-spacing:1px;padding:0 16px 8px;display:block;}
     .highlight-item{display:flex;gap:10px;align-items:flex-start;padding:8px 16px;border-bottom:1px solid var(--border);font-size:10px;line-height:1.6;color:var(--muted);transition:background 0.15s;}
     .highlight-item:last-child{border-bottom:none;}
     .highlight-item:hover{background:rgba(255,255,255,0.02);}
@@ -101,12 +106,14 @@
     .hi-dot.up{background:var(--green);box-shadow:0 0 6px var(--green);}
     .hi-dot.down{background:var(--red);box-shadow:0 0 6px var(--red);}
     .hi-dot.neu{background:var(--amber);box-shadow:0 0 6px var(--amber);}
+    .hi-new{font-size:8px;background:var(--bdim);color:var(--blue);padding:1px 5px;border-radius:1px;margin-left:4px;flex-shrink:0;}
     .source-item{display:flex;justify-content:space-between;align-items:flex-start;padding:9px 16px;border-bottom:1px solid var(--border);gap:12px;transition:background 0.15s;}
     .source-item:last-child{border-bottom:none;}
     .source-item:hover{background:rgba(255,255,255,0.02);}
     .source-left{flex:1;}
     .source-outlet{font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:3px;}
     .source-title{font-size:10px;color:var(--text);line-height:1.5;}
+    .source-time{font-size:8px;color:var(--dim);margin-top:2px;}
     .source-link{font-size:9px;color:var(--blue);text-decoration:none;letter-spacing:1px;flex-shrink:0;align-self:center;padding:3px 8px;border:1px solid rgba(0,170,255,0.2);transition:all 0.15s;}
     .source-link:hover{background:var(--bdim);}
     .sent{font-size:8px;letter-spacing:1px;padding:2px 6px;border-radius:1px;flex-shrink:0;align-self:center;}
@@ -160,12 +167,12 @@
     </div>
     <div class="topbar-right">
       <span class="chip chip-dim" id="chip-date">—</span>
-      <span class="chip chip-dim" id="chip-updated">No data yet</span>
+      <span class="chip chip-dim" id="chip-updated">No data</span>
       <span class="chip chip-dim" id="chip-spy">SPY —</span>
       <span class="chip chip-dim" id="chip-mood">—</span>
+      <span class="chip chip-blue" id="chip-news-updated" style="display:none">NEWS —</span>
     </div>
   </div>
-
   <div class="main-grid">
     <div id="flow-col">
       <div class="card">
@@ -185,23 +192,25 @@
     <div class="news-col">
       <div id="breaking-wrap"></div>
       <div class="card">
-        <div class="card-header"><span class="card-title">▸ MARKET SUMMARY</span><span class="card-meta" id="news-updated-label">—</span></div>
+        <div class="card-header">
+          <span class="card-title">▸ MARKET SUMMARY</span>
+          <span class="card-meta" id="news-updated-label">—</span>
+        </div>
         <div id="news-summary-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="card-title">▸ KEY HIGHLIGHTS</span></div>
+        <div class="card-header"><span class="card-title">▸ KEY HIGHLIGHTS</span><span class="card-badge" id="news-count-badge" style="display:none">0 updates</span></div>
         <div id="highlights-wrap"><div class="state-box" style="padding:16px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="card-title">▸ NEWS SOURCES</span></div>
+        <div class="card-header"><span class="card-title">▸ NEWS SOURCES</span><span class="card-meta" id="source-count-label">—</span></div>
         <div id="sources-wrap"><div class="state-box" style="padding:16px"><div class="state-sub">Loading...</div></div></div>
       </div>
     </div>
   </div>
-
   <div id="audit-section">
     <div class="audit-section-header">
-      <div class="audit-title">▸ AUDIT TRAIL</div>
+      <div class="audit-title">▸ INTRADAY FLOW AUDIT</div>
       <div class="date-picker-wrap">
         <span class="date-picker-label">VIEW DATE:</span>
         <button class="date-btn today active" id="btn-today" onclick="switchToToday()">TODAY</button>
@@ -211,11 +220,10 @@
       </div>
     </div>
     <div id="audit-entries">
-      <div class="state-box" style="padding:24px"><div class="state-sub">No history yet — audit entries appear after first agent run</div></div>
+      <div class="state-box" style="padding:24px"><div class="state-sub">No history yet — appears after first agent run</div></div>
     </div>
   </div>
-
-  <div class="footer">AI-POWERED &nbsp;·&nbsp; DATA VIA WEB SEARCH &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
+  <div class="footer">AI-POWERED &nbsp;·&nbsp; FLOW: 10 MIN · NEWS: 60 MIN &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
 </div>
 <script>
 const sign=n=>n>0?'+':'';
@@ -224,62 +232,73 @@ const col=n=>(n===null||n===undefined)?'':n>0?'pos':n<0?'neg':'neu';
 const clamp=(v,mn,mx)=>Math.min(Math.max(v,mn),mx);
 function regimeColor(r){if(!r)return'var(--muted)';if(r.includes('SELL-OFF')||r.includes('RISK-OFF'))return'var(--red)';if(r.includes('STRONG')||r.includes('RISK-ON'))return'var(--green)';if(r.includes('OUTFLOW'))return'#ff8c00';return'var(--amber)';}
 function moodClass(m){if(!m)return'chip-dim';const l=m.toLowerCase();if(l.includes('risk-on')||l.includes('bullish'))return'chip-green';if(l.includes('risk-off')||l.includes('bearish'))return'chip-red';return'chip-amber';}
-
 function renderFlow(d){
-  if(!d)return;
+  if(!d||!d.sectors)return;
   if(d.date)document.getElementById('chip-date').textContent=d.date;
   if(d.generated_at){document.getElementById('chip-updated').textContent='↻ '+d.generated_at;document.getElementById('flow-updated-label').textContent=d.generated_at;}
   if(d.sp500_change!==null){const e=document.getElementById('chip-spy');e.textContent='SPY '+fmt(d.sp500_change);e.className='chip '+(d.sp500_change>=0?'chip-green':'chip-red');}
   if(d.market_mood){const e=document.getElementById('chip-mood');e.textContent=d.market_mood;e.className='chip '+moodClass(d.market_mood);}
   const net=d.net_flow_score;const isPos=net!==null&&net>=0;
-  const maxAbs=d.sectors&&d.sectors.length?Math.max(...d.sectors.map(s=>Math.abs(s.change||0)),0.1):3;
+  const maxAbs=d.sectors.length?Math.max(...d.sectors.map(s=>Math.abs(s.change||0)),0.1):3;
   const barW=net!==null?clamp(Math.abs(net)/(maxAbs*(d.sectors.length||11))*100,0,50):0;
   const barLeft=isPos?'50%':(50-barW)+'%';
   const barBg=isPos?'linear-gradient(90deg,transparent,var(--green))':'linear-gradient(270deg,transparent,var(--red))';
   document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div><div class="net-score-label">NET FLOW SCORE</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}</div><div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">AVG SECTOR</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">BREADTH</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% ADVANCING</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ OUTFLOW</span><span>INFLOW ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
-  if(d.sectors&&d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
+  if(d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
   document.getElementById('narrative-wrap').innerHTML=`<div class="narrative-body"><div class="narrative-text">${d.narrative||'No narrative available.'}</div>${d.top_mover?`<div class="narrative-mover"><strong>${d.top_mover}:</strong> ${d.top_mover_reason||''}</div>`:''}</div>`;
   const adv=(d.sectors||[]).filter(s=>(s.change??0)>0);const dec=(d.sectors||[]).filter(s=>(s.change??0)<0);
   document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">INFLOWS (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">OUTFLOWS (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
 }
-
 function renderNews(n){
   if(!n)return;
-  if(n.generated_at)document.getElementById('news-updated-label').textContent=n.generated_at;
-  if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">BREAKING</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
+  if(n.last_updated){
+    document.getElementById('news-updated-label').textContent='Updated '+n.last_updated;
+    const chip=document.getElementById('chip-news-updated');
+    chip.textContent='NEWS ↻ '+n.last_updated;chip.style.display='';
+  }
+  if(n.update_count){const b=document.getElementById('news-count-badge');b.textContent=n.update_count+' update'+(n.update_count!==1?'s':'')+' today';b.style.display='';}
+  if(n.sources){document.getElementById('source-count-label').textContent=n.sources.length+' sources accumulated';}
+  if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">BREAKING</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
-  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary available.'}</div>`;
-  if(n.highlights&&n.highlights.length)document.getElementById('highlights-wrap').innerHTML=`<div>${n.highlights.map(h=>`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div>${h.text}</div></div>`).join('')}</div>`;
-  if(n.sources&&n.sources.length)document.getElementById('sources-wrap').innerHTML=`<div>${n.sources.map(s=>`<div class="source-item"><div class="source-left"><div class="source-outlet">${s.outlet||''}</div><div class="source-title">${s.title}</div></div><span class="sent ${s.sentiment==='bullish'?'sent-bull':s.sentiment==='bearish'?'sent-bear':'sent-neu'}">${s.sentiment==='bullish'?'BULL':s.sentiment==='bearish'?'BEAR':'NEU'}</span><a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ READ</a></div>`).join('')}</div>`;
+  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Last synthesis: ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
+  if(n.highlights&&n.highlights.length){document.getElementById('highlights-wrap').innerHTML='<div>'+n.highlights.map((h,i)=>{const isNew=i<3&&n.update_count>1;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div>${h.text}${isNew?'<span class="hi-new">NEW</span>':''}</div></div>`;}).join('')+'</div>';}
+  if(n.sources&&n.sources.length){document.getElementById('sources-wrap').innerHTML='<div>'+n.sources.map(s=>`<div class="source-item"><div class="source-left"><div class="source-outlet">${s.outlet||''}</div><div class="source-title">${s.title}</div>${s.added_at?`<div class="source-time">Added ${s.added_at}</div>`:''}</div><span class="sent ${s.sentiment==='bullish'?'sent-bull':s.sentiment==='bearish'?'sent-bear':'sent-neu'}">${s.sentiment==='bullish'?'BULL':s.sentiment==='bearish'?'BEAR':'NEU'}</span><a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ READ</a></div>`).join('')+'</div>';}
 }
-
 function buildAuditEntries(snapshots){
-  if(!snapshots||!snapshots.length)return'<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for this date.</div></div>';
-  return[...snapshots].reverse().map(d=>{
+  if(!snapshots||!snapshots.length)return'<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots for this date.</div></div>';
+  const nets=snapshots.map(d=>d.net_flow_score).filter(v=>v!==null);
+  let sparkHtml='';
+  if(nets.length>1){
+    const mn=Math.min(...nets),mx=Math.max(...nets),range=mx-mn||0.1;
+    const W=600,H=40,pad=4;
+    const pts=nets.map((v,i)=>{const x=pad+(i/(nets.length-1))*(W-2*pad);const y=H-pad-((v-mn)/range)*(H-2*pad);return`${x},${y}`;}).join(' ');
+    const zeroY=H-pad-((0-mn)/range)*(H-2*pad);
+    const lineColor=nets[nets.length-1]>=0?'#00f082':'#ff2d4a';
+    sparkHtml=`<div class="sparkline-wrap"><div class="spark-label">INTRADAY NET FLOW — ${nets.length} SNAPSHOTS</div><svg class="spark-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><line x1="0" y1="${clamp(zeroY,0,H)}" x2="${W}" y2="${clamp(zeroY,0,H)}" stroke="#1e3a58" stroke-width="1" stroke-dasharray="4,4"/><polyline points="${pts}" fill="none" stroke="${lineColor}" stroke-width="2" stroke-linejoin="round"/></svg></div>`;
+  }
+  const entries=[...snapshots].reverse().map(d=>{
     const net=d.net_flow_score;const isPos=net!==null&&net>=0;
     const deltaHtml=d.net_flow_delta!=null?`<span class="${col(d.net_flow_delta)}" style="font-size:9px">${d.net_flow_delta>0?'▲':'▼'}${Math.abs(d.net_flow_delta).toFixed(2)}%</span>`:'';
     const cells=(d.sectors||[]).map(s=>`<div class="audit-sector-cell"><span class="asc-name">${s.etf}</span><span class="asc-pct ${col(s.change)}">${fmt(s.change)}</span></div>`).join('');
     return`<details class="audit-entry ${isPos?'net-pos':'net-neg'}"><summary><span class="a-toggle">▶</span><span class="a-time">${d.generated_at||'—'}</span><span class="a-net ${col(net)}">${fmt(net)}</span>${deltaHtml}<span class="a-spy">SPY ${fmt(d.sp500_change)}</span><span class="a-bread">${d.sectors_advancing??'—'}▲ ${d.sectors_declining??'—'}▼</span><span class="a-regime">${(d.flow_regime||'').replace(/^[⚠⚡]\s?/,'')}</span></summary><div class="audit-body"><div class="audit-sectors">${cells}</div><div class="audit-narrative-text">${d.narrative||''} ${d.top_mover?`<strong style="color:var(--amber)">${d.top_mover}:</strong> ${d.top_mover_reason||''}`:''}</div></div></details>`;
   }).join('');
+  return sparkHtml+entries;
 }
-
 async function loadAuditForDate(dateStr){
   const el=document.getElementById('audit-entries');
   el.innerHTML='<div class="state-box" style="padding:16px"><div class="spinner"></div></div>';
   try{
-    const res=await fetch(`data/archive/${dateStr}.json?t=${Date.now()}`);
+    const res=await fetch(`data/archive/flow-${dateStr}.json?t=${Date.now()}`);
     if(!res.ok)throw new Error('not found');
     const data=await res.json();
     el.innerHTML=`<div class="audit-day-label">${dateStr} · ${data.length} snapshot${data.length!==1?'s':''}</div>`+buildAuditEntries(data);
-  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for ${dateStr}.</div></div>`;}
+  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots found for ${dateStr}.</div></div>`;}
 }
-
 function switchToToday(){
   document.getElementById('btn-today').classList.add('active');
   document.getElementById('date-select').value='';
   loadAuditForDate(new Date().toISOString().split('T')[0]);
 }
-
 async function populateDatePicker(indexData){
   const sel=document.getElementById('date-select');
   const today=new Date().toISOString().split('T')[0];
@@ -287,10 +306,9 @@ async function populateDatePicker(indexData){
   sel.innerHTML='<option value="">— past dates —</option>';
   past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
 }
-
 async function loadAll(){
   try{
-    const[flowRes,newsRes,indexRes]=await Promise.all([fetch('data/flow.json?t='+Date.now()),fetch('data/news.json?t='+Date.now()),fetch('data/index.json?t='+Date.now())]);
+    const[flowRes,newsRes,indexRes]=await Promise.all([fetch('data/flow.json?t='+Date.now()),fetch('data/news.json?t='+Date.now()),fetch('data/flow_index.json?t='+Date.now())]);
     const[flow,news,indexData]=await Promise.all([flowRes.json(),newsRes.json(),indexRes.json()]);
     if(flow&&flow.sectors&&flow.sectors.length)renderFlow(flow);
     if(news&&news.summary)renderNews(news);
@@ -298,11 +316,10 @@ async function loadAll(){
   }catch(e){console.warn('Load error:',e.message);}
   loadAuditForDate(new Date().toISOString().split('T')[0]);
 }
-
 document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 setInterval(()=>{document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});},60000);
 loadAll();
-setInterval(loadAll,300000);
+setInterval(loadAll,60000);
 </script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+[
+  {
+    "date": "March 4, 2026",
+    "generated_at": "6:26 PM ET",
+    "sp500_change": 0.78,
+    "market_mood": "Risk-On",
+    "narrative": "U.S. equities staged a broad recovery as oil prices retreated from the prior session's Iran-war-driven spike and strong ADP jobs plus ISM Services data eased growth fears. Growth-oriented sectors led the rebound, with consumer discretionary posting its best day since October and tech rallying on semiconductor strength. Defensive sectors lagged as the risk-on rotation favored cyclicals over safe havens.",
+    "top_mover": "Consumer Discretionary",
+    "top_mover_reason": "Ross Stores surged ~7% and broad retail strength drove the sector's best session since October 31, as easing oil prices and resilient consumer data boosted discretionary spending sentiment.",
+    "net_flow_score": 4.88,
+    "net_flow_delta": null,
+    "avg_sector_move": 0.44,
+    "sectors_advancing": 9,
+    "sectors_declining": 2,
+    "flow_regime": "RISK-ON \u2014 BROAD SECTOR PARTICIPATION",
+    "sectors": [
+      {
+        "name": "Consumer Discretionary",
+        "etf": "XLY",
+        "change": 2.01,
+        "change_delta": null,
+        "volume_vs_avg": 1.35,
+        "estimated": false
+      },
+      {
+        "name": "Technology",
+        "etf": "XLK",
+        "change": 1.46,
+        "change_delta": null,
+        "volume_vs_avg": 1.28,
+        "estimated": false
+      },
+      {
+        "name": "Communication Services",
+        "etf": "XLC",
+        "change": 0.72,
+        "change_delta": null,
+        "volume_vs_avg": 1.1,
+        "estimated": false
+      },
+      {
+        "name": "Industrials",
+        "etf": "XLI",
+        "change": 0.5,
+        "change_delta": null,
+        "volume_vs_avg": 1.05,
+        "estimated": false
+      },
+      {
+        "name": "Financials",
+        "etf": "XLF",
+        "change": 0.35,
+        "change_delta": null,
+        "volume_vs_avg": 1.02,
+        "estimated": true
+      },
+      {
+        "name": "Healthcare",
+        "etf": "XLV",
+        "change": 0.3,
+        "change_delta": null,
+        "volume_vs_avg": 0.95,
+        "estimated": true
+      },
+      {
+        "name": "Materials",
+        "etf": "XLB",
+        "change": 0.23,
+        "change_delta": null,
+        "volume_vs_avg": 1.08,
+        "estimated": false
+      },
+      {
+        "name": "Utilities",
+        "etf": "XLU",
+        "change": 0.19,
+        "change_delta": null,
+        "volume_vs_avg": 0.9,
+        "estimated": false
+      },
+      {
+        "name": "Real Estate",
+        "etf": "XLRE",
+        "change": 0.15,
+        "change_delta": null,
+        "volume_vs_avg": 0.92,
+        "estimated": true
+      },
+      {
+        "name": "Consumer Staples",
+        "etf": "XLP",
+        "change": -0.45,
+        "change_delta": null,
+        "volume_vs_avg": 1.12,
+        "estimated": true
+      },
+      {
+        "name": "Energy",
+        "etf": "XLE",
+        "change": -0.58,
+        "change_delta": null,
+        "volume_vs_avg": 1.42,
+        "estimated": false
+      }
+    ]
+  }
+]

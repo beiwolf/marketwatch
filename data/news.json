@@ -1,9 +1,85 @@
 {
-  "date": null,
-  "last_updated": null,
-  "update_count": 0,
-  "breaking": [],
-  "summary": null,
-  "highlights": [],
-  "sources": []
+  "date": "2026-03-04",
+  "last_updated": "6:19 PM ET",
+  "update_count": 1,
+  "breaking": [
+    {
+      "text": "Trump backs crypto firms against banks on stablecoin yields, Coinbase surges 14%",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "Broadcom, Veeva Systems, Okta report after-hours earnings \u2014 Broadcom analysts expect $2.03 EPS on $19.18B revenue",
+      "added_at": "6:19 PM ET"
+    }
+  ],
+  "summary": "U.S. equity markets staged a strong recovery on Wednesday, March 4, with the S&P 500 gaining 0.8% to 6,869.50, the Nasdaq surging 1.3% to 22,807.48, and the Dow adding 238 points as moderating oil prices and resilient economic data eased fears from earlier in the week. Key economic releases bolstered sentiment: ADP private payrolls beat expectations at 63,000 jobs (vs. 50,000 est.), the ISM Non-Manufacturing PMI held at 53.5, and the Fed Beige Book showed slight-to-moderate growth in seven districts. Technology stocks led the recovery with Micron and AMD each jumping over 5%, while Amazon gained 3.3% and Coinbase surged 14% after Trump publicly backed crypto firms against banks. Investors now look ahead to after-hours earnings from Broadcom, Veeva Systems, and Okta, with Friday's nonfarm payrolls report and the March 18 FOMC meeting as the next major catalysts.",
+  "highlights": [
+    {
+      "text": "South Korea's Kospi plunges over 12% amid escalating Middle East war fears, worst day in decades",
+      "sentiment": "bearish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "Micron and AMD each jump 5%+; Amazon gains 3.3% as chip and consumer discretionary sectors lead",
+      "sentiment": "bullish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "Fed Beige Book shows mixed picture: 7 districts with slight-to-moderate growth but 5 districts flat or declining",
+      "sentiment": "neutral",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "Coinbase surges 14% as Bitcoin recovers to $73,092; Trump publicly backs crypto firms against banks on stablecoin regulation",
+      "sentiment": "bullish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "ADP private payrolls beat at 63K vs 50K est.; ISM Services PMI steady at 53.5 with cooling prices-paid component",
+      "sentiment": "bullish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "text": "S&P 500 rises 0.8% to 6,869.50 as tech rebound and easing oil prices lift Wall Street",
+      "sentiment": "bullish",
+      "added_at": "6:19 PM ET"
+    }
+  ],
+  "sources": [
+    {
+      "outlet": "StockMarketWatch",
+      "title": "Tech Rebound and Easing Oil Prices Lift Wall Street; Focus Shifts to Late-Day Earnings",
+      "url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "sentiment": "bullish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "outlet": "24/7 Wall St.",
+      "title": "Stock Market Live March 4, 2026: S&P 500 (SPY) Flat as it Monitors Middle East Tension",
+      "url": "https://247wallst.com/investing/2026/03/04/stock-market-live-march-4-2026-sp-500-spy-flat-as-it-monitors-middle-east-tension/",
+      "sentiment": "neutral",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "outlet": "Bloomberg",
+      "title": "Chart Watchers See Risks of S&P 500 Correction Amid War Jitters",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-04/chart-watchers-see-risks-of-s-p-500-correction-amid-war-jitters",
+      "sentiment": "bearish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "outlet": "FinancialContent",
+      "title": "The AI Honeymoon Ends: S&P 500 Slides in February as Media Consolidation and Chip Volatility Signal a More Selective 2026",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-the-ai-honeymoon-ends-s-and-p-500-slides-in-february-as-media-consolidation-and-chip-volatility-signal-a-more-selective-2026",
+      "sentiment": "bearish",
+      "added_at": "6:19 PM ET"
+    },
+    {
+      "outlet": "CNN Business",
+      "title": "Stocks sink as Wall Street fears a prolonged war with Iran",
+      "url": "https://www.cnn.com/2026/03/03/investing/us-stocks-iran",
+      "sentiment": "bearish",
+      "added_at": "6:19 PM ET"
+    }
+  ]
 }

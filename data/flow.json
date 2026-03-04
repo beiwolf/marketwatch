@@ -1,0 +1,16 @@
+{
+  "date": null,
+  "generated_at": null,
+  "sp500_change": null,
+  "market_mood": null,
+  "narrative": null,
+  "top_mover": null,
+  "top_mover_reason": null,
+  "net_flow_score": null,
+  "net_flow_delta": null,
+  "avg_sector_move": null,
+  "sectors_advancing": null,
+  "sectors_declining": null,
+  "flow_regime": null,
+  "sectors": []
+}

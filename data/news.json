@@ -1,8 +1,16 @@
 {
   "date": "2026-03-04",
-  "last_updated": "6:19 PM ET",
-  "update_count": 1,
+  "last_updated": "6:55 PM ET",
+  "update_count": 2,
   "breaking": [
+    {
+      "text": "Broadcom reports fiscal Q1 earnings after the bell \u2014 analysts expect $2.03 EPS on $19.18B revenue",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Coinbase surges 14.6% after Trump signals support for digital asset market bill",
+      "added_at": "6:55 PM ET"
+    },
     {
       "text": "Trump backs crypto firms against banks on stablecoin yields, Coinbase surges 14%",
       "added_at": "6:19 PM ET"
@@ -12,8 +20,38 @@
       "added_at": "6:19 PM ET"
     }
   ],
-  "summary": "U.S. equity markets staged a strong recovery on Wednesday, March 4, with the S&P 500 gaining 0.8% to 6,869.50, the Nasdaq surging 1.3% to 22,807.48, and the Dow adding 238 points as moderating oil prices and resilient economic data eased fears from earlier in the week. Key economic releases bolstered sentiment: ADP private payrolls beat expectations at 63,000 jobs (vs. 50,000 est.), the ISM Non-Manufacturing PMI held at 53.5, and the Fed Beige Book showed slight-to-moderate growth in seven districts. Technology stocks led the recovery with Micron and AMD each jumping over 5%, while Amazon gained 3.3% and Coinbase surged 14% after Trump publicly backed crypto firms against banks. Investors now look ahead to after-hours earnings from Broadcom, Veeva Systems, and Okta, with Friday's nonfarm payrolls report and the March 18 FOMC meeting as the next major catalysts.",
+  "summary": "The S&P 500 rallied 0.78% to 6,869.50 on Wednesday as markets staged a broad recovery from Monday's geopolitical selloff, driven by easing oil prices and stronger-than-expected economic data. ADP private payrolls beat expectations at 63,000 vs. 50,000 forecast, while ISM Services PMI came in at 53.5 with slowing prices paid, easing inflation fears. Tech led the advance with Micron and AMD each jumping 5%+, crypto stocks surged on Trump's digital asset bill support (Coinbase +14.6%, MicroStrategy +10.4%), and consumer discretionary had its best day since October behind Ross Stores (+7%). The Fed's Beige Book showed mixed growth across districts, and attention now shifts to Broadcom's after-hours earnings report.",
   "highlights": [
+    {
+      "text": "CoreWeave jumps 8% on multiyear agreement with Perplexity; BofA initiates Tesla at Buy with $460 target",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Consumer discretionary sector pops 2% for best day since Oct 31 \u2014 Ross Stores +7%, Amazon/Tesla/Airbnb all +3%",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "GitLab tumbles 8% premarket on disappointing FY revenue guidance of $1.10-1.12B vs $1.12B expected",
+      "sentiment": "bearish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Fed Beige Book shows 7 districts with slight-to-moderate growth, but 5 districts reported flat or declining activity",
+      "sentiment": "neutral",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "ADP private payrolls beat at 63K vs 50K expected; ISM Services PMI solid at 53.5 with cooling prices paid component",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Crypto stocks explode higher \u2014 Coinbase +14.6%, MicroStrategy +10.4%, Robinhood +8.1% \u2014 after Trump signals support for digital asset legislation",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
     {
       "text": "South Korea's Kospi plunges over 12% amid escalating Middle East war fears, worst day in decades",
       "sentiment": "bearish",
@@ -80,6 +118,34 @@
       "url": "https://www.cnn.com/2026/03/03/investing/us-stocks-iran",
       "sentiment": "bearish",
       "added_at": "6:19 PM ET"
+    },
+    {
+      "outlet": "Yahoo Finance",
+      "title": "Stock Market Today, March 4: Coinbase Surges After Trump Signals Support for Digital Asset Market Bill",
+      "url": "https://finance.yahoo.com/news/stock-market-today-march-4-224903316.html",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "outlet": "OneUpTrader",
+      "title": "S&P 500 (ES) Technical Analysis 4 March 2026",
+      "url": "https://blog.oneuptrader.com/analysis/technical-analysis/sp-500-es-technical-analysis-4-march-2026/",
+      "sentiment": "neutral",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "outlet": "Bloomberg",
+      "title": "This Year's Winning Stock Trades Take the Brunt of War Selloff",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-03-04/this-year-s-winning-stock-trades-take-the-brunt-of-war-selloff",
+      "sentiment": "bearish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "outlet": "Market Rebellion",
+      "title": "Pre-Market IV Report March 4, 2026",
+      "url": "https://marketrebellion.com/news/daily-iv-report/pre-market-iv-report-march-4-2026/",
+      "sentiment": "neutral",
+      "added_at": "6:55 PM ET"
     }
   ]
 }

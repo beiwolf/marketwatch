@@ -1,7 +1,7 @@
 {
   "date": "2026-03-04",
   "last_updated": "6:55 PM ET",
-  "update_count": 2,
+  "update_count": 3,
   "breaking": [
     {
       "text": "Broadcom reports fiscal Q1 earnings after the bell \u2014 analysts expect $2.03 EPS on $19.18B revenue",
@@ -20,8 +20,38 @@
       "added_at": "6:19 PM ET"
     }
   ],
-  "summary": "The S&P 500 rallied 0.78% to 6,869.50 on Wednesday as markets staged a broad recovery from Monday's geopolitical selloff, driven by easing oil prices and stronger-than-expected economic data. ADP private payrolls beat expectations at 63,000 vs. 50,000 forecast, while ISM Services PMI came in at 53.5 with slowing prices paid, easing inflation fears. Tech led the advance with Micron and AMD each jumping 5%+, crypto stocks surged on Trump's digital asset bill support (Coinbase +14.6%, MicroStrategy +10.4%), and consumer discretionary had its best day since October behind Ross Stores (+7%). The Fed's Beige Book showed mixed growth across districts, and attention now shifts to Broadcom's after-hours earnings report.",
+  "summary": "The S&P 500 rose 0.78% to 6,869.50 on Wednesday as markets staged a broad recovery from recent Middle East war-driven selling, buoyed by easing oil prices and stronger-than-expected economic data. ADP private payrolls came in at 63,000 vs. 50,000 expected, while the ISM Services PMI held at 53.5 with a cooling prices-paid component, and the Fed Beige Book showed slight-to-moderate growth in seven of twelve districts. Technology and crypto-linked stocks led gains, with Micron and AMD each jumping 5%, while Coinbase surged 14.6% after President Trump signaled support for digital asset legislation. The Nasdaq gained 1.29% to 22,807.48 as the broader tape reflected cautious optimism, though the S&P 500 continues to face technical resistance at the 7,000 level.",
   "highlights": [
+    {
+      "text": "Consumer discretionary posts best session since Oct 31 led by Ross Stores +7%",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "CoreWeave jumps 8% after announcing multiyear cloud agreement with Perplexity",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "ISM Services PMI at 53.5 with cooling prices-paid component suggests service-sector inflation may be peaking",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Fed Beige Book shows 7 of 12 districts with slight-to-moderate growth, but 5 districts flat or declining",
+      "sentiment": "neutral",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "Crypto stocks surge \u2014 Coinbase +14.6%, MicroStrategy +10.4%, Robinhood +8.1% \u2014 on Trump digital asset bill support",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "text": "ADP private payrolls beat expectations at 63K vs 50K forecast, easing growth-scare fears",
+      "sentiment": "bullish",
+      "added_at": "6:55 PM ET"
+    },
     {
       "text": "CoreWeave jumps 8% on multiyear agreement with Perplexity; BofA initiates Tesla at Buy with $460 target",
       "sentiment": "bullish",
@@ -145,6 +175,13 @@
       "title": "Pre-Market IV Report March 4, 2026",
       "url": "https://marketrebellion.com/news/daily-iv-report/pre-market-iv-report-march-4-2026/",
       "sentiment": "neutral",
+      "added_at": "6:55 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Stock market news for March 4, 2026",
+      "url": "https://www.cnbc.com/2026/03/03/stock-market-today-live-updates.html",
+      "sentiment": "bullish",
       "added_at": "6:55 PM ET"
     }
   ]

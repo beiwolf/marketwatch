@@ -8,365 +8,151 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:       #04080f;
-      --bg2:      #070e1a;
-      --bg3:      #0a1525;
-      --bg4:      #0d1c30;
-      --border:   #0f2035;
-      --border2:  #162d48;
-      --border3:  #1e3d5e;
-      --green:    #00f082;
-      --green2:   #00c068;
-      --gdim:     rgba(0,240,130,0.12);
-      --red:      #ff2d4a;
-      --red2:     #cc2238;
-      --rdim:     rgba(255,45,74,0.12);
-      --amber:    #ffa500;
-      --adim:     rgba(255,165,0,0.12);
-      --blue:     #0af;
-      --bdim:     rgba(0,170,255,0.1);
-      --dim:      #1e3a58;
-      --mid:      #3a6a8a;
-      --muted:    #5a8aaa;
-      --text:     #b8d4e8;
-      --bright:   #ddeeff;
-      --mono:     'Share Tech Mono', 'Courier New', monospace;
-      --display:  'Rajdhani', sans-serif;
+      --bg:#04080f;--bg2:#070e1a;--bg3:#0a1525;--bg4:#0d1c30;
+      --border:#0f2035;--border2:#162d48;--border3:#1e3d5e;
+      --green:#00f082;--green2:#00c068;--gdim:rgba(0,240,130,0.12);
+      --red:#ff2d4a;--red2:#cc2238;--rdim:rgba(255,45,74,0.12);
+      --amber:#ffa500;--adim:rgba(255,165,0,0.12);
+      --blue:#0af;--bdim:rgba(0,170,255,0.1);
+      --dim:#1e3a58;--mid:#3a6a8a;--muted:#5a8aaa;
+      --text:#b8d4e8;--bright:#ddeeff;
+      --mono:'Share Tech Mono','Courier New',monospace;
+      --display:'Rajdhani',sans-serif;
     }
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--mono);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    /* Grid bg */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image:
-        linear-gradient(rgba(0,160,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,160,255,0.02) 1px, transparent 1px);
-      background-size: 52px 52px;
-      pointer-events: none; z-index: 0;
-    }
-    /* CRT scanlines */
-    body::after {
-      content: '';
-      position: fixed; inset: 0;
-      background: repeating-linear-gradient(
-        0deg, transparent, transparent 3px,
-        rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px
-      );
-      pointer-events: none; z-index: 0;
-    }
-    .page { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 20px 80px; }
-    /* ── TOPBAR ── */
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0; border-bottom: 1px solid var(--border3);
-      flex-wrap: wrap; gap: 10px;
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(4,8,15,0.95);
-      backdrop-filter: blur(8px);
-    }
-    .topbar-left { display: flex; align-items: center; gap: 16px; }
-    .live-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--green); box-shadow: 0 0 12px var(--green);
-      animation: livepulse 2.5s infinite;
-    }
-    @keyframes livepulse {
-      0%,100%{ opacity:1; box-shadow:0 0 12px var(--green); }
-      50%{ opacity:0.3; box-shadow:0 0 4px var(--green); }
-    }
-    .site-title {
-      font-family: var(--display); font-size: 22px; font-weight: 700;
-      letter-spacing: 4px; text-transform: uppercase; color: var(--bright);
-    }
-    .topbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .chip {
-      font-size: 10px; letter-spacing: 1px; padding: 4px 10px;
-      border-radius: 2px; font-family: var(--mono);
-    }
-    .chip-dim    { background: rgba(255,255,255,0.04); color: var(--muted);  border: 1px solid var(--border2); }
-    .chip-green  { background: var(--gdim); color: var(--green);  border: 1px solid rgba(0,240,130,0.25); }
-    .chip-red    { background: var(--rdim); color: var(--red);    border: 1px solid rgba(255,45,74,0.25); }
-    .chip-amber  { background: var(--adim); color: var(--amber);  border: 1px solid rgba(255,165,0,0.25); }
-    .chip-blue   { background: var(--bdim); color: var(--blue);   border: 1px solid rgba(0,170,255,0.25); }
-    /* ── LAYOUT GRID ── */
-    .main-grid {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 16px;
-      margin-top: 20px;
-    }
-    @media(max-width:900px){ .main-grid { grid-template-columns:1fr; } }
-    /* ── SECTION CARDS ── */
-    .card {
-      background: var(--bg2);
-      border: 1px solid var(--border2);
-      overflow: hidden;
-    }
-    .card-header {
-      background: var(--bg3);
-      border-bottom: 1px solid var(--border);
-      padding: 9px 16px;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .card-title {
-      font-size: 9px; color: var(--dim); letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    .card-meta { font-size: 9px; color: var(--dim); letter-spacing: 1px; }
-    .card-body { padding: 16px; }
-    /* ── LOADING / EMPTY STATES ── */
-    .state-box {
-      text-align: center; padding: 48px 20px;
-      color: var(--dim);
-    }
-    .state-title {
-      font-family: var(--display); font-size: 16px;
-      letter-spacing: 3px; margin-bottom: 8px; color: var(--mid);
-    }
-    .state-sub { font-size: 10px; letter-spacing: 1px; }
-    .spinner {
-      width: 28px; height: 28px; border-radius: 50%;
-      border: 2px solid var(--border3); border-top-color: var(--green);
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 16px;
-    }
-    @keyframes spin { to{ transform:rotate(360deg); } }
-    /* ── NET FLOW PANEL ── */
-    .net-panel {
-      display: grid; grid-template-columns: auto 1fr;
-      gap: 24px; align-items: center;
-      padding: 20px 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    @media(max-width:600px){ .net-panel { grid-template-columns:1fr; } }
-    .net-score-label { font-size: 9px; color: var(--dim); letter-spacing: 3px; margin-bottom: 4px; }
-    .net-score-value {
-      font-family: var(--display); font-size: 56px; font-weight: 700;
-      line-height: 1; letter-spacing: -2px;
-    }
-    .net-delta { font-size: 11px; margin-top: 6px; letter-spacing: 1px; }
-    .net-stats { display: flex; flex-direction: column; gap: 12px; }
-    .stats-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
-    .stat { }
-    .stat-label { font-size: 9px; color: var(--dim); letter-spacing: 2px; margin-bottom: 2px; }
-    .stat-value { font-size: 13px; color: var(--text); }
-    .breadth-row { display: flex; gap: 6px; align-items: center; }
-    .bp-up {
-      background: var(--gdim); color: var(--green);
-      padding: 2px 10px; font-size: 13px; font-weight: bold;
-      border: 1px solid rgba(0,240,130,0.2);
-    }
-    .bp-dn {
-      background: var(--rdim); color: var(--red);
-      padding: 2px 10px; font-size: 13px; font-weight: bold;
-      border: 1px solid rgba(255,45,74,0.2);
-    }
-    .bp-sep { color: var(--dim); }
-    /* Flow bar */
-    .flow-bar-wrap { }
-    .flow-bar-labels {
-      display: flex; justify-content: space-between;
-      font-size: 9px; color: var(--dim); letter-spacing: 1px; margin-bottom: 5px;
-    }
-    .flow-bar-track {
-      height: 5px; background: var(--bg4); border-radius: 3px; position: relative;
-    }
-    .flow-bar-fill { position: absolute; top:0; height:100%; border-radius:3px; }
-    .flow-bar-mid {
-      position: absolute; left:50%; top:-4px;
-      width:1px; height:13px; background: var(--border3);
-    }
-    .regime {
-      font-family: var(--display); font-size: 12px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase; margin-top: 8px;
-    }
-    /* ── SECTOR ROWS ── */
-    .sector-list { }
-    .sector-row {
-      display: flex; align-items: center;
-      padding: 6px 16px; gap: 10px;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s;
-    }
-    .sector-row:last-child { border-bottom: none; }
-    .sector-row:hover { background: rgba(255,255,255,0.02); }
-    .sector-row.is-top { border-left: 2px solid var(--amber); }
-    .s-name { width: 150px; flex-shrink:0; font-size:10px; color:var(--muted); text-align:right; }
-    .s-etf  { width: 36px; flex-shrink:0; font-size:9px; color:var(--dim); text-align:center; letter-spacing:1px; }
-    .s-bar-wrap { flex:1; height:18px; position:relative; display:flex; align-items:center; }
-    .s-bar-center { position:absolute; left:50%; width:1px; height:18px; background:var(--border2); }
-    .s-bar-fill { position:absolute; height:12px; border-radius:1px; }
-    .s-pct { width:66px; flex-shrink:0; font-size:12px; font-weight:bold; letter-spacing:0.5px; }
-    .s-delta { width:72px; flex-shrink:0; font-size:10px; }
-    .s-flag { width:18px; flex-shrink:0; font-size:10px; text-align:center; }
-    /* ── NARRATIVE ── */
-    .narrative-body { padding: 14px 16px; }
-    .narrative-text { font-size:11px; line-height:1.8; color:var(--muted); }
-    .narrative-mover {
-      margin-top:10px; padding-top:10px;
-      border-top:1px solid var(--border);
-      font-size:10px; color:var(--dim);
-    }
-    .narrative-mover strong { color:var(--amber); }
-    /* ── FLOW SUMMARY ── */
-    .flow-summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
-    .flow-col { background:var(--bg2); padding:12px 14px; }
-    .flow-col-hd { font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
-    .flow-item { display:flex; justify-content:space-between; font-size:10px; margin-bottom:4px; color:var(--dim); }
-    .flow-item span:last-child { font-weight:bold; }
-    /* ── NEWS PANEL ── */
-    .news-col { display: flex; flex-direction: column; gap: 16px; }
-    /* Breaking ticker */
-    .breaking-bar {
-      background: var(--rdim); border: 1px solid rgba(255,45,74,0.3);
-      padding: 0; overflow: hidden; height: 32px;
-      display: flex; align-items: center;
-    }
-    .breaking-label {
-      background: var(--red); color: #fff;
-      font-family: var(--display); font-size: 10px; font-weight: 700;
-      letter-spacing: 2px; padding: 0 12px; height: 100%;
-      display: flex; align-items: center; flex-shrink: 0;
-      text-transform: uppercase;
-    }
-    .breaking-ticker { overflow: hidden; flex: 1; }
-    .breaking-track {
-      display: inline-flex; gap: 48px;
-      animation: ticker 30s linear infinite;
-      white-space: nowrap; font-size: 10px; color: var(--red); letter-spacing: 0.5px;
-    }
-    @keyframes ticker {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    /* News summary card */
-    .news-summary {
-      font-size: 11px; line-height: 1.8; color: var(--muted);
-      padding: 14px 16px;
-    }
-    /* Highlights */
-    .highlight-list { padding: 4px 0; }
-    .highlight-item {
-      display: flex; gap: 10px; align-items: flex-start;
-      padding: 8px 16px; border-bottom: 1px solid var(--border);
-      font-size: 10px; line-height: 1.6; color: var(--muted);
-      transition: background 0.15s;
-    }
-    .highlight-item:last-child { border-bottom: none; }
-    .highlight-item:hover { background: rgba(255,255,255,0.02); }
-    .hi-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      flex-shrink: 0; margin-top: 5px;
-    }
-    .hi-dot.up   { background: var(--green); box-shadow: 0 0 6px var(--green); }
-    .hi-dot.down { background: var(--red);   box-shadow: 0 0 6px var(--red); }
-    .hi-dot.neu  { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
-    /* Sources */
-    .source-list { padding: 4px 0; }
-    .source-item {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      padding: 9px 16px; border-bottom: 1px solid var(--border);
-      gap: 12px; transition: background 0.15s;
-    }
-    .source-item:last-child { border-bottom: none; }
-    .source-item:hover { background: rgba(255,255,255,0.02); }
-    .source-left { flex: 1; }
-    .source-outlet { font-size: 9px; color: var(--dim); letter-spacing: 1px; margin-bottom: 3px; }
-    .source-title { font-size: 10px; color: var(--text); line-height: 1.5; }
-    .source-link {
-      font-size: 9px; color: var(--blue); text-decoration: none;
-      letter-spacing: 1px; flex-shrink: 0; align-self: center;
-      padding: 3px 8px; border: 1px solid rgba(0,170,255,0.2);
-      transition: all 0.15s;
-    }
-    .source-link:hover { background: var(--bdim); }
-    .source-sentiment {
-      font-size: 8px; letter-spacing: 1px; padding: 2px 6px;
-      border-radius: 1px; flex-shrink: 0; align-self: center;
-    }
-    .sent-bull { background: var(--gdim); color: var(--green); }
-    .sent-bear { background: var(--rdim); color: var(--red); }
-    .sent-neu  { background: var(--adim); color: var(--amber); }
-    /* ── AUDIT TRAIL ── */
-    #audit-section { margin-top: 32px; }
-    .audit-header {
-      font-size: 9px; color: var(--dim); letter-spacing: 3px;
-      text-transform: uppercase; margin-bottom: 14px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .audit-header::after { content:''; flex:1; height:1px; background:var(--border); }
-    .audit-entry { border: 1px solid var(--border); margin-bottom: 5px; }
-    .audit-entry.net-pos { border-color: rgba(0,240,130,0.15); }
-    .audit-entry.net-neg { border-color: rgba(255,45,74,0.15); }
-    .audit-entry summary {
-      padding: 9px 14px; cursor: pointer; list-style: none;
-      display: flex; align-items: center; gap: 10px;
-      font-size: 10px; letter-spacing: 0.5px; user-select: none;
-      transition: background 0.15s;
-    }
-    .audit-entry summary:hover { background: rgba(255,255,255,0.03); }
-    .audit-entry summary::-webkit-details-marker { display:none; }
-    .audit-entry.net-pos summary { background: rgba(0,240,130,0.05); }
-    .audit-entry.net-neg summary { background: rgba(255,45,74,0.05); }
-    .a-toggle {
-      width:13px; height:13px; border:1px solid var(--border3);
-      display:flex; align-items:center; justify-content:center;
-      font-size:7px; color:var(--dim); flex-shrink:0;
-      transition: transform 0.2s;
-    }
-    .audit-entry[open] .a-toggle { transform: rotate(90deg); }
-    .a-time  { color: var(--amber); flex-shrink:0; }
-    .a-net   { font-weight: bold; font-size:12px; }
-    .a-spy   { color: var(--muted); }
-    .a-bread { color: var(--dim); }
-    .a-regime { color: var(--dim); margin-left: auto; font-size:9px; }
-    .audit-body {
-      padding: 14px 16px; border-top: 1px solid var(--border);
-      background: var(--bg3);
-    }
-    .audit-sectors {
-      display: grid; grid-template-columns: 1fr 1fr 1fr;
-      gap: 5px; margin-bottom: 10px;
-    }
-    @media(max-width:600px){ .audit-sectors { grid-template-columns:1fr 1fr; } }
-    .audit-sector-cell {
-      display: flex; justify-content: space-between;
-      font-size: 9px; padding: 3px 8px;
-      background: var(--bg2); border: 1px solid var(--border);
-    }
-    .asc-name { color: var(--muted); }
-    .asc-pct  { font-weight: bold; }
-    .audit-narrative-text {
-      font-size: 10px; color: var(--dim); line-height: 1.7;
-      padding: 8px 10px; background: var(--bg2); border: 1px solid var(--border);
-    }
-    /* ── FOOTER ── */
-    .footer {
-      text-align: center; margin-top: 48px; padding: 20px 0;
-      font-size: 9px; color: var(--border3); letter-spacing: 2px;
-      border-top: 1px solid var(--border);
-    }
-    /* ── UTILITIES ── */
-    .pos { color: var(--green); }
-    .neg { color: var(--red); }
-    .neu { color: var(--amber); }
-    .dim { color: var(--dim); }
-    .text-right { text-align: right; }
-    .mt8  { margin-top: 8px; }
-    .mt12 { margin-top: 12px; }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--mono);min-height:100vh;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,160,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,160,255,0.02) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;z-index:0;}
+    body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.06) 3px,rgba(0,0,0,0.06) 4px);pointer-events:none;z-index:0;}
+    .page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 20px 80px;}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border3);flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100;background:rgba(4,8,15,0.95);backdrop-filter:blur(8px);}
+    .topbar-left{display:flex;align-items:center;gap:16px;}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:livepulse 2.5s infinite;}
+    @keyframes livepulse{0%,100%{opacity:1;box-shadow:0 0 12px var(--green);}50%{opacity:0.3;box-shadow:0 0 4px var(--green);}}
+    .site-title{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--bright);}
+    .topbar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .chip{font-size:10px;letter-spacing:1px;padding:4px 10px;border-radius:2px;font-family:var(--mono);}
+    .chip-dim{background:rgba(255,255,255,0.04);color:var(--muted);border:1px solid var(--border2);}
+    .chip-green{background:var(--gdim);color:var(--green);border:1px solid rgba(0,240,130,0.25);}
+    .chip-red{background:var(--rdim);color:var(--red);border:1px solid rgba(255,45,74,0.25);}
+    .chip-amber{background:var(--adim);color:var(--amber);border:1px solid rgba(255,165,0,0.25);}
+    .main-grid{display:grid;grid-template-columns:1fr 400px;gap:16px;margin-top:20px;}
+    @media(max-width:900px){.main-grid{grid-template-columns:1fr;}}
+    .card{background:var(--bg2);border:1px solid var(--border2);overflow:hidden;margin-bottom:16px;}
+    .card:last-child{margin-bottom:0;}
+    .card-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:9px 16px;display:flex;justify-content:space-between;align-items:center;}
+    .card-title{font-size:9px;color:var(--dim);letter-spacing:3px;text-transform:uppercase;}
+    .card-meta{font-size:9px;color:var(--dim);letter-spacing:1px;}
+    .state-box{text-align:center;padding:40px 20px;color:var(--dim);}
+    .state-title{font-family:var(--display);font-size:16px;letter-spacing:3px;margin-bottom:8px;color:var(--mid);}
+    .state-sub{font-size:10px;letter-spacing:1px;}
+    .spinner{width:28px;height:28px;border-radius:50%;border:2px solid var(--border3);border-top-color:var(--green);animation:spin 0.8s linear infinite;margin:0 auto 16px;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    .net-panel{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:20px;}
+    @media(max-width:600px){.net-panel{grid-template-columns:1fr;}}
+    .net-score-label{font-size:9px;color:var(--dim);letter-spacing:3px;margin-bottom:4px;}
+    .net-score-value{font-family:var(--display);font-size:56px;font-weight:700;line-height:1;letter-spacing:-2px;}
+    .net-delta{font-size:11px;margin-top:6px;letter-spacing:1px;}
+    .net-stats{display:flex;flex-direction:column;gap:12px;}
+    .stats-row{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;}
+    .stat-label{font-size:9px;color:var(--dim);letter-spacing:2px;margin-bottom:2px;}
+    .stat-value{font-size:13px;color:var(--text);}
+    .breadth-row{display:flex;gap:6px;align-items:center;}
+    .bp-up{background:var(--gdim);color:var(--green);padding:2px 10px;font-size:13px;font-weight:bold;border:1px solid rgba(0,240,130,0.2);}
+    .bp-dn{background:var(--rdim);color:var(--red);padding:2px 10px;font-size:13px;font-weight:bold;border:1px solid rgba(255,45,74,0.2);}
+    .bp-sep{color:var(--dim);}
+    .flow-bar-wrap{margin-top:4px;}
+    .flow-bar-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:5px;}
+    .flow-bar-track{height:5px;background:var(--bg4);border-radius:3px;position:relative;}
+    .flow-bar-fill{position:absolute;top:0;height:100%;border-radius:3px;}
+    .flow-bar-mid{position:absolute;left:50%;top:-4px;width:1px;height:13px;background:var(--border3);}
+    .regime{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:8px;}
+    .sector-row{display:flex;align-items:center;padding:6px 16px;gap:10px;border-bottom:1px solid var(--border);transition:background 0.15s;}
+    .sector-row:last-child{border-bottom:none;}
+    .sector-row:hover{background:rgba(255,255,255,0.02);}
+    .sector-row.is-top{border-left:2px solid var(--amber);}
+    .s-name{width:150px;flex-shrink:0;font-size:10px;color:var(--muted);text-align:right;}
+    .s-etf{width:36px;flex-shrink:0;font-size:9px;color:var(--dim);text-align:center;letter-spacing:1px;}
+    .s-bar-wrap{flex:1;height:18px;position:relative;display:flex;align-items:center;}
+    .s-bar-center{position:absolute;left:50%;width:1px;height:18px;background:var(--border2);}
+    .s-bar-fill{position:absolute;height:12px;border-radius:1px;}
+    .s-pct{width:66px;flex-shrink:0;font-size:12px;font-weight:bold;letter-spacing:0.5px;}
+    .s-delta{width:72px;flex-shrink:0;font-size:10px;}
+    .s-flag{width:18px;flex-shrink:0;font-size:10px;text-align:center;}
+    .narrative-body{padding:14px 16px;}
+    .narrative-text{font-size:11px;line-height:1.8;color:var(--muted);}
+    .narrative-mover{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:10px;color:var(--dim);}
+    .narrative-mover strong{color:var(--amber);}
+    .flow-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+    .flow-col{background:var(--bg2);padding:12px 14px;}
+    .flow-col-hd{font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+    .flow-item{display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px;color:var(--dim);}
+    .flow-item span:last-child{font-weight:bold;}
+    .breaking-bar{background:var(--rdim);border:1px solid rgba(255,45,74,0.3);overflow:hidden;height:32px;display:flex;align-items:center;}
+    .breaking-label{background:var(--red);color:#fff;font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:2px;padding:0 12px;height:100%;display:flex;align-items:center;flex-shrink:0;text-transform:uppercase;}
+    .breaking-ticker{overflow:hidden;flex:1;}
+    .breaking-track{display:inline-flex;gap:48px;animation:ticker 30s linear infinite;white-space:nowrap;font-size:10px;color:var(--red);letter-spacing:0.5px;}
+    @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .news-summary{font-size:11px;line-height:1.8;color:var(--muted);padding:14px 16px;}
+    .highlight-item{display:flex;gap:10px;align-items:flex-start;padding:8px 16px;border-bottom:1px solid var(--border);font-size:10px;line-height:1.6;color:var(--muted);transition:background 0.15s;}
+    .highlight-item:last-child{border-bottom:none;}
+    .highlight-item:hover{background:rgba(255,255,255,0.02);}
+    .hi-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+    .hi-dot.up{background:var(--green);box-shadow:0 0 6px var(--green);}
+    .hi-dot.down{background:var(--red);box-shadow:0 0 6px var(--red);}
+    .hi-dot.neu{background:var(--amber);box-shadow:0 0 6px var(--amber);}
+    .source-item{display:flex;justify-content:space-between;align-items:flex-start;padding:9px 16px;border-bottom:1px solid var(--border);gap:12px;transition:background 0.15s;}
+    .source-item:last-child{border-bottom:none;}
+    .source-item:hover{background:rgba(255,255,255,0.02);}
+    .source-left{flex:1;}
+    .source-outlet{font-size:9px;color:var(--dim);letter-spacing:1px;margin-bottom:3px;}
+    .source-title{font-size:10px;color:var(--text);line-height:1.5;}
+    .source-link{font-size:9px;color:var(--blue);text-decoration:none;letter-spacing:1px;flex-shrink:0;align-self:center;padding:3px 8px;border:1px solid rgba(0,170,255,0.2);transition:all 0.15s;}
+    .source-link:hover{background:var(--bdim);}
+    .sent{font-size:8px;letter-spacing:1px;padding:2px 6px;border-radius:1px;flex-shrink:0;align-self:center;}
+    .sent-bull{background:var(--gdim);color:var(--green);}
+    .sent-bear{background:var(--rdim);color:var(--red);}
+    .sent-neu{background:var(--adim);color:var(--amber);}
+    #audit-section{margin-top:32px;}
+    .audit-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;}
+    .audit-title{font-size:9px;color:var(--dim);letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:12px;}
+    .audit-title::after{content:'';width:60px;height:1px;background:var(--border);}
+    .date-picker-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .date-picker-label{font-size:9px;color:var(--dim);letter-spacing:2px;}
+    .date-btn{background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:1px;padding:5px 12px;cursor:pointer;transition:all 0.15s;}
+    .date-btn:hover,.date-btn.active{background:var(--bdim);color:var(--blue);border-color:rgba(0,170,255,0.3);}
+    .date-btn.today{color:var(--green);border-color:rgba(0,240,130,0.3);background:var(--gdim);}
+    #date-select{background:var(--bg3);border:1px solid var(--border2);color:var(--muted);font-family:var(--mono);font-size:10px;padding:5px 10px;letter-spacing:1px;}
+    #date-select option{background:var(--bg3);}
+    .audit-day-label{font-size:9px;color:var(--dim);letter-spacing:2px;padding:8px 0 6px;border-bottom:1px solid var(--border);margin-bottom:8px;}
+    .audit-entry{border:1px solid var(--border);margin-bottom:5px;}
+    .audit-entry.net-pos{border-color:rgba(0,240,130,0.15);}
+    .audit-entry.net-neg{border-color:rgba(255,45,74,0.15);}
+    .audit-entry summary{padding:9px 14px;cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:0.5px;user-select:none;transition:background 0.15s;}
+    .audit-entry summary:hover{background:rgba(255,255,255,0.03);}
+    .audit-entry summary::-webkit-details-marker{display:none;}
+    .audit-entry.net-pos summary{background:rgba(0,240,130,0.05);}
+    .audit-entry.net-neg summary{background:rgba(255,45,74,0.05);}
+    .a-toggle{width:13px;height:13px;border:1px solid var(--border3);display:flex;align-items:center;justify-content:center;font-size:7px;color:var(--dim);flex-shrink:0;transition:transform 0.2s;}
+    .audit-entry[open] .a-toggle{transform:rotate(90deg);}
+    .a-time{color:var(--amber);flex-shrink:0;}
+    .a-net{font-weight:bold;font-size:12px;}
+    .a-spy{color:var(--muted);}
+    .a-bread{color:var(--dim);}
+    .a-regime{color:var(--dim);margin-left:auto;font-size:9px;}
+    .audit-body{padding:14px 16px;border-top:1px solid var(--border);background:var(--bg3);}
+    .audit-sectors{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:10px;}
+    @media(max-width:600px){.audit-sectors{grid-template-columns:1fr 1fr;}}
+    .audit-sector-cell{display:flex;justify-content:space-between;font-size:9px;padding:3px 8px;background:var(--bg2);border:1px solid var(--border);}
+    .asc-name{color:var(--muted);}
+    .audit-narrative-text{font-size:10px;color:var(--dim);line-height:1.7;padding:8px 10px;background:var(--bg2);border:1px solid var(--border);}
+    .footer{text-align:center;margin-top:48px;padding:20px 0;font-size:9px;color:var(--border3);letter-spacing:2px;border-top:1px solid var(--border);}
+    .pos{color:var(--green);} .neg{color:var(--red);} .neu{color:var(--amber);}
+    .news-col{display:flex;flex-direction:column;gap:16px;}
   </style>
 </head>
 <body>
 <div class="page">
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="topbar-left">
       <div class="live-dot" id="live-dot"></div>
@@ -379,376 +165,143 @@
       <span class="chip chip-dim" id="chip-mood">—</span>
     </div>
   </div>
-  <!-- MAIN GRID -->
+
   <div class="main-grid">
-    <!-- LEFT: FLOW COLUMN -->
     <div id="flow-col">
-      <!-- Net Flow Panel -->
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-header">
-          <span class="card-title">▸ NET FLOW SCORE</span>
-          <span class="card-meta" id="flow-updated-label">—</span>
-        </div>
-        <div id="net-panel-wrap">
-          <div class="state-box">
-            <div class="spinner"></div>
-            <div class="state-title">LOADING FLOW DATA</div>
-            <div class="state-sub">Fetching data/flow.json</div>
-          </div>
-        </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">▸ NET FLOW SCORE</span><span class="card-meta" id="flow-updated-label">—</span></div>
+        <div id="net-panel-wrap"><div class="state-box"><div class="spinner"></div><div class="state-title">LOADING</div></div></div>
       </div>
-      <!-- Sector Waterfall -->
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-header">
-          <span class="card-title">▸ SECTOR ROTATION</span>
-          <span class="card-meta" style="font-size:9px;color:var(--dim)">⚡ HIGH VOL · ~ ESTIMATED · ▲▼ DELTA</span>
-        </div>
-        <div id="sector-list-wrap">
-          <div class="state-box" style="padding:24px">
-            <div class="state-sub">Waiting for data...</div>
-          </div>
-        </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">▸ SECTOR ROTATION</span><span class="card-meta" style="font-size:9px;color:var(--dim)">⚡ HIGH VOL · ~ EST · ▲▼ DELTA</span></div>
+        <div id="sector-list-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
-      <!-- Narrative -->
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-header">
-          <span class="card-title">▸ MARKET NARRATIVE</span>
-        </div>
-        <div id="narrative-wrap">
-          <div class="state-box" style="padding:24px">
-            <div class="state-sub">Waiting for data...</div>
-          </div>
-        </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">▸ MARKET NARRATIVE</span></div>
+        <div id="narrative-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
-      <!-- Inflow / Outflow Summary -->
-      <div class="card" id="flow-summary-card" style="margin-bottom:0"></div>
+      <div class="card" id="flow-summary-card"></div>
     </div>
-    <!-- RIGHT: NEWS COLUMN -->
-    <div class="news-col" id="news-col">
-      <!-- Breaking ticker -->
-      <div id="breaking-wrap">
-        <div class="state-box" style="padding:16px">
-          <div class="state-sub">Loading news...</div>
-        </div>
-      </div>
-      <!-- News Summary -->
+
+    <div class="news-col">
+      <div id="breaking-wrap"></div>
       <div class="card">
-        <div class="card-header">
-          <span class="card-title">▸ MARKET SUMMARY</span>
-          <span class="card-meta" id="news-updated-label">—</span>
-        </div>
-        <div id="news-summary-wrap">
-          <div class="state-box" style="padding:24px">
-            <div class="state-sub">Waiting for data...</div>
-          </div>
-        </div>
+        <div class="card-header"><span class="card-title">▸ MARKET SUMMARY</span><span class="card-meta" id="news-updated-label">—</span></div>
+        <div id="news-summary-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
-      <!-- Highlights -->
       <div class="card">
-        <div class="card-header">
-          <span class="card-title">▸ KEY HIGHLIGHTS</span>
-        </div>
-        <div id="highlights-wrap">
-          <div class="state-box" style="padding:16px">
-            <div class="state-sub">Waiting for data...</div>
-          </div>
-        </div>
+        <div class="card-header"><span class="card-title">▸ KEY HIGHLIGHTS</span></div>
+        <div id="highlights-wrap"><div class="state-box" style="padding:16px"><div class="state-sub">Loading...</div></div></div>
       </div>
-      <!-- Sources -->
       <div class="card">
-        <div class="card-header">
-          <span class="card-title">▸ NEWS SOURCES</span>
-        </div>
-        <div id="sources-wrap">
-          <div class="state-box" style="padding:16px">
-            <div class="state-sub">Waiting for data...</div>
-          </div>
-        </div>
+        <div class="card-header"><span class="card-title">▸ NEWS SOURCES</span></div>
+        <div id="sources-wrap"><div class="state-box" style="padding:16px"><div class="state-sub">Loading...</div></div></div>
       </div>
     </div>
   </div>
-  <!-- AUDIT TRAIL -->
+
   <div id="audit-section">
-    <div class="audit-header">▸ SESSION AUDIT TRAIL</div>
+    <div class="audit-section-header">
+      <div class="audit-title">▸ AUDIT TRAIL</div>
+      <div class="date-picker-wrap">
+        <span class="date-picker-label">VIEW DATE:</span>
+        <button class="date-btn today active" id="btn-today" onclick="loadAuditForDate('today')">TODAY</button>
+        <select id="date-select" onchange="if(this.value){document.getElementById('btn-today').classList.remove('active');loadAuditForDate(this.value);}">
+          <option value="">— past dates —</option>
+        </select>
+      </div>
+    </div>
     <div id="audit-entries">
-      <div class="state-box" style="padding:24px">
-        <div class="state-sub">No history yet — audit entries appear after first agent run</div>
-      </div>
+      <div class="state-box" style="padding:24px"><div class="state-sub">No history yet — audit entries appear after first agent run</div></div>
     </div>
   </div>
-  <div class="footer">
-    AI-POWERED &nbsp;·&nbsp; DATA VIA WEB SEARCH &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; beiwolf.github.io/marketwatch
-  </div>
+
+  <div class="footer">AI-POWERED &nbsp;·&nbsp; DATA VIA WEB SEARCH &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
 </div>
+
 <script>
-// ── HELPERS ──────────────────────────────────────────────────────────
-const sign = n => n > 0 ? '+' : '';
-const fmt  = n => n !== null && n !== undefined ? (sign(n) + Number(n).toFixed(2) + '%') : '—';
-const col  = n => n === null || n === undefined ? '' : n > 0 ? 'pos' : n < 0 ? 'neg' : 'neu';
-const clamp = (v, mn, mx) => Math.min(Math.max(v, mn), mx);
-function regimeColor(regime) {
-  if (!regime) return 'var(--muted)';
-  if (regime.includes('SELL-OFF')) return 'var(--red)';
-  if (regime.includes('RISK-OFF')) return 'var(--red)';
-  if (regime.includes('OUTFLOW')) return '#ff8c00';
-  if (regime.includes('INFLOW') && regime.includes('STRONG')) return 'var(--green)';
-  if (regime.includes('RISK-ON')) return 'var(--green)';
-  return 'var(--amber)';
+const sign=n=>n>0?'+':'';
+const fmt=n=>(n!==null&&n!==undefined)?sign(n)+Number(n).toFixed(2)+'%':'—';
+const col=n=>(n===null||n===undefined)?'':n>0?'pos':n<0?'neg':'neu';
+const clamp=(v,mn,mx)=>Math.min(Math.max(v,mn),mx);
+
+function regimeColor(r){if(!r)return'var(--muted)';if(r.includes('SELL-OFF')||r.includes('RISK-OFF'))return'var(--red)';if(r.includes('STRONG')||r.includes('RISK-ON'))return'var(--green)';if(r.includes('OUTFLOW'))return'#ff8c00';return'var(--amber)';}
+function moodClass(m){if(!m)return'chip-dim';const l=m.toLowerCase();if(l.includes('risk-on')||l.includes('bullish'))return'chip-green';if(l.includes('risk-off')||l.includes('bearish'))return'chip-red';return'chip-amber';}
+
+function renderFlow(d){
+  if(!d)return;
+  if(d.date)document.getElementById('chip-date').textContent=d.date;
+  if(d.generated_at){document.getElementById('chip-updated').textContent='↻ '+d.generated_at;document.getElementById('flow-updated-label').textContent=d.generated_at;}
+  if(d.sp500_change!==null){const e=document.getElementById('chip-spy');e.textContent='SPY '+fmt(d.sp500_change);e.className='chip '+(d.sp500_change>=0?'chip-green':'chip-red');}
+  if(d.market_mood){const e=document.getElementById('chip-mood');e.textContent=d.market_mood;e.className='chip '+moodClass(d.market_mood);}
+  const net=d.net_flow_score;const isPos=net!==null&&net>=0;
+  const maxAbs=d.sectors&&d.sectors.length?Math.max(...d.sectors.map(s=>Math.abs(s.change||0)),0.1):3;
+  const barW=net!==null?clamp(Math.abs(net)/(maxAbs*(d.sectors.length||11))*100,0,50):0;
+  const barLeft=isPos?'50%':(50-barW)+'%';
+  const barBg=isPos?'linear-gradient(90deg,transparent,var(--green))':'linear-gradient(270deg,transparent,var(--red))';
+  const rc=regimeColor(d.flow_regime);
+  document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div><div class="net-score-label">NET FLOW SCORE</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}</div><div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">AVG SECTOR</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">BREADTH</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% ADVANCING</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ OUTFLOW</span><span>INFLOW ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${rc}">${d.flow_regime||'—'}</div></div></div></div>`;
+  if(d.sectors&&d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
+  document.getElementById('narrative-wrap').innerHTML=`<div class="narrative-body"><div class="narrative-text">${d.narrative||'No narrative available.'}</div>${d.top_mover?`<div class="narrative-mover"><strong>${d.top_mover}:</strong> ${d.top_mover_reason||''}</div>`:''}</div>`;
+  const adv=(d.sectors||[]).filter(s=>(s.change??0)>0);const dec=(d.sectors||[]).filter(s=>(s.change??0)<0);
+  document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">INFLOWS (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">OUTFLOWS (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
 }
-function moodChipClass(mood) {
-  if (!mood) return 'chip-dim';
-  if (mood.toLowerCase().includes('risk-on') || mood.toLowerCase().includes('bullish')) return 'chip-green';
-  if (mood.toLowerCase().includes('risk-off') || mood.toLowerCase().includes('bearish')) return 'chip-red';
-  return 'chip-amber';
+
+function renderNews(n){
+  if(!n)return;
+  if(n.generated_at)document.getElementById('news-updated-label').textContent=n.generated_at;
+  if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">BREAKING</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
+  else document.getElementById('breaking-wrap').innerHTML='';
+  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary available.'}</div>`;
+  if(n.highlights&&n.highlights.length)document.getElementById('highlights-wrap').innerHTML=`<div>${n.highlights.map(h=>`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div>${h.text}</div></div>`).join('')}</div>`;
+  if(n.sources&&n.sources.length)document.getElementById('sources-wrap').innerHTML=`<div>${n.sources.map(s=>`<div class="source-item"><div class="source-left"><div class="source-outlet">${s.outlet||''}</div><div class="source-title">${s.title}</div></div><span class="sent ${s.sentiment==='bullish'?'sent-bull':s.sentiment==='bearish'?'sent-bear':'sent-neu'}">${s.sentiment==='bullish'?'BULL':s.sentiment==='bearish'?'BEAR':'NEU'}</span><a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ READ</a></div>`).join('')}</div>`;
 }
-// ── RENDER FLOW ──────────────────────────────────────────────────────
-function renderFlow(d) {
-  if (!d || d.sp500_change === undefined) return;
-  // Update topbar chips
-  const spyEl = document.getElementById('chip-spy');
-  const moodEl = document.getElementById('chip-mood');
-  const updEl = document.getElementById('chip-updated');
-  const dateEl = document.getElementById('chip-date');
-  if (d.date) dateEl.textContent = d.date;
-  if (d.generated_at) {
-    updEl.textContent = '↻ ' + d.generated_at;
-    document.getElementById('flow-updated-label').textContent = d.generated_at;
-  }
-  if (d.sp500_change !== null) {
-    spyEl.textContent = 'SPY ' + fmt(d.sp500_change);
-    spyEl.className = 'chip ' + (d.sp500_change >= 0 ? 'chip-green' : 'chip-red');
-  }
-  if (d.market_mood) {
-    moodEl.textContent = d.market_mood;
-    moodEl.className = 'chip ' + moodChipClass(d.market_mood);
-  }
-  if (d.generated_at) {
-    document.getElementById('live-dot').style.background = 'var(--green)';
-  }
-  // Net flow panel
-  const net = d.net_flow_score;
-  const isPos = net !== null && net >= 0;
-  const maxAbs = d.sectors && d.sectors.length
-    ? Math.max(...d.sectors.map(s => Math.abs(s.change || 0)), 0.1)
-    : 3;
-  const barW = net !== null ? clamp(Math.abs(net) / (maxAbs * d.sectors.length) * 100, 0, 50) : 0;
-  const barLeft = isPos ? '50%' : (50 - barW) + '%';
-  const barBg = isPos
-    ? 'linear-gradient(90deg, transparent, var(--green))'
-    : 'linear-gradient(270deg, transparent, var(--red))';
-  const rc = regimeColor(d.flow_regime);
-  document.getElementById('net-panel-wrap').innerHTML = `
-    <div class="net-panel">
-      <div>
-        <div class="net-score-label">NET FLOW SCORE</div>
-        <div class="net-score-value ${col(net)}">${fmt(net)}</div>
-        ${d.net_flow_delta !== null && d.net_flow_delta !== undefined
-          ? `<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta > 0 ? '▲' : '▼'} ${fmt(d.net_flow_delta)} since last run</div>`
-          : ''}
-      </div>
-      <div class="net-stats">
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat-label">AVG SECTOR</div>
-            <div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">BREADTH</div>
-            <div class="breadth-row">
-              <span class="bp-up">${d.sectors_advancing ?? '—'} ▲</span>
-              <span class="bp-sep">/</span>
-              <span class="bp-dn">${d.sectors_declining ?? '—'} ▼</span>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">% ADVANCING</div>
-            <div class="stat-value">${d.sectors_advancing && d.sectors
-              ? Math.round(d.sectors_advancing / d.sectors.length * 100) + '%'
-              : '—'}</div>
-          </div>
-        </div>
-        <div class="flow-bar-wrap">
-          <div class="flow-bar-labels"><span>◀ OUTFLOW</span><span>INFLOW ▶</span></div>
-          <div class="flow-bar-track">
-            <div class="flow-bar-mid"></div>
-            <div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div>
-          </div>
-          <div class="regime" style="color:${rc}">${d.flow_regime || '—'}</div>
-        </div>
-      </div>
-    </div>
-  `;
-  // Sector waterfall
-  if (d.sectors && d.sectors.length) {
-    const rows = d.sectors.map(s => {
-      const pct = s.change ?? 0;
-      const isP = pct >= 0;
-      const bw = clamp(Math.abs(pct) / maxAbs * 50, 0, 50);
-      const bl = isP ? '50%' : (50 - bw) + '%';
-      const bbg = isP
-        ? 'linear-gradient(90deg,transparent,var(--green2))'
-        : 'linear-gradient(270deg,transparent,var(--red2))';
-      const isTop = d.top_mover && s.name === d.top_mover;
-      const delta = s.change_delta;
-      const estimated = s.estimated ? '~' : '';
-      const volFlag = s.volume_vs_avg >= 1.5 ? '⚡' : '';
-      return `
-        <div class="sector-row${isTop ? ' is-top' : ''}">
-          <div class="s-name">${s.name}</div>
-          <div class="s-etf">${s.etf}</div>
-          <div class="s-bar-wrap">
-            <div class="s-bar-center"></div>
-            <div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div>
-          </div>
-          <div class="s-pct ${col(pct)}">${estimated}${fmt(pct)}</div>
-          <div class="s-delta ${col(delta)}">${delta !== null && delta !== undefined
-            ? (delta > 0 ? '▲' : '▼') + ' ' + Math.abs(delta).toFixed(2) + '%'
-            : ''}</div>
-          <div class="s-flag">${volFlag}</div>
-        </div>`;
-    }).join('');
-    document.getElementById('sector-list-wrap').innerHTML = `<div class="sector-list">${rows}</div>`;
-  }
-  // Narrative
-  document.getElementById('narrative-wrap').innerHTML = `
-    <div class="narrative-body">
-      <div class="narrative-text">${d.narrative || 'No narrative available.'}</div>
-      ${d.top_mover ? `
-      <div class="narrative-mover">
-        <strong>${d.top_mover}:</strong> ${d.top_mover_reason || ''}
-      </div>` : ''}
-    </div>`;
-  // Flow summary
-  const advancing = (d.sectors || []).filter(s => (s.change ?? 0) > 0);
-  const declining = (d.sectors || []).filter(s => (s.change ?? 0) < 0);
-  const inRows  = advancing.map(s => `<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('');
-  const outRows = declining.map(s => `<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('');
-  document.getElementById('flow-summary-card').innerHTML = `
-    <div class="flow-summary-grid">
-      <div class="flow-col">
-        <div class="flow-col-hd pos">INFLOWS (${advancing.length})</div>
-        ${inRows || '<div class="flow-item dim">None</div>'}
-      </div>
-      <div class="flow-col">
-        <div class="flow-col-hd neg">OUTFLOWS (${declining.length})</div>
-        ${outRows || '<div class="flow-item dim">None</div>'}
-      </div>
-    </div>`;
-}
-// ── RENDER NEWS ──────────────────────────────────────────────────────
-function renderNews(n) {
-  if (!n) return;
-  if (n.generated_at) {
-    document.getElementById('news-updated-label').textContent = n.generated_at;
-  }
-  // Breaking ticker
-  if (n.breaking && n.breaking.length) {
-    const items = [...n.breaking, ...n.breaking].map(b => `<span>${b}</span>`).join('');
-    document.getElementById('breaking-wrap').innerHTML = `
-      <div class="breaking-bar">
-        <div class="breaking-label">BREAKING</div>
-        <div class="breaking-ticker">
-          <div class="breaking-track">${items}</div>
-        </div>
-      </div>`;
-  } else {
-    document.getElementById('breaking-wrap').innerHTML = '';
-  }
-  // Summary
-  document.getElementById('news-summary-wrap').innerHTML = `
-    <div class="news-summary">${n.summary || 'No summary available.'}</div>`;
-  // Highlights
-  if (n.highlights && n.highlights.length) {
-    const items = n.highlights.map(h => {
-      const dot = h.sentiment === 'bullish' ? 'up' : h.sentiment === 'bearish' ? 'down' : 'neu';
-      return `<div class="highlight-item">
-        <div class="hi-dot ${dot}"></div>
-        <div>${h.text}</div>
-      </div>`;
-    }).join('');
-    document.getElementById('highlights-wrap').innerHTML = `<div class="highlight-list">${items}</div>`;
-  }
-  // Sources
-  if (n.sources && n.sources.length) {
-    const items = n.sources.map(s => {
-      const sentClass = s.sentiment === 'bullish' ? 'sent-bull' : s.sentiment === 'bearish' ? 'sent-bear' : 'sent-neu';
-      const sentLabel = s.sentiment === 'bullish' ? 'BULL' : s.sentiment === 'bearish' ? 'BEAR' : 'NEU';
-      return `<div class="source-item">
-        <div class="source-left">
-          <div class="source-outlet">${s.outlet || ''}</div>
-          <div class="source-title">${s.title}</div>
-        </div>
-        <span class="source-sentiment ${sentClass}">${sentLabel}</span>
-        <a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ READ</a>
-      </div>`;
-    }).join('');
-    document.getElementById('sources-wrap').innerHTML = `<div class="source-list">${items}</div>`;
-  }
-}
-// ── RENDER AUDIT ─────────────────────────────────────────────────────
-function renderAudit(history) {
-  if (!history || !history.length) return;
-  const entries = [...history].reverse().map(d => {
-    const net = d.net_flow_score;
-    const isPos = net !== null && net >= 0;
-    const sectorCells = (d.sectors || []).map(s =>
-      `<div class="audit-sector-cell">
-        <span class="asc-name">${s.etf}</span>
-        <span class="asc-pct ${col(s.change)}">${fmt(s.change)}</span>
-      </div>`
-    ).join('');
-    const deltaHtml = d.net_flow_delta !== null && d.net_flow_delta !== undefined
-      ? `<span class="${col(d.net_flow_delta)}" style="font-size:9px">${d.net_flow_delta > 0 ? '▲' : '▼'}${Math.abs(d.net_flow_delta).toFixed(2)}%</span>`
-      : '';
-    return `
-      <details class="audit-entry ${isPos ? 'net-pos' : 'net-neg'}">
-        <summary>
-          <span class="a-toggle">▶</span>
-          <span class="a-time">${d.generated_at || '—'}</span>
-          <span class="a-net ${col(net)}">${fmt(net)}</span>
-          ${deltaHtml}
-          <span class="a-spy">SPY ${fmt(d.sp500_change)}</span>
-          <span class="a-bread">${d.sectors_advancing ?? '—'}▲ ${d.sectors_declining ?? '—'}▼</span>
-          <span class="a-regime">${(d.flow_regime || '').replace(/^[⚠⚡]\s?/, '')}</span>
-        </summary>
-        <div class="audit-body">
-          <div class="audit-sectors">${sectorCells}</div>
-          <div class="audit-narrative-text">
-            ${d.narrative || ''} ${d.top_mover ? `<strong style="color:var(--amber)">${d.top_mover}:</strong> ${d.top_mover_reason || ''}` : ''}
-          </div>
-        </div>
-      </details>`;
+
+function buildAuditEntries(snapshots){
+  if(!snapshots||!snapshots.length)return'<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for this date.</div></div>';
+  return[...snapshots].reverse().map(d=>{
+    const net=d.net_flow_score;const isPos=net!==null&&net>=0;
+    const deltaHtml=d.net_flow_delta!=null?`<span class="${col(d.net_flow_delta)}" style="font-size:9px">${d.net_flow_delta>0?'▲':'▼'}${Math.abs(d.net_flow_delta).toFixed(2)}%</span>`:'';
+    const cells=(d.sectors||[]).map(s=>`<div class="audit-sector-cell"><span class="asc-name">${s.etf}</span><span class="asc-pct ${col(s.change)}">${fmt(s.change)}</span></div>`).join('');
+    return`<details class="audit-entry ${isPos?'net-pos':'net-neg'}"><summary><span class="a-toggle">▶</span><span class="a-time">${d.generated_at||'—'}</span><span class="a-net ${col(net)}">${fmt(net)}</span>${deltaHtml}<span class="a-spy">SPY ${fmt(d.sp500_change)}</span><span class="a-bread">${d.sectors_advancing??'—'}▲ ${d.sectors_declining??'—'}▼</span><span class="a-regime">${(d.flow_regime||'').replace(/^[⚠⚡]\s?/,'')}</span></summary><div class="audit-body"><div class="audit-sectors">${cells}</div><div class="audit-narrative-text">${d.narrative||''} ${d.top_mover?`<strong style="color:var(--amber)">${d.top_mover}:</strong> ${d.top_mover_reason||''}`:''}</div></div></details>`;
   }).join('');
-  document.getElementById('audit-entries').innerHTML = entries;
 }
-// ── FETCH & INIT ─────────────────────────────────────────────────────
-async function loadAll() {
-  try {
-    const [flowRes, newsRes, histRes] = await Promise.all([
-      fetch('data/flow.json?t=' + Date.now()),
-      fetch('data/news.json?t=' + Date.now()),
-      fetch('data/history.json?t=' + Date.now()),
-    ]);
-    const [flow, news, history] = await Promise.all([
-      flowRes.json(), newsRes.json(), histRes.json()
-    ]);
-    if (flow && flow.sectors && flow.sectors.length) renderFlow(flow);
-    if (news && news.summary) renderNews(news);
-    if (history && history.length) renderAudit(history);
-  } catch(e) {
-    console.warn('Data load error:', e.message);
-  }
+
+async function loadAuditForDate(dateKey){
+  const el=document.getElementById('audit-entries');
+  el.innerHTML='<div class="state-box" style="padding:16px"><div class="spinner"></div></div>';
+  const target=dateKey==='today'?new Date().toISOString().split('T')[0]:dateKey;
+  try{
+    const res=await fetch(`data/archive/${target}.json?t=${Date.now()}`);
+    if(!res.ok)throw new Error('not found');
+    const data=await res.json();
+    const label=`<div class="audit-day-label">${dateKey==='today'?'TODAY — ':''}${target} · ${data.length} snapshot${data.length!==1?'s':''}</div>`;
+    el.innerHTML=label+buildAuditEntries(data);
+  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for ${target}.</div></div>`;}
 }
-// Update date chip every minute
-function updateDateChip() {
-  const now = new Date();
-  document.getElementById('chip-date').textContent = now.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+
+async function populateDatePicker(indexData){
+  const sel=document.getElementById('date-select');
+  const today=new Date().toISOString().split('T')[0];
+  const past=(indexData||[]).filter(e=>e.date!==today).sort((a,b)=>b.date.localeCompare(a.date));
+  sel.innerHTML='<option value="">— past dates —</option>';
+  past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · net close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
 }
-updateDateChip();
-setInterval(updateDateChip, 60000);
-loadAll();
-// Reload data every 5 minutes without full page refresh
-setInterval(loadAll, 300000);
+
+async function loadAll(){
+  try{
+    const[flowRes,newsRes,indexRes]=await Promise.all([fetch('data/flow.json?t='+Date.now()),fetch('data/news.json?t='+Date.now()),fetch('data/index.json?t='+Date.now())]);
+    const[flow,news,indexData]=await Promise.all([flowRes.json(),newsRes.json(),indexRes.json()]);
+    if(flow&&flow.sectors&&flow.sectors.length)renderFlow(flow);
+    if(news&&news.summary)renderNews(news);
+    if(indexData)populateDatePicker(indexData);
+  }catch(e){console.warn('Load error:',e.message);}
+  loadAuditForDate('today');
+}
+
+function updateDateChip(){document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
+updateDateChip();setInterval(updateDateChip,60000);
+loadAll();setInterval(loadAll,300000);
 </script>
 </body>
 </html>

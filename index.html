@@ -182,7 +182,6 @@
       </div>
       <div class="card" id="flow-summary-card"></div>
     </div>
-
     <div class="news-col">
       <div id="breaking-wrap"></div>
       <div class="card">
@@ -205,7 +204,7 @@
       <div class="audit-title">▸ AUDIT TRAIL</div>
       <div class="date-picker-wrap">
         <span class="date-picker-label">VIEW DATE:</span>
-        <button class="date-btn today active" id="btn-today" onclick="loadAuditForDate('today')">TODAY</button>
+        <button class="date-btn today active" id="btn-today" onclick="switchToToday()">TODAY</button>
         <select id="date-select" onchange="if(this.value){document.getElementById('btn-today').classList.remove('active');loadAuditForDate(this.value);}">
           <option value="">— past dates —</option>
         </select>
@@ -218,13 +217,11 @@
 
   <div class="footer">AI-POWERED &nbsp;·&nbsp; DATA VIA WEB SEARCH &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
 </div>
-
 <script>
 const sign=n=>n>0?'+':'';
 const fmt=n=>(n!==null&&n!==undefined)?sign(n)+Number(n).toFixed(2)+'%':'—';
 const col=n=>(n===null||n===undefined)?'':n>0?'pos':n<0?'neg':'neu';
 const clamp=(v,mn,mx)=>Math.min(Math.max(v,mn),mx);
-
 function regimeColor(r){if(!r)return'var(--muted)';if(r.includes('SELL-OFF')||r.includes('RISK-OFF'))return'var(--red)';if(r.includes('STRONG')||r.includes('RISK-ON'))return'var(--green)';if(r.includes('OUTFLOW'))return'#ff8c00';return'var(--amber)';}
 function moodClass(m){if(!m)return'chip-dim';const l=m.toLowerCase();if(l.includes('risk-on')||l.includes('bullish'))return'chip-green';if(l.includes('risk-off')||l.includes('bearish'))return'chip-red';return'chip-amber';}
 
@@ -239,8 +236,7 @@ function renderFlow(d){
   const barW=net!==null?clamp(Math.abs(net)/(maxAbs*(d.sectors.length||11))*100,0,50):0;
   const barLeft=isPos?'50%':(50-barW)+'%';
   const barBg=isPos?'linear-gradient(90deg,transparent,var(--green))':'linear-gradient(270deg,transparent,var(--red))';
-  const rc=regimeColor(d.flow_regime);
-  document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div><div class="net-score-label">NET FLOW SCORE</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}</div><div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">AVG SECTOR</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">BREADTH</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% ADVANCING</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ OUTFLOW</span><span>INFLOW ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${rc}">${d.flow_regime||'—'}</div></div></div></div>`;
+  document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div><div class="net-score-label">NET FLOW SCORE</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}</div><div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">AVG SECTOR</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">BREADTH</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% ADVANCING</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ OUTFLOW</span><span>INFLOW ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
   if(d.sectors&&d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
   document.getElementById('narrative-wrap').innerHTML=`<div class="narrative-body"><div class="narrative-text">${d.narrative||'No narrative available.'}</div>${d.top_mover?`<div class="narrative-mover"><strong>${d.top_mover}:</strong> ${d.top_mover_reason||''}</div>`:''}</div>`;
   const adv=(d.sectors||[]).filter(s=>(s.change??0)>0);const dec=(d.sectors||[]).filter(s=>(s.change??0)<0);
@@ -267,17 +263,21 @@ function buildAuditEntries(snapshots){
   }).join('');
 }
 
-async function loadAuditForDate(dateKey){
+async function loadAuditForDate(dateStr){
   const el=document.getElementById('audit-entries');
   el.innerHTML='<div class="state-box" style="padding:16px"><div class="spinner"></div></div>';
-  const target=dateKey==='today'?new Date().toISOString().split('T')[0]:dateKey;
   try{
-    const res=await fetch(`data/archive/${target}.json?t=${Date.now()}`);
+    const res=await fetch(`data/archive/${dateStr}.json?t=${Date.now()}`);
     if(!res.ok)throw new Error('not found');
     const data=await res.json();
-    const label=`<div class="audit-day-label">${dateKey==='today'?'TODAY — ':''}${target} · ${data.length} snapshot${data.length!==1?'s':''}</div>`;
-    el.innerHTML=label+buildAuditEntries(data);
-  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for ${target}.</div></div>`;}
+    el.innerHTML=`<div class="audit-day-label">${dateStr} · ${data.length} snapshot${data.length!==1?'s':''}</div>`+buildAuditEntries(data);
+  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No snapshots for ${dateStr}.</div></div>`;}
+}
+
+function switchToToday(){
+  document.getElementById('btn-today').classList.add('active');
+  document.getElementById('date-select').value='';
+  loadAuditForDate(new Date().toISOString().split('T')[0]);
 }
 
 async function populateDatePicker(indexData){
@@ -285,7 +285,7 @@ async function populateDatePicker(indexData){
   const today=new Date().toISOString().split('T')[0];
   const past=(indexData||[]).filter(e=>e.date!==today).sort((a,b)=>b.date.localeCompare(a.date));
   sel.innerHTML='<option value="">— past dates —</option>';
-  past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · net close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
+  past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
 }
 
 async function loadAll(){
@@ -296,12 +296,13 @@ async function loadAll(){
     if(news&&news.summary)renderNews(news);
     if(indexData)populateDatePicker(indexData);
   }catch(e){console.warn('Load error:',e.message);}
-  loadAuditForDate('today');
+  loadAuditForDate(new Date().toISOString().split('T')[0]);
 }
 
-function updateDateChip(){document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
-updateDateChip();setInterval(updateDateChip,60000);
-loadAll();setInterval(loadAll,300000);
+document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+setInterval(()=>{document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});},60000);
+loadAll();
+setInterval(loadAll,300000);
 </script>
 </body>
 </html>

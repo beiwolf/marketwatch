@@ -5,11 +5,24 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-04 19:17 ET
+- Last updated: 2026-03-04 (session 2)
+- Latest commit: `d110814` — docs: add MEMORY_BANK
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-04 — `d110814`
+**Message:** `docs: add MEMORY_BANK with running repo change history`
+
+**Files changed:**
+- `MEMORY_BANK.md` (created)
+
+**What changed:**
+- Created this file to track why each commit was made.
+- Serves as canonical persistent memory across Claude Code sessions.
+
+---
 
 ### 2026-03-04 — `2a089b4`
 **Message:** `ux: clickable highlights linked to source URLs`
@@ -97,8 +110,23 @@ Canonical running memory of repository changes and why they were made.
 ### 2026-03-04 — `b0f54a6`
 **Message:** `v6: Robinhood-inspired UI redesign`
 
-**What changed (high-level):**
-- Dashboard visual redesign and layout improvements.
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Replaced `Share Tech Mono` + `Rajdhani` fonts with `Inter` (body) + `JetBrains Mono` (numbers/tickers).
+- Removed all terminal effects: scanline overlay (`body::before/::after`), CSS grid pattern.
+- Introduced CSS variables: `--r` (12px card radius), `--r-sm` (8px), `--r-pill` (100px).
+- All cards now use `border-radius: var(--r)` with softer borders.
+- Topbar chips and date buttons are pill-shaped (`border-radius: var(--r-pill)`).
+- Net Flow Score panel redesigned as Robinhood-style hero: 68px bold mono score spans full width; `net-stats` stacks below as flex column (instead of side-by-side grid).
+- Sector rows: ETF code rendered as inset pill badge (`bg3` + `border2`); percentage at 14px bold mono.
+- Narrative mover styled as inset block (`bg3` + border + padding) instead of plain text line.
+- Sentiment badges and source Read links are pill-shaped.
+- Audit entries have `--r-sm` rounded corners.
+- All label sizes bumped from 9px → 11px.
+- Sparkline hex colors updated from `#00f082`/`#ff2d4a` to `#00d68f`/`#ff4757` to match new palette.
+- New color palette: green `#00d68f`, red `#ff4757`, blue `#60a5fa`, amber `#f59e0b`.
 
 ---
 

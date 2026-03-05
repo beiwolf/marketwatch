@@ -1,15 +1,58 @@
 {
   "date": "2026-03-05",
-  "last_updated": "12:56 AM ET",
-  "update_count": 1,
+  "last_updated": "1:58 AM ET",
+  "update_count": 2,
   "breaking": [
+    {
+      "text": "Dow futures slip ~270 points overnight as post-rally momentum fades ahead of jobless claims data",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "text": "Broadcom surges 5% after hours on record $19.3B Q1 revenue, projects $100B AI chip revenue by 2027",
+      "added_at": "1:58 AM ET"
+    },
     {
       "text": "Treasury Sec. Bessent confirms 15% global tariff takes effect this week, replacing prior 10% rate under Section 122",
       "added_at": "12:56 AM ET"
     }
   ],
-  "summary": "U.S. stocks rallied on Wednesday as easing oil prices and strong economic data offset Middle East war concerns \u2014 the S&P 500 gained 0.78% to 6,869.50, the Dow added 238 points (+0.49%), and the Nasdaq surged 1.29%. Tech and semiconductors led the advance with Micron and AMD each jumping over 5%, while crypto stocks exploded higher (Coinbase +14.6%, MicroStrategy +10.4%) after President Trump signaled support for digital asset legislation and Bitcoin broke above $73,000. After the close, Broadcom delivered a blowout Q1 with $19.3B revenue (+29% YoY) and AI revenue soaring 106% to $8.4B, guiding next quarter to $22B vs $20.6B consensus \u2014 shares rose 5% after hours. Treasury Secretary Bessent confirmed that 15% global tariffs will be imposed this week under Section 122, though he predicted rates would return to pre-Supreme Court levels within five months.",
+  "summary": "Wall Street rallied Wednesday as easing oil prices and solid economic data offset Middle East tensions, with the S&P 500 gaining 0.78% to 6,869.50, the Nasdaq surging 1.29%, and the Dow adding 238 points. Crypto-linked stocks exploded higher \u2014 Coinbase jumped 14% and MicroStrategy rose 10% \u2014 after President Trump signaled support for the stablecoin Clarity Act and Bitcoin reclaimed $73,000. After the close, Broadcom delivered a blockbuster Q1 earnings beat with record $19.3 billion revenue and guided Q2 to $22 billion, while CEO Hock Tan projected AI chip revenue exceeding $100 billion in 2027. Thursday brings key labor data including initial jobless claims, revised Q4 productivity, and Challenger layoff figures ahead of Friday's pivotal nonfarm payrolls report.",
   "highlights": [
+    {
+      "text": "Thursday's economic calendar heavy with labor data: Challenger job cuts, initial jobless claims, revised Q4 productivity and unit labor costs \u2014 all ahead of Friday's nonfarm payrolls",
+      "sentiment": "neutral",
+      "source_url": "https://x.com/marketsday/status/2027606182056366498",
+      "source_outlet": "Markets Today",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "text": "Cracker Barrel pops 9% after-hours on surprise Q2 earnings beat: EPS of $0.25 vs consensus loss of -$0.20, revenue $874.8M tops estimates",
+      "sentiment": "bullish",
+      "source_url": "https://www.benzinga.com/insights/earnings/26/03/51028588/earnings-scheduled-for-march-4-2026",
+      "source_outlet": "Benzinga",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "text": "Moderna rallies nearly 11% after agreeing to pay up to $2.25 billion to settle Covid vaccine patent dispute with Biopharma Corp and Genevant Sciences",
+      "sentiment": "neutral",
+      "source_url": "https://www.cnbc.com/2026/03/03/stock-market-today-live-updates.html",
+      "source_outlet": "CNBC",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "text": "Coinbase surges 14% and MicroStrategy jumps 10% as Bitcoin reclaims $73,000 on Trump administration support for stablecoin Clarity Act legislation",
+      "sentiment": "bullish",
+      "source_url": "https://finance.yahoo.com/news/stock-market-today-march-4-224903316.html",
+      "source_outlet": "Yahoo Finance",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "text": "Broadcom posts record Q1 revenue of $19.3B (+29% YoY), AI revenue soars 106% to $8.4B; CEO projects $100B+ AI chip revenue in 2027 with OpenAI as new sixth customer",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "1:58 AM ET"
+    },
     {
       "text": "Key economic data due March 5: Initial Jobless Claims (8:30 AM), Q4 revised Unit Labor Costs & Nonfarm Productivity, and Challenger Job Cuts report",
       "sentiment": "neutral",
@@ -74,6 +117,41 @@
       "url": "https://www.capitalbrief.com/briefing/bessent-says-15-global-tariffs-to-be-imposed-this-week-us-to-support-gulf-oil-trade-a4f594e0-82a5-45a1-b02f-16990d7e641a/",
       "sentiment": "bearish",
       "added_at": "12:56 AM ET"
+    },
+    {
+      "outlet": "24/7 Wall St.",
+      "title": "Live Earnings Analysis: Broadcom (AVGO) Wows Wall Street With $100 Billion AI Forecast",
+      "url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
+      "sentiment": "bullish",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "outlet": "Yahoo Finance",
+      "title": "Stock Market Today, March 4: Coinbase Surges After Trump Signals Support for Digital Asset Market Bill",
+      "url": "https://finance.yahoo.com/news/stock-market-today-march-4-224903316.html",
+      "sentiment": "bullish",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Broadcom posts earnings beat, reports record revenue of $19.31 billion",
+      "url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
+      "sentiment": "bullish",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "outlet": "Benzinga",
+      "title": "Earnings Scheduled For March 4, 2026 \u2014 After-Hours Results Roundup",
+      "url": "https://www.benzinga.com/insights/earnings/26/03/51028588/earnings-scheduled-for-march-4-2026",
+      "sentiment": "neutral",
+      "added_at": "1:58 AM ET"
+    },
+    {
+      "outlet": "Stock Market Watch",
+      "title": "Tech Rebound and Easing Oil Prices Lift Wall Street; Focus Shifts to Late-Day Earnings",
+      "url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "sentiment": "bullish",
+      "added_at": "1:58 AM ET"
     }
   ]
 }

@@ -1,8 +1,16 @@
 {
   "date": "2026-03-05",
-  "last_updated": "1:58 AM ET",
-  "update_count": 2,
+  "last_updated": "3:11 AM ET",
+  "update_count": 3,
   "breaking": [
+    {
+      "text": "CrowdStrike slips ~4% after hours despite Q4 earnings beat as guidance disappoints some investors",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "Broadcom surges ~5% after hours on record Q1 revenue of $19.3B, AI revenue up 106% YoY to $8.4B with $100B AI chip forecast",
+      "added_at": "3:11 AM ET"
+    },
     {
       "text": "Dow futures slip ~270 points overnight as post-rally momentum fades ahead of jobless claims data",
       "added_at": "1:58 AM ET"
@@ -16,8 +24,50 @@
       "added_at": "12:56 AM ET"
     }
   ],
-  "summary": "Wall Street rallied Wednesday as easing oil prices and solid economic data offset Middle East tensions, with the S&P 500 gaining 0.78% to 6,869.50, the Nasdaq surging 1.29%, and the Dow adding 238 points. Crypto-linked stocks exploded higher \u2014 Coinbase jumped 14% and MicroStrategy rose 10% \u2014 after President Trump signaled support for the stablecoin Clarity Act and Bitcoin reclaimed $73,000. After the close, Broadcom delivered a blockbuster Q1 earnings beat with record $19.3 billion revenue and guided Q2 to $22 billion, while CEO Hock Tan projected AI chip revenue exceeding $100 billion in 2027. Thursday brings key labor data including initial jobless claims, revised Q4 productivity, and Challenger layoff figures ahead of Friday's pivotal nonfarm payrolls report.",
+  "summary": "Wall Street rallied on Wednesday March 4 with the S&P 500 gaining 0.78% to 6,869.50 and the Nasdaq jumping 1.29%, driven by a tech rebound as oil prices pulled back from Iran conflict highs and fears of an economic growth scare faded. Coinbase surged 15% after President Trump signaled support for the digital asset market structure bill and sided with crypto firms over banks on stablecoin yield, while Moderna rose 12% on a $2.25B Covid vaccine patent settlement. After the bell, Broadcom delivered a blockbuster Q1 report with record $19.3B revenue and AI revenue of $8.4B growing 106% YoY, guiding Q2 AI revenue to $10.7B and announcing a $10B buyback \u2014 while CrowdStrike beat on revenue but slipped 4% after hours on cautious guidance. Markets now eye Treasury Secretary Bessent's confirmation that 15% global tariffs will take effect this week and Friday's February nonfarm payrolls report.",
   "highlights": [
+    {
+      "text": "February nonfarm payrolls report due Friday March 6 \u2014 after January showed only 130K jobs added and unemployment at 4.3%",
+      "sentiment": "neutral",
+      "source_url": "https://www.bls.gov/schedule/",
+      "source_outlet": "Bureau of Labor Statistics",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "Ross Stores pops 7% on Q4 earnings beat \u2014 $2.00 EPS vs $1.90 estimate, $6.64B revenue vs $6.42B expected",
+      "sentiment": "bullish",
+      "source_url": "https://finance.yahoo.com/news/live/earnings-live-ross-stores-stock-jumps-on-upbeat-results-crowdstrike-posts-slight-top--and-bottom-line-beats-220558338.html",
+      "source_outlet": "Yahoo Finance",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "Moderna jumps 12% after agreeing to pay up to $2.25B ($950M upfront + $1.3B contingent) to settle Arbutus/Genevant Covid vaccine patent lawsuit",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/04/moderna-and-ross-stores-lead-stock-gainers-on-wednesday/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "Coinbase surges 15% as Trump urges passage of CLARITY Act and sides with crypto firms against banks on stablecoin yield \u2014 CEO Armstrong met with Trump at White House",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
+      "source_outlet": "CNBC",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "CrowdStrike posts Q4 revenue of $1.31B (+23%) and record $331M net new ARR (+47% YoY), but stock drops ~4% after hours on growth deceleration concerns",
+      "sentiment": "bearish",
+      "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-crowdstrike-holdings-surpasses-q4-2026-expectations-93CH-4539505",
+      "source_outlet": "Investing.com",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "text": "Broadcom reports record Q1 revenue of $19.3B (+29% YoY), AI revenue of $8.4B (+106%), and guides Q2 AI revenue to $10.7B (+140% YoY) \u2014 announces $10B share buyback",
+      "sentiment": "bullish",
+      "source_url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
+      "source_outlet": "Sherwood News",
+      "added_at": "3:11 AM ET"
+    },
     {
       "text": "Thursday's economic calendar heavy with labor data: Challenger job cuts, initial jobless claims, revised Q4 productivity and unit labor costs \u2014 all ahead of Friday's nonfarm payrolls",
       "sentiment": "neutral",
@@ -152,6 +202,41 @@
       "url": "https://stockmarketwatch.com/live/stock-market-today/",
       "sentiment": "bullish",
       "added_at": "1:58 AM ET"
+    },
+    {
+      "outlet": "Sherwood News",
+      "title": "Broadcom posts modest Q1 sales and earnings beats",
+      "url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
+      "sentiment": "bullish",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Coinbase leads crypto stocks higher after Trump signals support for digital asset market structure bill",
+      "url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
+      "sentiment": "bullish",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Trump sides with crypto firms in trillion-dollar battle with banks over stablecoin yield",
+      "url": "https://www.cnbc.com/2026/03/04/trump-crypto-banks-stablecoin-yield.html",
+      "sentiment": "bullish",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "outlet": "Investing.com",
+      "title": "CrowdStrike Holdings surpasses Q4 2026 expectations \u2014 stock slips after hours",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-crowdstrike-holdings-surpasses-q4-2026-expectations-93CH-4539505",
+      "sentiment": "neutral",
+      "added_at": "3:11 AM ET"
+    },
+    {
+      "outlet": "24/7 Wall St.",
+      "title": "Moderna and Ross Stores lead stock gainers on Wednesday",
+      "url": "https://247wallst.com/investing/2026/03/04/moderna-and-ross-stores-lead-stock-gainers-on-wednesday/",
+      "sentiment": "bullish",
+      "added_at": "3:11 AM ET"
     }
   ]
 }

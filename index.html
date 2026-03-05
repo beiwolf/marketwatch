@@ -32,7 +32,7 @@
     .site-title{font-size:18px;font-weight:700;color:var(--bright);letter-spacing:-0.3px;}
     .topbar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 
-    /* Chips — pill shaped */
+    /* Chips */
     .chip{font-size:12px;font-weight:500;padding:5px 12px;border-radius:var(--r-pill);font-family:var(--sans);}
     .chip-dim{background:var(--bg3);color:var(--muted);border:1px solid var(--border2);}
     .chip-green{background:var(--gdim);color:var(--green);border:1px solid rgba(0,214,143,0.25);}
@@ -59,7 +59,7 @@
     .spinner{width:24px;height:24px;border-radius:50%;border:2px solid var(--border2);border-top-color:var(--green);animation:spin 0.8s linear infinite;margin:0 auto 16px;}
     @keyframes spin{to{transform:rotate(360deg);}}
 
-    /* Net panel — Robinhood hero layout */
+    /* Net panel */
     .net-panel{padding:28px 24px 24px;}
     .net-score-label{font-size:11px;color:var(--muted);letter-spacing:0.7px;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
     .net-score-value{font-size:68px;font-weight:800;line-height:1;letter-spacing:-3px;font-family:var(--mono);}
@@ -94,11 +94,27 @@
     .s-delta{width:60px;flex-shrink:0;font-size:11px;text-align:right;font-family:var(--mono);color:var(--mid);}
     .s-flag{width:18px;flex-shrink:0;font-size:12px;text-align:center;}
 
+    /* ── SECTOR HEATMAP ── */
+    .hm-wrap{padding:16px 20px;}
+    .hm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+    @media(max-width:600px){.hm-grid{grid-template-columns:repeat(3,1fr);}}
+    .hm-cell{border:1px solid transparent;border-radius:var(--r-sm);padding:9px 10px;display:flex;flex-direction:column;gap:2px;cursor:default;transition:filter 0.12s;}
+    .hm-cell:hover{filter:brightness(1.2);}
+    .hm-etf{font-size:11px;font-weight:700;font-family:var(--mono);color:rgba(255,255,255,0.5);}
+    .hm-name{font-size:9px;color:rgba(255,255,255,0.38);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .hm-pct{font-size:14px;font-weight:800;font-family:var(--mono);margin-top:4px;}
+
     /* Narrative */
     .narrative-body{padding:20px 24px;}
     .narrative-text{font-size:14px;line-height:1.75;color:var(--text);}
     .narrative-mover{margin-top:16px;padding:12px 16px;background:var(--bg3);border-radius:var(--r-sm);border:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.6;}
     .narrative-mover strong{color:var(--amber);font-weight:600;}
+
+    /* ── TOP MOVER SPOTLIGHT ── */
+    .spotlight-wrap{padding:20px 24px;}
+    .spotlight-ticker{font-size:26px;font-weight:800;font-family:var(--mono);letter-spacing:-0.5px;}
+    .spotlight-pct{font-size:18px;font-weight:700;font-family:var(--mono);margin-left:10px;}
+    .spotlight-reason{font-size:13px;color:var(--muted);line-height:1.65;margin-top:10px;}
 
     /* Flow summary */
     .flow-summary-grid{display:grid;grid-template-columns:1fr 1fr;}
@@ -109,10 +125,23 @@
     .flow-item span:first-child{color:var(--muted);}
     .flow-item span:last-child{font-weight:600;font-family:var(--mono);}
 
+    /* ── TREND CHART ── */
+    .trend-chart-wrap{padding:16px 20px 12px;border-bottom:1px solid var(--border);}
+    .tc-svg{width:100%;display:block;overflow:visible;}
+
     /* Sparkline */
     .sparkline-wrap{padding:16px 20px;border-top:1px solid var(--border);}
     .spark-label{font-size:11px;color:var(--muted);letter-spacing:0.7px;text-transform:uppercase;font-weight:600;margin-bottom:10px;}
     .spark-svg{width:100%;height:40px;display:block;}
+
+    /* ── REGIME FLIP BANNER ── */
+    .regime-flip-banner{display:flex;align-items:center;gap:12px;padding:10px 20px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:var(--r);margin-top:14px;font-size:13px;animation:slidein 0.25s ease;}
+    @keyframes slidein{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+    .rfb-icon{font-size:16px;flex-shrink:0;}
+    .rfb-text{flex:1;color:var(--text);}
+    .rfb-text strong{color:var(--amber);}
+    .rfb-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:2px 6px;border-radius:4px;line-height:1;}
+    .rfb-close:hover{color:var(--bright);}
 
     /* Breaking ticker */
     .breaking-bar{background:rgba(255,71,87,0.07);border:1px solid rgba(255,71,87,0.2);border-radius:var(--r);overflow:hidden;height:40px;display:flex;align-items:center;margin-bottom:16px;}
@@ -151,17 +180,25 @@
     .sent-bear{background:var(--rdim);color:var(--red);}
     .sent-neu{background:var(--adim);color:var(--amber);}
 
+    /* ── SENTIMENT RATIO ── */
+    .sent-ratio{display:flex;gap:4px;align-items:center;}
+    .sr-bull{font-size:11px;font-weight:700;color:var(--green);background:var(--gdim);border:1px solid rgba(0,214,143,0.2);padding:2px 7px;border-radius:var(--r-pill);}
+    .sr-bear{font-size:11px;font-weight:700;color:var(--red);background:var(--rdim);border:1px solid rgba(255,71,87,0.2);padding:2px 7px;border-radius:var(--r-pill);}
+    .sr-neu{font-size:11px;font-weight:700;color:var(--amber);background:var(--adim);border:1px solid rgba(245,158,11,0.2);padding:2px 7px;border-radius:var(--r-pill);}
+
     /* Audit — timeline layout */
     #audit-section{margin-top:40px;}
-    .audit-section-header{display:flex;align-items:center;margin-bottom:24px;}
+    .audit-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
     .audit-title{font-size:11px;color:var(--muted);letter-spacing:0.7px;text-transform:uppercase;font-weight:600;}
+    .audit-kb-hint{font-size:10px;color:var(--dim);letter-spacing:0.3px;}
 
     /* Inter-day block */
     .audit-day-block{margin-bottom:32px;}
     .audit-day-block:last-child{margin-bottom:0;}
 
-    /* Inter-day header — the prominent day separator */
-    .audit-day-header{display:flex;align-items:center;gap:20px;padding:16px 20px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);margin-bottom:10px;border-left:4px solid var(--border3);}
+    /* Inter-day header */
+    .audit-day-header{display:flex;align-items:center;gap:20px;padding:16px 20px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);margin-bottom:10px;border-left:4px solid var(--border3);cursor:pointer;transition:background 0.12s;}
+    .audit-day-header:hover{background:var(--bg4);}
     .audit-day-block.day-pos .audit-day-header{border-left-color:var(--green2);}
     .audit-day-block.day-neg .audit-day-header{border-left-color:var(--red2);}
     .audit-day-datecol{flex:1;min-width:0;}
@@ -175,7 +212,24 @@
     .audit-day-status.final{background:var(--bg4);color:var(--mid);border:1px solid var(--border2);}
     .audit-day-status.partial{background:var(--adim);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
 
-    /* Intra-day entries — timeline rail shows they belong to the day above */
+    /* ── MOOD ARC ── */
+    .mood-arc{display:flex;align-items:center;gap:8px;padding:6px 18px 2px;margin-left:18px;}
+    .mood-arc-label{font-size:9px;color:var(--dim);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;flex-shrink:0;}
+    .mood-arc-dots{display:flex;gap:3px;align-items:center;}
+    .ma-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;cursor:default;}
+
+    /* ── REGIME TIMELINE ── */
+    .regime-timeline{display:flex;align-items:center;gap:6px;padding:4px 18px 10px;margin-left:18px;overflow-x:auto;scrollbar-width:none;}
+    .regime-timeline::-webkit-scrollbar{display:none;}
+    .rt-label{font-size:9px;color:var(--dim);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;flex-shrink:0;}
+    .rt-pills{display:flex;align-items:center;gap:4px;flex-wrap:nowrap;}
+    .rt-pill{font-size:9px;font-weight:600;padding:2px 8px;border-radius:var(--r-pill);white-space:nowrap;font-family:var(--mono);}
+    .rt-on{background:var(--gdim);color:var(--green);border:1px solid rgba(0,214,143,0.2);}
+    .rt-off{background:var(--rdim);color:var(--red);border:1px solid rgba(255,71,87,0.2);}
+    .rt-neu{background:var(--adim);color:var(--amber);border:1px solid rgba(245,158,11,0.2);}
+    .rt-arrow{color:var(--dim);font-size:10px;flex-shrink:0;}
+
+    /* Intra-day entries */
     .audit-day-entries{border-left:2px solid var(--border2);margin-left:18px;padding-left:14px;}
     .audit-day-block.day-pos .audit-day-entries{border-left-color:rgba(0,214,143,0.2);}
     .audit-day-block.day-neg .audit-day-entries{border-left-color:rgba(255,71,87,0.2);}
@@ -183,6 +237,7 @@
     .audit-entry{border:1px solid var(--border2);border-radius:var(--r-sm);margin-bottom:6px;overflow:hidden;}
     .audit-entry.net-pos{border-color:rgba(0,214,143,0.2);}
     .audit-entry.net-neg{border-color:rgba(255,71,87,0.2);}
+    .audit-entry.kb-active{outline:2px solid var(--blue);outline-offset:1px;}
     .audit-entry summary{padding:12px 16px;cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;font-size:13px;user-select:none;transition:background 0.12s;}
     .audit-entry summary:hover{background:rgba(255,255,255,0.03);}
     .audit-entry summary::-webkit-details-marker{display:none;}
@@ -204,6 +259,21 @@
     .asc-etf{font-size:10px;color:var(--muted);font-family:var(--mono);}
     .asc-pct{font-size:13px;font-weight:700;font-family:var(--mono);flex-shrink:0;}
     .audit-narrative-text{font-size:13px;color:var(--muted);line-height:1.65;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);}
+
+    /* ── JUMP TO TODAY BUTTON ── */
+    .jump-today-btn{position:fixed;bottom:28px;right:28px;z-index:200;background:var(--bg3);color:var(--text);border:1px solid var(--border3);border-radius:var(--r-pill);padding:10px 20px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:all 0.15s;box-shadow:0 4px 24px rgba(0,0,0,0.5);}
+    .jump-today-btn:hover{background:var(--green);color:#000;border-color:var(--green);transform:translateY(-2px);}
+
+    /* ── MINIMAP ── */
+    .minimap{position:fixed;top:50%;right:10px;transform:translateY(-50%);z-index:150;display:flex;flex-direction:column;gap:4px;align-items:flex-end;padding:8px 0;}
+    @media(max-width:1460px){.minimap{display:none;}}
+    .mm-entry{display:flex;align-items:center;gap:5px;text-decoration:none;padding:1px 0;opacity:0.4;transition:opacity 0.15s;}
+    .mm-entry:hover,.mm-entry.mm-active{opacity:1;}
+    .mm-label{font-size:8px;color:var(--mid);font-family:var(--mono);}
+    .mm-bar{width:16px;height:3px;border-radius:2px;flex-shrink:0;transition:width 0.2s,background 0.2s;}
+    .mm-entry:hover .mm-bar,.mm-entry.mm-active .mm-bar{width:26px;}
+
+    /* Misc */
     .footer{text-align:center;margin-top:56px;padding:20px 0;font-size:11px;color:var(--dim);letter-spacing:0.3px;border-top:1px solid var(--border);}
     .pos{color:var(--green);}.neg{color:var(--red);}.neu{color:var(--amber);}
     .news-col{display:flex;flex-direction:column;}
@@ -215,6 +285,13 @@
   </style>
 </head>
 <body>
+
+<!-- ── MINIMAP (feature #13) ── -->
+<div id="minimap" class="minimap" aria-hidden="true"></div>
+
+<!-- ── JUMP TO TODAY (feature #10) ── -->
+<button id="jump-today-btn" class="jump-today-btn" style="display:none" onclick="jumpToToday()">↑ Today</button>
+
 <div class="page">
   <div class="topbar">
     <div class="topbar-left">
@@ -223,12 +300,16 @@
     </div>
     <div class="topbar-right">
       <span class="chip chip-dim" id="chip-date">—</span>
-      <span class="chip chip-dim" id="chip-updated">No data</span>
+      <span class="chip chip-dim" id="chip-updated" title="">No data</span>
       <span class="chip chip-dim" id="chip-spy">SPY —</span>
       <span class="chip chip-dim" id="chip-mood">—</span>
       <span class="chip chip-blue" id="chip-news-updated" style="display:none">NEWS —</span>
     </div>
   </div>
+
+  <!-- ── REGIME FLIP BANNER (feature #7) ── -->
+  <div id="regime-flip-banner" class="regime-flip-banner" style="display:none"></div>
+
   <div class="main-grid">
     <div id="flow-col">
       <div class="card">
@@ -239,17 +320,29 @@
         <div class="card-header"><span class="card-title">Sector Rotation</span><span class="card-meta">⚡ High vol &nbsp;·&nbsp; ~ Est &nbsp;·&nbsp; ▲▼ Delta</span></div>
         <div id="sector-list-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
+      <!-- ── SECTOR HEATMAP (feature #2) ── -->
+      <div class="card">
+        <div class="card-header"><span class="card-title">Sector Heatmap</span><span class="card-meta" id="hm-meta">Live · Color = intensity</span></div>
+        <div id="sector-heatmap-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
+      </div>
       <div class="card">
         <div class="card-header"><span class="card-title">Market Narrative</span></div>
         <div id="narrative-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <div class="card" id="flow-summary-card"></div>
+      <!-- Flow Pattern + Trend Chart (#1) -->
       <div class="card">
-        <div class="card-header"><span class="card-title">Flow Pattern & History (Recent Days)</span><span class="card-meta">Second-tier trend view</span></div>
+        <div class="card-header"><span class="card-title">Net Flow Trend</span><span class="card-meta">Last 10 days · Close values</span></div>
         <div id="flow-pattern-wrap"><div class="state-box" style="padding:20px"><div class="state-sub">Loading...</div></div></div>
       </div>
     </div>
+
     <div class="news-col">
+      <!-- ── TOP MOVER SPOTLIGHT (feature #6) ── -->
+      <div class="card" id="top-mover-card" style="display:none">
+        <div class="card-header"><span class="card-title">Top Mover</span><span class="card-meta" id="top-mover-time">—</span></div>
+        <div id="top-mover-wrap"></div>
+      </div>
       <div id="breaking-wrap"></div>
       <div class="card">
         <div class="card-header">
@@ -259,15 +352,23 @@
         <div id="news-summary-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="card-title">Key Highlights</span><span class="card-badge" id="news-count-badge" style="display:none">0 updates</span></div>
+        <div class="card-header">
+          <span class="card-title">Key Highlights</span>
+          <div style="display:flex;align-items:center;gap:8px">
+            <!-- ── SENTIMENT RATIO (feature #5) ── -->
+            <div id="sent-ratio-wrap"></div>
+            <span class="card-badge" id="news-count-badge" style="display:none">0 updates</span>
+          </div>
+        </div>
         <div id="highlights-wrap"><div class="state-box" style="padding:16px"><div class="state-sub">Loading...</div></div></div>
       </div>
-
     </div>
   </div>
+
   <div id="audit-section">
     <div class="audit-section-header">
       <div class="audit-title">Flow Audit — All Days</div>
+      <div class="audit-kb-hint" title="Keyboard shortcuts: j/k to navigate snapshots, Enter to expand">⌨ j/k · Enter</div>
     </div>
     <div id="audit-entries">
       <div class="state-box" style="padding:24px"><div class="spinner"></div><div class="state-sub" style="margin-top:8px">Loading audit history…</div></div>
@@ -275,17 +376,84 @@
   </div>
   <div class="footer">AI-powered &nbsp;·&nbsp; Flow: 10 min &nbsp;·&nbsp; News: 60 min &nbsp;·&nbsp; Not financial advice &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
 </div>
+
 <script>
+// ── Utilities ──
 const sign=n=>n>0?'+':'';
 const fmt=n=>(n!==null&&n!==undefined)?sign(n)+Number(n).toFixed(2)+'%':'—';
 const col=n=>(n===null||n===undefined)?'':n>0?'pos':n<0?'neg':'neu';
 const clamp=(v,mn,mx)=>Math.min(Math.max(v,mn),mx);
 function regimeColor(r){if(!r)return'var(--muted)';if(r.includes('SELL-OFF')||r.includes('RISK-OFF'))return'var(--red)';if(r.includes('STRONG')||r.includes('RISK-ON'))return'var(--green)';if(r.includes('OUTFLOW'))return'#f59e0b';return'var(--amber)';}
 function moodClass(m){if(!m)return'chip-dim';const l=m.toLowerCase();if(l.includes('risk-on')||l.includes('bullish'))return'chip-green';if(l.includes('risk-off')||l.includes('bearish'))return'chip-red';return'chip-amber';}
+
+// ── Feature #7: Regime Flip Alert ──
+let lastKnownRegime=null;
+function checkRegimeFlip(r){
+  const banner=document.getElementById('regime-flip-banner');
+  if(!banner)return;
+  if(lastKnownRegime&&r&&lastKnownRegime!==r){
+    banner.innerHTML=`<span class="rfb-icon">⚡</span><span class="rfb-text">Regime changed: <strong>${lastKnownRegime}</strong> → <strong>${r}</strong></span><button class="rfb-close" onclick="this.parentElement.style.display='none'">✕</button>`;
+    banner.style.display='flex';
+  }
+  if(r)lastKnownRegime=r;
+}
+
+// ── Feature #8: Stale Data Warning ──
+function checkStaleData(generatedAt){
+  if(!generatedAt)return;
+  const m=generatedAt.match(/(\d{1,2}):(\d{2})/);
+  if(!m)return;
+  const now=new Date();
+  const genMins=parseInt(m[1])*60+parseInt(m[2]);
+  const nowMins=now.getHours()*60+now.getMinutes();
+  const diff=nowMins-genMins;
+  const mktHours=nowMins>=(9*60+30)&&nowMins<=(16*60+30);
+  const chip=document.getElementById('chip-updated');
+  if(!chip)return;
+  if(diff>20&&diff<480&&mktHours){
+    chip.className='chip chip-amber';
+    chip.title=`⚠ Data is ${diff} min old during market hours`;
+  } else {
+    chip.className='chip chip-dim';
+    chip.title='';
+  }
+}
+
+// ── Feature #2: Sector Heatmap ──
+function renderSectorHeatmap(sectors){
+  const wrap=document.getElementById('sector-heatmap-wrap');
+  if(!wrap||!sectors||!sectors.length)return;
+  const maxAbs=Math.max(...sectors.map(s=>Math.abs(s.change||0)),0.5);
+  const cells=sectors.map(s=>{
+    const pct=s.change??0;
+    const intensity=Math.min(Math.abs(pct)/maxAbs,1);
+    const bg=pct>=0?`rgba(0,214,143,${(intensity*0.35+0.04).toFixed(2)})`:`rgba(255,71,87,${(intensity*0.35+0.04).toFixed(2)})`;
+    const bc=pct>=0?`rgba(0,214,143,${(intensity*0.4+0.08).toFixed(2)})`:`rgba(255,71,87,${(intensity*0.4+0.08).toFixed(2)})`;
+    return`<div class="hm-cell" style="background:${bg};border-color:${bc}" title="${s.name}: ${fmt(pct)}"><div class="hm-etf">${s.etf}</div><div class="hm-name">${s.name}</div><div class="hm-pct ${col(pct)}">${fmt(pct)}</div></div>`;
+  }).join('');
+  wrap.innerHTML=`<div class="hm-wrap"><div class="hm-grid">${cells}</div></div>`;
+}
+
+// ── Feature #5: Sentiment Ratio ──
+function renderSentimentRatio(highlights){
+  const wrap=document.getElementById('sent-ratio-wrap');
+  if(!wrap||!highlights||!highlights.length)return;
+  const bull=highlights.filter(h=>h.sentiment==='bullish').length;
+  const bear=highlights.filter(h=>h.sentiment==='bearish').length;
+  const neu=highlights.filter(h=>h.sentiment==='neutral').length;
+  wrap.innerHTML=`<div class="sent-ratio"><span class="sr-bull">${bull}↑</span><span class="sr-bear">${bear}↓</span><span class="sr-neu">${neu}→</span></div>`;
+}
+
+// ── Main: renderFlow ──
 function renderFlow(d){
   if(!d||!d.sectors)return;
   if(d.date)document.getElementById('chip-date').textContent=d.date;
-  if(d.generated_at){document.getElementById('chip-updated').textContent='↻ '+d.generated_at;document.getElementById('flow-updated-label').textContent=d.generated_at;}
+  if(d.generated_at){
+    document.getElementById('chip-updated').textContent='↻ '+d.generated_at;
+    document.getElementById('flow-updated-label').textContent=d.generated_at;
+    checkStaleData(d.generated_at);
+  }
+  checkRegimeFlip(d.flow_regime);
   if(d.sp500_change!==null){const e=document.getElementById('chip-spy');e.textContent='SPY '+fmt(d.sp500_change);e.className='chip '+(d.sp500_change>=0?'chip-green':'chip-red');}
   if(d.market_mood){const e=document.getElementById('chip-mood');e.textContent=d.market_mood;e.className='chip '+moodClass(d.market_mood);}
   const net=d.net_flow_score;const isPos=net!==null&&net>=0;
@@ -295,10 +463,22 @@ function renderFlow(d){
   const barBg=isPos?'linear-gradient(90deg,transparent,var(--green))':'linear-gradient(270deg,transparent,var(--red))';
   document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div class="net-score-label">Net Flow Score</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}<div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">Avg Sector</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">Breadth</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% Advancing</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ Outflow</span><span>Inflow ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
   if(d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
+  renderSectorHeatmap(d.sectors);
+  // Feature #6: Top Mover Spotlight
+  if(d.top_mover){
+    const ts=d.sectors.find(s=>s.name===d.top_mover);
+    const tmCard=document.getElementById('top-mover-card');
+    const tmWrap=document.getElementById('top-mover-wrap');
+    const tmTime=document.getElementById('top-mover-time');
+    if(tmCard)tmCard.style.display='block';
+    if(tmTime&&d.generated_at)tmTime.textContent=d.generated_at;
+    if(tmWrap)tmWrap.innerHTML=`<div class="spotlight-wrap"><div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span class="spotlight-ticker ${col(ts?.change)}">${d.top_mover}</span>${ts?`<span class="spotlight-pct ${col(ts.change)}">${fmt(ts.change)}</span><span class="s-etf">${ts.etf}</span>`:''}</div><div class="spotlight-reason">${d.top_mover_reason||''}</div></div>`;
+  }
   document.getElementById('narrative-wrap').innerHTML=`<div class="narrative-body"><div class="narrative-text">${d.narrative||'No narrative available.'}</div>${d.top_mover?`<div class="narrative-mover"><strong>${d.top_mover}:</strong> ${d.top_mover_reason||''}</div>`:''}</div>`;
   const adv=(d.sectors||[]).filter(s=>(s.change??0)>0);const dec=(d.sectors||[]).filter(s=>(s.change??0)<0);
   document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">Inflows (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">Outflows (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
 }
+
 function renderNews(n){
   if(!n)return;
   if(n.last_updated){
@@ -307,12 +487,45 @@ function renderNews(n){
     chip.textContent='News ↻ '+n.last_updated;chip.style.display='';
   }
   if(n.update_count){const b=document.getElementById('news-count-badge');b.textContent=n.update_count+' update'+(n.update_count!==1?'s':'')+' today';b.style.display='';}
+  renderSentimentRatio(n.highlights||[]);
   const sourceByUrl=new Map((n.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s]));
   if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">Breaking</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
   document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Last synthesis: ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
   if(n.highlights&&n.highlights.length){const show=(n.highlights||[]).slice(0,12);document.getElementById('highlights-wrap').innerHTML='<div class="highlights-list">'+show.map((h,i)=>{const isNew=i<3&&n.update_count>1;const hasLink=!!h.source_url;const src=hasLink?sourceByUrl.get(h.source_url):null;const sourceLabel=h.source_outlet||(src&&src.outlet)||'';const sourceHeadline=(src&&src.title)||'';const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;}).join('')+'</div>'+(n.highlights.length>12?`<div class="news-update-badge">Showing latest 12 of ${n.highlights.length} highlights</div>`:'');}
 }
+
+// ── Feature #4: Mood Arc ──
+function buildMoodArc(snapshots){
+  if(!snapshots||snapshots.length<2)return'';
+  const withMood=snapshots.filter(s=>s.market_mood);
+  if(withMood.length<2)return'';
+  const dots=withMood.map(s=>{
+    const l=(s.market_mood||'').toLowerCase();
+    const color=l.includes('risk-on')||l.includes('bullish')?'var(--green)':l.includes('risk-off')||l.includes('bearish')?'var(--red)':'var(--amber)';
+    return`<span class="ma-dot" style="background:${color}" title="${s.generated_at}: ${s.market_mood}"></span>`;
+  }).join('');
+  return`<div class="mood-arc"><span class="mood-arc-label">Mood</span><div class="mood-arc-dots">${dots}</div></div>`;
+}
+
+// ── Feature #3: Regime Timeline ──
+function buildRegimeTimeline(snapshots){
+  if(!snapshots||snapshots.length<2)return'';
+  const withR=snapshots.filter(s=>s.flow_regime);
+  if(!withR.length)return'';
+  // Compress consecutive same regimes to show only transitions
+  const changes=[];let last=null;
+  for(const s of withR){if(s.flow_regime!==last){changes.push(s);last=s.flow_regime;}}
+  if(changes.length<2)return''; // no transitions → nothing to show
+  const pills=changes.map((s,i)=>{
+    const r=s.flow_regime||'';
+    const cls=r.includes('RISK-ON')||r.includes('STRONG')?'rt-on':r.includes('RISK-OFF')||r.includes('SELL-OFF')?'rt-off':'rt-neu';
+    const short=r.replace(/RISK-ON — |RISK-OFF — /,'').split(' ').slice(0,2).join(' ');
+    return(i>0?'<span class="rt-arrow">→</span>':'')+`<span class="rt-pill ${cls}" title="${r}">${s.generated_at||'?'} · ${short}</span>`;
+  }).join('');
+  return`<div class="regime-timeline"><span class="rt-label">Regime</span><div class="rt-pills">${pills}</div></div>`;
+}
+
 function buildAuditEntries(snapshots){
   if(!snapshots||!snapshots.length)return'<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots for this date.</div></div>';
   const nets=snapshots.map(d=>d.net_flow_score).filter(v=>v!==null);
@@ -333,6 +546,7 @@ function buildAuditEntries(snapshots){
   }).join('');
   return sparkHtml+entries;
 }
+
 function buildDayBlock(dateStr,snapshots,meta){
   const today=new Date().toISOString().split('T')[0];
   const isToday=dateStr===today;
@@ -342,10 +556,54 @@ function buildDayBlock(dateStr,snapshots,meta){
   const count=snapshots.length;
   const dow=new Date(dateStr+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
   const statusHtml=isToday?'<span class="audit-day-status live">● Live</span>':(finalized?'<span class="audit-day-status final">Finalized</span>':'<span class="audit-day-status partial">Partial</span>');
-  const header=`<div class="audit-day-header"><div class="audit-day-datecol"><div class="audit-day-date">${dateStr}</div><div class="audit-day-dow">${dow}</div></div><div class="audit-day-close ${col(netClose)}">${netClose!==null?fmt(netClose):'—'}</div><div class="audit-day-info"><div class="audit-day-meta">${count} snapshot${count!==1?'s':''}</div>${statusHtml}</div></div>`;
-  return`<div class="audit-day-block ${posClass}" id="audit-day-${dateStr}">${header}<div class="audit-day-entries">${buildAuditEntries(snapshots)}</div></div>`;
+  // Feature #9: clicking day header updates URL hash
+  const header=`<div class="audit-day-header" onclick="history.replaceState(null,'','#${dateStr}')"><div class="audit-day-datecol"><div class="audit-day-date">${dateStr}</div><div class="audit-day-dow">${dow}</div></div><div class="audit-day-close ${col(netClose)}">${netClose!==null?fmt(netClose):'—'}</div><div class="audit-day-info"><div class="audit-day-meta">${count} snapshot${count!==1?'s':''}</div>${statusHtml}</div></div>`;
+  const moodArc=buildMoodArc(snapshots);
+  const regimeTimeline=buildRegimeTimeline(snapshots);
+  return`<div class="audit-day-block ${posClass}" id="audit-day-${dateStr}">${header}${moodArc}${regimeTimeline}<div class="audit-day-entries">${buildAuditEntries(snapshots)}</div></div>`;
 }
+
+// ── Feature #1: Net Flow Trend Chart ──
+function renderTrendChart(indexData){
+  const days=[...(indexData||[])].reverse().slice(-10); // oldest→newest, last 10
+  if(days.length<2)return'';
+  const vals=days.map(d=>d.net_close??0);
+  const mn=Math.min(...vals,0),mx=Math.max(...vals,0);
+  const range=mx-mn||0.1;
+  const W=600,H=72,lp=28,rp=16,tp=10,bp=20;
+  const chartH=H-tp-bp,chartW=W-lp-rp;
+  const zeroY=tp+((mx-0)/range)*chartH;
+  const pts=vals.map((v,i)=>{
+    const x=lp+(i/(days.length-1))*chartW;
+    const y=tp+((mx-v)/range)*chartH;
+    return{x,y,v,d:days[i]};
+  });
+  const linePts=pts.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+  const dots=pts.map(p=>`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4.5" fill="${p.v>=0?'#00d68f':'#ff4757'}" stroke="#0d0d0d" stroke-width="2"><title>${p.d.date}: ${fmt(p.v)}</title></circle>`).join('');
+  const labels=pts.map((p,i)=>{
+    if(i!==0&&i!==pts.length-1&&i%2!==0)return'';
+    return`<text x="${p.x.toFixed(1)}" y="${H}" text-anchor="middle" font-size="9" fill="#555" font-family="JetBrains Mono,monospace">${p.d.date.slice(5)}</text>`;
+  }).join('');
+  const lastVal=vals[vals.length-1];
+  const lineColor=lastVal>=0?'#00d68f':'#ff4757';
+  const clamped=Math.min(Math.max(zeroY,tp),tp+chartH);
+  return`<div class="trend-chart-wrap"><div class="spark-label">Net Flow Close — Last ${days.length} Days</div><svg class="tc-svg" viewBox="0 0 ${W} ${H+4}" preserveAspectRatio="none" style="height:88px"><line x1="${lp}" y1="${clamped.toFixed(1)}" x2="${W-rp}" y2="${clamped.toFixed(1)}" stroke="#2e2e2e" stroke-width="1" stroke-dasharray="4,3"/><polyline points="${linePts}" fill="none" stroke="${lineColor}" stroke-width="2" stroke-opacity="0.6" stroke-linejoin="round"/>${dots}${labels}</svg></div>`;
+}
+
+function renderFlowPattern(indexData){
+  const wrap=document.getElementById('flow-pattern-wrap');
+  if(!wrap)return;
+  const rows=(indexData||[]).slice(0,10);
+  if(!rows.length){wrap.innerHTML='<div class="state-box" style="padding:20px"><div class="state-sub">No historical flow index yet.</div></div>';return;}
+  const chartHtml=renderTrendChart(indexData);
+  const tableRows=rows.slice(0,7).map(r=>`<div class="mini-row"><div>${r.date||'—'}</div><div>${r.entries??r.total_snapshots??'—'}</div><div class="${col(r.net_close)}">${r.net_close!=null?fmt(r.net_close):'—'}</div><div>${r.finalized?'Final':'Live'}</div></div>`).join('');
+  const table=`<div class="mini-table"><div class="mini-row mini-h"><div>Date</div><div>Snaps</div><div>Close</div><div>Status</div></div>${tableRows}</div>`;
+  wrap.innerHTML=chartHtml+table;
+}
+
+// ── Audit loading ──
 let auditInitialized=false;
+let auditDataCache={};
 async function loadAllAudit(indexData){
   const el=document.getElementById('audit-entries');
   const today=new Date().toISOString().split('T')[0];
@@ -362,8 +620,13 @@ async function loadAllAudit(indexData){
   }));
   const valid=results.filter(Boolean);
   if(!valid.length){el.innerHTML='<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots yet — appears after first agent run.</div></div>';return;}
+  valid.forEach(({dateStr,snapshots})=>{auditDataCache[dateStr]=snapshots;});
   el.innerHTML=valid.map(({dateStr,snapshots,meta})=>buildDayBlock(dateStr,snapshots,meta)).join('');
+  // Post-load features
+  updateMinimap(valid.map(v=>v.dateStr));
+  scrollToHash();
 }
+
 async function refreshTodayBlock(){
   const today=new Date().toISOString().split('T')[0];
   try{
@@ -371,19 +634,17 @@ async function refreshTodayBlock(){
     if(!res.ok)return;
     const snapshots=await res.json();
     if(!snapshots.length)return;
+    auditDataCache[today]=snapshots;
     const block=document.getElementById(`audit-day-${today}`);
     const html=buildDayBlock(today,snapshots,null);
     if(block)block.outerHTML=html;
     else document.getElementById('audit-entries').insertAdjacentHTML('afterbegin',html);
+    // Refresh minimap active state
+    updateMinimapActive();
   }catch{}
 }
-function renderFlowPattern(indexData){
-  const rows=(indexData||[]).slice(0,7);
-  if(!rows.length){document.getElementById('flow-pattern-wrap').innerHTML='<div class="state-box" style="padding:20px"><div class="state-sub">No historical flow index yet.</div></div>';return;}
-  const header='<div class="mini-table"><div class="mini-row mini-h"><div>Date</div><div>Snapshots</div><div>Close Net</div><div>Status</div></div>';
-  const body=rows.map(r=>`<div class="mini-row"><div>${r.date||'—'}</div><div>${r.entries??r.total_snapshots??'—'}</div><div class="${col(r.net_close)}">${r.net_close!=null?fmt(r.net_close):'—'}</div><div>${r.finalized?'Final':'Live'}</div></div>`).join('');
-  document.getElementById('flow-pattern-wrap').innerHTML=header+body+'</div>';
-}
+
+// ── Main loadAll ──
 async function loadAll(){
   try{
     const[flowRes,newsRes,indexRes]=await Promise.all([fetch('data/flow.json?t='+Date.now()),fetch('data/news.json?t='+Date.now()),fetch('data/flow_index.json?t='+Date.now())]);
@@ -397,10 +658,98 @@ async function loadAll(){
     }
   }catch(e){console.warn('Load error:',e.message);}
 }
+
+// ── Feature #9: URL Hash Navigation ──
+function scrollToHash(){
+  const hash=location.hash;
+  if(hash&&/^#\d{4}-\d{2}-\d{2}$/.test(hash)){
+    const block=document.getElementById('audit-day-'+hash.slice(1));
+    if(block)setTimeout(()=>block.scrollIntoView({behavior:'smooth',block:'start'}),150);
+  }
+}
+window.addEventListener('hashchange',scrollToHash);
+
+// ── Feature #10: Jump to Today ──
+function jumpToToday(){
+  const today=new Date().toISOString().split('T')[0];
+  const block=document.getElementById(`audit-day-${today}`);
+  if(block){block.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+today);}
+}
+function initJumpToday(){
+  const btn=document.getElementById('jump-today-btn');
+  const audit=document.getElementById('audit-section');
+  if(!btn||!audit)return;
+  window.addEventListener('scroll',()=>{
+    const r=audit.getBoundingClientRect();
+    btn.style.display=r.top<-60?'block':'none';
+  },{passive:true});
+}
+
+// ── Feature #11: Keyboard Navigation ──
+function initKeyboardNav(){
+  let kbIdx=-1;
+  function entries(){return Array.from(document.querySelectorAll('.audit-entry'));}
+  function activate(idx){
+    const es=entries();
+    es.forEach((e,i)=>e.classList.toggle('kb-active',i===idx));
+    if(es[idx])es[idx].scrollIntoView({behavior:'smooth',block:'nearest'});
+    kbIdx=idx;
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.target.matches('input,textarea,select,a,button'))return;
+    const es=entries();
+    if(e.key==='j'){e.preventDefault();activate(Math.min(kbIdx+1,es.length-1));}
+    else if(e.key==='k'){e.preventDefault();activate(Math.max(kbIdx-1,0));}
+    else if(e.key==='Enter'&&kbIdx>=0&&es[kbIdx]){e.preventDefault();const en=es[kbIdx];en.open=!en.open;}
+  });
+}
+
+// ── Feature #13: Minimap ──
+let mmObserver=null;
+function updateMinimap(allDates){
+  const mm=document.getElementById('minimap');
+  if(!mm)return;
+  if(mmObserver)mmObserver.disconnect();
+  mm.innerHTML=allDates.map(dateStr=>{
+    const snaps=auditDataCache[dateStr]||[];
+    const netClose=snaps.length?snaps[snaps.length-1].net_flow_score:null;
+    const barColor=netClose===null?'var(--border3)':netClose>=0?'var(--green2)':'var(--red2)';
+    const label=dateStr.slice(5);
+    return`<a class="mm-entry" id="mm-${dateStr}" href="#${dateStr}" title="${dateStr}: ${netClose!==null?fmt(netClose):'—'}"><span class="mm-label">${label}</span><div class="mm-bar" style="background:${barColor}"></div></a>`;
+  }).join('');
+  // IntersectionObserver to highlight active day
+  mmObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const dateStr=entry.target.id.replace('audit-day-','');
+        document.querySelectorAll('.mm-entry').forEach(e=>e.classList.toggle('mm-active',e.id===`mm-${dateStr}`));
+      }
+    });
+  },{threshold:0.2});
+  allDates.forEach(dateStr=>{
+    const block=document.getElementById(`audit-day-${dateStr}`);
+    if(block)mmObserver.observe(block);
+  });
+}
+function updateMinimapActive(){
+  // Called after refreshTodayBlock to re-observe today's new element
+  const today=new Date().toISOString().split('T')[0];
+  const block=document.getElementById(`audit-day-${today}`);
+  if(block&&mmObserver)mmObserver.observe(block);
+}
+
+// Init
 document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 setInterval(()=>{document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});},60000);
 loadAll();
 setInterval(loadAll,60000);
+initJumpToday();
+initKeyboardNav();
+
+// ── Feature #12: Service Worker ──
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js').then(()=>console.log('[SW] Registered')).catch(e=>console.warn('[SW] Registration failed:',e));
+}
 </script>
 </body>
 </html>

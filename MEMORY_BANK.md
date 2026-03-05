@@ -5,12 +5,28 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-04 (session 3)
-- Latest commit: `c76aecb` — ux: remove standalone sources panel; show source headline inline with highlights
+- Last updated: 2026-03-05 (session 4)
+- Latest commit: `c04c2b8` — sched+ui: launchd scheduler, flow history panel, compact news list
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `c04c2b8`
+**Message:** `sched+ui: launchd scheduler, flow history panel, compact news list`
+
+**Files changed:**
+- `index.html`
+- `scripts/install_launchd_scheduler.sh`
+
+**What changed:**
+- Added launchd installer script for a real persistent scheduler service:
+  - label `com.beiwolf.marketwatch.scheduler`
+  - runs `automation.sh` at login and keeps it alive.
+- Updated dashboard with second-tier FLOW history/pattern section (recent-day table from `flow_index.json`).
+- Condensed NEWS rendering by capping visible highlights to latest 12 and constraining list height (`highlights-list`), preventing page from growing monolithically.
+
+---
 
 ### 2026-03-04 — `c76aecb`
 **Message:** `ux: remove standalone sources panel; show source headline inline with highlights`
@@ -185,6 +201,13 @@ Canonical running memory of repository changes and why they were made.
 - Flow parser was hardened to extract JSON even when Claude wraps it with prose/fences.
 - News loop was changed to run every 60 minutes 24/7 (flow remains market-hours-gated).
 - Telegram status notifications were integrated into loop outcomes (success/failure summaries).
+
+## Working rules (requested by owner)
+- Before making any repository change, consult `MEMORY_BANK.md` first for current context.
+- After every change that gets pushed to GitHub, immediately append/update this memory bank with:
+  - commit hash
+  - files changed
+  - what changed and why
 
 ---
 

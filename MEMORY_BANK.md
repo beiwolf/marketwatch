@@ -5,12 +5,28 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-04 (session 2)
-- Latest commit: `d110814` — docs: add MEMORY_BANK
+- Last updated: 2026-03-04 (session 3)
+- Latest commit: `c76aecb` — ux: remove standalone sources panel; show source headline inline with highlights
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-04 — `c76aecb`
+**Message:** `ux: remove standalone sources panel; show source headline inline with highlights`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Removed the standalone "News Sources" card from the right column.
+- Enriched each highlight row to show source context inline:
+  - source outlet badge
+  - source headline next to the highlight metadata
+- Kept highlight text clickable to open the linked source URL.
+- UX goal: users can scan insight + provenance in one place without jumping between sections.
+
+---
 
 ### 2026-03-04 — `d110814`
 **Message:** `docs: add MEMORY_BANK with running repo change history`

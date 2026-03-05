@@ -1,8 +1,16 @@
 {
   "date": "2026-03-05",
-  "last_updated": "6:51 AM ET",
-  "update_count": 6,
+  "last_updated": "8:01 AM ET",
+  "update_count": 7,
   "breaking": [
+    {
+      "text": "S&P 500 futures down ~0.4% as markets weigh 15% global tariff implementation and Strait of Hormuz disruptions",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "text": "Kroger Q4 earnings beat on EPS ($1.28 vs $1.20 est) but misses on revenue; issues soft 2026 guidance",
+      "added_at": "8:01 AM ET"
+    },
     {
       "text": "Costco, Marvell Technology, and Kroger set to report earnings today after market close",
       "added_at": "6:51 AM ET"
@@ -14,18 +22,45 @@
     {
       "text": "Okta beats Q4 estimates but stock dips after-hours on slower FY27 growth guidance of ~9%",
       "added_at": "5:47 AM ET"
-    },
-    {
-      "text": "EU expects exemption from imminent U.S. 15% universal tariff hike, sources say",
-      "added_at": "5:47 AM ET"
-    },
-    {
-      "text": "Broadcom guides Q2 revenue to $22B, beating estimates; CEO sees $100B+ AI chip revenue by 2027",
-      "added_at": "5:47 AM ET"
     }
   ],
-  "summary": "U.S. stock futures are sliding Thursday morning with S&P 500 futures down 1.5% and Nasdaq futures off nearly 2%, as renewed Middle East tensions weigh on sentiment after Iran vowed to escalate retaliation against U.S. strikes, pushing Brent crude toward $84. This follows Wednesday's strong rebound where the S&P 500 rose 0.7% and the Nasdaq jumped 1.4%, buoyed by Broadcom's blowout Q1 earnings showing 106% AI revenue growth and a $100 billion AI chip revenue forecast for 2027. Markets are also bracing for the implementation of Trump's 15% global tariff expected this week, while a packed earnings calendar today features Costco, Marvell Technology, and Kroger, with options traders pricing in an 11% move for Marvell on its AI-focused results.",
+  "summary": "U.S. stock futures are pointing lower on Thursday morning, with S&P 500 futures down about 0.4% after Wednesday's 0.8% rebound, as investors digest the imminent implementation of Trump's 15% global tariff and ongoing Strait of Hormuz shipping disruptions that keep Brent crude elevated near $82-84/barrel. Tech led Wednesday's gains with Micron and AMD surging over 5% each and Nvidia extending its historic run past $5 trillion market cap, while Broadcom soared 5% after hours on a record $19.3B revenue quarter and $100B AI revenue forecast. Thursday's earnings slate features Kroger and BJ's Wholesale before the bell (both reported mixed Q4 results), with Costco and Marvell Technology due after the close, while weekly jobless claims data at 8:30 AM will be closely watched ahead of Friday's nonfarm payrolls report.",
   "highlights": [
+    {
+      "text": "Strait of Hormuz tanker insurance pulled for March 5, effectively halting all shipping traffic; Brent crude holds near $82-84 as White House offers no timeline for safe passage",
+      "sentiment": "bearish",
+      "source_url": "https://www.euronews.com/business/2026/03/04/passage-denied-hormuz-shutdown-keeps-oil-prices-on-an-upward-trajectory",
+      "source_outlet": "Euronews",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "text": "S&P 500 futures slip 0.4% premarket as Polymarket shows 70% odds of a down open; weekly jobless claims and productivity data due at 8:30 AM ahead of Friday's critical payrolls report",
+      "sentiment": "bearish",
+      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51058430/will-sp-open-up-or-down-on-march-5-iran-jitters-ease-as-oil-pulls-back-but-tariff-thre",
+      "source_outlet": "Benzinga",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "text": "BJ's Wholesale beats on Q4 EPS at $1.11 but misses on revenue at $5.36B vs $5.39B expected, mirroring the mixed retail earnings theme this morning",
+      "sentiment": "neutral",
+      "source_url": "https://finance.yahoo.com/video/kroger-bjs-stock-moves-q4-174419973.html",
+      "source_outlet": "Yahoo Finance",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "text": "Ciena Corp crushes Q4 estimates with EPS of $1.35 vs $1.16 expected and revenue of $1.43B (up 33% YoY), driven by surging AI infrastructure demand",
+      "sentiment": "bullish",
+      "source_url": "https://tokenist.com/earnings-recap-ciena-kroger-and-burlington-share-quarterly-results/",
+      "source_outlet": "Tokenist",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "text": "Kroger Q4 adjusted EPS beats at $1.28 vs $1.20 expected, but revenue misses at $34.73B vs $35B est; eCommerce sales surged 20% YoY \u2014 stock dips ~1% premarket on soft 2026 guidance of 1-2% identical sales growth",
+      "sentiment": "bearish",
+      "source_url": "https://coincentral.com/kroger-kr-stock-q4-sales-rise-2-4-as-ecommerce-growth-hits-20/",
+      "source_outlet": "CoinCentral",
+      "added_at": "8:01 AM ET"
+    },
     {
       "text": "Geopolitical tensions ease slightly as reports indicate Iranian operatives reached out to U.S. to explore potential peace talks",
       "sentiment": "bullish",
@@ -130,41 +165,6 @@
       "source_url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
       "source_outlet": "Stock Titan",
       "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "February nonfarm payrolls report due Friday March 6 \u2014 after January showed only 130K jobs added and unemployment at 4.3%",
-      "sentiment": "neutral",
-      "source_url": "https://www.bls.gov/schedule/",
-      "source_outlet": "Bureau of Labor Statistics",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "Ross Stores pops 7% on Q4 earnings beat \u2014 $2.00 EPS vs $1.90 estimate, $6.64B revenue vs $6.42B expected",
-      "sentiment": "bullish",
-      "source_url": "https://finance.yahoo.com/news/live/earnings-live-ross-stores-stock-jumps-on-upbeat-results-crowdstrike-posts-slight-top--and-bottom-line-beats-220558338.html",
-      "source_outlet": "Yahoo Finance",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "Moderna jumps 12% after agreeing to pay up to $2.25B ($950M upfront + $1.3B contingent) to settle Arbutus/Genevant Covid vaccine patent lawsuit",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/04/moderna-and-ross-stores-lead-stock-gainers-on-wednesday/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "Coinbase surges 15% as Trump urges passage of CLARITY Act and sides with crypto firms against banks on stablecoin yield \u2014 CEO Armstrong met with Trump at White House",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
-      "source_outlet": "CNBC",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "CrowdStrike posts Q4 revenue of $1.31B (+23%) and record $331M net new ARR (+47% YoY), but stock drops ~4% after hours on growth deceleration concerns",
-      "sentiment": "bearish",
-      "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-crowdstrike-holdings-surpasses-q4-2026-expectations-93CH-4539505",
-      "source_outlet": "Investing.com",
-      "added_at": "3:11 AM ET"
     }
   ],
   "sources": [
@@ -370,6 +370,41 @@
       "url": "https://www.morningstar.com/markets/nvidia-crosses-5-trillion-5-charts-unstoppable-tech-rally",
       "sentiment": "bullish",
       "added_at": "6:51 AM ET"
+    },
+    {
+      "outlet": "CoinCentral",
+      "title": "Kroger (KR) Stock: Q4 Sales Rise 2.4% as eCommerce Growth Hits 20%",
+      "url": "https://coincentral.com/kroger-kr-stock-q4-sales-rise-2-4-as-ecommerce-growth-hits-20/",
+      "sentiment": "neutral",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "outlet": "Tokenist",
+      "title": "Earnings Recap: Ciena, Kroger, and Burlington Share Quarterly Results",
+      "url": "https://tokenist.com/earnings-recap-ciena-kroger-and-burlington-share-quarterly-results/",
+      "sentiment": "bullish",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "outlet": "Benzinga",
+      "title": "Will S&P Open Up Or Down On March 5? Iran Jitters Ease As Oil Pulls Back But Tariff Threat Clouds Recovery",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/03/51058430/will-sp-open-up-or-down-on-march-5-iran-jitters-ease-as-oil-pulls-back-but-tariff-thre",
+      "sentiment": "bearish",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "outlet": "Euronews",
+      "title": "Passage denied: Oil and gas prices swing wildly as Hormuz crisis drags on",
+      "url": "https://www.euronews.com/business/2026/03/04/passage-denied-hormuz-shutdown-keeps-oil-prices-on-an-upward-trajectory",
+      "sentiment": "bearish",
+      "added_at": "8:01 AM ET"
+    },
+    {
+      "outlet": "Yahoo Finance",
+      "title": "Kroger, BJ's stock moves up on Q4 earnings",
+      "url": "https://finance.yahoo.com/video/kroger-bjs-stock-moves-q4-174419973.html",
+      "sentiment": "neutral",
+      "added_at": "8:01 AM ET"
     }
   ]
 }

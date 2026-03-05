@@ -1,8 +1,20 @@
 {
   "date": "2026-03-05",
-  "last_updated": "8:01 AM ET",
-  "update_count": 7,
+  "last_updated": "9:02 AM ET",
+  "update_count": 8,
   "breaking": [
+    {
+      "text": "S&P 500 futures slip 0.4% premarket as 15% global tariff expected to take effect this week",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "Iran denies peace talk reports as 'psychological warfare'; marine war-risk insurance canceled for Strait of Hormuz effective today",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "Broadcom guides Q2 revenue to $22B, smashing $20.4B consensus; sees AI chip revenue above $100B in 2027",
+      "added_at": "9:02 AM ET"
+    },
     {
       "text": "S&P 500 futures down ~0.4% as markets weigh 15% global tariff implementation and Strait of Hormuz disruptions",
       "added_at": "8:01 AM ET"
@@ -10,22 +22,45 @@
     {
       "text": "Kroger Q4 earnings beat on EPS ($1.28 vs $1.20 est) but misses on revenue; issues soft 2026 guidance",
       "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "Costco, Marvell Technology, and Kroger set to report earnings today after market close",
-      "added_at": "6:51 AM ET"
-    },
-    {
-      "text": "S&P 500 futures fall 1.5% premarket as Brent crude climbs toward $84 on Iran escalation threats",
-      "added_at": "6:51 AM ET"
-    },
-    {
-      "text": "Okta beats Q4 estimates but stock dips after-hours on slower FY27 growth guidance of ~9%",
-      "added_at": "5:47 AM ET"
     }
   ],
-  "summary": "U.S. stock futures are pointing lower on Thursday morning, with S&P 500 futures down about 0.4% after Wednesday's 0.8% rebound, as investors digest the imminent implementation of Trump's 15% global tariff and ongoing Strait of Hormuz shipping disruptions that keep Brent crude elevated near $82-84/barrel. Tech led Wednesday's gains with Micron and AMD surging over 5% each and Nvidia extending its historic run past $5 trillion market cap, while Broadcom soared 5% after hours on a record $19.3B revenue quarter and $100B AI revenue forecast. Thursday's earnings slate features Kroger and BJ's Wholesale before the bell (both reported mixed Q4 results), with Costco and Marvell Technology due after the close, while weekly jobless claims data at 8:30 AM will be closely watched ahead of Friday's nonfarm payrolls report.",
+  "summary": "S&P 500 futures are down about 0.4% in premarket trading on Thursday after the index rallied 0.8% to 6,869 on Wednesday, led by a 1.3% Nasdaq surge as tech and semiconductor stocks dominated. Broadcom delivered a blockbuster Q1 report after the bell \u2014 revenue jumped 29% to $19.3B with AI revenue doubling to $8.4B \u2014 and stunned markets with Q2 guidance of $22B and a $100B+ AI chip revenue target for 2027, sending shares up 5% after hours. Geopolitical crosscurrents persist as Iran officially denied reports of back-channel peace talks with the US, calling them 'psychological warfare,' while marine insurers canceled war-risk coverage for the Strait of Hormuz effective March 5, keeping Brent crude elevated near $84 with a $10-15 risk premium embedded. Adding to uncertainty, Treasury Secretary Bessent confirmed the global tariff rate will rise from 10% to 15% this week under Section 122 authority, with plans to return to prior levels within five months as formal trade reviews proceed.",
   "highlights": [
+    {
+      "text": "Marvell Technology reports Q4 earnings after today's close \u2014 analysts expect EPS of $0.79 on $2.21B revenue amid surging AI networking demand",
+      "sentiment": "neutral",
+      "source_url": "https://www.dailypolitical.com/2026/03/03/marvell-technology-mrvl-to-release-quarterly-earnings-on-thursday.html",
+      "source_outlet": "Daily Political",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "Iran's intelligence ministry calls NYT report of back-channel CIA peace outreach 'pure falsehood and psychological warfare,' dashing hopes for near-term de-escalation",
+      "sentiment": "bearish",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/iran-denies-it-reached-out-to-the-us-about-peace-talks",
+      "source_outlet": "Bloomberg",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "ADP private payrolls beat expectations with 63K jobs added in February vs 48K consensus, rebounding sharply from January's revised 11K \u2014 weekly jobless claims due this morning",
+      "sentiment": "bullish",
+      "source_url": "https://www.investing.com/news/stock-market-news/initial-jobless-claims-highlight-economic-data-due-thursday-93CH-4541934",
+      "source_outlet": "Investing.com",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "Marine insurers Gard and Skuld issue 'Notice of Cancellation' for war-risk coverage in the Strait of Hormuz effective March 5, further disrupting global energy trade flows",
+      "sentiment": "bearish",
+      "source_url": "https://adi-analytics.com/2026/03/04/the-iran-conflict-and-oil-markets/",
+      "source_outlet": "ADI Analytics",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "text": "Broadcom CEO Hock Tan projects AI chip revenue 'significantly in excess of $100 billion' in 2027, naming Google, Meta, Anthropic, and OpenAI among six key custom chip customers \u2014 Q2 guidance of $22B represents 47% YoY growth",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-sees-ai-chip-sales-significantly-over-100-billion-in-2027.html",
+      "source_outlet": "CNBC",
+      "added_at": "9:02 AM ET"
+    },
     {
       "text": "Strait of Hormuz tanker insurance pulled for March 5, effectively halting all shipping traffic; Brent crude holds near $82-84 as White House offers no timeline for safe passage",
       "sentiment": "bearish",
@@ -130,41 +165,6 @@
       "source_url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
       "source_outlet": "Investing.com",
       "added_at": "5:47 AM ET"
-    },
-    {
-      "text": "South Korea's KOSPI suffers biggest single-day crash since 2008 financial crisis, plunging up to 12% and triggering circuit breaker on March 4",
-      "sentiment": "bearish",
-      "source_url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_conflict",
-      "source_outlet": "Wikipedia",
-      "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "Middle East conflict threatens fresh inflation shock as oil surges 36% YTD, posing challenge to central banks and rate-cut expectations",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/04/iran-israel-us-war-middle-east-conflict-oil-gas-lng-surge-central-banks-inflation-risk.html",
-      "source_outlet": "CNBC",
-      "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "S&P 500 futures fall 0.3% early Thursday as Brent crude pushes toward $84 after Iran vows to escalate retaliation against U.S. strikes",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
-      "source_outlet": "CNBC",
-      "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "Okta beats Q4 estimates with revenue of $761M vs $749M expected and EPS of $0.90 vs $0.85, shares rise 3% after hours",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
-      "source_outlet": "CNBC",
-      "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "Broadcom CEO Hock Tan projects over $100B in AI chip revenue by 2027, announces $10B share buyback as Q1 AI revenue surges 106% to $8.4B",
-      "sentiment": "bullish",
-      "source_url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
-      "source_outlet": "Stock Titan",
-      "added_at": "4:38 AM ET"
     }
   ],
   "sources": [
@@ -405,6 +405,41 @@
       "url": "https://finance.yahoo.com/video/kroger-bjs-stock-moves-q4-174419973.html",
       "sentiment": "neutral",
       "added_at": "8:01 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Broadcom CEO Hock Tan sees AI chip revenue 'significantly' above $100 billion next year",
+      "url": "https://www.cnbc.com/2026/03/04/broadcom-sees-ai-chip-sales-significantly-over-100-billion-in-2027.html",
+      "sentiment": "bullish",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "outlet": "ADI Analytics",
+      "title": "The Iran Conflict and Oil Markets",
+      "url": "https://adi-analytics.com/2026/03/04/the-iran-conflict-and-oil-markets/",
+      "sentiment": "bearish",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "outlet": "Bloomberg",
+      "title": "Oil Prices Briefly Rise After Iran Denies US Peace Talks Report",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-04/iran-denies-it-reached-out-to-the-us-about-peace-talks",
+      "sentiment": "bearish",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "outlet": "TrendForce",
+      "title": "Broadcom eyes $100B AI chip revenue in 2027, backed by six key clients including Google and Meta",
+      "url": "https://www.trendforce.com/news/2026/03/05/news-broadcom-reportedly-eyes-100b-ai-chip-revenue-in-2027-backed-by-six-key-clients-including-google-meta/",
+      "sentiment": "bullish",
+      "added_at": "9:02 AM ET"
+    },
+    {
+      "outlet": "Daily Political",
+      "title": "Marvell Technology (MRVL) to Release Quarterly Earnings on Thursday",
+      "url": "https://www.dailypolitical.com/2026/03/03/marvell-technology-mrvl-to-release-quarterly-earnings-on-thursday.html",
+      "sentiment": "neutral",
+      "added_at": "9:02 AM ET"
     }
   ]
 }

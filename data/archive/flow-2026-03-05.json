@@ -523,5 +523,110 @@
         "estimated": true
       }
     ]
+  },
+  {
+    "date": "March 5, 2026",
+    "generated_at": "4:06 PM ET",
+    "sp500_change": -0.55,
+    "market_mood": "Risk-Off",
+    "narrative": "Geopolitical tensions around the Iran conflict and surging crude oil prices (+14% weekly, near $79/barrel) drove broad risk-off selling across 10 of 11 sectors. Energy was the sole gainer as rising oil prices lifted producers, while Industrials and Materials led losses on inflation and supply-chain fears.",
+    "top_mover": "Industrials",
+    "top_mover_reason": "Industrials dropped 2.81% as surging oil prices raised input cost and transportation expense concerns amid escalating Middle East tensions.",
+    "net_flow_score": -12.31,
+    "net_flow_delta": -7.67,
+    "avg_sector_move": -1.12,
+    "sectors_advancing": 1,
+    "sectors_declining": 10,
+    "flow_regime": "\u26a0 BROAD SELL-OFF \u2014 CASH/BONDS DESTINATION",
+    "sectors": [
+      {
+        "name": "Energy",
+        "etf": "XLE",
+        "change": 0.53,
+        "change_delta": -2.62,
+        "volume_vs_avg": 1.5,
+        "estimated": true
+      },
+      {
+        "name": "Consumer Discretionary",
+        "etf": "XLY",
+        "change": -0.05,
+        "change_delta": 1.8,
+        "volume_vs_avg": 1.1,
+        "estimated": true
+      },
+      {
+        "name": "Communication Services",
+        "etf": "XLC",
+        "change": -0.34,
+        "change_delta": 0.21,
+        "volume_vs_avg": 1.0,
+        "estimated": true
+      },
+      {
+        "name": "Technology",
+        "etf": "XLK",
+        "change": -0.51,
+        "change_delta": -1.23,
+        "volume_vs_avg": 1.2,
+        "estimated": true
+      },
+      {
+        "name": "Financials",
+        "etf": "XLF",
+        "change": -0.89,
+        "change_delta": -0.51,
+        "volume_vs_avg": 1.1,
+        "estimated": true
+      },
+      {
+        "name": "Utilities",
+        "etf": "XLU",
+        "change": -0.93,
+        "change_delta": -1.35,
+        "volume_vs_avg": 1.0,
+        "estimated": true
+      },
+      {
+        "name": "Real Estate",
+        "etf": "XLRE",
+        "change": -1.05,
+        "change_delta": -0.33,
+        "volume_vs_avg": 1.1,
+        "estimated": true
+      },
+      {
+        "name": "Consumer Staples",
+        "etf": "XLP",
+        "change": -1.89,
+        "change_delta": -1.45,
+        "volume_vs_avg": 1.3,
+        "estimated": true
+      },
+      {
+        "name": "Healthcare",
+        "etf": "XLV",
+        "change": -1.98,
+        "change_delta": -0.49,
+        "volume_vs_avg": 1.2,
+        "estimated": true
+      },
+      {
+        "name": "Materials",
+        "etf": "XLB",
+        "change": -2.39,
+        "change_delta": -1.24,
+        "volume_vs_avg": 1.3,
+        "estimated": true
+      },
+      {
+        "name": "Industrials",
+        "etf": "XLI",
+        "change": -2.81,
+        "change_delta": -0.46,
+        "volume_vs_avg": 1.4,
+        "estimated": true
+      }
+    ]
   }
 ]

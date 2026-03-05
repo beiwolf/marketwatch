@@ -1,104 +1,104 @@
 {
-  "date": "2026-03-05",
-  "generated_at": "3:40 PM ET",
-  "sp500_change": -1.1,
+  "date": "March 5, 2026",
+  "generated_at": "4:06 PM ET",
+  "sp500_change": -0.55,
   "market_mood": "Risk-Off",
-  "narrative": "Escalating U.S.-Iran military tensions drove crude oil above $80/barrel for the first time since January 2025, triggering a broad risk-off rotation. Energy surged as the clear beneficiary while airlines, industrials, and consumer discretionary bore the brunt of the sell-off. Broadcom's blowout AI earnings (+7%) partially insulated tech from the downdraft.",
-  "top_mover": "Energy",
-  "top_mover_reason": "Oil prices spiked 6%+ on Iran missile strike against an oil tanker near the Strait of Hormuz, lifting energy stocks sharply.",
-  "net_flow_score": -4.64,
-  "net_flow_delta": 9.31,
-  "avg_sector_move": -0.42,
-  "sectors_advancing": 3,
-  "sectors_declining": 8,
-  "flow_regime": "RISK-OFF \u2014 DE-RISKING IN PROGRESS",
+  "narrative": "Geopolitical tensions around the Iran conflict and surging crude oil prices (+14% weekly, near $79/barrel) drove broad risk-off selling across 10 of 11 sectors. Energy was the sole gainer as rising oil prices lifted producers, while Industrials and Materials led losses on inflation and supply-chain fears.",
+  "top_mover": "Industrials",
+  "top_mover_reason": "Industrials dropped 2.81% as surging oil prices raised input cost and transportation expense concerns amid escalating Middle East tensions.",
+  "net_flow_score": -12.31,
+  "net_flow_delta": -7.67,
+  "avg_sector_move": -1.12,
+  "sectors_advancing": 1,
+  "sectors_declining": 10,
+  "flow_regime": "\u26a0 BROAD SELL-OFF \u2014 CASH/BONDS DESTINATION",
   "sectors": [
     {
       "name": "Energy",
       "etf": "XLE",
-      "change": 3.15,
-      "change_delta": 1.05,
-      "volume_vs_avg": 2.1,
-      "estimated": true
-    },
-    {
-      "name": "Technology",
-      "etf": "XLK",
-      "change": 0.72,
-      "change_delta": 1.2,
+      "change": 0.53,
+      "change_delta": -2.62,
       "volume_vs_avg": 1.5,
       "estimated": true
     },
     {
-      "name": "Utilities",
-      "etf": "XLU",
-      "change": 0.42,
-      "change_delta": 1.94,
-      "volume_vs_avg": 1.3,
-      "estimated": true
-    },
-    {
-      "name": "Financials",
-      "etf": "XLF",
-      "change": -0.38,
-      "change_delta": 0.67,
-      "volume_vs_avg": 1.4,
-      "estimated": true
-    },
-    {
-      "name": "Consumer Staples",
-      "etf": "XLP",
-      "change": -0.44,
-      "change_delta": 2.04,
-      "volume_vs_avg": 1.2,
+      "name": "Consumer Discretionary",
+      "etf": "XLY",
+      "change": -0.05,
+      "change_delta": 1.8,
+      "volume_vs_avg": 1.1,
       "estimated": true
     },
     {
       "name": "Communication Services",
       "etf": "XLC",
-      "change": -0.55,
-      "change_delta": 0.17,
-      "volume_vs_avg": 1.3,
+      "change": -0.34,
+      "change_delta": 0.21,
+      "volume_vs_avg": 1.0,
+      "estimated": true
+    },
+    {
+      "name": "Technology",
+      "etf": "XLK",
+      "change": -0.51,
+      "change_delta": -1.23,
+      "volume_vs_avg": 1.2,
+      "estimated": true
+    },
+    {
+      "name": "Financials",
+      "etf": "XLF",
+      "change": -0.89,
+      "change_delta": -0.51,
+      "volume_vs_avg": 1.1,
+      "estimated": true
+    },
+    {
+      "name": "Utilities",
+      "etf": "XLU",
+      "change": -0.93,
+      "change_delta": -1.35,
+      "volume_vs_avg": 1.0,
       "estimated": true
     },
     {
       "name": "Real Estate",
       "etf": "XLRE",
-      "change": -0.72,
-      "change_delta": 0.96,
-      "volume_vs_avg": 1.2,
+      "change": -1.05,
+      "change_delta": -0.33,
+      "volume_vs_avg": 1.1,
       "estimated": true
     },
     {
-      "name": "Materials",
-      "etf": "XLB",
-      "change": -1.15,
-      "change_delta": 0.97,
+      "name": "Consumer Staples",
+      "etf": "XLP",
+      "change": -1.89,
+      "change_delta": -1.45,
       "volume_vs_avg": 1.3,
       "estimated": true
     },
     {
       "name": "Healthcare",
       "etf": "XLV",
-      "change": -1.49,
-      "change_delta": 1.41,
-      "volume_vs_avg": 1.4,
+      "change": -1.98,
+      "change_delta": -0.49,
+      "volume_vs_avg": 1.2,
       "estimated": true
     },
     {
-      "name": "Consumer Discretionary",
-      "etf": "XLY",
-      "change": -1.85,
-      "change_delta": -1.67,
-      "volume_vs_avg": 1.6,
+      "name": "Materials",
+      "etf": "XLB",
+      "change": -2.39,
+      "change_delta": -1.24,
+      "volume_vs_avg": 1.3,
       "estimated": true
     },
     {
       "name": "Industrials",
       "etf": "XLI",
-      "change": -2.35,
-      "change_delta": 0.57,
-      "volume_vs_avg": 1.7,
+      "change": -2.81,
+      "change_delta": -0.46,
+      "volume_vs_avg": 1.4,
       "estimated": true
     }
   ]

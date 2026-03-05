@@ -187,6 +187,11 @@
     .footer{text-align:center;margin-top:56px;padding:20px 0;font-size:11px;color:var(--dim);letter-spacing:0.3px;border-top:1px solid var(--border);}
     .pos{color:var(--green);}.neg{color:var(--red);}.neu{color:var(--amber);}
     .news-col{display:flex;flex-direction:column;}
+    .highlights-list{max-height:420px;overflow:auto;}
+    .mini-table{padding:8px 12px 14px;}
+    .mini-row{display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;align-items:center;}
+    .mini-row:last-child{border-bottom:none;}
+    .mini-h{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600;}
   </style>
 </head>
 <body>
@@ -219,6 +224,10 @@
         <div id="narrative-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <div class="card" id="flow-summary-card"></div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Flow Pattern & History (Recent Days)</span><span class="card-meta">Second-tier trend view</span></div>
+        <div id="flow-pattern-wrap"><div class="state-box" style="padding:20px"><div class="state-sub">Loading...</div></div></div>
+      </div>
     </div>
     <div class="news-col">
       <div id="breaking-wrap"></div>
@@ -289,7 +298,7 @@ function renderNews(n){
   if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">Breaking</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
   document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Last synthesis: ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
-  if(n.highlights&&n.highlights.length){document.getElementById('highlights-wrap').innerHTML='<div>'+n.highlights.map((h,i)=>{const isNew=i<3&&n.update_count>1;const hasLink=!!h.source_url;const src=hasLink?sourceByUrl.get(h.source_url):null;const sourceLabel=h.source_outlet||(src&&src.outlet)||'';const sourceHeadline=(src&&src.title)||'';const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;}).join('')+'</div>';}
+  if(n.highlights&&n.highlights.length){const show=(n.highlights||[]).slice(0,12);document.getElementById('highlights-wrap').innerHTML='<div class="highlights-list">'+show.map((h,i)=>{const isNew=i<3&&n.update_count>1;const hasLink=!!h.source_url;const src=hasLink?sourceByUrl.get(h.source_url):null;const sourceLabel=h.source_outlet||(src&&src.outlet)||'';const sourceHeadline=(src&&src.title)||'';const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;}).join('')+'</div>'+(n.highlights.length>12?`<div class="news-update-badge">Showing latest 12 of ${n.highlights.length} highlights</div>`:'');}
 }
 function buildAuditEntries(snapshots){
   if(!snapshots||!snapshots.length)return'<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots for this date.</div></div>';
@@ -333,13 +342,20 @@ async function populateDatePicker(indexData){
   sel.innerHTML='<option value="">— past dates —</option>';
   past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
 }
+function renderFlowPattern(indexData){
+  const rows=(indexData||[]).slice(0,7);
+  if(!rows.length){document.getElementById('flow-pattern-wrap').innerHTML='<div class="state-box" style="padding:20px"><div class="state-sub">No historical flow index yet.</div></div>';return;}
+  const header='<div class="mini-table"><div class="mini-row mini-h"><div>Date</div><div>Snapshots</div><div>Close Net</div><div>Status</div></div>';
+  const body=rows.map(r=>`<div class="mini-row"><div>${r.date||'—'}</div><div>${r.entries??r.total_snapshots??'—'}</div><div class="${col(r.net_close)}">${r.net_close!=null?fmt(r.net_close):'—'}</div><div>${r.finalized?'Final':'Live'}</div></div>`).join('');
+  document.getElementById('flow-pattern-wrap').innerHTML=header+body+'</div>';
+}
 async function loadAll(){
   try{
     const[flowRes,newsRes,indexRes]=await Promise.all([fetch('data/flow.json?t='+Date.now()),fetch('data/news.json?t='+Date.now()),fetch('data/flow_index.json?t='+Date.now())]);
     const[flow,news,indexData]=await Promise.all([flowRes.json(),newsRes.json(),indexRes.json()]);
     if(flow&&flow.sectors&&flow.sectors.length)renderFlow(flow);
     if(news&&news.summary)renderNews(news);
-    if(indexData)populateDatePicker(indexData);
+    if(indexData){populateDatePicker(indexData);renderFlowPattern(indexData);} 
   }catch(e){console.warn('Load error:',e.message);}
   loadAuditForDate(new Date().toISOString().split('T')[0]);
 }

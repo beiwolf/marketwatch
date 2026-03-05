@@ -1,8 +1,16 @@
 {
   "date": "2026-03-04",
-  "last_updated": "9:06 PM ET",
-  "update_count": 6,
+  "last_updated": "10:20 PM ET",
+  "update_count": 7,
   "breaking": [
+    {
+      "text": "Veeva Systems jumps 9% after hours on Q4 earnings and revenue beat",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "text": "Broadcom beats Q1 estimates, guides Q2 revenue to $22B; AI revenue soars 106% to $8.4B \u2014 stock up 5% after hours",
+      "added_at": "10:20 PM ET"
+    },
     {
       "text": "Senate war powers vote fails, allowing Trump to continue military strikes on Iran without new congressional authorization",
       "added_at": "9:06 PM ET"
@@ -14,18 +22,45 @@
     {
       "text": "CEO Hock Tan projects $100B+ AI chip revenue pipeline citing Anthropic, Meta, and OpenAI as key customers",
       "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "Broadcom posts record Q1 revenue of $19.3B, AI revenue soars 106% to $8.4B; stock up 5% after hours",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "Fed Beige Book flags weaker consumer spending and sticky energy/labor costs across multiple districts",
-      "added_at": "7:14 PM ET"
     }
   ],
-  "summary": "Wall Street staged a broad recovery on Wednesday as easing oil prices and strong economic data restored confidence. The S&P 500 rose 0.78% to 6,869.50, the Nasdaq gained 1.29%, and the Dow added 238 points, led by a tech rebound with Micron and AMD each up over 5%. ADP's February jobs report surprised to the upside at 63,000 new private-sector jobs, while the Fed Beige Book showed mixed regional growth with sticky price pressures. After the close, Broadcom delivered a blockbuster Q1 earnings beat with AI revenue surging 106% to $8.4B and a bold $100B AI chip revenue forecast for 2027, sending shares up 5% in extended trading \u2014 while Bitcoin broke above $73,000 for the first time in weeks amid crypto-friendly policy signals and Iran ceasefire speculation.",
+  "summary": "Wall Street staged a broad recovery on Wednesday as easing oil prices and strong economic data offset lingering Middle East war jitters. The S&P 500 rose 0.78% to 6,869.50, the Nasdaq surged 1.29%, and the Dow added 238 points. The ISM Services PMI surprised to the upside at 56.1% \u2014 the strongest reading since 2022 \u2014 while ADP private payrolls topped estimates at 63,000. After the bell, Broadcom delivered a blowout quarter with AI revenue up 106% to $8.4B and guided Q2 revenue to $22B, well above consensus, sending shares up 5% in extended trading. Consumer discretionary led sectors during the session with Ross Stores surging 7% on strong Q4 results, Moderna jumped 11% after settling its COVID vaccine patent dispute for up to $2.25B, and Coinbase rallied 14% as Bitcoin reclaimed $73,000 on Trump crypto policy tailwinds.",
   "highlights": [
+    {
+      "text": "Moderna surges 11% after settling $2.25B COVID vaccine patent dispute with Arbutus/Genevant, removing key legal overhang and securing royalty-free LNP license",
+      "sentiment": "bullish",
+      "source_url": "https://finance.yahoo.com/news/moderna-rises-2-25-billion-132602379.html",
+      "source_outlet": "Yahoo Finance",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "text": "Okta tops Q4 estimates as AI agent security demand accelerates \u2014 EPS $0.90 vs $0.85 expected, revenue $761M vs $749M \u2014 stock up 3% after hours",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
+      "source_outlet": "CNBC",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "text": "Veeva Systems beats Q4 estimates handily \u2014 EPS $2.06 vs $1.93 expected, revenue $836M vs $811M \u2014 shares up 9% after hours",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/stocks-making-the-biggest-moves-after-hours-avgo-okta-stub.html",
+      "source_outlet": "CNBC",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "text": "Broadcom Q2 guidance of $22B revenue crushes $20.56B consensus; CEO Hock Tan sees 'line of sight' to $100B+ in AI chip revenue by 2027; announces $10B buyback",
+      "sentiment": "bullish",
+      "source_url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
+      "source_outlet": "Sherwood News",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "text": "ISM Services PMI surges to 56.1% in February \u2014 strongest expansion since 2022 \u2014 with New Orders jumping 5.5 points to 58.6% and Prices Paid cooling to 63.0%",
+      "sentiment": "bullish",
+      "source_url": "https://www.prnewswire.com/news-releases/services-pmi-at-56-1-february-2026-ism-services-pmi-report-302702978.html",
+      "source_outlet": "PR Newswire / ISM",
+      "added_at": "10:20 PM ET"
+    },
     {
       "text": "KeyBanc upgrades Dow Inc. and LyondellBasell to Overweight, citing 11-15% of global ethylene capacity disrupted by Iran conflict benefiting U.S. petrochemical producers",
       "sentiment": "bullish",
@@ -130,33 +165,6 @@
       "source_url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
       "source_outlet": "24/7 Wall St.",
       "added_at": "7:14 PM ET"
-    },
-    {
-      "text": "Broadcom Q1 revenue hits record $19.3B (up 29% YoY), AI revenue soars 106% to $8.4B; CEO Hock Tan projects $100B AI chip revenue pipeline from Anthropic, Meta, OpenAI",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
-      "source_outlet": "CNBC",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "text": "Consumer discretionary posts best session since Oct 31 led by Ross Stores +7%",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "CoreWeave jumps 8% after announcing multiyear cloud agreement with Perplexity",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "ISM Services PMI at 53.5 with cooling prices-paid component suggests service-sector inflation may be peaking",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Fed Beige Book shows 7 of 12 districts with slight-to-moderate growth, but 5 districts flat or declining",
-      "sentiment": "neutral",
-      "added_at": "6:55 PM ET"
     }
   ],
   "sources": [
@@ -334,6 +342,41 @@
       "url": "https://www.cnbc.com/2026/03/04/us-iran-war-live-updates.html",
       "sentiment": "bearish",
       "added_at": "9:06 PM ET"
+    },
+    {
+      "outlet": "PR Newswire / ISM",
+      "title": "Services PMI at 56.1%; February 2026 ISM Services PMI Report",
+      "url": "https://www.prnewswire.com/news-releases/services-pmi-at-56-1-february-2026-ism-services-pmi-report-302702978.html",
+      "sentiment": "bullish",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "outlet": "Sherwood News",
+      "title": "Broadcom posts modest Q1 sales and earnings beats amid AI boom",
+      "url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
+      "sentiment": "bullish",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Stocks making the biggest moves after hours: Broadcom, Okta, StubHub & more",
+      "url": "https://www.cnbc.com/2026/03/04/stocks-making-the-biggest-moves-after-hours-avgo-okta-stub.html",
+      "sentiment": "bullish",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Okta (OKTA) Q4 2026 earnings beat estimates on AI security demand",
+      "url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
+      "sentiment": "bullish",
+      "added_at": "10:20 PM ET"
+    },
+    {
+      "outlet": "Yahoo Finance",
+      "title": "Moderna rises as $2.25 billion COVID vaccine patent settlement removes overhang",
+      "url": "https://finance.yahoo.com/news/moderna-rises-2-25-billion-132602379.html",
+      "sentiment": "bullish",
+      "added_at": "10:20 PM ET"
     }
   ]
 }

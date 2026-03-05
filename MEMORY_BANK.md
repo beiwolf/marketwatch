@@ -5,12 +5,33 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 5)
-- Latest commit: `b983964` — chore: remove scheduler/automation scripts from repo
+- Last updated: 2026-03-05 (session 6)
+- Latest commit: `e6947cb` — ux: continuous-scroll flow audit — all days, inter/intra-day dividers
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `e6947cb`
+**Message:** `ux: continuous-scroll flow audit — all days, inter/intra-day dividers`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Removed date picker UI (Today button + past-dates `<select>`) from audit section header.
+- Replaced single-date audit view with a full continuous scroll of all available days.
+- New `loadAllAudit(indexData)` fetches all archive dates in parallel on first page load, renders newest-first.
+- New `refreshTodayBlock()` called on every 60s poll — only re-fetches today's archive, not the full history.
+- `auditInitialized` flag prevents re-running full load on subsequent polls.
+- Removed JS functions: `loadAuditForDate`, `switchToToday`, `populateDatePicker`.
+- Each day is a `.audit-day-block` containing:
+  - **Inter-day header** (`.audit-day-header`): bold 4px left accent bar (green/red by closing net), 28px mono closing score, date + day-of-week label, snapshot count, status pill (Live / Finalized / Partial).
+  - **Intra-day entries** (`.audit-day-entries`): existing `<details>` accordion rows, indented with a 2px left timeline rail whose color matches the day's direction.
+- New CSS classes: `.audit-day-block`, `.audit-day-header`, `.audit-day-datecol`, `.audit-day-date`, `.audit-day-dow`, `.audit-day-close`, `.audit-day-info`, `.audit-day-meta`, `.audit-day-status` (.live / .final / .partial), `.audit-day-entries`.
+- Removed CSS: `.date-picker-wrap`, `.date-picker-label`, `.date-btn`, `#date-select`, `.audit-day-label`.
+
+---
 
 ### 2026-03-05 — `c04c2b8`
 **Message:** `sched+ui: launchd scheduler, flow history panel, compact news list`

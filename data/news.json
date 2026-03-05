@@ -1,8 +1,16 @@
 {
   "date": "2026-03-05",
-  "last_updated": "3:11 AM ET",
-  "update_count": 3,
+  "last_updated": "4:38 AM ET",
+  "update_count": 4,
   "breaking": [
+    {
+      "text": "Broadcom surges 5% after hours on blowout Q1: AI revenue up 106%, CEO sees $100B AI chip revenue by 2027",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "text": "S&P 500 futures slide 0.3% Thursday as Brent crude resumes climb toward $84 on Iran escalation fears",
+      "added_at": "4:38 AM ET"
+    },
     {
       "text": "CrowdStrike slips ~4% after hours despite Q4 earnings beat as guidance disappoints some investors",
       "added_at": "3:11 AM ET"
@@ -14,18 +22,45 @@
     {
       "text": "Dow futures slip ~270 points overnight as post-rally momentum fades ahead of jobless claims data",
       "added_at": "1:58 AM ET"
-    },
-    {
-      "text": "Broadcom surges 5% after hours on record $19.3B Q1 revenue, projects $100B AI chip revenue by 2027",
-      "added_at": "1:58 AM ET"
-    },
-    {
-      "text": "Treasury Sec. Bessent confirms 15% global tariff takes effect this week, replacing prior 10% rate under Section 122",
-      "added_at": "12:56 AM ET"
     }
   ],
-  "summary": "Wall Street rallied on Wednesday March 4 with the S&P 500 gaining 0.78% to 6,869.50 and the Nasdaq jumping 1.29%, driven by a tech rebound as oil prices pulled back from Iran conflict highs and fears of an economic growth scare faded. Coinbase surged 15% after President Trump signaled support for the digital asset market structure bill and sided with crypto firms over banks on stablecoin yield, while Moderna rose 12% on a $2.25B Covid vaccine patent settlement. After the bell, Broadcom delivered a blockbuster Q1 report with record $19.3B revenue and AI revenue of $8.4B growing 106% YoY, guiding Q2 AI revenue to $10.7B and announcing a $10B buyback \u2014 while CrowdStrike beat on revenue but slipped 4% after hours on cautious guidance. Markets now eye Treasury Secretary Bessent's confirmation that 15% global tariffs will take effect this week and Friday's February nonfarm payrolls report.",
+  "summary": "U.S. stocks rallied Wednesday with the S&P 500 gaining 0.78% and the Nasdaq jumping 1.29%, led by tech and semiconductor strength, as investors looked past the ongoing Iran conflict after Trump offered maritime risk insurance for Gulf shipping and reports emerged of Iranian outreach for peace talks. However, S&P 500 futures slipped 0.3% early Thursday as oil prices resumed their climb with Brent pushing toward $84 amid Iran's vow to escalate retaliation. After the bell, Broadcom delivered a blockbuster Q1 with revenue of $19.3B (+29% YoY) and AI revenue soaring 106% to $8.4B, while CEO Hock Tan projected over $100B in AI chip revenue by 2027; Okta also beat estimates with revenue of $761M and EPS of $0.90. Key labor market data due Thursday \u2014 including initial jobless claims, Q4 unit labor costs, and nonfarm productivity revisions \u2014 could further move markets as the Middle East conflict fuels inflation concerns.",
   "highlights": [
+    {
+      "text": "South Korea's KOSPI suffers biggest single-day crash since 2008 financial crisis, plunging up to 12% and triggering circuit breaker on March 4",
+      "sentiment": "bearish",
+      "source_url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_conflict",
+      "source_outlet": "Wikipedia",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "text": "Middle East conflict threatens fresh inflation shock as oil surges 36% YTD, posing challenge to central banks and rate-cut expectations",
+      "sentiment": "bearish",
+      "source_url": "https://www.cnbc.com/2026/03/04/iran-israel-us-war-middle-east-conflict-oil-gas-lng-surge-central-banks-inflation-risk.html",
+      "source_outlet": "CNBC",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "text": "S&P 500 futures fall 0.3% early Thursday as Brent crude pushes toward $84 after Iran vows to escalate retaliation against U.S. strikes",
+      "sentiment": "bearish",
+      "source_url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
+      "source_outlet": "CNBC",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "text": "Okta beats Q4 estimates with revenue of $761M vs $749M expected and EPS of $0.90 vs $0.85, shares rise 3% after hours",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
+      "source_outlet": "CNBC",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "text": "Broadcom CEO Hock Tan projects over $100B in AI chip revenue by 2027, announces $10B share buyback as Q1 AI revenue surges 106% to $8.4B",
+      "sentiment": "bullish",
+      "source_url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
+      "source_outlet": "Stock Titan",
+      "added_at": "4:38 AM ET"
+    },
     {
       "text": "February nonfarm payrolls report due Friday March 6 \u2014 after January showed only 130K jobs added and unemployment at 4.3%",
       "sentiment": "neutral",
@@ -130,13 +165,6 @@
       "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-veeva-systems-q4-fy2026-results-dominating-the-sensitive-tech-frontier",
       "source_outlet": "FinancialContent",
       "added_at": "12:56 AM ET"
-    },
-    {
-      "text": "Broadcom CEO Hock Tan outlines path to $100B in AI chip revenue, citing progress with Anthropic, Meta, and OpenAI as key custom accelerator customers",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "12:56 AM ET"
     }
   ],
   "sources": [
@@ -237,6 +265,41 @@
       "url": "https://247wallst.com/investing/2026/03/04/moderna-and-ross-stores-lead-stock-gainers-on-wednesday/",
       "sentiment": "bullish",
       "added_at": "3:11 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "S&P 500 futures slide after major averages rebound, traders' U.S.-Iran fears ease",
+      "url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
+      "sentiment": "bearish",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "outlet": "Stock Titan",
+      "title": "Broadcom Q1 2026 revenue jumps 29% to $19.3B",
+      "url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
+      "sentiment": "bullish",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Okta (OKTA) Q4 2026 earnings beat estimates",
+      "url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
+      "sentiment": "bullish",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Middle East conflict poses fresh test to central banks as oil shock fuels inflation",
+      "url": "https://www.cnbc.com/2026/03/04/iran-israel-us-war-middle-east-conflict-oil-gas-lng-surge-central-banks-inflation-risk.html",
+      "sentiment": "bearish",
+      "added_at": "4:38 AM ET"
+    },
+    {
+      "outlet": "Businesswire",
+      "title": "Okta Announces Fourth Quarter And Fiscal Year 2026 Financial Results",
+      "url": "https://www.businesswire.com/news/home/20260304801624/en/Okta-Announces-Fourth-Quarter-And-Fiscal-Year-2026-Financial-Results",
+      "sentiment": "bullish",
+      "added_at": "4:38 AM ET"
     }
   ]
 }

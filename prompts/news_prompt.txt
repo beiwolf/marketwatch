@@ -18,6 +18,7 @@ RULES:
 - breaking: Include only genuinely urgent market-moving events from the last 2 hours. Max 3 items. Short headline only.
 - summary: Write a fresh 3-4 sentence synthesis of EVERYTHING that has happened today so far (not just the last hour). This REPLACES the previous summary.
 - highlights: Provide 4-6 highlights. These will be MERGED with existing ones — focus on NEW developments not already captured. Tag each bullish/bearish/neutral.
+- Every highlight MUST include its primary supporting source URL (source_url) and source outlet (source_outlet). If multiple sources support it, choose the best one.
 - sources: Provide 3-5 NEW articles not already in EXISTING_SOURCES_URLS. Real direct article URLs only. Verify each URL exists.
 
 Return ONLY this JSON:
@@ -27,7 +28,7 @@ Return ONLY this JSON:
   ],
   "summary": "<fresh 3-4 sentence full-day synthesis>",
   "new_highlights": [
-    {"text": "<highlight>", "sentiment": "<bullish|bearish|neutral>", "added_at": "{TIME} ET"}
+    {"text": "<highlight>", "sentiment": "<bullish|bearish|neutral>", "source_url": "<matching URL from new_sources or another credible article URL>", "source_outlet": "<outlet name>", "added_at": "{TIME} ET"}
   ],
   "new_sources": [
     {"outlet": "<string>", "title": "<string>", "url": "<real article URL>", "sentiment": "<bullish|bearish|neutral>", "added_at": "{TIME} ET"}

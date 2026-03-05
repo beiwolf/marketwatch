@@ -131,6 +131,11 @@
     .hi-dot.up{background:var(--green);}
     .hi-dot.down{background:var(--red);}
     .hi-dot.neu{background:var(--amber);}
+    .hi-main{display:flex;flex-direction:column;gap:5px;min-width:0;}
+    .hi-text{color:var(--text);text-decoration:none;}
+    .hi-text:hover{text-decoration:underline;color:var(--bright);}
+    .hi-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+    .hi-source{font-size:10px;font-weight:600;color:var(--blue);background:var(--bdim);border:1px solid rgba(96,165,250,0.25);padding:2px 8px;border-radius:var(--r-pill);}
     .hi-new{font-size:10px;font-weight:600;background:var(--bdim);color:var(--blue);padding:1px 7px;border-radius:var(--r-pill);margin-left:6px;flex-shrink:0;}
     .source-item{display:flex;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);gap:12px;transition:background 0.12s;}
     .source-item:last-child{border-bottom:none;}
@@ -287,7 +292,7 @@ function renderNews(n){
   if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">Breaking</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
   document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Last synthesis: ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
-  if(n.highlights&&n.highlights.length){document.getElementById('highlights-wrap').innerHTML='<div>'+n.highlights.map((h,i)=>{const isNew=i<3&&n.update_count>1;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div>${h.text}${isNew?'<span class="hi-new">New</span>':''}</div></div>`;}).join('')+'</div>';}
+  if(n.highlights&&n.highlights.length){document.getElementById('highlights-wrap').innerHTML='<div>'+n.highlights.map((h,i)=>{const isNew=i<3&&n.update_count>1;const hasLink=!!h.source_url;const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${h.source_outlet?`<span class="hi-source">${h.source_outlet}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;}).join('')+'</div>';}
   if(n.sources&&n.sources.length){document.getElementById('sources-wrap').innerHTML='<div>'+n.sources.map(s=>`<div class="source-item"><div class="source-left"><div class="source-outlet">${s.outlet||''}</div><div class="source-title">${s.title}</div>${s.added_at?`<div class="source-time">Added ${s.added_at}</div>`:''}</div><span class="sent ${s.sentiment==='bullish'?'sent-bull':s.sentiment==='bearish'?'sent-bear':'sent-neu'}">${s.sentiment==='bullish'?'Bull':s.sentiment==='bearish'?'Bear':'Neu'}</span><a class="source-link" href="${s.url}" target="_blank" rel="noopener">↗ Read</a></div>`).join('')+'</div>';}
 }
 function buildAuditEntries(snapshots){

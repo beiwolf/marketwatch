@@ -273,6 +273,36 @@
     .mm-bar{width:16px;height:3px;border-radius:2px;flex-shrink:0;transition:width 0.2s,background 0.2s;}
     .mm-entry:hover .mm-bar,.mm-entry.mm-active .mm-bar{width:26px;}
 
+    /* ── MARKET CLOCK ── */
+    .chip-clock{cursor:default;}
+    .chip-clock.mkt-open{background:var(--gdim);color:var(--green);border:1px solid rgba(0,214,143,0.25);}
+    .chip-clock.mkt-closed{background:var(--bg3);color:var(--muted);border:1px solid var(--border2);}
+    .chip-clock.mkt-pre{background:var(--adim);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
+
+    /* ── WATCHLIST ── */
+    .wl-card{padding:12px 20px;}
+    .wl-empty{font-size:12px;color:var(--dim);text-align:center;padding:8px 0;}
+    .wl-grid{display:flex;gap:8px;flex-wrap:wrap;}
+    .wl-item{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);transition:background 0.12s;min-width:120px;}
+    .wl-item:hover{background:var(--bg4);}
+    .wl-name{font-size:12px;font-weight:500;color:var(--text);}
+    .wl-etf{font-size:10px;color:var(--muted);font-family:var(--mono);}
+    .wl-pct{font-size:14px;font-weight:700;font-family:var(--mono);margin-left:auto;}
+    .wl-remove{background:none;border:none;color:var(--dim);cursor:pointer;font-size:14px;padding:0 2px;line-height:1;margin-left:4px;}
+    .wl-remove:hover{color:var(--red);}
+    .wl-add-btn{font-size:11px;color:var(--blue);background:var(--bdim);border:1px solid rgba(96,165,250,0.2);border-radius:var(--r-pill);padding:3px 10px;cursor:pointer;font-family:var(--sans);font-weight:600;transition:background 0.12s;}
+    .wl-add-btn:hover{background:rgba(96,165,250,0.2);}
+    .wl-picker{position:absolute;top:100%;left:0;right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r-sm);max-height:200px;overflow-y:auto;z-index:10;display:none;box-shadow:0 8px 24px rgba(0,0,0,0.5);}
+    .wl-picker.open{display:block;}
+    .wl-picker-item{padding:8px 14px;font-size:12px;cursor:pointer;display:flex;justify-content:space-between;border-bottom:1px solid var(--border);}
+    .wl-picker-item:hover{background:var(--bg3);}
+    .wl-picker-item:last-child{border-bottom:none;}
+
+    /* ── NOTIFICATION BELL ── */
+    .notif-btn{background:none;border:1px solid var(--border2);border-radius:var(--r-pill);padding:4px 10px;cursor:pointer;font-size:14px;color:var(--muted);transition:all 0.12s;line-height:1;}
+    .notif-btn:hover{color:var(--bright);border-color:var(--border3);}
+    .notif-btn.notif-on{color:var(--green);border-color:rgba(0,214,143,0.3);background:var(--gdim);}
+
     /* Misc */
     .footer{text-align:center;margin-top:56px;padding:20px 0;font-size:11px;color:var(--dim);letter-spacing:0.3px;border-top:1px solid var(--border);}
     .pos{color:var(--green);}.neg{color:var(--red);}.neu{color:var(--amber);}
@@ -304,6 +334,8 @@
       <span class="chip chip-dim" id="chip-spy">SPY —</span>
       <span class="chip chip-dim" id="chip-mood">—</span>
       <span class="chip chip-blue" id="chip-news-updated" style="display:none">NEWS —</span>
+      <span class="chip chip-clock mkt-closed" id="chip-clock">Market Closed</span>
+      <button class="notif-btn" id="notif-btn" title="Enable alerts">🔔</button>
     </div>
   </div>
 
@@ -338,6 +370,17 @@
     </div>
 
     <div class="news-col">
+      <!-- ── WATCHLIST ── -->
+      <div class="card" id="watchlist-card">
+        <div class="card-header" style="position:relative">
+          <span class="card-title">My Watchlist</span>
+          <button class="wl-add-btn" id="wl-add-btn" onclick="toggleWatchlistPicker()">+ Add Sector</button>
+          <div class="wl-picker" id="wl-picker"></div>
+        </div>
+        <div class="wl-card" id="wl-wrap">
+          <div class="wl-empty">Pin sectors you want to track</div>
+        </div>
+      </div>
       <!-- ── TOP MOVER SPOTLIGHT (feature #6) ── -->
       <div class="card" id="top-mover-card" style="display:none">
         <div class="card-header"><span class="card-title">Top Mover</span><span class="card-meta" id="top-mover-time">—</span></div>
@@ -464,6 +507,8 @@ function renderFlow(d){
   document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div class="net-score-label">Market Flow</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}<div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">Avg Move</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">Sectors Up / Down</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% Green</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ Money Out</span><span>Money In ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
   if(d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
   renderSectorHeatmap(d.sectors);
+  latestSectors=d.sectors||[];renderWatchlist();
+  checkAlerts(d);
   // Feature #6: Top Mover Spotlight
   if(d.top_mover){
     const ts=d.sectors.find(s=>s.name===d.top_mover);
@@ -488,6 +533,12 @@ function renderNews(n){
   }
   if(n.update_count){const b=document.getElementById('news-count-badge');b.textContent=n.update_count+' update'+(n.update_count!==1?'s':'')+' today';b.style.display='';}
   renderSentimentRatio(n.highlights||[]);
+  // Alert on new breaking news
+  if(notifEnabled&&n.breaking&&n.breaking.length){
+    const lastBreakKey=localStorage.getItem('mw_last_break');
+    const newKey=(n.breaking[0].text||n.breaking[0]||'').slice(0,40);
+    if(lastBreakKey!==newKey){localStorage.setItem('mw_last_break',newKey);if(lastBreakKey)sendNotif('Breaking News',n.breaking[0].text||n.breaking[0]);}
+  }
   const sourceByUrl=new Map((n.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s]));
   if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">Breaking</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
@@ -738,7 +789,138 @@ function updateMinimapActive(){
   if(block&&mmObserver)mmObserver.observe(block);
 }
 
+// ── Market Clock ──
+function updateMarketClock(){
+  const chip=document.getElementById('chip-clock');
+  if(!chip)return;
+  const now=new Date();
+  const et=new Date(now.toLocaleString('en-US',{timeZone:'America/New_York'}));
+  const mins=et.getHours()*60+et.getMinutes();
+  const day=et.getDay();
+  const isWeekday=day>=1&&day<=5;
+  const open=9*60+30,close=16*60;
+  if(!isWeekday){
+    chip.textContent='Weekend · Closed';
+    chip.className='chip chip-clock mkt-closed';
+  } else if(mins>=open&&mins<close){
+    const left=close-mins;
+    const h=Math.floor(left/60),m=left%60;
+    chip.textContent=`Open · ${h}h ${m}m left`;
+    chip.className='chip chip-clock mkt-open';
+  } else if(mins<open){
+    const until=open-mins;
+    const h=Math.floor(until/60),m=until%60;
+    chip.textContent=`Pre-market · Opens in ${h}h ${m}m`;
+    chip.className='chip chip-clock mkt-pre';
+  } else {
+    chip.textContent='After Hours · Closed';
+    chip.className='chip chip-clock mkt-closed';
+  }
+}
+
+// ── Watchlist ──
+let watchlist=JSON.parse(localStorage.getItem('mw_watchlist')||'[]');
+let latestSectors=[];
+
+function saveWatchlist(){localStorage.setItem('mw_watchlist',JSON.stringify(watchlist));}
+
+function renderWatchlist(){
+  const wrap=document.getElementById('wl-wrap');
+  if(!wrap)return;
+  if(!watchlist.length){wrap.innerHTML='<div class="wl-empty">Pin sectors you want to track</div>';return;}
+  const items=watchlist.map(etf=>{
+    const s=latestSectors.find(x=>x.etf===etf);
+    if(!s)return`<div class="wl-item"><div><div class="wl-name">${etf}</div></div><span class="wl-pct" style="color:var(--muted)">—</span><button class="wl-remove" onclick="removeFromWatchlist('${etf}')">✕</button></div>`;
+    return`<div class="wl-item"><div><div class="wl-name">${s.name}</div><div class="wl-etf">${s.etf}</div></div><span class="wl-pct ${col(s.change)}">${fmt(s.change)}</span><button class="wl-remove" onclick="removeFromWatchlist('${etf}')">✕</button></div>`;
+  }).join('');
+  wrap.innerHTML=`<div class="wl-grid">${items}</div>`;
+}
+
+function toggleWatchlistPicker(){
+  const picker=document.getElementById('wl-picker');
+  if(picker.classList.contains('open')){picker.classList.remove('open');return;}
+  const available=latestSectors.filter(s=>!watchlist.includes(s.etf));
+  if(!available.length){picker.innerHTML='<div class="wl-picker-item" style="color:var(--dim)">All sectors added</div>';picker.classList.add('open');return;}
+  picker.innerHTML=available.map(s=>`<div class="wl-picker-item" onclick="addToWatchlist('${s.etf}')">${s.name}<span class="s-etf">${s.etf}</span></div>`).join('');
+  picker.classList.add('open');
+}
+
+function addToWatchlist(etf){
+  if(!watchlist.includes(etf))watchlist.push(etf);
+  saveWatchlist();renderWatchlist();
+  document.getElementById('wl-picker').classList.remove('open');
+}
+
+function removeFromWatchlist(etf){
+  watchlist=watchlist.filter(e=>e!==etf);
+  saveWatchlist();renderWatchlist();
+}
+
+// Close picker on outside click
+document.addEventListener('click',e=>{
+  const picker=document.getElementById('wl-picker');
+  const btn=document.getElementById('wl-add-btn');
+  if(picker&&!picker.contains(e.target)&&e.target!==btn)picker.classList.remove('open');
+});
+
+// ── Push Notifications ──
+let notifEnabled=localStorage.getItem('mw_notif')==='on';
+let prevFlowData=null;
+
+function updateNotifBtn(){
+  const btn=document.getElementById('notif-btn');
+  if(!btn)return;
+  btn.classList.toggle('notif-on',notifEnabled);
+  btn.title=notifEnabled?'Alerts on — click to disable':'Enable alerts';
+}
+
+async function toggleNotifications(){
+  if(notifEnabled){
+    notifEnabled=false;localStorage.setItem('mw_notif','off');updateNotifBtn();return;
+  }
+  if(!('Notification' in window)){alert('Notifications not supported in this browser');return;}
+  const perm=await Notification.requestPermission();
+  if(perm==='granted'){notifEnabled=true;localStorage.setItem('mw_notif','on');updateNotifBtn();}
+  else{alert('Notification permission denied');}
+}
+
+function sendNotif(title,body){
+  if(!notifEnabled||!('Notification' in window)||Notification.permission!=='granted')return;
+  try{new Notification(title,{body,icon:'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>'});}catch{}
+}
+
+function checkAlerts(flow){
+  if(!notifEnabled||!flow)return;
+  if(prevFlowData){
+    // Regime flip
+    if(prevFlowData.flow_regime&&flow.flow_regime&&prevFlowData.flow_regime!==flow.flow_regime){
+      sendNotif('Market Mode Changed',`${prevFlowData.flow_regime} → ${flow.flow_regime}`);
+    }
+    // Big sector move (>2% change since last)
+    if(flow.sectors&&prevFlowData.sectors){
+      const prevMap=new Map(prevFlowData.sectors.map(s=>[s.etf,s.change||0]));
+      for(const s of flow.sectors){
+        const prev=prevMap.get(s.etf)||0;
+        const delta=Math.abs((s.change||0)-prev);
+        if(delta>=2)sendNotif(`${s.name} moved ${delta>0?'+':''}${(s.change-prev).toFixed(1)}%`,`${s.etf}: ${fmt(s.change)}`);
+      }
+    }
+    // SPY threshold cross (crossed 0)
+    if(prevFlowData.sp500_change!==null&&flow.sp500_change!==null){
+      if((prevFlowData.sp500_change>=0&&flow.sp500_change<0)||(prevFlowData.sp500_change<0&&flow.sp500_change>=0)){
+        sendNotif('SPY Crossed Zero',`SPY now at ${fmt(flow.sp500_change)}`);
+      }
+    }
+  }
+  prevFlowData=JSON.parse(JSON.stringify(flow));
+}
+
+document.getElementById('notif-btn').addEventListener('click',toggleNotifications);
+
 // Init
+updateNotifBtn();
+updateMarketClock();
+setInterval(updateMarketClock,30000);
 document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 setInterval(()=>{document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});},60000);
 loadAll();

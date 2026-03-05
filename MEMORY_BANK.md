@@ -5,12 +5,36 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 7)
-- Latest commit: `b30e4c1` — feat: 13 new features — charts, heatmap, mood arc, regime alerts, minimap + more
+- Last updated: 2026-03-05 (session 8)
+- Latest commit: `f0a19a4` — ux: simplify jargon for basic investors — plain English labels
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `f0a19a4`
+**Message:** `ux: simplify jargon for basic investors — plain English labels`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+Replaced finance jargon with plain English labels to make the dashboard accessible to basic investors:
+- "Net Flow Score" → "Market Flow" (card title + hero label)
+- "Breadth" → "Sectors Up / Down"
+- "% Advancing" → "% Green"
+- "Avg Sector" → "Avg Move"
+- "Sector Rotation" → "Sectors" + legend: "⚡ Unusual volume · ~ Estimated · ▲▼ Change"
+- "◀ Outflow / Inflow ▶" → "◀ Money Out / Money In ▶"
+- "Inflows / Outflows" → "Winners / Losers"
+- "Net Flow Trend" → "Market Flow — 10 Days"
+- "Regime changed" → "Market mode changed" (flip banner)
+- "Regime" → "Mode" (timeline label)
+- "Mood" → "Sentiment" (arc label)
+- Sentiment ratio: `5↑ 2↓ 3→` → `5 Bullish 2 Bearish 3 Neutral`
+- "Intraday net flow" → "Today's market flow" (sparkline label)
+
+---
 
 ### 2026-03-05 — `b30e4c1`
 **Message:** `feat: 13 new features — charts, heatmap, mood arc, regime alerts, minimap + more`

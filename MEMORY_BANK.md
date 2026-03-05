@@ -5,12 +5,42 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 6)
-- Latest commit: `ff78889` — ux: show industry name + ETF ticker in audit sector cells
+- Last updated: 2026-03-05 (session 7)
+- Latest commit: `b30e4c1` — feat: 13 new features — charts, heatmap, mood arc, regime alerts, minimap + more
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `b30e4c1`
+**Message:** `feat: 13 new features — charts, heatmap, mood arc, regime alerts, minimap + more`
+
+**Files changed:**
+- `index.html`
+- `sw.js` (created)
+
+**What changed:**
+All 13 features added in one comprehensive update:
+
+1. **Multi-day net flow trend chart** — SVG line chart in "Net Flow Trend" card showing last 10 days of `net_close` from `flow_index.json`. Colored dots per day (green/red), zero-line, date labels.
+2. **Sector heatmap** — New card in flow col. 4-column CSS grid of all sectors; background color intensity scales with magnitude relative to max, hue by direction (green/red).
+3. **Flow regime timeline** — Appears inside each audit day block when regime transitions occurred. Compresses consecutive same-regime snapshots into pill trail with arrows between changes.
+4. **Intraday mood arc** — Row of 8px colored dots (one per snapshot) inside audit day block; green=risk-on, red=risk-off, amber=neutral. Only shown if ≥2 snapshots have mood data.
+5. **Sentiment ratio badge** — `5↑ 2↓ 3→` pill row in Key Highlights card header, populated on each `renderNews` call.
+6. **Top Mover Spotlight card** — Dedicated card at top of right column. Shows top_mover name (large mono), % change, ETF badge, reason text. Populated from `renderFlow`.
+7. **Regime flip alert** — Amber banner below topbar on page load when `flow_regime` differs from last known value. Persists across polls. Dismissable with ✕ button.
+8. **Stale data warning** — `chip-updated` turns amber (`chip-amber`) if `generated_at` is >20 min old and current time is within market hours (9:30–16:30). Shows tooltip with age.
+9. **URL hash deep-linking** — `#YYYY-MM-DD` in URL scrolls to matching `.audit-day-block` on load and on `hashchange`. Clicking any day header updates hash via `history.replaceState`.
+10. **Jump to Today floating button** — Fixed bottom-right button (`↑ Today`). Appears when audit section is scrolled >60px above viewport. Scrolls to today's block and updates hash.
+11. **Keyboard navigation** — Global `j`/`k` moves between `.audit-entry` elements (blue outline highlight), `Enter` toggles open/closed. Ignores when focused on form elements.
+12. **Service worker / offline cache** — `sw.js` registered at `./sw.js`. Network-first strategy for `/data/` files (caches fresh responses, falls back to cache). Cache-first for shell. Cleans stale caches on activate.
+13. **Minimap sidebar** — Fixed right-side panel (hidden `<1460px`). One colored bar per audit day; `IntersectionObserver` highlights the currently-visible day. Bars link to `#YYYY-MM-DD` hashes. Updated after `loadAllAudit` resolves.
+
+**CSS additions:** `.hm-wrap/.hm-grid/.hm-cell/.hm-etf/.hm-name/.hm-pct`, `.trend-chart-wrap/.tc-svg`, `.mood-arc/.mood-arc-dots/.ma-dot`, `.regime-timeline/.rt-label/.rt-pills/.rt-pill/.rt-on/.rt-off/.rt-neu/.rt-arrow`, `.sent-ratio/.sr-bull/.sr-bear/.sr-neu`, `.spotlight-wrap/.spotlight-ticker/.spotlight-pct/.spotlight-reason`, `.regime-flip-banner/.rfb-icon/.rfb-text/.rfb-close`, `.jump-today-btn`, `.minimap/.mm-entry/.mm-label/.mm-bar/.mm-active`, `.audit-entry.kb-active`, `.audit-kb-hint`
+
+**JS additions:** `checkRegimeFlip()`, `checkStaleData()`, `renderSectorHeatmap()`, `renderSentimentRatio()`, `buildMoodArc()`, `buildRegimeTimeline()`, `renderTrendChart()`, `jumpToToday()`, `initJumpToday()`, `initKeyboardNav()`, `updateMinimap()`, `updateMinimapActive()`, `scrollToHash()`. `auditDataCache` global object caches snapshots for minimap use.
+
+---
 
 ### 2026-03-05 — `ff78889`
 **Message:** `ux: show industry name + ETF ticker in audit sector cells`

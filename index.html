@@ -198,8 +198,11 @@
     .audit-body{padding:16px 20px;border-top:1px solid var(--border);background:var(--bg3);}
     .audit-sectors{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:12px;}
     @media(max-width:600px){.audit-sectors{grid-template-columns:1fr 1fr;}}
-    .audit-sector-cell{display:flex;justify-content:space-between;font-size:12px;padding:5px 10px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;}
-    .asc-name{color:var(--muted);font-family:var(--mono);}
+    .audit-sector-cell{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;gap:8px;}
+    .asc-info{display:flex;flex-direction:column;gap:2px;min-width:0;}
+    .asc-industry{font-size:12px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .asc-etf{font-size:10px;color:var(--muted);font-family:var(--mono);}
+    .asc-pct{font-size:13px;font-weight:700;font-family:var(--mono);flex-shrink:0;}
     .audit-narrative-text{font-size:13px;color:var(--muted);line-height:1.65;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-sm);}
     .footer{text-align:center;margin-top:56px;padding:20px 0;font-size:11px;color:var(--dim);letter-spacing:0.3px;border-top:1px solid var(--border);}
     .pos{color:var(--green);}.neg{color:var(--red);}.neu{color:var(--amber);}
@@ -325,7 +328,7 @@ function buildAuditEntries(snapshots){
   const entries=[...snapshots].reverse().map(d=>{
     const net=d.net_flow_score;const isPos=net!==null&&net>=0;
     const deltaHtml=d.net_flow_delta!=null?`<span class="${col(d.net_flow_delta)}" style="font-size:11px;font-family:var(--mono)">${d.net_flow_delta>0?'▲':'▼'}${Math.abs(d.net_flow_delta).toFixed(2)}%</span>`:'';
-    const cells=(d.sectors||[]).map(s=>`<div class="audit-sector-cell"><span class="asc-name">${s.etf}</span><span class="asc-pct ${col(s.change)}">${fmt(s.change)}</span></div>`).join('');
+    const cells=(d.sectors||[]).map(s=>`<div class="audit-sector-cell"><div class="asc-info"><span class="asc-industry">${s.name||s.etf}</span><span class="asc-etf">${s.etf}</span></div><span class="asc-pct ${col(s.change)}">${fmt(s.change)}</span></div>`).join('');
     return`<details class="audit-entry ${isPos?'net-pos':'net-neg'}"><summary><span class="a-toggle">▶</span><span class="a-time">${d.generated_at||'—'}</span><span class="a-net ${col(net)}">${fmt(net)}</span>${deltaHtml}<span class="a-spy">SPY ${fmt(d.sp500_change)}</span><span class="a-bread">${d.sectors_advancing??'—'}▲ ${d.sectors_declining??'—'}▼</span><span class="a-regime">${(d.flow_regime||'').replace(/^[⚠⚡]\s?/,'')}</span></summary><div class="audit-body"><div class="audit-sectors">${cells}</div><div class="audit-narrative-text">${d.narrative||''} ${d.top_mover?`<strong style="color:var(--amber)">${d.top_mover}:</strong> ${d.top_mover_reason||''}`:''}</div></div></details>`;
   }).join('');
   return sparkHtml+entries;

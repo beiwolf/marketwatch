@@ -1,8 +1,20 @@
 {
   "date": "2026-03-05",
-  "last_updated": "4:38 AM ET",
-  "update_count": 4,
+  "last_updated": "5:47 AM ET",
+  "update_count": 5,
   "breaking": [
+    {
+      "text": "Okta beats Q4 estimates but stock dips after-hours on slower FY27 growth guidance of ~9%",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "EU expects exemption from imminent U.S. 15% universal tariff hike, sources say",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "Broadcom guides Q2 revenue to $22B, beating estimates; CEO sees $100B+ AI chip revenue by 2027",
+      "added_at": "5:47 AM ET"
+    },
     {
       "text": "Broadcom surges 5% after hours on blowout Q1: AI revenue up 106%, CEO sees $100B AI chip revenue by 2027",
       "added_at": "4:38 AM ET"
@@ -10,22 +22,45 @@
     {
       "text": "S&P 500 futures slide 0.3% Thursday as Brent crude resumes climb toward $84 on Iran escalation fears",
       "added_at": "4:38 AM ET"
-    },
-    {
-      "text": "CrowdStrike slips ~4% after hours despite Q4 earnings beat as guidance disappoints some investors",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "Broadcom surges ~5% after hours on record Q1 revenue of $19.3B, AI revenue up 106% YoY to $8.4B with $100B AI chip forecast",
-      "added_at": "3:11 AM ET"
-    },
-    {
-      "text": "Dow futures slip ~270 points overnight as post-rally momentum fades ahead of jobless claims data",
-      "added_at": "1:58 AM ET"
     }
   ],
-  "summary": "U.S. stocks rallied Wednesday with the S&P 500 gaining 0.78% and the Nasdaq jumping 1.29%, led by tech and semiconductor strength, as investors looked past the ongoing Iran conflict after Trump offered maritime risk insurance for Gulf shipping and reports emerged of Iranian outreach for peace talks. However, S&P 500 futures slipped 0.3% early Thursday as oil prices resumed their climb with Brent pushing toward $84 amid Iran's vow to escalate retaliation. After the bell, Broadcom delivered a blockbuster Q1 with revenue of $19.3B (+29% YoY) and AI revenue soaring 106% to $8.4B, while CEO Hock Tan projected over $100B in AI chip revenue by 2027; Okta also beat estimates with revenue of $761M and EPS of $0.90. Key labor market data due Thursday \u2014 including initial jobless claims, Q4 unit labor costs, and nonfarm productivity revisions \u2014 could further move markets as the Middle East conflict fuels inflation concerns.",
+  "summary": "Wall Street staged a broad recovery on Wednesday as the S&P 500 rose 0.78%, the Nasdaq jumped 1.29%, and the Dow added 0.49%, driven by easing oil prices and strong ADP jobs data (63K vs 50K expected). After the bell, Broadcom delivered a blowout Q1 with record $19.3B revenue (+29% YoY), AI revenue surging 106% to $8.4B, and announced a $10B buyback alongside Q2 guidance of $22B that crushed estimates \u2014 while Okta beat on earnings and revenue but saw shares dip on modest FY27 growth guidance. Treasury Secretary Bessent confirmed a 15% global tariff hike is imminent this week, though the EU expects an exemption under its existing trade framework. Overnight futures point to a modest pullback with S&P 500 futures down ~0.25%, as markets digest the earnings wave and tariff uncertainty heading into Thursday's session.",
   "highlights": [
+    {
+      "text": "Ross Stores surges 7.4% after Q4 comp sales jump 9% (double estimates), EPS of $2.00 beats guidance; plans 110 new stores in 2026",
+      "sentiment": "bullish",
+      "source_url": "https://www.benzinga.com/markets/earnings/26/03/51020504/ross-stores-stock-rises-after-q4-results-top-expectations",
+      "source_outlet": "Benzinga",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "EU expects to be exempt from U.S. universal tariff hike to 15%, keeping the bloc at 10% under existing trade deal framework",
+      "sentiment": "neutral",
+      "source_url": "https://www.emirates247.com/business/eu-expects-exemption-from-looming-u-s-tariff-hike-to-15-2026-03-04-1.744593",
+      "source_outlet": "Emirates247",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "CoreWeave lands multi-year deal to power Perplexity's AI inference on Nvidia GB200 NVL72 clusters, shares pop 8%",
+      "sentiment": "bullish",
+      "source_url": "https://www.axios.com/2026/03/04/perplexity-coreweave-data-center-nvidia",
+      "source_outlet": "Axios",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "Okta beats Q4 with $0.90 EPS vs $0.85 expected and $761M revenue, but stock falls after-hours as FY27 guidance implies growth deceleration to ~9%",
+      "sentiment": "bearish",
+      "source_url": "https://ts2.tech/en/okta-stock-whipsaws-after-ai-agent-lift-and-earnings-beat-then-guidance-points-to-slower-growth/",
+      "source_outlet": "TS2 Space",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "text": "Broadcom Q2 revenue guidance of $22B crushes Street estimate of $20.6B; announces $10B share buyback and projects $100B+ AI chip revenue by 2027",
+      "sentiment": "bullish",
+      "source_url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
+      "source_outlet": "Investing.com",
+      "added_at": "5:47 AM ET"
+    },
     {
       "text": "South Korea's KOSPI suffers biggest single-day crash since 2008 financial crisis, plunging up to 12% and triggering circuit breaker on March 4",
       "sentiment": "bearish",
@@ -130,41 +165,6 @@
       "source_url": "https://finance.yahoo.com/news/stock-market-today-march-4-224903316.html",
       "source_outlet": "Yahoo Finance",
       "added_at": "1:58 AM ET"
-    },
-    {
-      "text": "Broadcom posts record Q1 revenue of $19.3B (+29% YoY), AI revenue soars 106% to $8.4B; CEO projects $100B+ AI chip revenue in 2027 with OpenAI as new sixth customer",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "1:58 AM ET"
-    },
-    {
-      "text": "Key economic data due March 5: Initial Jobless Claims (8:30 AM), Q4 revised Unit Labor Costs & Nonfarm Productivity, and Challenger Job Cuts report",
-      "sentiment": "neutral",
-      "source_url": "https://x.com/marketsday/status/2027606182056366498",
-      "source_outlet": "Markets Today",
-      "added_at": "12:56 AM ET"
-    },
-    {
-      "text": "StubHub posts $1.9B net loss in first post-IPO earnings on $1.4B stock-based compensation charge, but guides FY2026 to $9.9-10.1B GMS and $400-420M adjusted EBITDA",
-      "sentiment": "neutral",
-      "source_url": "https://www.stocktitan.net/sec-filings/STUB/8-k-stub-hub-holdings-inc-reports-material-event-60c38cfcc857.html",
-      "source_outlet": "Stock Titan",
-      "added_at": "12:56 AM ET"
-    },
-    {
-      "text": "Treasury Secretary Bessent says 15% global tariffs under Section 122 take effect this week, but predicts rates return to pre-Supreme Court ruling levels within 5 months",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/04/bessent-says-global-15percent-tariff-starts-this-week-move-back-to-prior-rates-within-5-months.html",
-      "source_outlet": "CNBC",
-      "added_at": "12:56 AM ET"
-    },
-    {
-      "text": "Veeva Systems beats Q4 estimates with $836M revenue (+13% YoY) and $2.06 EPS vs $1.93 consensus, maintaining 40%+ operating margins \u2014 shares up 4% after hours",
-      "sentiment": "bullish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-veeva-systems-q4-fy2026-results-dominating-the-sensitive-tech-frontier",
-      "source_outlet": "FinancialContent",
-      "added_at": "12:56 AM ET"
     }
   ],
   "sources": [
@@ -300,6 +300,41 @@
       "url": "https://www.businesswire.com/news/home/20260304801624/en/Okta-Announces-Fourth-Quarter-And-Fiscal-Year-2026-Financial-Results",
       "sentiment": "bullish",
       "added_at": "4:38 AM ET"
+    },
+    {
+      "outlet": "Investing.com",
+      "title": "Broadcom Q2 revenue guidance tops estimates, sees $10.7 billion in AI semiconductor sales",
+      "url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
+      "sentiment": "bullish",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "outlet": "Axios",
+      "title": "Perplexity inks CoreWeave deal to use Nvidia Grace Blackwell-powered clusters",
+      "url": "https://www.axios.com/2026/03/04/perplexity-coreweave-data-center-nvidia",
+      "sentiment": "bullish",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "outlet": "TS2 Space",
+      "title": "Okta stock whipsaws after AI-agent lift and earnings beat \u2014 then guidance points to slower growth",
+      "url": "https://ts2.tech/en/okta-stock-whipsaws-after-ai-agent-lift-and-earnings-beat-then-guidance-points-to-slower-growth/",
+      "sentiment": "bearish",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "outlet": "Benzinga",
+      "title": "Ross Stores stock rises after Q4 results top expectations",
+      "url": "https://www.benzinga.com/markets/earnings/26/03/51020504/ross-stores-stock-rises-after-q4-results-top-expectations",
+      "sentiment": "bullish",
+      "added_at": "5:47 AM ET"
+    },
+    {
+      "outlet": "Emirates247",
+      "title": "EU expects exemption from looming U.S. tariff hike to 15%",
+      "url": "https://www.emirates247.com/business/eu-expects-exemption-from-looming-u-s-tariff-hike-to-15-2026-03-04-1.744593",
+      "sentiment": "neutral",
+      "added_at": "5:47 AM ET"
     }
   ]
 }

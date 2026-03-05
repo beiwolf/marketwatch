@@ -313,11 +313,11 @@
   <div class="main-grid">
     <div id="flow-col">
       <div class="card">
-        <div class="card-header"><span class="card-title">Net Flow Score</span><span class="card-meta" id="flow-updated-label">—</span></div>
+        <div class="card-header"><span class="card-title">Market Flow</span><span class="card-meta" id="flow-updated-label">—</span></div>
         <div id="net-panel-wrap"><div class="state-box"><div class="spinner"></div><div class="state-title">Loading</div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><span class="card-title">Sector Rotation</span><span class="card-meta">⚡ High vol &nbsp;·&nbsp; ~ Est &nbsp;·&nbsp; ▲▼ Delta</span></div>
+        <div class="card-header"><span class="card-title">Sectors</span><span class="card-meta">⚡ Unusual volume &nbsp;·&nbsp; ~ Estimated &nbsp;·&nbsp; ▲▼ Change</span></div>
         <div id="sector-list-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
       </div>
       <!-- ── SECTOR HEATMAP (feature #2) ── -->
@@ -332,7 +332,7 @@
       <div class="card" id="flow-summary-card"></div>
       <!-- Flow Pattern + Trend Chart (#1) -->
       <div class="card">
-        <div class="card-header"><span class="card-title">Net Flow Trend</span><span class="card-meta">Last 10 days · Close values</span></div>
+        <div class="card-header"><span class="card-title">Market Flow — 10 Days</span><span class="card-meta">Daily closing values</span></div>
         <div id="flow-pattern-wrap"><div class="state-box" style="padding:20px"><div class="state-sub">Loading...</div></div></div>
       </div>
     </div>
@@ -392,7 +392,7 @@ function checkRegimeFlip(r){
   const banner=document.getElementById('regime-flip-banner');
   if(!banner)return;
   if(lastKnownRegime&&r&&lastKnownRegime!==r){
-    banner.innerHTML=`<span class="rfb-icon">⚡</span><span class="rfb-text">Regime changed: <strong>${lastKnownRegime}</strong> → <strong>${r}</strong></span><button class="rfb-close" onclick="this.parentElement.style.display='none'">✕</button>`;
+    banner.innerHTML=`<span class="rfb-icon">⚡</span><span class="rfb-text">Market mode changed: <strong>${lastKnownRegime}</strong> → <strong>${r}</strong></span><button class="rfb-close" onclick="this.parentElement.style.display='none'">✕</button>`;
     banner.style.display='flex';
   }
   if(r)lastKnownRegime=r;
@@ -441,7 +441,7 @@ function renderSentimentRatio(highlights){
   const bull=highlights.filter(h=>h.sentiment==='bullish').length;
   const bear=highlights.filter(h=>h.sentiment==='bearish').length;
   const neu=highlights.filter(h=>h.sentiment==='neutral').length;
-  wrap.innerHTML=`<div class="sent-ratio"><span class="sr-bull">${bull}↑</span><span class="sr-bear">${bear}↓</span><span class="sr-neu">${neu}→</span></div>`;
+  wrap.innerHTML=`<div class="sent-ratio"><span class="sr-bull">${bull} Bullish</span><span class="sr-bear">${bear} Bearish</span><span class="sr-neu">${neu} Neutral</span></div>`;
 }
 
 // ── Main: renderFlow ──
@@ -461,7 +461,7 @@ function renderFlow(d){
   const barW=net!==null?clamp(Math.abs(net)/(maxAbs*(d.sectors.length||11))*100,0,50):0;
   const barLeft=isPos?'50%':(50-barW)+'%';
   const barBg=isPos?'linear-gradient(90deg,transparent,var(--green))':'linear-gradient(270deg,transparent,var(--red))';
-  document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div class="net-score-label">Net Flow Score</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}<div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">Avg Sector</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">Breadth</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% Advancing</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ Outflow</span><span>Inflow ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
+  document.getElementById('net-panel-wrap').innerHTML=`<div class="net-panel"><div class="net-score-label">Market Flow</div><div class="net-score-value ${col(net)}">${fmt(net)}</div>${d.net_flow_delta!=null?`<div class="net-delta ${col(d.net_flow_delta)}">${d.net_flow_delta>0?'▲':'▼'} ${fmt(d.net_flow_delta)} since last run</div>`:''}<div class="net-stats"><div class="stats-row"><div class="stat"><div class="stat-label">Avg Move</div><div class="stat-value ${col(d.avg_sector_move)}">${fmt(d.avg_sector_move)}</div></div><div class="stat"><div class="stat-label">Sectors Up / Down</div><div class="breadth-row"><span class="bp-up">${d.sectors_advancing??'—'} ▲</span><span class="bp-sep">/</span><span class="bp-dn">${d.sectors_declining??'—'} ▼</span></div></div><div class="stat"><div class="stat-label">% Green</div><div class="stat-value">${d.sectors_advancing&&d.sectors?Math.round(d.sectors_advancing/d.sectors.length*100)+'%':'—'}</div></div></div><div class="flow-bar-wrap"><div class="flow-bar-labels"><span>◀ Money Out</span><span>Money In ▶</span></div><div class="flow-bar-track"><div class="flow-bar-mid"></div><div class="flow-bar-fill" style="width:${barW}%;left:${barLeft};background:${barBg}"></div></div><div class="regime" style="color:${regimeColor(d.flow_regime)}">${d.flow_regime||'—'}</div></div></div></div>`;
   if(d.sectors.length){document.getElementById('sector-list-wrap').innerHTML='<div>'+d.sectors.map(s=>{const pct=s.change??0;const isP=pct>=0;const bw=clamp(Math.abs(pct)/maxAbs*50,0,50);const bl=isP?'50%':(50-bw)+'%';const bbg=isP?'linear-gradient(90deg,transparent,var(--green2))':'linear-gradient(270deg,transparent,var(--red2))';const isTop=d.top_mover&&s.name===d.top_mover;const delta=s.change_delta;return`<div class="sector-row${isTop?' is-top':''}"><div class="s-name">${s.name}</div><div class="s-etf">${s.etf}</div><div class="s-bar-wrap"><div class="s-bar-center"></div><div class="s-bar-fill" style="width:${bw}%;left:${bl};background:${bbg}"></div></div><div class="s-pct ${col(pct)}">${s.estimated?'~':''}${fmt(pct)}</div><div class="s-delta ${col(delta)}">${delta!=null?(delta>0?'▲':'▼')+' '+Math.abs(delta).toFixed(2)+'%':''}</div><div class="s-flag">${(s.volume_vs_avg||0)>=1.5?'⚡':''}</div></div>`;}).join('')+'</div>';}
   renderSectorHeatmap(d.sectors);
   // Feature #6: Top Mover Spotlight
@@ -476,7 +476,7 @@ function renderFlow(d){
   }
   document.getElementById('narrative-wrap').innerHTML=`<div class="narrative-body"><div class="narrative-text">${d.narrative||'No narrative available.'}</div>${d.top_mover?`<div class="narrative-mover"><strong>${d.top_mover}:</strong> ${d.top_mover_reason||''}</div>`:''}</div>`;
   const adv=(d.sectors||[]).filter(s=>(s.change??0)>0);const dec=(d.sectors||[]).filter(s=>(s.change??0)<0);
-  document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">Inflows (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">Outflows (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
+  document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">Winners (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">Losers (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
 }
 
 function renderNews(n){
@@ -505,7 +505,7 @@ function buildMoodArc(snapshots){
     const color=l.includes('risk-on')||l.includes('bullish')?'var(--green)':l.includes('risk-off')||l.includes('bearish')?'var(--red)':'var(--amber)';
     return`<span class="ma-dot" style="background:${color}" title="${s.generated_at}: ${s.market_mood}"></span>`;
   }).join('');
-  return`<div class="mood-arc"><span class="mood-arc-label">Mood</span><div class="mood-arc-dots">${dots}</div></div>`;
+  return`<div class="mood-arc"><span class="mood-arc-label">Sentiment</span><div class="mood-arc-dots">${dots}</div></div>`;
 }
 
 // ── Feature #3: Regime Timeline ──
@@ -523,7 +523,7 @@ function buildRegimeTimeline(snapshots){
     const short=r.replace(/RISK-ON — |RISK-OFF — /,'').split(' ').slice(0,2).join(' ');
     return(i>0?'<span class="rt-arrow">→</span>':'')+`<span class="rt-pill ${cls}" title="${r}">${s.generated_at||'?'} · ${short}</span>`;
   }).join('');
-  return`<div class="regime-timeline"><span class="rt-label">Regime</span><div class="rt-pills">${pills}</div></div>`;
+  return`<div class="regime-timeline"><span class="rt-label">Mode</span><div class="rt-pills">${pills}</div></div>`;
 }
 
 function buildAuditEntries(snapshots){
@@ -536,7 +536,7 @@ function buildAuditEntries(snapshots){
     const pts=nets.map((v,i)=>{const x=pad+(i/(nets.length-1))*(W-2*pad);const y=H-pad-((v-mn)/range)*(H-2*pad);return`${x},${y}`;}).join(' ');
     const zeroY=H-pad-((0-mn)/range)*(H-2*pad);
     const lineColor=nets[nets.length-1]>=0?'#00d68f':'#ff4757';
-    sparkHtml=`<div class="sparkline-wrap"><div class="spark-label">Intraday net flow — ${nets.length} snapshots</div><svg class="spark-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><line x1="0" y1="${clamp(zeroY,0,H)}" x2="${W}" y2="${clamp(zeroY,0,H)}" stroke="#2e2e2e" stroke-width="1" stroke-dasharray="4,4"/><polyline points="${pts}" fill="none" stroke="${lineColor}" stroke-width="2" stroke-linejoin="round"/></svg></div>`;
+    sparkHtml=`<div class="sparkline-wrap"><div class="spark-label">Today's market flow — ${nets.length} snapshots</div><svg class="spark-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><line x1="0" y1="${clamp(zeroY,0,H)}" x2="${W}" y2="${clamp(zeroY,0,H)}" stroke="#2e2e2e" stroke-width="1" stroke-dasharray="4,4"/><polyline points="${pts}" fill="none" stroke="${lineColor}" stroke-width="2" stroke-linejoin="round"/></svg></div>`;
   }
   const entries=[...snapshots].reverse().map(d=>{
     const net=d.net_flow_score;const isPos=net!==null&&net>=0;

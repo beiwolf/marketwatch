@@ -1,8 +1,20 @@
 {
   "date": "2026-03-05",
-  "last_updated": "4:31 PM ET",
-  "update_count": 9,
+  "last_updated": "5:36 PM ET",
+  "update_count": 10,
   "breaking": [
+    {
+      "text": "China sets 2026 GDP growth target at 4.5%-5%, lowest since at least the 1990s",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Berkshire Hathaway resumes share buybacks for first time since 2024",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Dow plunges 785 points as Iran conflict sends oil surging past $80/barrel, settling up 8% at $81.01",
+      "added_at": "5:36 PM ET"
+    },
     {
       "text": "US reportedly considering AI chip export permit requirements \u2014 semiconductor index drops 1.2%",
       "added_at": "4:31 PM ET"
@@ -10,22 +22,52 @@
     {
       "text": "S&P 500 closes down 1.22% at 5,785; Dow drops 785 points on geopolitical selloff",
       "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "Iran strikes oil tanker with missile \u2014 WTI crude surges 8% past $81/barrel",
-      "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "S&P 500 futures slip 0.4% premarket as 15% global tariff expected to take effect this week",
-      "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "Iran denies peace talk reports as 'psychological warfare'; marine war-risk insurance canceled for Strait of Hormuz effective today",
-      "added_at": "9:02 AM ET"
     }
   ],
-  "summary": "U.S. equities sold off sharply on Thursday as escalating Middle East tensions rattled markets after Iran struck an oil tanker with a missile, sending WTI crude surging 8% to $81.01/barrel. The Dow led losses with a 785-point decline (-1.61%), the S&P 500 fell 1.22%, while the Nasdaq held up relatively better at -0.26% as investors rotated into software names like Salesforce (+5%). Airlines were the worst-hit sector with United and Delta both tumbling 7%, while travel booking stocks Expedia (+11%) and Booking (+8%) rallied after OpenAI scaled back ChatGPT shopping plans. Investors also digested Broadcom earnings, Kroger's strong results, China's reduced GDP growth target of 4.5-5%, and Berkshire Hathaway's first share buyback since 2024 under new CEO Greg Abel.",
+  "summary": "U.S. stocks sold off sharply on Thursday as escalating conflict in Iran sent crude oil surging past $80 per barrel, igniting inflation fears across Wall Street. The Dow led losses, plunging 785 points (\u22121.6%) to 47,955, while the S&P 500 fell 0.6% to 6,831 and the Nasdaq slipped just 0.3% to 22,749 as tech showed relative resilience. Airlines were decimated by soaring fuel costs, with American Airlines dropping 5.4% and United falling 5%, while energy producers rallied with the SPDR S&P Oil & Gas ETF gaining over 2%. Broadcom stood out as a bright spot, climbing 4.8% on strong earnings, while Berkshire Hathaway announced a resumption of buybacks and China set its lowest GDP growth target in over 30 years.",
   "highlights": [
+    {
+      "text": "Salesforce gains 5%, Microsoft and Oracle each add 1% as cloud/enterprise software sector defies broader market weakness",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "China sets 2026 GDP growth target at 4.5%-5%, the lowest in over 30 years, raising concerns about global demand outlook",
+      "sentiment": "bearish",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/stock-market-today-dow-s-p-live-updates-",
+      "source_outlet": "Bloomberg",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Berkshire Hathaway resumes share repurchases for first time since 2024, signaling Buffett sees value in own stock",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
+      "source_outlet": "CNBC",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Airlines crushed by jet fuel fears \u2014 American Airlines \u22125.4%, United \u22125.0%, Delta \u22124.0% as brokerages warn of extreme fuel cost risk",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Broadcom (AVGO) rallies 4.8% after quarterly earnings beat analyst expectations, leading tech resilience amid broad selloff",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "5:36 PM ET"
+    },
+    {
+      "text": "Dow Jones plunges 785 points (\u22121.6%) as Iran conflict sends WTI crude surging 8% to $81.01/barrel, worst single-day oil spike in months",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "5:36 PM ET"
+    },
     {
       "text": "China sets 2026 GDP growth target at 4.5-5%, lowest since at least the 1990s, signaling slowing momentum",
       "sentiment": "bearish",
@@ -123,48 +165,6 @@
       "source_url": "https://finance.yahoo.com/video/kroger-bjs-stock-moves-q4-174419973.html",
       "source_outlet": "Yahoo Finance",
       "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "Ciena Corp crushes Q4 estimates with EPS of $1.35 vs $1.16 expected and revenue of $1.43B (up 33% YoY), driven by surging AI infrastructure demand",
-      "sentiment": "bullish",
-      "source_url": "https://tokenist.com/earnings-recap-ciena-kroger-and-burlington-share-quarterly-results/",
-      "source_outlet": "Tokenist",
-      "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "Kroger Q4 adjusted EPS beats at $1.28 vs $1.20 expected, but revenue misses at $34.73B vs $35B est; eCommerce sales surged 20% YoY \u2014 stock dips ~1% premarket on soft 2026 guidance of 1-2% identical sales growth",
-      "sentiment": "bearish",
-      "source_url": "https://coincentral.com/kroger-kr-stock-q4-sales-rise-2-4-as-ecommerce-growth-hits-20/",
-      "source_outlet": "CoinCentral",
-      "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "Geopolitical tensions ease slightly as reports indicate Iranian operatives reached out to U.S. to explore potential peace talks",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/03/stock-market-today-live-updates.html",
-      "source_outlet": "CNBC",
-      "added_at": "6:51 AM ET"
-    },
-    {
-      "text": "Trump's 15% global tariff expected to take effect this week per Treasury Secretary Bessent, up from current 10% rate under Trade Act Section 122",
-      "sentiment": "bearish",
-      "source_url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trumps-10-tariffs-in-effect-as-refunds-remain-an-open-question-130538043.html",
-      "source_outlet": "Yahoo Finance",
-      "added_at": "6:51 AM ET"
-    },
-    {
-      "text": "Costco reports Q2 earnings after close today; consensus expects $4.55 EPS on $69.3B revenue with strong membership income growth",
-      "sentiment": "neutral",
-      "source_url": "https://seekingalpha.com/news/4560629-costco-q2-2026-earnings-preview",
-      "source_outlet": "Seeking Alpha",
-      "added_at": "6:51 AM ET"
-    },
-    {
-      "text": "Marvell Technology reports Q4 earnings today with analysts expecting $0.79 EPS on $2.2B revenue; options traders pricing in 11% move on AI chip demand",
-      "sentiment": "neutral",
-      "source_url": "https://www.benzinga.com/insights/earnings/26/03/51033627/preview-marvell-techs-earnings",
-      "source_outlet": "Benzinga",
-      "added_at": "6:51 AM ET"
     }
   ],
   "sources": [
@@ -468,6 +468,13 @@
       "url": "https://www.schwab.com/learn/story/stock-market-update-open",
       "sentiment": "bearish",
       "added_at": "4:31 PM ET"
+    },
+    {
+      "outlet": "Stock Market Watch",
+      "title": "Tech Resilience Amid Geopolitical Volatility: Stock Market Today, March 5, 2026",
+      "url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
+      "sentiment": "neutral",
+      "added_at": "5:36 PM ET"
     }
   ]
 }

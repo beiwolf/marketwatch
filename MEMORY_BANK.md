@@ -5,8 +5,8 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 4)
-- Latest commit: `c04c2b8` — sched+ui: launchd scheduler, flow history panel, compact news list
+- Last updated: 2026-03-05 (session 5)
+- Latest commit: `b983964` — chore: remove scheduler/automation scripts from repo
 
 ---
 

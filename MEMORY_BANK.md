@@ -6,11 +6,25 @@ Canonical running memory of repository changes and why they were made.
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
 - Last updated: 2026-03-05 (session 6)
-- Latest commit: `e6947cb` — ux: continuous-scroll flow audit — all days, inter/intra-day dividers
+- Latest commit: `ff78889` — ux: show industry name + ETF ticker in audit sector cells
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `ff78889`
+**Message:** `ux: show industry name + ETF ticker in audit sector cells`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Audit snapshot sector cells previously only showed the ETF code (XLE, XLK, etc.) with no sector context.
+- Each cell now shows the sector/industry name (`s.name`, e.g. "Technology") as the primary label, with the ETF ticker below it as a secondary tag.
+- CSS: replaced `.asc-name` with `.asc-info` (flex column), `.asc-industry` (12px 500-weight text), `.asc-etf` (10px mono muted), `.asc-pct` (13px bold mono, right-aligned).
+- JS: `buildAuditEntries` cell template updated to render both `s.name` and `s.etf`, with `s.name || s.etf` fallback.
+
+---
 
 ### 2026-03-05 — `e6947cb`
 **Message:** `ux: continuous-scroll flow audit — all days, inter/intra-day dividers`

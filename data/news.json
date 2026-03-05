@@ -1,8 +1,16 @@
 {
   "date": "2026-03-04",
-  "last_updated": "7:14 PM ET",
-  "update_count": 4,
+  "last_updated": "7:55 PM ET",
+  "update_count": 5,
   "breaking": [
+    {
+      "text": "CEO Hock Tan projects $100B+ AI chip revenue pipeline citing Anthropic, Meta, and OpenAI as key customers",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "text": "Broadcom posts record Q1 revenue of $19.3B, AI revenue soars 106% to $8.4B; stock up 5% after hours",
+      "added_at": "7:55 PM ET"
+    },
     {
       "text": "Fed Beige Book flags weaker consumer spending and sticky energy/labor costs across multiple districts",
       "added_at": "7:14 PM ET"
@@ -14,18 +22,45 @@
     {
       "text": "Broadcom reports fiscal Q1 earnings after the bell \u2014 analysts expect $2.03 EPS on $19.18B revenue",
       "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Coinbase surges 14.6% after Trump signals support for digital asset market bill",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Trump backs crypto firms against banks on stablecoin yields, Coinbase surges 14%",
-      "added_at": "6:19 PM ET"
     }
   ],
-  "summary": "The S&P 500 rose 0.78% to 6,869.50 on Wednesday as markets staged a broad recovery from this week's Middle East-driven selloff, led by a 1.29% gain in the Nasdaq. Technology stocks powered the rally with Micron and AMD each jumping over 5%, while easing oil prices and stronger-than-expected ADP jobs data (63K vs 50K expected) bolstered sentiment. After the close, Broadcom delivered a blockbuster Q1 report with revenue of $19.3B and AI revenue surging 106%, sending shares up 5% in extended trading, while the Fed's Beige Book painted a mixed picture of slight-to-moderate growth but flagged weakening consumer spending and sticky inflation pressures.",
+  "summary": "U.S. equities staged a broad recovery on Wednesday as easing oil prices and resilient economic data calmed investor nerves following the Iran-related selloff. The S&P 500 rose 0.78% to 6,869.50, the Nasdaq gained 1.29%, and the Dow added 238 points, led by a tech rebound with Micron and AMD each up over 5%. After the close, Broadcom delivered a blockbuster Q1 report with record $19.3B revenue and AI revenue surging 106% to $8.4B, guiding Q2 to $22B. Earlier in the session, Ross Stores surged 7.4% on blowout Q4 earnings, Coinbase jumped 12% after Trump backed crypto firms over banks on stablecoin legislation, and BofA initiated Tesla at Buy with a $460 target, while Dubai stocks crashed 4.7% as UAE markets reopened after a two-day Iran-conflict closure.",
   "highlights": [
+    {
+      "text": "Dubai stocks crash 4.7% \u2014 worst since 2022 \u2014 as UAE markets reopen after two-day closure following Iranian drone and missile strikes",
+      "sentiment": "bearish",
+      "source_url": "https://www.cnbc.com/2026/03/04/uae-stock-market-sell-off-closed-iran-missile-drone-strikes-dubai-abu-dhabi.html",
+      "source_outlet": "CNBC",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "text": "Coinbase jumps 12% after Trump publicly backs crypto firms over banks on stablecoin yield, urging passage of digital asset market structure bill",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
+      "source_outlet": "CNBC",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "text": "BofA initiates Tesla at Buy with $460 price target, calling it the clear leader in autonomous driving \u2014 TSLA gains 3.6% on the session",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/bank-of-america-upgrades-tesla-calls-it-the-clear-leader-in-autonomous-driving.html",
+      "source_outlet": "CNBC",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "text": "Ross Stores surges 7.4% after Q4 EPS of $2.00 beats estimates; comp sales up 9% \u2014 plans 110 new stores in 2026 and 10% dividend hike",
+      "sentiment": "bullish",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-ross-stores-surges-74-on-blowout-q4-earnings-and-bullish-2026-outlook",
+      "source_outlet": "MarketMinute",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "text": "Broadcom Q1 revenue hits record $19.3B (+29% YoY), AI revenue surges 106% to $8.4B; guides Q2 to $22B with AI revenue expected at $10.7B \u2014 stock up 5% after hours",
+      "sentiment": "bullish",
+      "source_url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
+      "source_outlet": "PR Newswire",
+      "added_at": "7:55 PM ET"
+    },
     {
       "text": "Bank of America initiates Tesla at Buy with $460 price target, citing robotaxi and autonomous driving upside",
       "sentiment": "bullish",
@@ -112,31 +147,6 @@
       "text": "GitLab tumbles 8% premarket on disappointing FY revenue guidance of $1.10-1.12B vs $1.12B expected",
       "sentiment": "bearish",
       "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Fed Beige Book shows 7 districts with slight-to-moderate growth, but 5 districts reported flat or declining activity",
-      "sentiment": "neutral",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "ADP private payrolls beat at 63K vs 50K expected; ISM Services PMI solid at 53.5 with cooling prices paid component",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Crypto stocks explode higher \u2014 Coinbase +14.6%, MicroStrategy +10.4%, Robinhood +8.1% \u2014 after Trump signals support for digital asset legislation",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "South Korea's Kospi plunges over 12% amid escalating Middle East war fears, worst day in decades",
-      "sentiment": "bearish",
-      "added_at": "6:19 PM ET"
-    },
-    {
-      "text": "Micron and AMD each jump 5%+; Amazon gains 3.3% as chip and consumer discretionary sectors lead",
-      "sentiment": "bullish",
-      "added_at": "6:19 PM ET"
     }
   ],
   "sources": [
@@ -244,6 +254,41 @@
       "url": "https://www.atlantafed.org/what-we-study/regional-economy/beige-book/2026/03/04/beige-book-regional-economy-grows-albeit-modestly",
       "sentiment": "neutral",
       "added_at": "7:14 PM ET"
+    },
+    {
+      "outlet": "PR Newswire",
+      "title": "Broadcom Inc. Announces First Quarter Fiscal Year 2026 Financial Results and Quarterly Dividend",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
+      "sentiment": "bullish",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Bank of America upgrades Tesla, calls it the clear leader in autonomous driving",
+      "url": "https://www.cnbc.com/2026/03/04/bank-of-america-upgrades-tesla-calls-it-the-clear-leader-in-autonomous-driving.html",
+      "sentiment": "bullish",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "outlet": "MarketMinute",
+      "title": "Ross Stores Surges 7.4% on Blowout Q4 Earnings and Bullish 2026 Outlook",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-ross-stores-surges-74-on-blowout-q4-earnings-and-bullish-2026-outlook",
+      "sentiment": "bullish",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Coinbase leads crypto stocks higher after Trump signals support for digital asset market structure bill",
+      "url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
+      "sentiment": "bullish",
+      "added_at": "7:55 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "UAE stocks sell off as markets reopen from two-day closure after Iranian strikes",
+      "url": "https://www.cnbc.com/2026/03/04/uae-stock-market-sell-off-closed-iran-missile-drone-strikes-dubai-abu-dhabi.html",
+      "sentiment": "bearish",
+      "added_at": "7:55 PM ET"
     }
   ]
 }

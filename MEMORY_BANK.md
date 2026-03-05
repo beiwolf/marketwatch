@@ -1,0 +1,152 @@
+# MarketWatch Memory Bank
+
+Canonical running memory of repository changes and why they were made.
+
+## Latest state
+- Branch: `main`
+- Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
+- Last updated: 2026-03-04 19:17 ET
+
+---
+
+## Change history (newest first)
+
+### 2026-03-04 — `2a089b4`
+**Message:** `ux: clickable highlights linked to source URLs`
+
+**Files changed:**
+- `automation.sh`
+- `index.html`
+- `prompts/news_prompt.txt`
+
+**What changed:**
+- Added clickable highlight UX in dashboard so a highlight can open its supporting source URL.
+- Added source outlet badges for highlights.
+- Updated news prompt contract so each highlight includes:
+  - `source_url`
+  - `source_outlet`
+- Brought `automation.sh` into tracked repo history (script used for scheduler/orchestration).
+
+---
+
+### 2026-03-04 — `96edb45`
+**Message:** `news: 7:14 PM ET — update #4 | 15 sources`
+
+**Files changed:**
+- `data/news.json`
+- `data/news_index.json`
+
+**What changed:**
+- Executed a news aggregation run.
+- Merged latest breaking/highlights/sources into `data/news.json`.
+- Updated daily index metadata in `data/news_index.json`.
+
+---
+
+### 2026-03-04 — `2f1626d`
+**Message:** `news: 6:55 PM ET — update #3 | 10 sources`
+
+**Files changed:**
+- `data/news.json`
+- `data/news_index.json`
+
+**What changed:**
+- Executed a news aggregation run and pushed resulting state.
+
+---
+
+### 2026-03-04 — `306cec7`
+**Message:** `news: 6:55 PM ET — update #2 | 9 sources`
+
+**Files changed:**
+- `data/news.json`
+- `data/news_index.json`
+
+**What changed:**
+- Additional news merge/update in the same operational window.
+
+---
+
+### 2026-03-04 — `db0e349`
+**Message:** `flow: 6:26 PM ET — net +4.88% | SPY +0.78%`
+
+**Files changed:**
+- `data/flow.json`
+- `data/flow_index.json`
+- `data/archive/flow-2026-03-04.json`
+
+**What changed:**
+- Successful flow snapshot write.
+- Daily flow archive created/appended.
+- Flow index updated with latest net/SPY metadata.
+
+---
+
+### 2026-03-04 — `0929493`
+**Message:** `news: 6:19 PM ET — update #1 | 5 sources`
+
+**Files changed:**
+- `data/news.json`
+- `data/news_index.json`
+
+**What changed:**
+- First successful news run for the day and initial source accumulation.
+
+---
+
+### 2026-03-04 — `b0f54a6`
+**Message:** `v6: Robinhood-inspired UI redesign`
+
+**What changed (high-level):**
+- Dashboard visual redesign and layout improvements.
+
+---
+
+### 2026-03-04 — `18dc8fe`
+**Message:** `v5: split flow/news prompts, news aggregation schema, intraday sparkline`
+
+**What changed (high-level):**
+- Prompt split by concern (flow vs news).
+- News schema + aggregation behavior improvements.
+- Intraday sparkline support added.
+
+---
+
+### 2026-03-04 — `3f263ff`
+**Message:** `v4: research_prompt.txt — Claude returns JSON only, OpenClaw handles writes`
+
+**What changed (high-level):**
+- Explicit role separation: Claude returns JSON; automation handles filesystem writes.
+
+---
+
+### 2026-03-04 — `f0b02dd`
+**Message:** `v3: archive-based audit trail, date picker, index.json manifest`
+
+**What changed (high-level):**
+- Added audit trail and historical browsing primitives.
+
+---
+
+### 2026-03-04 — `f686ad9`
+**Message:** `initial deploy — marketwatch dashboard`
+
+**What changed (high-level):**
+- Initial project deployment and baseline dashboard.
+
+---
+
+## Operational notes (today)
+- Scheduler is a background process (`automation.sh`), not system cron.
+- Flow parser was hardened to extract JSON even when Claude wraps it with prose/fences.
+- News loop was changed to run every 60 minutes 24/7 (flow remains market-hours-gated).
+- Telegram status notifications were integrated into loop outcomes (success/failure summaries).
+
+---
+
+## How to refresh this memory bank
+```bash
+cd ~/Desktop/marketwatch
+git log --oneline --decorate --max-count=50
+```
+Then update this file with commit purpose + changed files.

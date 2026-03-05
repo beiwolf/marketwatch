@@ -1,417 +1,79 @@
 {
-  "date": "2026-03-04",
-  "last_updated": "11:21 PM ET",
-  "update_count": 8,
+  "date": "2026-03-05",
+  "last_updated": "12:56 AM ET",
+  "update_count": 1,
   "breaking": [
     {
-      "text": "Veeva Systems rockets 9% after hours on Q4 earnings and revenue beat, raises full-year guidance",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "text": "Broadcom surges 5% after hours on record $19.3B revenue, CEO touts $100B AI chip revenue pipeline",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "text": "Veeva Systems jumps 9% after hours on Q4 earnings and revenue beat",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "text": "Broadcom beats Q1 estimates, guides Q2 revenue to $22B; AI revenue soars 106% to $8.4B \u2014 stock up 5% after hours",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "text": "Senate war powers vote fails, allowing Trump to continue military strikes on Iran without new congressional authorization",
-      "added_at": "9:06 PM ET"
+      "text": "Treasury Sec. Bessent confirms 15% global tariff takes effect this week, replacing prior 10% rate under Section 122",
+      "added_at": "12:56 AM ET"
     }
   ],
-  "summary": "U.S. equities staged a broad recovery on Wednesday as easing oil prices and resilient economic data offset lingering Middle East war fears, with the S&P 500 gaining 0.78% to 6,869.50 and the Nasdaq jumping 1.29%. Technology led the rebound as Micron and AMD surged over 5%, while crypto-linked stocks rallied sharply with Coinbase up 15% after Bitcoin reclaimed $73,000 on reports Iran reached out to the U.S. about ending the conflict. After hours, Broadcom delivered a blockbuster Q1 with record $19.3B revenue and guided Q2 to $22B, while CEO Hock Tan outlined a path to $100B in AI chip revenue; Veeva Systems also beat on all metrics and jumped 9%. Internationally, South Korea's KOSPI suffered its worst single-day crash on record, plunging 12% as Iran war fears hammered export-dependent Asian markets.",
+  "summary": "U.S. stocks rallied on Wednesday as easing oil prices and strong economic data offset Middle East war concerns \u2014 the S&P 500 gained 0.78% to 6,869.50, the Dow added 238 points (+0.49%), and the Nasdaq surged 1.29%. Tech and semiconductors led the advance with Micron and AMD each jumping over 5%, while crypto stocks exploded higher (Coinbase +14.6%, MicroStrategy +10.4%) after President Trump signaled support for digital asset legislation and Bitcoin broke above $73,000. After the close, Broadcom delivered a blowout Q1 with $19.3B revenue (+29% YoY) and AI revenue soaring 106% to $8.4B, guiding next quarter to $22B vs $20.6B consensus \u2014 shares rose 5% after hours. Treasury Secretary Bessent confirmed that 15% global tariffs will be imposed this week under Section 122, though he predicted rates would return to pre-Supreme Court levels within five months.",
   "highlights": [
     {
-      "text": "Okta beats Q4 estimates with 90c EPS vs 85c expected and $761M revenue, but shares give back gains as Q1 guidance disappoints at $749-753M vs $755M expected",
+      "text": "Key economic data due March 5: Initial Jobless Claims (8:30 AM), Q4 revised Unit Labor Costs & Nonfarm Productivity, and Challenger Job Cuts report",
       "sentiment": "neutral",
-      "source_url": "https://247wallst.com/investing/2026/03/04/live-will-okta-beat-q4-earnings-after-the-bell-tonight/",
-      "source_outlet": "24/7 Wall St",
-      "added_at": "11:21 PM ET"
+      "source_url": "https://x.com/marketsday/status/2027606182056366498",
+      "source_outlet": "Markets Today",
+      "added_at": "12:56 AM ET"
     },
     {
-      "text": "Broadcom CEO Hock Tan outlines path to $100B in AI chip revenue, citing progress with Anthropic, Meta, and OpenAI as custom silicon demand accelerates",
-      "sentiment": "bullish",
-      "source_url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
+      "text": "StubHub posts $1.9B net loss in first post-IPO earnings on $1.4B stock-based compensation charge, but guides FY2026 to $9.9-10.1B GMS and $400-420M adjusted EBITDA",
+      "sentiment": "neutral",
+      "source_url": "https://www.stocktitan.net/sec-filings/STUB/8-k-stub-hub-holdings-inc-reports-material-event-60c38cfcc857.html",
       "source_outlet": "Stock Titan",
-      "added_at": "11:21 PM ET"
+      "added_at": "12:56 AM ET"
     },
     {
-      "text": "Coinbase surges 15.3% and Galaxy Digital jumps 14.7% as Bitcoin reclaims $73,000 on reports Iran reached out to CIA about ending the war",
-      "sentiment": "bullish",
-      "source_url": "https://www.ibtimes.com/coinbase-global-shares-surge-15-bitcoin-rally-regulatory-optimism-fuel-crypto-stock-gains-3798394",
-      "source_outlet": "IBTimes",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "text": "South Korea's KOSPI suffers worst single-day crash in history, plunging 12% as Iran war fears trigger margin calls and circuit breakers across Asian markets",
+      "text": "Treasury Secretary Bessent says 15% global tariffs under Section 122 take effect this week, but predicts rates return to pre-Supreme Court ruling levels within 5 months",
       "sentiment": "bearish",
-      "source_url": "https://www.aljazeera.com/economy/2026/3/4/south-koreas-stock-market-in-meltdown-amid-us-iran-war",
-      "source_outlet": "Al Jazeera",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "text": "Veeva Systems (VEEV) surges 9% after hours after Q4 revenue of $836M beat estimates by $25M; raised FY2027 guidance to $3.59B vs $3.56B expected",
-      "sentiment": "bullish",
-      "source_url": "https://www.benzinga.com/markets/earnings/26/03/51052968/why-veeva-systems-shares-are-rocketing-after-q4-results",
-      "source_outlet": "Benzinga",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "text": "Moderna surges 11% after settling $2.25B COVID vaccine patent dispute with Arbutus/Genevant, removing key legal overhang and securing royalty-free LNP license",
-      "sentiment": "bullish",
-      "source_url": "https://finance.yahoo.com/news/moderna-rises-2-25-billion-132602379.html",
-      "source_outlet": "Yahoo Finance",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "text": "Okta tops Q4 estimates as AI agent security demand accelerates \u2014 EPS $0.90 vs $0.85 expected, revenue $761M vs $749M \u2014 stock up 3% after hours",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
+      "source_url": "https://www.cnbc.com/2026/03/04/bessent-says-global-15percent-tariff-starts-this-week-move-back-to-prior-rates-within-5-months.html",
       "source_outlet": "CNBC",
-      "added_at": "10:20 PM ET"
+      "added_at": "12:56 AM ET"
     },
     {
-      "text": "Veeva Systems beats Q4 estimates handily \u2014 EPS $2.06 vs $1.93 expected, revenue $836M vs $811M \u2014 shares up 9% after hours",
+      "text": "Veeva Systems beats Q4 estimates with $836M revenue (+13% YoY) and $2.06 EPS vs $1.93 consensus, maintaining 40%+ operating margins \u2014 shares up 4% after hours",
       "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/stocks-making-the-biggest-moves-after-hours-avgo-okta-stub.html",
-      "source_outlet": "CNBC",
-      "added_at": "10:20 PM ET"
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-veeva-systems-q4-fy2026-results-dominating-the-sensitive-tech-frontier",
+      "source_outlet": "FinancialContent",
+      "added_at": "12:56 AM ET"
     },
     {
-      "text": "Broadcom Q2 guidance of $22B revenue crushes $20.56B consensus; CEO Hock Tan sees 'line of sight' to $100B+ in AI chip revenue by 2027; announces $10B buyback",
+      "text": "Broadcom CEO Hock Tan outlines path to $100B in AI chip revenue, citing progress with Anthropic, Meta, and OpenAI as key custom accelerator customers",
       "sentiment": "bullish",
-      "source_url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
-      "source_outlet": "Sherwood News",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "text": "ISM Services PMI surges to 56.1% in February \u2014 strongest expansion since 2022 \u2014 with New Orders jumping 5.5 points to 58.6% and Prices Paid cooling to 63.0%",
-      "sentiment": "bullish",
-      "source_url": "https://www.prnewswire.com/news-releases/services-pmi-at-56-1-february-2026-ism-services-pmi-report-302702978.html",
-      "source_outlet": "PR Newswire / ISM",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "text": "KeyBanc upgrades Dow Inc. and LyondellBasell to Overweight, citing 11-15% of global ethylene capacity disrupted by Iran conflict benefiting U.S. petrochemical producers",
-      "sentiment": "bullish",
-      "source_url": "https://seekingalpha.com/news/4560780-dow-lyondellbasell-upgraded-at-keybanc-with-iran-conflict-seen-boosting-u-s-petrochemicals",
-      "source_outlet": "Seeking Alpha",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "text": "Iran officially denies NYT report of CIA back-channel peace outreach, calling it 'psychological warfare' \u2014 oil prices tick higher on the denial",
-      "sentiment": "bearish",
-      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/iran-denies-it-reached-out-to-the-us-about-peace-talks",
-      "source_outlet": "Bloomberg",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "text": "ADP reports 63,000 private-sector jobs added in February, strongest in seven months, beating 43K consensus \u2014 but January revised sharply down to just 11,000",
-      "sentiment": "neutral",
-      "source_url": "https://www.cnbc.com/2026/03/04/private-companies-added-63000-jobs-in-february-january-revised-to-just-11000-additions-adp-says.html",
-      "source_outlet": "CNBC",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "text": "Bitcoin breaks above $73,000 to a one-month high as crypto rallies broadly \u2014 Solana +7.2%, Chainlink +8% \u2014 though traders warn of potential bull trap",
-      "sentiment": "bullish",
-      "source_url": "https://www.coindesk.com/markets/2026/03/04/bitcoin-breaks-usd73-000-but-traders-warn-of-another-bull-trap",
-      "source_outlet": "CoinDesk",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "text": "Broadcom Q1 AI semiconductor revenue surged 106% YoY to $8.4B; CEO Hock Tan forecasts AI chip revenue exceeding $100B by 2027 and announces $10B buyback",
-      "sentiment": "bullish",
-      "source_url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
-      "source_outlet": "Investing.com",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "text": "Dubai stocks crash 4.7% \u2014 worst since 2022 \u2014 as UAE markets reopen after two-day closure following Iranian drone and missile strikes",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/04/uae-stock-market-sell-off-closed-iran-missile-drone-strikes-dubai-abu-dhabi.html",
-      "source_outlet": "CNBC",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "Coinbase jumps 12% after Trump publicly backs crypto firms over banks on stablecoin yield, urging passage of digital asset market structure bill",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
-      "source_outlet": "CNBC",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "BofA initiates Tesla at Buy with $460 price target, calling it the clear leader in autonomous driving \u2014 TSLA gains 3.6% on the session",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/bank-of-america-upgrades-tesla-calls-it-the-clear-leader-in-autonomous-driving.html",
-      "source_outlet": "CNBC",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "Ross Stores surges 7.4% after Q4 EPS of $2.00 beats estimates; comp sales up 9% \u2014 plans 110 new stores in 2026 and 10% dividend hike",
-      "sentiment": "bullish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-ross-stores-surges-74-on-blowout-q4-earnings-and-bullish-2026-outlook",
-      "source_outlet": "MarketMinute",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "text": "Broadcom Q1 revenue hits record $19.3B (+29% YoY), AI revenue surges 106% to $8.4B; guides Q2 to $22B with AI revenue expected at $10.7B \u2014 stock up 5% after hours",
-      "sentiment": "bullish",
-      "source_url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
-      "source_outlet": "PR Newswire",
-      "added_at": "7:55 PM ET"
+      "source_url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "12:56 AM ET"
     }
   ],
   "sources": [
     {
-      "outlet": "StockMarketWatch",
-      "title": "Tech Rebound and Easing Oil Prices Lift Wall Street; Focus Shifts to Late-Day Earnings",
-      "url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "sentiment": "bullish",
-      "added_at": "6:19 PM ET"
-    },
-    {
-      "outlet": "24/7 Wall St.",
-      "title": "Stock Market Live March 4, 2026: S&P 500 (SPY) Flat as it Monitors Middle East Tension",
-      "url": "https://247wallst.com/investing/2026/03/04/stock-market-live-march-4-2026-sp-500-spy-flat-as-it-monitors-middle-east-tension/",
-      "sentiment": "neutral",
-      "added_at": "6:19 PM ET"
-    },
-    {
-      "outlet": "Bloomberg",
-      "title": "Chart Watchers See Risks of S&P 500 Correction Amid War Jitters",
-      "url": "https://www.bloomberg.com/news/articles/2026-03-04/chart-watchers-see-risks-of-s-p-500-correction-amid-war-jitters",
+      "outlet": "CNBC",
+      "title": "Bessent says global 15% tariff starts this week, move back to prior rates within 5 months",
+      "url": "https://www.cnbc.com/2026/03/04/bessent-says-global-15percent-tariff-starts-this-week-move-back-to-prior-rates-within-5-months.html",
       "sentiment": "bearish",
-      "added_at": "6:19 PM ET"
+      "added_at": "12:56 AM ET"
     },
     {
       "outlet": "FinancialContent",
-      "title": "The AI Honeymoon Ends: S&P 500 Slides in February as Media Consolidation and Chip Volatility Signal a More Selective 2026",
-      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-the-ai-honeymoon-ends-s-and-p-500-slides-in-february-as-media-consolidation-and-chip-volatility-signal-a-more-selective-2026",
-      "sentiment": "bearish",
-      "added_at": "6:19 PM ET"
-    },
-    {
-      "outlet": "CNN Business",
-      "title": "Stocks sink as Wall Street fears a prolonged war with Iran",
-      "url": "https://www.cnn.com/2026/03/03/investing/us-stocks-iran",
-      "sentiment": "bearish",
-      "added_at": "6:19 PM ET"
-    },
-    {
-      "outlet": "Yahoo Finance",
-      "title": "Stock Market Today, March 4: Coinbase Surges After Trump Signals Support for Digital Asset Market Bill",
-      "url": "https://finance.yahoo.com/news/stock-market-today-march-4-224903316.html",
+      "title": "Veeva Systems Q4 FY2026 Results: Dominating the 'Sensitive' Tech Frontier",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-veeva-systems-q4-fy2026-results-dominating-the-sensitive-tech-frontier",
       "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "outlet": "OneUpTrader",
-      "title": "S&P 500 (ES) Technical Analysis 4 March 2026",
-      "url": "https://blog.oneuptrader.com/analysis/technical-analysis/sp-500-es-technical-analysis-4-march-2026/",
-      "sentiment": "neutral",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "outlet": "Bloomberg",
-      "title": "This Year's Winning Stock Trades Take the Brunt of War Selloff",
-      "url": "https://www.bloomberg.com/news/newsletters/2026-03-04/this-year-s-winning-stock-trades-take-the-brunt-of-war-selloff",
-      "sentiment": "bearish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "outlet": "Market Rebellion",
-      "title": "Pre-Market IV Report March 4, 2026",
-      "url": "https://marketrebellion.com/news/daily-iv-report/pre-market-iv-report-march-4-2026/",
-      "sentiment": "neutral",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Stock market news for March 4, 2026",
-      "url": "https://www.cnbc.com/2026/03/03/stock-market-today-live-updates.html",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Broadcom (AVGO) Q1 earnings report 2026",
-      "url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
-      "sentiment": "bullish",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "outlet": "24/7 Wall St.",
-      "title": "Live Earnings Analysis: Broadcom (AVGO) Wows Wall Street With $100 Billion AI Forecast",
-      "url": "https://247wallst.com/investing/2026/03/04/live-earnings-analysis-will-broadcom-avgo-announce-something-big-tonight/",
-      "sentiment": "bullish",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "outlet": "Motley Fool",
-      "title": "Why GitLab Stock Plunged 13.5% This Morning",
-      "url": "https://www.fool.com/investing/2026/03/04/why-gitlab-stock-plunged-135-this-morning/",
-      "sentiment": "bearish",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "outlet": "Axios",
-      "title": "Perplexity inks CoreWeave deal to use Nvidia Grace Blackwell-powered clusters",
-      "url": "https://www.axios.com/2026/03/04/perplexity-coreweave-data-center-nvidia",
-      "sentiment": "bullish",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "outlet": "Atlanta Fed",
-      "title": "Beige Book: Regional Economy Grows, Albeit Modestly",
-      "url": "https://www.atlantafed.org/what-we-study/regional-economy/beige-book/2026/03/04/beige-book-regional-economy-grows-albeit-modestly",
-      "sentiment": "neutral",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "outlet": "PR Newswire",
-      "title": "Broadcom Inc. Announces First Quarter Fiscal Year 2026 Financial Results and Quarterly Dividend",
-      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
-      "sentiment": "bullish",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Bank of America upgrades Tesla, calls it the clear leader in autonomous driving",
-      "url": "https://www.cnbc.com/2026/03/04/bank-of-america-upgrades-tesla-calls-it-the-clear-leader-in-autonomous-driving.html",
-      "sentiment": "bullish",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "outlet": "MarketMinute",
-      "title": "Ross Stores Surges 7.4% on Blowout Q4 Earnings and Bullish 2026 Outlook",
-      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-4-ross-stores-surges-74-on-blowout-q4-earnings-and-bullish-2026-outlook",
-      "sentiment": "bullish",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Coinbase leads crypto stocks higher after Trump signals support for digital asset market structure bill",
-      "url": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
-      "sentiment": "bullish",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "UAE stocks sell off as markets reopen from two-day closure after Iranian strikes",
-      "url": "https://www.cnbc.com/2026/03/04/uae-stock-market-sell-off-closed-iran-missile-drone-strikes-dubai-abu-dhabi.html",
-      "sentiment": "bearish",
-      "added_at": "7:55 PM ET"
-    },
-    {
-      "outlet": "Investing.com",
-      "title": "Broadcom's quarterly revenue guidance tops estimates, stock seesaws after hours",
-      "url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
-      "sentiment": "bullish",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "outlet": "CoinDesk",
-      "title": "Bitcoin breaks $73,000 but traders warn of another bull trap",
-      "url": "https://www.coindesk.com/markets/2026/03/04/bitcoin-breaks-usd73-000-but-traders-warn-of-another-bull-trap",
-      "sentiment": "neutral",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Private companies added 63,000 jobs in February, January revised to just 11,000 additions, ADP says",
-      "url": "https://www.cnbc.com/2026/03/04/private-companies-added-63000-jobs-in-february-january-revised-to-just-11000-additions-adp-says.html",
-      "sentiment": "neutral",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "outlet": "Seeking Alpha",
-      "title": "Dow, LyondellBasell upgraded at KeyBanc with Iran conflict seen boosting U.S. petrochemicals",
-      "url": "https://seekingalpha.com/news/4560780-dow-lyondellbasell-upgraded-at-keybanc-with-iran-conflict-seen-boosting-u-s-petrochemicals",
-      "sentiment": "bullish",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Senate war powers vote fails, allowing Trump to continue Iran strikes",
-      "url": "https://www.cnbc.com/2026/03/04/us-iran-war-live-updates.html",
-      "sentiment": "bearish",
-      "added_at": "9:06 PM ET"
-    },
-    {
-      "outlet": "PR Newswire / ISM",
-      "title": "Services PMI at 56.1%; February 2026 ISM Services PMI Report",
-      "url": "https://www.prnewswire.com/news-releases/services-pmi-at-56-1-february-2026-ism-services-pmi-report-302702978.html",
-      "sentiment": "bullish",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "outlet": "Sherwood News",
-      "title": "Broadcom posts modest Q1 sales and earnings beats amid AI boom",
-      "url": "https://sherwood.news/markets/broadcom-q1-2026-earnings-ai-boom-bubble-custom-chips/",
-      "sentiment": "bullish",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Stocks making the biggest moves after hours: Broadcom, Okta, StubHub & more",
-      "url": "https://www.cnbc.com/2026/03/04/stocks-making-the-biggest-moves-after-hours-avgo-okta-stub.html",
-      "sentiment": "bullish",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "outlet": "CNBC",
-      "title": "Okta (OKTA) Q4 2026 earnings beat estimates on AI security demand",
-      "url": "https://www.cnbc.com/2026/03/04/okta-okta-q4-2026-earnings.html",
-      "sentiment": "bullish",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "outlet": "Yahoo Finance",
-      "title": "Moderna rises as $2.25 billion COVID vaccine patent settlement removes overhang",
-      "url": "https://finance.yahoo.com/news/moderna-rises-2-25-billion-132602379.html",
-      "sentiment": "bullish",
-      "added_at": "10:20 PM ET"
-    },
-    {
-      "outlet": "Benzinga",
-      "title": "Why Veeva Systems Shares Are Rocketing After Q4 Results",
-      "url": "https://www.benzinga.com/markets/earnings/26/03/51052968/why-veeva-systems-shares-are-rocketing-after-q4-results",
-      "sentiment": "bullish",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "outlet": "Al Jazeera",
-      "title": "South Korea's stock market suffers biggest drop in history amid US-Iran war",
-      "url": "https://www.aljazeera.com/economy/2026/3/4/south-koreas-stock-market-in-meltdown-amid-us-iran-war",
-      "sentiment": "bearish",
-      "added_at": "11:21 PM ET"
-    },
-    {
-      "outlet": "IBTimes",
-      "title": "Coinbase Global Shares Surge 15% as Bitcoin Rally and Regulatory Optimism Fuel Crypto Stock Gains",
-      "url": "https://www.ibtimes.com/coinbase-global-shares-surge-15-bitcoin-rally-regulatory-optimism-fuel-crypto-stock-gains-3798394",
-      "sentiment": "bullish",
-      "added_at": "11:21 PM ET"
+      "added_at": "12:56 AM ET"
     },
     {
       "outlet": "Stock Titan",
-      "title": "Broadcom Q1 2026 revenue jumps 29% to $19.3B",
-      "url": "https://www.stocktitan.net/news/AVGO/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-q0oirxyfmutv.html",
-      "sentiment": "bullish",
-      "added_at": "11:21 PM ET"
+      "title": "StubHub Holdings reports Q4 and FY2025 financial results",
+      "url": "https://www.stocktitan.net/sec-filings/STUB/8-k-stub-hub-holdings-inc-reports-material-event-60c38cfcc857.html",
+      "sentiment": "neutral",
+      "added_at": "12:56 AM ET"
     },
     {
-      "outlet": "Bankless Times",
-      "title": "Here's Why Crypto is Going Up Today as Bitcoin, Solana, Chainlink Lead",
-      "url": "https://www.banklesstimes.com/articles/2026/03/04/heres-why-crypto-is-going-up-today-as-bitcoin-solana-chainlink-lead/",
-      "sentiment": "bullish",
-      "added_at": "11:21 PM ET"
+      "outlet": "Capital Brief",
+      "title": "Bessent says 15% global tariffs to be imposed this week, US to support Gulf oil trade",
+      "url": "https://www.capitalbrief.com/briefing/bessent-says-15-global-tariffs-to-be-imposed-this-week-us-to-support-gulf-oil-trade-a4f594e0-82a5-45a1-b02f-16990d7e641a/",
+      "sentiment": "bearish",
+      "added_at": "12:56 AM ET"
     }
   ]
 }

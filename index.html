@@ -151,18 +151,35 @@
     .sent-bear{background:var(--rdim);color:var(--red);}
     .sent-neu{background:var(--adim);color:var(--amber);}
 
-    /* Audit */
+    /* Audit — timeline layout */
     #audit-section{margin-top:40px;}
-    .audit-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;}
+    .audit-section-header{display:flex;align-items:center;margin-bottom:24px;}
     .audit-title{font-size:11px;color:var(--muted);letter-spacing:0.7px;text-transform:uppercase;font-weight:600;}
-    .date-picker-wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-    .date-picker-label{font-size:11px;color:var(--mid);font-weight:500;}
-    .date-btn{background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-family:var(--sans);font-size:12px;font-weight:500;padding:6px 14px;border-radius:var(--r-pill);cursor:pointer;transition:all 0.12s;}
-    .date-btn:hover,.date-btn.active{background:var(--bdim);color:var(--blue);border-color:rgba(96,165,250,0.3);}
-    .date-btn.today{color:var(--green);border-color:rgba(0,214,143,0.3);background:var(--gdim);}
-    #date-select{background:var(--bg2);border:1px solid var(--border2);color:var(--muted);font-family:var(--sans);font-size:12px;padding:6px 12px;border-radius:var(--r-pill);}
-    #date-select option{background:var(--bg3);}
-    .audit-day-label{font-size:11px;color:var(--muted);font-weight:500;padding:6px 0 12px;}
+
+    /* Inter-day block */
+    .audit-day-block{margin-bottom:32px;}
+    .audit-day-block:last-child{margin-bottom:0;}
+
+    /* Inter-day header — the prominent day separator */
+    .audit-day-header{display:flex;align-items:center;gap:20px;padding:16px 20px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r);margin-bottom:10px;border-left:4px solid var(--border3);}
+    .audit-day-block.day-pos .audit-day-header{border-left-color:var(--green2);}
+    .audit-day-block.day-neg .audit-day-header{border-left-color:var(--red2);}
+    .audit-day-datecol{flex:1;min-width:0;}
+    .audit-day-date{font-size:15px;font-weight:700;color:var(--bright);font-family:var(--mono);}
+    .audit-day-dow{font-size:11px;color:var(--muted);margin-top:3px;font-weight:500;}
+    .audit-day-close{font-size:28px;font-weight:800;font-family:var(--mono);letter-spacing:-1px;flex-shrink:0;}
+    .audit-day-info{text-align:right;flex-shrink:0;}
+    .audit-day-meta{font-size:11px;color:var(--muted);font-weight:500;}
+    .audit-day-status{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:var(--r-pill);margin-top:6px;}
+    .audit-day-status.live{background:var(--gdim);color:var(--green);border:1px solid rgba(0,214,143,0.25);}
+    .audit-day-status.final{background:var(--bg4);color:var(--mid);border:1px solid var(--border2);}
+    .audit-day-status.partial{background:var(--adim);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
+
+    /* Intra-day entries — timeline rail shows they belong to the day above */
+    .audit-day-entries{border-left:2px solid var(--border2);margin-left:18px;padding-left:14px;}
+    .audit-day-block.day-pos .audit-day-entries{border-left-color:rgba(0,214,143,0.2);}
+    .audit-day-block.day-neg .audit-day-entries{border-left-color:rgba(255,71,87,0.2);}
+
     .audit-entry{border:1px solid var(--border2);border-radius:var(--r-sm);margin-bottom:6px;overflow:hidden;}
     .audit-entry.net-pos{border-color:rgba(0,214,143,0.2);}
     .audit-entry.net-neg{border-color:rgba(255,71,87,0.2);}
@@ -247,17 +264,10 @@
   </div>
   <div id="audit-section">
     <div class="audit-section-header">
-      <div class="audit-title">Intraday Flow Audit</div>
-      <div class="date-picker-wrap">
-        <span class="date-picker-label">View date:</span>
-        <button class="date-btn today active" id="btn-today" onclick="switchToToday()">Today</button>
-        <select id="date-select" onchange="if(this.value){document.getElementById('btn-today').classList.remove('active');loadAuditForDate(this.value);}">
-          <option value="">— past dates —</option>
-        </select>
-      </div>
+      <div class="audit-title">Flow Audit — All Days</div>
     </div>
     <div id="audit-entries">
-      <div class="state-box" style="padding:24px"><div class="state-sub">No history yet — appears after first agent run</div></div>
+      <div class="state-box" style="padding:24px"><div class="spinner"></div><div class="state-sub" style="margin-top:8px">Loading audit history…</div></div>
     </div>
   </div>
   <div class="footer">AI-powered &nbsp;·&nbsp; Flow: 10 min &nbsp;·&nbsp; News: 60 min &nbsp;·&nbsp; Not financial advice &nbsp;·&nbsp; beiwolf.github.io/marketwatch</div>
@@ -320,27 +330,49 @@ function buildAuditEntries(snapshots){
   }).join('');
   return sparkHtml+entries;
 }
-async function loadAuditForDate(dateStr){
-  const el=document.getElementById('audit-entries');
-  el.innerHTML='<div class="state-box" style="padding:16px"><div class="spinner"></div></div>';
-  try{
-    const res=await fetch(`data/archive/flow-${dateStr}.json?t=${Date.now()}`);
-    if(!res.ok)throw new Error('not found');
-    const data=await res.json();
-    el.innerHTML=`<div class="audit-day-label">${dateStr} · ${data.length} snapshot${data.length!==1?'s':''}</div>`+buildAuditEntries(data);
-  }catch{el.innerHTML=`<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots found for ${dateStr}.</div></div>`;}
-}
-function switchToToday(){
-  document.getElementById('btn-today').classList.add('active');
-  document.getElementById('date-select').value='';
-  loadAuditForDate(new Date().toISOString().split('T')[0]);
-}
-async function populateDatePicker(indexData){
-  const sel=document.getElementById('date-select');
+function buildDayBlock(dateStr,snapshots,meta){
   const today=new Date().toISOString().split('T')[0];
-  const past=(indexData||[]).filter(e=>e.date!==today).sort((a,b)=>b.date.localeCompare(a.date));
-  sel.innerHTML='<option value="">— past dates —</option>';
-  past.forEach(e=>{const o=document.createElement('option');o.value=e.date;o.textContent=`${e.date}  (${e.entries} snapshots · close ${e.net_close>0?'+':''}${Number(e.net_close||0).toFixed(2)}%)`;sel.appendChild(o);});
+  const isToday=dateStr===today;
+  const netClose=(meta&&meta.net_close!=null)?meta.net_close:(snapshots.length?snapshots[snapshots.length-1].net_flow_score:null);
+  const posClass=netClose!==null?(netClose>=0?'day-pos':'day-neg'):'';
+  const finalized=meta?meta.finalized:false;
+  const count=snapshots.length;
+  const dow=new Date(dateStr+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+  const statusHtml=isToday?'<span class="audit-day-status live">● Live</span>':(finalized?'<span class="audit-day-status final">Finalized</span>':'<span class="audit-day-status partial">Partial</span>');
+  const header=`<div class="audit-day-header"><div class="audit-day-datecol"><div class="audit-day-date">${dateStr}</div><div class="audit-day-dow">${dow}</div></div><div class="audit-day-close ${col(netClose)}">${netClose!==null?fmt(netClose):'—'}</div><div class="audit-day-info"><div class="audit-day-meta">${count} snapshot${count!==1?'s':''}</div>${statusHtml}</div></div>`;
+  return`<div class="audit-day-block ${posClass}" id="audit-day-${dateStr}">${header}<div class="audit-day-entries">${buildAuditEntries(snapshots)}</div></div>`;
+}
+let auditInitialized=false;
+async function loadAllAudit(indexData){
+  const el=document.getElementById('audit-entries');
+  const today=new Date().toISOString().split('T')[0];
+  const indexByDate=new Map((indexData||[]).map(e=>[e.date,e]));
+  const allDates=[...new Set([today,...(indexData||[]).map(e=>e.date)])].sort((a,b)=>b.localeCompare(a));
+  const results=await Promise.all(allDates.map(async dateStr=>{
+    try{
+      const res=await fetch(`data/archive/flow-${dateStr}.json?t=${Date.now()}`);
+      if(!res.ok)return null;
+      const snapshots=await res.json();
+      if(!snapshots.length)return null;
+      return{dateStr,snapshots,meta:indexByDate.get(dateStr)||null};
+    }catch{return null;}
+  }));
+  const valid=results.filter(Boolean);
+  if(!valid.length){el.innerHTML='<div class="state-box" style="padding:24px"><div class="state-sub">No flow snapshots yet — appears after first agent run.</div></div>';return;}
+  el.innerHTML=valid.map(({dateStr,snapshots,meta})=>buildDayBlock(dateStr,snapshots,meta)).join('');
+}
+async function refreshTodayBlock(){
+  const today=new Date().toISOString().split('T')[0];
+  try{
+    const res=await fetch(`data/archive/flow-${today}.json?t=${Date.now()}`);
+    if(!res.ok)return;
+    const snapshots=await res.json();
+    if(!snapshots.length)return;
+    const block=document.getElementById(`audit-day-${today}`);
+    const html=buildDayBlock(today,snapshots,null);
+    if(block)block.outerHTML=html;
+    else document.getElementById('audit-entries').insertAdjacentHTML('afterbegin',html);
+  }catch{}
 }
 function renderFlowPattern(indexData){
   const rows=(indexData||[]).slice(0,7);
@@ -355,9 +387,12 @@ async function loadAll(){
     const[flow,news,indexData]=await Promise.all([flowRes.json(),newsRes.json(),indexRes.json()]);
     if(flow&&flow.sectors&&flow.sectors.length)renderFlow(flow);
     if(news&&news.summary)renderNews(news);
-    if(indexData){populateDatePicker(indexData);renderFlowPattern(indexData);} 
+    if(indexData){
+      renderFlowPattern(indexData);
+      if(!auditInitialized){auditInitialized=true;loadAllAudit(indexData);}
+      else{refreshTodayBlock();}
+    }
   }catch(e){console.warn('Load error:',e.message);}
-  loadAuditForDate(new Date().toISOString().split('T')[0]);
 }
 document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 setInterval(()=>{document.getElementById('chip-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});},60000);

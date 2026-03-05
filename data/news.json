@@ -1,8 +1,16 @@
 {
   "date": "2026-03-04",
-  "last_updated": "7:55 PM ET",
-  "update_count": 5,
+  "last_updated": "9:06 PM ET",
+  "update_count": 6,
   "breaking": [
+    {
+      "text": "Senate war powers vote fails, allowing Trump to continue military strikes on Iran without new congressional authorization",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "text": "Broadcom beats Q1 estimates: revenue $19.3B (+29% YoY), AI revenue $8.4B (+106%), guides Q2 to $22B \u2014 stock jumps 5% after hours",
+      "added_at": "9:06 PM ET"
+    },
     {
       "text": "CEO Hock Tan projects $100B+ AI chip revenue pipeline citing Anthropic, Meta, and OpenAI as key customers",
       "added_at": "7:55 PM ET"
@@ -14,18 +22,45 @@
     {
       "text": "Fed Beige Book flags weaker consumer spending and sticky energy/labor costs across multiple districts",
       "added_at": "7:14 PM ET"
-    },
-    {
-      "text": "Broadcom surges 5% after hours on blowout Q1: AI revenue up 106% to $8.4B, CEO touts $100B AI chip revenue pipeline",
-      "added_at": "7:14 PM ET"
-    },
-    {
-      "text": "Broadcom reports fiscal Q1 earnings after the bell \u2014 analysts expect $2.03 EPS on $19.18B revenue",
-      "added_at": "6:55 PM ET"
     }
   ],
-  "summary": "U.S. equities staged a broad recovery on Wednesday as easing oil prices and resilient economic data calmed investor nerves following the Iran-related selloff. The S&P 500 rose 0.78% to 6,869.50, the Nasdaq gained 1.29%, and the Dow added 238 points, led by a tech rebound with Micron and AMD each up over 5%. After the close, Broadcom delivered a blockbuster Q1 report with record $19.3B revenue and AI revenue surging 106% to $8.4B, guiding Q2 to $22B. Earlier in the session, Ross Stores surged 7.4% on blowout Q4 earnings, Coinbase jumped 12% after Trump backed crypto firms over banks on stablecoin legislation, and BofA initiated Tesla at Buy with a $460 target, while Dubai stocks crashed 4.7% as UAE markets reopened after a two-day Iran-conflict closure.",
+  "summary": "Wall Street staged a broad recovery on Wednesday as easing oil prices and strong economic data restored confidence. The S&P 500 rose 0.78% to 6,869.50, the Nasdaq gained 1.29%, and the Dow added 238 points, led by a tech rebound with Micron and AMD each up over 5%. ADP's February jobs report surprised to the upside at 63,000 new private-sector jobs, while the Fed Beige Book showed mixed regional growth with sticky price pressures. After the close, Broadcom delivered a blockbuster Q1 earnings beat with AI revenue surging 106% to $8.4B and a bold $100B AI chip revenue forecast for 2027, sending shares up 5% in extended trading \u2014 while Bitcoin broke above $73,000 for the first time in weeks amid crypto-friendly policy signals and Iran ceasefire speculation.",
   "highlights": [
+    {
+      "text": "KeyBanc upgrades Dow Inc. and LyondellBasell to Overweight, citing 11-15% of global ethylene capacity disrupted by Iran conflict benefiting U.S. petrochemical producers",
+      "sentiment": "bullish",
+      "source_url": "https://seekingalpha.com/news/4560780-dow-lyondellbasell-upgraded-at-keybanc-with-iran-conflict-seen-boosting-u-s-petrochemicals",
+      "source_outlet": "Seeking Alpha",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "text": "Iran officially denies NYT report of CIA back-channel peace outreach, calling it 'psychological warfare' \u2014 oil prices tick higher on the denial",
+      "sentiment": "bearish",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/iran-denies-it-reached-out-to-the-us-about-peace-talks",
+      "source_outlet": "Bloomberg",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "text": "ADP reports 63,000 private-sector jobs added in February, strongest in seven months, beating 43K consensus \u2014 but January revised sharply down to just 11,000",
+      "sentiment": "neutral",
+      "source_url": "https://www.cnbc.com/2026/03/04/private-companies-added-63000-jobs-in-february-january-revised-to-just-11000-additions-adp-says.html",
+      "source_outlet": "CNBC",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "text": "Bitcoin breaks above $73,000 to a one-month high as crypto rallies broadly \u2014 Solana +7.2%, Chainlink +8% \u2014 though traders warn of potential bull trap",
+      "sentiment": "bullish",
+      "source_url": "https://www.coindesk.com/markets/2026/03/04/bitcoin-breaks-usd73-000-but-traders-warn-of-another-bull-trap",
+      "source_outlet": "CoinDesk",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "text": "Broadcom Q1 AI semiconductor revenue surged 106% YoY to $8.4B; CEO Hock Tan forecasts AI chip revenue exceeding $100B by 2027 and announces $10B buyback",
+      "sentiment": "bullish",
+      "source_url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
+      "source_outlet": "Investing.com",
+      "added_at": "9:06 PM ET"
+    },
     {
       "text": "Dubai stocks crash 4.7% \u2014 worst since 2022 \u2014 as UAE markets reopen after two-day closure following Iranian drone and missile strikes",
       "sentiment": "bearish",
@@ -121,31 +156,6 @@
     {
       "text": "Fed Beige Book shows 7 of 12 districts with slight-to-moderate growth, but 5 districts flat or declining",
       "sentiment": "neutral",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Crypto stocks surge \u2014 Coinbase +14.6%, MicroStrategy +10.4%, Robinhood +8.1% \u2014 on Trump digital asset bill support",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "ADP private payrolls beat expectations at 63K vs 50K forecast, easing growth-scare fears",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "CoreWeave jumps 8% on multiyear agreement with Perplexity; BofA initiates Tesla at Buy with $460 target",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "Consumer discretionary sector pops 2% for best day since Oct 31 \u2014 Ross Stores +7%, Amazon/Tesla/Airbnb all +3%",
-      "sentiment": "bullish",
-      "added_at": "6:55 PM ET"
-    },
-    {
-      "text": "GitLab tumbles 8% premarket on disappointing FY revenue guidance of $1.10-1.12B vs $1.12B expected",
-      "sentiment": "bearish",
       "added_at": "6:55 PM ET"
     }
   ],
@@ -289,6 +299,41 @@
       "url": "https://www.cnbc.com/2026/03/04/uae-stock-market-sell-off-closed-iran-missile-drone-strikes-dubai-abu-dhabi.html",
       "sentiment": "bearish",
       "added_at": "7:55 PM ET"
+    },
+    {
+      "outlet": "Investing.com",
+      "title": "Broadcom's quarterly revenue guidance tops estimates, stock seesaws after hours",
+      "url": "https://www.investing.com/news/earnings/broadcoms-quarterly-revenue-guidance-tops-estimates-stock-seesaws-after-hours-4542036",
+      "sentiment": "bullish",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "outlet": "CoinDesk",
+      "title": "Bitcoin breaks $73,000 but traders warn of another bull trap",
+      "url": "https://www.coindesk.com/markets/2026/03/04/bitcoin-breaks-usd73-000-but-traders-warn-of-another-bull-trap",
+      "sentiment": "neutral",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Private companies added 63,000 jobs in February, January revised to just 11,000 additions, ADP says",
+      "url": "https://www.cnbc.com/2026/03/04/private-companies-added-63000-jobs-in-february-january-revised-to-just-11000-additions-adp-says.html",
+      "sentiment": "neutral",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "outlet": "Seeking Alpha",
+      "title": "Dow, LyondellBasell upgraded at KeyBanc with Iran conflict seen boosting U.S. petrochemicals",
+      "url": "https://seekingalpha.com/news/4560780-dow-lyondellbasell-upgraded-at-keybanc-with-iran-conflict-seen-boosting-u-s-petrochemicals",
+      "sentiment": "bullish",
+      "added_at": "9:06 PM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Senate war powers vote fails, allowing Trump to continue Iran strikes",
+      "url": "https://www.cnbc.com/2026/03/04/us-iran-war-live-updates.html",
+      "sentiment": "bearish",
+      "added_at": "9:06 PM ET"
     }
   ]
 }

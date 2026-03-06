@@ -289,7 +289,12 @@ try:
   existing={'date':iso,'last_updated':None,'update_count':0,'breaking':[],'summary':None,'highlights':[],'sources':[]}
 except:
  existing={'date':iso,'last_updated':None,'update_count':0,'breaking':[],'summary':None,'highlights':[],'sources':[]}
-existing['summary']=new_data.get('summary', existing.get('summary'))
+new_summary=new_data.get('summary')
+if new_summary and new_summary!=existing.get('summary') and existing.get('summary'):
+ hist=existing.get('summary_history',[])
+ hist.insert(0,{'time':existing.get('last_updated') or time_et,'text':existing['summary']})
+ existing['summary_history']=hist[:8]
+existing['summary']=new_summary if new_summary else existing.get('summary')
 for item in new_data.get('breaking',[]):
  txt=item['text'] if isinstance(item,dict) else item
  seen={b['text'] if isinstance(b,dict) else b for b in existing.get('breaking',[])}

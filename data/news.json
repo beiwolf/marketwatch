@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "1:42 PM ET",
-  "update_count": 11,
+  "last_updated": "2:45 PM ET",
+  "update_count": 12,
   "breaking": [
+    {
+      "text": "Day One Biopharmaceuticals soars 65% on $2.5B Servier acquisition deal",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "Brent crude surges toward $88-$94/bbl on escalating Middle East conflict, fueling stagflation fears",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "February NFP shocks at -92,000 jobs vs +59K expected \u2014 worst reading since pandemic era; unemployment rises to 4.4%",
+      "added_at": "2:45 PM ET"
+    },
     {
       "text": "Brent crude surges 8.8% to $92.93 on escalating Iran conflict \u2014 energy stocks rally while broader market whipsaws",
       "added_at": "1:42 PM ET"
@@ -10,22 +22,52 @@
     {
       "text": "February nonfarm payrolls plunge by 92,000 \u2014 unemployment rises to 4.4%, worst jobs report in years",
       "added_at": "1:42 PM ET"
-    },
-    {
-      "text": "Fed Chair Powell calls economy 'stable and resilient' \u2014 sparks midday market reversal, S&P 500 recovers from -1.3% to +0.6%",
-      "added_at": "1:42 PM ET"
-    },
-    {
-      "text": "Broadcom surges 8% on blowout earnings \u2014 AI revenue up 77% YoY to $4.1B",
-      "added_at": "12:18 PM ET"
-    },
-    {
-      "text": "February payrolls shock: economy lost 92,000 jobs, worst print since early pandemic",
-      "added_at": "12:18 PM ET"
     }
   ],
-  "summary": "Markets staged a dramatic midday reversal on March 6 after Fed Chair Powell characterized the economy as stable, recovering from steep morning losses driven by a shocking February jobs report showing 92,000 jobs lost and surging oil prices amid the Iran conflict. The S&P 500 clawed back from a 1.3% drop to trade up 0.6% near 5,770, with the Nasdaq leading at +0.7% fueled by semiconductor strength. Broadcom surged 8% on blockbuster AI revenue while Marvell jumped 22% on record earnings, contrasting with Costco's 6.1% decline on an earnings miss and HPE's 12% plunge on weak guidance. The energy sector was a standout as Brent crude spiked to $92.93, lifting Occidental Petroleum 3.3% and Exxon and Chevron over 1% each.",
+  "summary": "U.S. stocks are selling off sharply on Friday after a devastating February jobs report showed the economy lost 92,000 jobs, far worse than the +59,000 consensus estimate, sending the unemployment rate to 4.4%. The S&P 500 is down roughly 1.6% to 6,830 while the Dow has plunged about 800 points, with stagflation fears intensifying as surging Middle East tensions push Brent crude toward $88-$94 per barrel alongside stubborn wage growth of 0.4% monthly. Energy is the sole advancing sector while financials, consumer staples, and materials bear the brunt of selling; bright spots include Marvell Technology surging on record AI-driven earnings and Day One Biopharmaceuticals rocketing 65% on an acquisition deal. The VIX has spiked 12.3% to 23.75 as markets brace for the Fed's March 19th decision, where policymakers face a difficult choice between supporting a weakening labor market and fighting oil-driven inflation.",
   "highlights": [
+    {
+      "text": "VIX spikes 12.3% to 23.75 as average hourly earnings rise 0.4% m/m despite job losses, creating a 'lose-lose' policy dilemma for the Fed",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "StockMarketWatch",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "Financials lead declines with Goldman Sachs -3.4%, American Express -3.2%, JPMorgan -3.0% as recession fears mount; Consumer Staples and Materials each drop over 2%",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "StockMarketWatch",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "Energy sector stands alone in the green \u2014 Occidental Petroleum +3.3%, Exxon and Chevron each up ~1% \u2014 as Brent crude hits 4-year highs near $88-$94/bbl on Middle East escalation",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "StockMarketWatch",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "Day One Biopharmaceuticals rockets 65.6% after Servier announces $2.5 billion acquisition targeting glioma drug Ojemda",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "Marvell Technology surges ~15-22% after record Q4 earnings beat driven by AI hardware demand, receives fresh analyst upgrades with $114 consensus target",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "2:45 PM ET"
+    },
+    {
+      "text": "February payrolls contract by 92,000 jobs \u2014 massive miss vs +59K consensus \u2014 with unemployment ticking up to 4.4%, sparking stagflation fears ahead of March 19 Fed meeting",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "StockMarketWatch",
+      "added_at": "2:45 PM ET"
+    },
     {
       "text": "Costco (COST) drops 6.1% and HPE plunges 12% on earnings disappointments, while Walgreens jumps 7.5% on Sycamore Partners take-private deal",
       "sentiment": "neutral",
@@ -123,48 +165,6 @@
       "source_url": "https://www.stocktitan.net/news/DAWN/servier-and-day-one-biopharmaceuticals-announce-acquisition-to-r6fs0iuc7x22.html",
       "source_outlet": "StockTitan",
       "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "Marvell Technology rallied 12% premarket after posting record fiscal 2026 revenue of $8.2B (+42% YoY), driven by surging AI data center demand",
-      "sentiment": "bullish",
-      "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
-      "source_outlet": "Marvell Investor Relations",
-      "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "Broadcom beat Q1 estimates with $19.3B revenue (+29% YoY), AI chip revenue of $8.4B (+106% YoY), guided Q2 to $22B and announced a $10B buyback",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
-      "source_outlet": "CNBC",
-      "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "WTI crude surged 6.3% to $86.06 and Brent hit $89.23 \u2014 both at 52-week highs \u2014 as the Iran conflict disrupts Strait of Hormuz traffic; Qatar warns crude could reach $150",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/06/iran-us-war-oil-prices-brent-wti-barrel-futures.html",
-      "source_outlet": "CNBC",
-      "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "February nonfarm payrolls plunged by 92,000 \u2014 the third jobs loss in five months \u2014 as healthcare (-28K from strikes), manufacturing (-12K), and federal government (-10K) all contracted sharply",
-      "sentiment": "bearish",
-      "source_url": "https://www.benzinga.com/markets/economic-data/26/03/51093989/nonfarm-payrolls-february-2026-employment-declines-by-92000-unemployment-rises",
-      "source_outlet": "Benzinga",
-      "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "Costco dips despite strong Q2 results in classic sell-the-news reaction; Walmart up 14% YTD as defensive safe-haven play",
-      "sentiment": "neutral",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "StockMarketWatch",
-      "added_at": "7:56 AM ET"
-    },
-    {
-      "text": "Fed pivot from rate-cut talk to 'data-dependent pause' \u2014 no relief expected before June at earliest as core CPI remains stubbornly above 2.5%",
-      "sentiment": "bearish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "7:56 AM ET"
     }
   ],
   "sources": [
@@ -353,6 +353,10 @@
   ],
   "summary_history": [
     {
+      "time": "1:42 PM ET",
+      "text": "Markets staged a dramatic midday reversal on March 6 after Fed Chair Powell characterized the economy as stable, recovering from steep morning losses driven by a shocking February jobs report showing 92,000 jobs lost and surging oil prices amid the Iran conflict. The S&P 500 clawed back from a 1.3% drop to trade up 0.6% near 5,770, with the Nasdaq leading at +0.7% fueled by semiconductor strength. Broadcom surged 8% on blockbuster AI revenue while Marvell jumped 22% on record earnings, contrasting with Costco's 6.1% decline on an earnings miss and HPE's 12% plunge on weak guidance. The energy sector was a standout as Brent crude spiked to $92.93, lifting Occidental Petroleum 3.3% and Exxon and Chevron over 1% each."
+    },
+    {
       "time": "12:18 PM ET",
       "text": "Markets staged a dramatic midday reversal on March 6 after Fed Chair Jerome Powell characterized the economy as stable and resilient, calming nerves rattled by a shockingly weak February jobs report that showed nonfarm payrolls falling 92,000 \u2014 far below the 50,000 growth expected \u2014 while unemployment ticked up to 4.4%. The S&P 500, which plunged as much as 1.3% at the open on the jobs data and rising oil prices from the widening Middle East conflict, has rebounded to trade up 0.6% near 5,770, led by a tech and semiconductor rally. Broadcom's blowout earnings (+8%, AI revenue up 77% YoY) and a Marvell analyst upgrade are powering the Nasdaq's 0.7% gain, while Costco (-6.1% on earnings miss), HPE (-12% on weak guidance and layoffs), and oil-sensitive financials like Goldman Sachs (-3.7%) weigh on the Dow."
     },
@@ -379,10 +383,6 @@
     {
       "time": "3:23 AM ET",
       "text": "U.S. markets are bracing for Friday's critical February jobs report after a volatile week dominated by the Iran-Strait of Hormuz crisis that has sent oil prices surging nearly 14% in a week. The S&P 500 closed Thursday at 6,830.71, down 0.56%, after failing to breach 6,900 resistance \u2014 erasing its 2026 gains. Broadcom provided a bright spot with blowout Q1 earnings, reporting AI revenue of $8.4 billion (up 106% YoY) and projecting $100 billion in AI chip revenue by 2027. Overnight futures point to a modest recovery, with prediction markets giving 65% odds of a higher open, though airline and industrial stocks remain under heavy pressure from energy costs."
-    },
-    {
-      "time": "2:16 AM ET",
-      "text": "Markets are attempting to stabilize Friday after a punishing week driven by the U.S.-Israeli conflict with Iran that began February 28, which has sent oil prices surging 20% and disrupted shipping through the Strait of Hormuz. The Dow plunged 785 points (1.6%) on Thursday while the S&P 500 fell 0.56% to 6,830.71, failing to hold the 6,900 resistance level and slipping into negative territory for 2026. After hours, Broadcom delivered a bright spot with record Q1 revenue of $19.3B and AI semiconductor revenue doubling to $8.4B, while announcing a $10B buyback program. All eyes now turn to the February nonfarm payrolls report due Friday morning, with expectations for just 50,000 jobs added and unemployment holding at 4.3%, as traders price in less than one-in-three odds for a June Fed rate cut."
     }
   ]
 }

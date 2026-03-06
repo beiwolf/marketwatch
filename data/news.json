@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "10:15 AM ET",
-  "update_count": 9,
+  "last_updated": "12:18 PM ET",
+  "update_count": 10,
   "breaking": [
+    {
+      "text": "Broadcom surges 8% on blowout earnings \u2014 AI revenue up 77% YoY to $4.1B",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "February payrolls shock: economy lost 92,000 jobs, worst print since early pandemic",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "Fed Chair Powell calls economy 'stable and resilient' \u2014 markets reverse sharp morning selloff",
+      "added_at": "12:18 PM ET"
+    },
     {
       "text": "Servier to acquire Day One Biopharmaceuticals (DAWN) for $2.5B at 68% premium",
       "added_at": "10:15 AM ET"
@@ -10,22 +22,52 @@
     {
       "text": "Oil surges \u2014 WTI hits $86, Brent nears $90 as Iran conflict chokes Strait of Hormuz shipping",
       "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "February payrolls shock: U.S. economy lost 92,000 jobs vs. +60K expected, worst miss in months",
-      "added_at": "10:15 AM ET"
-    },
-    {
-      "text": "Crude oil surges past $81/barrel, Brent near $85 \u2014 highest since mid-2024 on Middle East supply disruption fears",
-      "added_at": "7:56 AM ET"
-    },
-    {
-      "text": "February jobs report due at 8:30 AM ET \u2014 consensus expects sharp slowdown to 60K payrolls vs 130K prior",
-      "added_at": "7:56 AM ET"
     }
   ],
-  "summary": "U.S. stocks are under heavy pressure Friday morning as a disastrous February jobs report \u2014 the economy lost 92,000 jobs versus expectations for a 60,000 gain \u2014 collides with surging oil prices driven by the escalating U.S.-Iran conflict now in its seventh day. WTI crude has spiked above $86 and Brent is approaching $90 as the Strait of Hormuz faces near-total shipping disruption, with Qatar's energy minister warning prices could hit $150. S&P 500 futures fell roughly 0.5% premarket while the Fed rate-cut timeline has been pushed to October, with a 97% probability the central bank holds rates at its March meeting. On the earnings front, Broadcom beat Q1 estimates with $19.3B revenue and 106% AI revenue growth, while Marvell Technology rallied 12% premarket on strong AI-driven results.",
+  "summary": "Markets staged a dramatic midday reversal on March 6 after Fed Chair Jerome Powell characterized the economy as stable and resilient, calming nerves rattled by a shockingly weak February jobs report that showed nonfarm payrolls falling 92,000 \u2014 far below the 50,000 growth expected \u2014 while unemployment ticked up to 4.4%. The S&P 500, which plunged as much as 1.3% at the open on the jobs data and rising oil prices from the widening Middle East conflict, has rebounded to trade up 0.6% near 5,770, led by a tech and semiconductor rally. Broadcom's blowout earnings (+8%, AI revenue up 77% YoY) and a Marvell analyst upgrade are powering the Nasdaq's 0.7% gain, while Costco (-6.1% on earnings miss), HPE (-12% on weak guidance and layoffs), and oil-sensitive financials like Goldman Sachs (-3.7%) weigh on the Dow.",
   "highlights": [
+    {
+      "text": "Energy sector stands out as safe haven \u2014 Occidental Petroleum (OXY) up 3.3%, Exxon and Chevron each gain 1%+ as oil prices spike on Middle East tensions",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "Costco (COST) slides 6.1% after quarterly profits miss expectations, citing higher operational costs",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "Hewlett Packard Enterprise (HPE) plummets 12% on disappointing earnings outlook and announcement of workforce reductions",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "Walgreens Boots Alliance (WBA) jumps 7.5% on reports it has reached an agreement to go private with Sycamore Partners",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "Broadcom (AVGO) surges 8% after reporting AI-related revenue of $4.1B, up 77% year-over-year, in a blowout quarterly earnings report",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "text": "February nonfarm payrolls plunged by 92,000 jobs \u2014 unemployment rose to 4.4%, stoking recession fears before Powell's calming remarks",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "12:18 PM ET"
+    },
     {
       "text": "Fed rate-cut expectations pushed back to October as energy-driven inflation and labor market weakness create a stagflationary dilemma \u2014 97% odds of a March hold",
       "sentiment": "bearish",
@@ -123,48 +165,6 @@
       "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
       "source_outlet": "Stock Market Watch",
       "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "Airlines under heavy pressure \u2014 American Airlines (AAL) downgraded to neutral by Rothschild on fuel cost sensitivity, negative EPS now forecast",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "U.S. crude oil spiked over 8% to $81/barrel after Iran claimed strike on American tanker \u2014 20% of global oil transits the threatened Strait of Hormuz",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "Broadcom (AVGO) surged 4.8% after hours on earnings beat; Marvell (MRVL) projects fiscal 2027 revenue approaching $11 billion",
-      "sentiment": "bullish",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "S&P 500 futures down 0.29% pre-market as oil shock and jobs report anxiety weigh on sentiment; index closed at 6,830.71 Thursday",
-      "sentiment": "bearish",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "Defensive plays outperforming: Walmart up 14% YTD and Berkshire Hathaway leading as investors rotate to safety",
-      "sentiment": "neutral",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "CIENA plunges 16.5% despite strong cloud revenue growth of 76% after issuing tepid 2026 guidance",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "5:42 AM ET"
     }
   ],
   "sources": [
@@ -321,9 +321,27 @@
       "url": "https://www.stocktitan.net/news/DAWN/servier-and-day-one-biopharmaceuticals-announce-acquisition-to-r6fs0iuc7x22.html",
       "sentiment": "bullish",
       "added_at": "10:15 AM ET"
+    },
+    {
+      "outlet": "24/7 Wall St.",
+      "title": "Stock Market Live March 6, 2026: S&P 500 (SPY) Sinks as Oil Spikes",
+      "url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "sentiment": "bearish",
+      "added_at": "12:18 PM ET"
+    },
+    {
+      "outlet": "FinancialContent",
+      "title": "Labor Market Shudder: February Payrolls Slump to 50,000 as Fed Pivot Looms",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-6-labor-market-shudder-february-payrolls-slump-to-50000-as-fed-pivot-looms",
+      "sentiment": "bearish",
+      "added_at": "12:18 PM ET"
     }
   ],
   "summary_history": [
+    {
+      "time": "10:15 AM ET",
+      "text": "U.S. stocks are under heavy pressure Friday morning as a disastrous February jobs report \u2014 the economy lost 92,000 jobs versus expectations for a 60,000 gain \u2014 collides with surging oil prices driven by the escalating U.S.-Iran conflict now in its seventh day. WTI crude has spiked above $86 and Brent is approaching $90 as the Strait of Hormuz faces near-total shipping disruption, with Qatar's energy minister warning prices could hit $150. S&P 500 futures fell roughly 0.5% premarket while the Fed rate-cut timeline has been pushed to October, with a 97% probability the central bank holds rates at its March meeting. On the earnings front, Broadcom beat Q1 estimates with $19.3B revenue and 106% AI revenue growth, while Marvell Technology rallied 12% premarket on strong AI-driven results."
+    },
     {
       "time": "7:56 AM ET",
       "text": "U.S. stock futures are under pressure Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as markets brace for the February employment report amid an escalating Middle East crisis. The Iran-Israel conflict has entered its seventh day with Israel's 'Operation Epic Fury' targeting Tehran directly, triggering closure of the Strait of Hormuz and sending crude oil surging past $81/barrel \u2014 its highest level since mid-2024. Thursday's session saw the Dow plummet 784 points (1.6%) to 47,954 while the S&P 500 fell 0.6% to 6,831, failing at 6,900 resistance and erasing all 2026 gains. Investors now await the jobs report at 8:30 AM ET, where economists expect a sharp deceleration to just 60,000 new jobs, complicated by winter weather and a Kaiser Permanente healthcare workers' strike."
@@ -351,10 +369,6 @@
     {
       "time": "1:03 AM ET",
       "text": "U.S. markets suffered another bruising session on March 5 as the S&P 500 fell roughly 0.8% to close near 6,820 after decisively failing to breach 6,900 resistance, with year-to-date gains now fully erased. The selloff was driven by surging crude oil prices\u2014WTI spiked above $79 per barrel after Iran claimed to have struck an American oil tanker near the Strait of Hormuz\u2014stoking inflation fears and pushing the VIX to 22.08. Eight of eleven S&P sectors ended lower, with defensive rotation accelerating as Microsoft dropped 17% YTD and airlines faced downgrades on fuel cost concerns. Investors now turn to Friday's February nonfarm payrolls report amid a Fed stance shifting toward a data-dependent pause with no rate relief expected before June."
-    },
-    {
-      "time": "12:03 AM ET",
-      "text": "The S&P 500 closed near 6,820 on Thursday, down 0.56%, decisively failing the 6,900 resistance level and erasing all 2026 gains as a triple threat of sticky inflation, hawkish Fed policy, and Middle East escalation rattled investors. Oil prices surged over 8% after Iran's Revolutionary Guard Navy struck an American oil tanker in the Persian Gulf, sending crude above $79 and triggering the commodity's biggest weekly gain since 2022. After the bell, Broadcom delivered a blowout Q1 with record revenue of $19.3 billion and AI semiconductor sales doubling year-over-year to $8.4 billion, sending shares up 5% in extended trading. Markets now brace for Friday's February jobs report, where economists expect a modest 50,000 payroll gain weighed down by a Kaiser Permanente strike that affected 31,000 workers during the BLS survey week."
     }
   ]
 }

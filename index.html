@@ -331,58 +331,96 @@
 
     /* ── MOBILE RESPONSIVE ── */
     @media(max-width:600px){
+      /* Ensure nothing causes the html/body to grow wider than the viewport */
+      html,body{max-width:100%;overflow-x:hidden;}
       .page{padding:0 12px 60px;}
 
-      /* Topbar: hide secondary info chips, keep essentials */
+      /* ── Topbar ──
+         Hide date, updated-time, and the market clock chip (its JS-generated
+         text is too long: "Pre-market · Opens in 1h 30m"). Keep SPY, mood, bell. */
       #chip-date{display:none!important;}
       #chip-updated{display:none!important;}
+      #chip-clock{display:none!important;}
+      #chip-news-updated{display:none!important;}
       .topbar-right{gap:5px;}
       .chip{font-size:11px;padding:4px 10px;}
 
-      /* Net panel: slightly smaller hero number */
-      .net-panel{padding:20px 16px 18px;}
-      .net-score-value{font-size:52px;letter-spacing:-2px;}
-      .net-stats{margin-top:20px;}
-      .stats-row{gap:16px;}
-      .stat-value{font-size:17px;}
+      /* ── Net panel ── */
+      .net-panel{padding:20px 14px 16px;}
+      .net-score-value{font-size:48px;letter-spacing:-2px;}
+      .net-stats{margin-top:18px;}
+      .stats-row{gap:14px;}
+      .stat-value{font-size:16px;}
+      /* Keep breadth-row from stretching */
+      .breadth-row{flex-wrap:wrap;gap:6px;}
 
-      /* Sector rows: hide bar-wrap and delta to prevent overflow */
+      /* ── Sector rows: hide bar + delta to prevent overflow ── */
       .s-bar-wrap{display:none;}
       .s-delta{display:none;}
-      .s-pct{width:60px;font-size:13px;}
-      .sector-row{padding:10px 12px;}
+      .s-pct{width:58px;font-size:13px;}
+      .s-flag{width:14px;font-size:11px;}
+      .sector-row{padding:9px 12px;gap:8px;}
 
-      /* Flow summary: stack columns */
+      /* ── Heatmap: 2-column on very small screens ── */
+      .hm-grid{grid-template-columns:repeat(2,1fr);}
+      .hm-wrap{padding:12px;}
+
+      /* ── Flow summary: single column ── */
       .flow-summary-grid{grid-template-columns:1fr;}
       .flow-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
 
-      /* Mini table: tighten first column */
-      .mini-row{grid-template-columns:80px 1fr 1fr 1fr;gap:6px;font-size:11px;}
+      /* ── Mini table (10-day history): tighten columns ── */
+      .mini-table{padding:6px 10px 12px;}
+      .mini-row{grid-template-columns:75px 1fr 1fr 1fr;gap:4px;font-size:10px;}
 
-      /* Card headers and bodies: tighter padding */
-      .card-header{padding:12px 14px;}
-      .net-panel,.narrative-body,.news-summary,.spotlight-wrap,.hm-wrap,.trend-chart-wrap,.sparkline-wrap{padding-left:14px;padding-right:14px;}
-      .highlight-item,.source-item{padding-left:14px;padding-right:14px;}
-      .news-update-badge{padding-left:14px;}
-      .audit-body{padding:14px 14px;}
-      .summary-history-toggle{padding-left:14px;padding-right:14px;}
-      .summary-hist-item{padding-left:14px;padding-right:14px;}
+      /* ── Card padding throughout ── */
+      .card-header{padding:11px 12px;}
+      .card-meta{font-size:10px;}
+      .net-panel,.narrative-body,.news-summary,.spotlight-wrap,
+      .hm-wrap,.trend-chart-wrap,.sparkline-wrap{padding-left:12px;padding-right:12px;}
+      .highlight-item,.source-item{padding:10px 12px;}
+      .news-update-badge{padding-left:12px;}
+      .audit-body{padding:12px;}
+      .summary-history-toggle{padding-left:12px;padding-right:12px;}
+      .summary-hist-item{padding:12px;}
+      .shi-divider{padding:6px 12px 2px;}
+      .wl-card{padding:10px 12px;}
 
-      /* Audit: hide regime label, tighten layout */
+      /* ── Source items: hide read link on very small screens
+         to stop flex row from overflowing ── */
+      .source-link{display:none;}
+
+      /* ── Audit entries ── */
       .a-regime{display:none;}
       .a-bread{display:none;}
-      .audit-entry summary{padding:10px 12px;gap:8px;}
-      .audit-day-header{gap:10px;padding:12px 14px;}
-      .audit-day-close{font-size:22px;}
-      .audit-day-entries{margin-left:8px;padding-left:10px;}
-      .mood-arc{margin-left:8px;padding:4px 10px 0;}
-      .regime-timeline{margin-left:8px;padding:2px 10px 8px;}
+      /* Tighter summary row */
+      .audit-entry summary{padding:9px 10px;gap:6px;font-size:12px;}
+      .a-time{font-size:11px;}
+      .a-net{font-size:13px;}
+      .a-spy{font-size:11px;}
+      /* Day header */
+      .audit-day-header{gap:8px;padding:11px 12px;}
+      .audit-day-date{font-size:13px;}
+      .audit-day-dow{font-size:10px;}
+      .audit-day-close{font-size:18px;letter-spacing:-0.5px;}
+      .audit-day-meta{font-size:10px;}
+      /* Timeline indent reduced */
+      .audit-day-entries{margin-left:6px;padding-left:8px;}
+      .mood-arc{margin-left:6px;padding:3px 8px 0;}
+      .regime-timeline{margin-left:6px;padding:2px 8px 8px;}
+      /* Audit body sector grid */
+      .audit-sectors{grid-template-columns:1fr 1fr;}
+      .audit-body{padding:10px;}
+      .audit-narrative-text{font-size:12px;padding:10px 12px;}
 
-      /* Jump button: closer to edge */
-      .jump-today-btn{bottom:16px;right:16px;padding:8px 14px;font-size:11px;}
+      /* ── Footer: force wrapping so the long line doesn't overflow ── */
+      .footer{font-size:10px;letter-spacing:0;word-break:break-all;overflow-wrap:anywhere;white-space:normal;padding:14px 0;}
 
-      /* Watchlist items: allow narrower */
-      .wl-item{min-width:90px;}
+      /* ── Jump button ── */
+      .jump-today-btn{bottom:14px;right:14px;padding:7px 13px;font-size:11px;}
+
+      /* ── Watchlist ── */
+      .wl-item{min-width:0;flex:1 1 calc(50% - 4px);}
     }
   </style>
 </head>

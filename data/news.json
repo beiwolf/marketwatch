@@ -1,8 +1,16 @@
 {
   "date": "2026-03-05",
-  "last_updated": "5:36 PM ET",
-  "update_count": 10,
+  "last_updated": "6:46 PM ET",
+  "update_count": 11,
   "breaking": [
+    {
+      "text": "Reports of new AI-chip export restrictions requiring licensing hit Nvidia, Lam Research, Applied Materials",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "text": "Iran claims missile strike on oil tanker in Persian Gulf \u2014 WTI crude surges 8% past $81",
+      "added_at": "6:46 PM ET"
+    },
     {
       "text": "China sets 2026 GDP growth target at 4.5%-5%, lowest since at least the 1990s",
       "added_at": "5:36 PM ET"
@@ -14,18 +22,45 @@
     {
       "text": "Dow plunges 785 points as Iran conflict sends oil surging past $80/barrel, settling up 8% at $81.01",
       "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "US reportedly considering AI chip export permit requirements \u2014 semiconductor index drops 1.2%",
-      "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "S&P 500 closes down 1.22% at 5,785; Dow drops 785 points on geopolitical selloff",
-      "added_at": "4:31 PM ET"
     }
   ],
-  "summary": "U.S. stocks sold off sharply on Thursday as escalating conflict in Iran sent crude oil surging past $80 per barrel, igniting inflation fears across Wall Street. The Dow led losses, plunging 785 points (\u22121.6%) to 47,955, while the S&P 500 fell 0.6% to 6,831 and the Nasdaq slipped just 0.3% to 22,749 as tech showed relative resilience. Airlines were decimated by soaring fuel costs, with American Airlines dropping 5.4% and United falling 5%, while energy producers rallied with the SPDR S&P Oil & Gas ETF gaining over 2%. Broadcom stood out as a bright spot, climbing 4.8% on strong earnings, while Berkshire Hathaway announced a resumption of buybacks and China set its lowest GDP growth target in over 30 years.",
+  "summary": "U.S. stocks sold off sharply on Thursday as escalating Iran conflict rocked energy markets, with WTI crude surging over 8% past $81 a barrel after Iran claimed it struck an oil tanker in the Persian Gulf. The Dow plunged 785 points (-1.6%) to 47,955 while the S&P 500 fell 0.6% to 6,831, erasing year-to-date gains and failing to breach 6,900 resistance. Airlines led the decline with United and Delta both down over 5%, while Broadcom bucked the trend rising 4.8% on strong earnings and The Trade Desk surged 19% on reported OpenAI ad partnership talks. China set its 2026 GDP target at 4.5-5%, the lowest in decades, and markets now await tomorrow's February nonfarm payrolls report.",
   "highlights": [
+    {
+      "text": "Berkshire Hathaway resumes share buybacks for first time since 2024",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "text": "Airlines hammered \u2014 American Airlines downgraded to neutral on jet fuel risk; United and Delta both fall 5%+",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "text": "The Trade Desk surges 19% on reports of OpenAI advertising partnership; CEO Jeff Green buys 6M shares",
+      "sentiment": "bullish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "text": "Broadcom rises 4.8% after quarterly earnings beat analyst expectations",
+      "sentiment": "bullish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "text": "Dow plunges 785 points (-1.6%) as oil surge past $81/bbl reignites inflation fears; S&P 500 erases 2026 gains at 6,831",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:46 PM ET"
+    },
     {
       "text": "Salesforce gains 5%, Microsoft and Oracle each add 1% as cloud/enterprise software sector defies broader market weakness",
       "sentiment": "bullish",
@@ -130,41 +165,6 @@
       "source_url": "https://www.investing.com/news/stock-market-news/initial-jobless-claims-highlight-economic-data-due-thursday-93CH-4541934",
       "source_outlet": "Investing.com",
       "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "Marine insurers Gard and Skuld issue 'Notice of Cancellation' for war-risk coverage in the Strait of Hormuz effective March 5, further disrupting global energy trade flows",
-      "sentiment": "bearish",
-      "source_url": "https://adi-analytics.com/2026/03/04/the-iran-conflict-and-oil-markets/",
-      "source_outlet": "ADI Analytics",
-      "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "Broadcom CEO Hock Tan projects AI chip revenue 'significantly in excess of $100 billion' in 2027, naming Google, Meta, Anthropic, and OpenAI among six key custom chip customers \u2014 Q2 guidance of $22B represents 47% YoY growth",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-sees-ai-chip-sales-significantly-over-100-billion-in-2027.html",
-      "source_outlet": "CNBC",
-      "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "Strait of Hormuz tanker insurance pulled for March 5, effectively halting all shipping traffic; Brent crude holds near $82-84 as White House offers no timeline for safe passage",
-      "sentiment": "bearish",
-      "source_url": "https://www.euronews.com/business/2026/03/04/passage-denied-hormuz-shutdown-keeps-oil-prices-on-an-upward-trajectory",
-      "source_outlet": "Euronews",
-      "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "S&P 500 futures slip 0.4% premarket as Polymarket shows 70% odds of a down open; weekly jobless claims and productivity data due at 8:30 AM ahead of Friday's critical payrolls report",
-      "sentiment": "bearish",
-      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51058430/will-sp-open-up-or-down-on-march-5-iran-jitters-ease-as-oil-pulls-back-but-tariff-thre",
-      "source_outlet": "Benzinga",
-      "added_at": "8:01 AM ET"
-    },
-    {
-      "text": "BJ's Wholesale beats on Q4 EPS at $1.11 but misses on revenue at $5.36B vs $5.39B expected, mirroring the mixed retail earnings theme this morning",
-      "sentiment": "neutral",
-      "source_url": "https://finance.yahoo.com/video/kroger-bjs-stock-moves-q4-174419973.html",
-      "source_outlet": "Yahoo Finance",
-      "added_at": "8:01 AM ET"
     }
   ],
   "sources": [
@@ -475,6 +475,27 @@
       "url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
       "sentiment": "neutral",
       "added_at": "5:36 PM ET"
+    },
+    {
+      "outlet": "Motley Fool",
+      "title": "Stock Market Today, Mar. 5: Oil Surge and AI Export Fears Drag Down Major Indexes",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "sentiment": "bearish",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "outlet": "MarketMinute",
+      "title": "S&P 500 Hits 6,900 Resistance: Why 2026 Gains Have Vanished Amid High Volatility",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
+      "sentiment": "bearish",
+      "added_at": "6:46 PM ET"
+    },
+    {
+      "outlet": "FX.co",
+      "title": "US Market News Digest for March 5, 2026",
+      "url": "https://www.fx.co/en/analysis/439782",
+      "sentiment": "bearish",
+      "added_at": "6:46 PM ET"
     }
   ]
 }

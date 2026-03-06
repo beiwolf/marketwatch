@@ -5,12 +5,32 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-06 (session 12)
-- Latest commit: `e80e189` — feat: cross-day summary history from news archives
+- Last updated: 2026-03-06 (session 13)
+- Latest commit: `a472322` — feature: mobile responsive layout
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-06 — `a472322`
+**Message:** `feature: mobile responsive layout`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Added `@media(max-width:600px)` block for full mobile responsiveness.
+- Topbar: hides `#chip-date` and `#chip-updated` on small screens; retains SPY, mood, clock, bell.
+- Sector rows: hides `.s-bar-wrap` (100px) and `.s-delta` (60px) to prevent horizontal overflow.
+- Flow summary grid: stacks from 2-column to 1-column (`grid-template-columns:1fr`).
+- Net panel: reduces hero number from 68px → 52px; tightens gaps and padding.
+- Audit entries: hides `.a-regime` and `.a-bread` labels on narrow screens.
+- Card padding reduced to 12-14px throughout (from 20-24px).
+- Mini table first column: 120px → 80px.
+- Jump button repositioned closer to edge (16px vs 28px).
+- Page padding: 24px → 12px on mobile.
+
+---
 
 ### 2026-03-06 — `e80e189`
 **Message:** `feat: cross-day summary history from news archives`

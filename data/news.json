@@ -1,8 +1,16 @@
 {
   "date": "2026-03-06",
-  "last_updated": "3:23 AM ET",
-  "update_count": 4,
+  "last_updated": "4:30 AM ET",
+  "update_count": 5,
   "breaking": [
+    {
+      "text": "Oil pulls back to $80.45 after Trump administration signals options to address crude price spike",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "S&P 500 futures up 0.24% to 6,851 as markets brace for February jobs report at 8:30 AM ET",
+      "added_at": "4:30 AM ET"
+    },
     {
       "text": "Oil pulls back from $81 after Trump administration signals options to address price spike",
       "added_at": "3:23 AM ET"
@@ -14,18 +22,52 @@
     {
       "text": "February nonfarm payrolls report due this morning \u2014 economists expect just 50,000 jobs added amid geopolitical uncertainty",
       "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "Oil prices remain elevated with WTI at $80.45 and Brent near $85 as ships remain stranded in Persian Gulf",
-      "added_at": "2:16 AM ET"
-    },
-    {
-      "text": "Broadcom surges 5% after-hours on record Q1 revenue of $19.3B, AI chip revenue doubles to $8.4B",
-      "added_at": "2:16 AM ET"
     }
   ],
-  "summary": "U.S. markets are bracing for Friday's critical February jobs report after a volatile week dominated by the Iran-Strait of Hormuz crisis that has sent oil prices surging nearly 14% in a week. The S&P 500 closed Thursday at 6,830.71, down 0.56%, after failing to breach 6,900 resistance \u2014 erasing its 2026 gains. Broadcom provided a bright spot with blowout Q1 earnings, reporting AI revenue of $8.4 billion (up 106% YoY) and projecting $100 billion in AI chip revenue by 2027. Overnight futures point to a modest recovery, with prediction markets giving 65% odds of a higher open, though airline and industrial stocks remain under heavy pressure from energy costs.",
+  "summary": "Markets are cautiously optimistic Friday morning after a volatile week driven by the U.S.-Israeli conflict with Iran that sent oil prices surging over 14% and erased the S&P 500's year-to-date gains. The S&P 500 closed Thursday at 6,830.71 (-0.56%) with the Dow dropping 785 points as WTI crude settled at $81.01, its biggest weekly gain since 2022, though prices eased overnight after Washington signaled intervention. Broadcom delivered a blowout Q1 report after the bell \u2014 revenue hit a record $19.3B (+29% YoY) with AI revenue of $8.4B (+106%), and CEO Hock Tan projected $100B in AI chip revenue by 2027. All eyes now turn to the February nonfarm payrolls report due at 8:30 AM, where consensus expects just 50,000 jobs added, potentially depressed by a Kaiser Permanente strike that affected 31,000 workers during the survey week.",
   "highlights": [
+    {
+      "text": "Broadcom announces $10B share buyback program and guides Q2 revenue to $22B (+47% YoY) with AI revenue expected to reach $10.7B",
+      "sentiment": "bullish",
+      "source_url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
+      "source_outlet": "PR Newswire",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "The Trade Desk surged 19% on reports of ad partnership discussions with OpenAI, while Ciena plunged 16.5% on weak 2026 outlook despite strong cloud revenue",
+      "sentiment": "neutral",
+      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "S&P 500 year-to-date gains fully erased amid triple threat of sticky inflation, hawkish Fed, and Middle East conflict \u2014 index failed at 6,900 resistance",
+      "sentiment": "bearish",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
+      "source_outlet": "MarketMinute",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "Oil prices headed for biggest weekly gain since 2022 as hundreds of ships remain stuck in Persian Gulf despite U.S. escort promises \u2014 WTI hit $81.01",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "February nonfarm payrolls due at 8:30 AM with consensus at just 50K jobs \u2014 Kaiser Permanente strike affecting 31,000 workers may distort results",
+      "sentiment": "neutral",
+      "source_url": "https://www.cnbc.com/2026/03/05/february-2026-jobs-report-preview.html",
+      "source_outlet": "CNBC",
+      "added_at": "4:30 AM ET"
+    },
+    {
+      "text": "Broadcom crushes Q1 estimates with record $19.3B revenue (+29% YoY), AI semiconductor revenue surges 106% to $8.4B, and CEO forecasts $100B AI chip revenue by 2027",
+      "sentiment": "bullish",
+      "source_url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial",
+      "source_outlet": "Broadcom Investor Relations",
+      "added_at": "4:30 AM ET"
+    },
     {
       "text": "10-year Treasury yield climbed to 4.14% as oil-driven inflation fears offset weakening growth signals; Fed rate-cut odds for June below 33%",
       "sentiment": "bearish",
@@ -123,48 +165,6 @@
       "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
       "source_outlet": "MarketMinute",
       "added_at": "1:03 AM ET"
-    },
-    {
-      "text": "Broadcom earnings in focus as chip giant reports solid results; CIENA drops 16.5% on tepid 2026 outlook despite 76% cloud revenue growth",
-      "sentiment": "neutral",
-      "source_url": "https://www.stocktitan.net/rankings/top-news/losers/2026-03",
-      "source_outlet": "StockTitan",
-      "added_at": "1:03 AM ET"
-    },
-    {
-      "text": "S&P 500 cracked its 100-day moving average at 6,835, closing near 6,820 with 2026 gains fully erased and next support at the 200-day MA near 6,570-6,590",
-      "sentiment": "bearish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "1:03 AM ET"
-    },
-    {
-      "text": "WTI crude surged past $79/barrel after Iran claimed a missile strike on a U.S. oil tanker near the Strait of Hormuz, threatening 20% of global oil exports",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "1:03 AM ET"
-    },
-    {
-      "text": "Nvidia CEO Jensen Huang says $30B OpenAI investment 'might be the last time' before startup's potential IPO later this year",
-      "sentiment": "bullish",
-      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "February nonfarm payrolls expected at just 50K as Kaiser Permanente strike affecting 31K workers weighs on healthcare hiring",
-      "sentiment": "neutral",
-      "source_url": "https://www.cnbc.com/2026/03/05/february-2026-jobs-report-preview.html",
-      "source_outlet": "CNBC",
-      "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "American Airlines downgraded to neutral by Rothschild as surging jet fuel costs push EPS forecasts negative for 2026",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "12:03 AM ET"
     }
   ],
   "sources": [
@@ -265,9 +265,20 @@
       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261648292-avgo-broadcom-earnings-ai-revenue-guidance-chip-tradingkey",
       "sentiment": "bullish",
       "added_at": "3:23 AM ET"
+    },
+    {
+      "outlet": "Broadcom Investor Relations",
+      "title": "Broadcom Inc. Announces First Quarter Fiscal Year 2026 Financial Results and Quarterly Dividend",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial",
+      "sentiment": "bullish",
+      "added_at": "4:30 AM ET"
     }
   ],
   "summary_history": [
+    {
+      "time": "3:23 AM ET",
+      "text": "U.S. markets are bracing for Friday's critical February jobs report after a volatile week dominated by the Iran-Strait of Hormuz crisis that has sent oil prices surging nearly 14% in a week. The S&P 500 closed Thursday at 6,830.71, down 0.56%, after failing to breach 6,900 resistance \u2014 erasing its 2026 gains. Broadcom provided a bright spot with blowout Q1 earnings, reporting AI revenue of $8.4 billion (up 106% YoY) and projecting $100 billion in AI chip revenue by 2027. Overnight futures point to a modest recovery, with prediction markets giving 65% odds of a higher open, though airline and industrial stocks remain under heavy pressure from energy costs."
+    },
     {
       "time": "2:16 AM ET",
       "text": "Markets are attempting to stabilize Friday after a punishing week driven by the U.S.-Israeli conflict with Iran that began February 28, which has sent oil prices surging 20% and disrupted shipping through the Strait of Hormuz. The Dow plunged 785 points (1.6%) on Thursday while the S&P 500 fell 0.56% to 6,830.71, failing to hold the 6,900 resistance level and slipping into negative territory for 2026. After hours, Broadcom delivered a bright spot with record Q1 revenue of $19.3B and AI semiconductor revenue doubling to $8.4B, while announcing a $10B buyback program. All eyes now turn to the February nonfarm payrolls report due Friday morning, with expectations for just 50,000 jobs added and unemployment holding at 4.3%, as traders price in less than one-in-three odds for a June Fed rate cut."

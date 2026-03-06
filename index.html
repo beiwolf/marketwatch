@@ -563,10 +563,15 @@ function renderNews(n){
   else document.getElementById('breaking-wrap').innerHTML='';
 
   // ── Summary history tracking ──
+  // Hydrate from persisted JSON on first load (survives page refresh)
+  if(summaryHistory.length===0&&n.summary_history&&n.summary_history.length){
+    summaryHistory=n.summary_history.slice(0,8);
+  }
   const newSummary=n.summary||'';
   if(newSummary&&newSummary!==_lastSummaryText){
-    // Archive the previous summary before replacing it
-    if(_lastSummaryText){
+    // Archive the previous summary before replacing it (in-session changes
+    // not yet written to JSON — e.g. the very first change of a session)
+    if(_lastSummaryText&&!summaryHistory.some(h=>h.text===_lastSummaryText)){
       summaryHistory.unshift({time:_lastSummaryTime||'—',text:_lastSummaryText});
       if(summaryHistory.length>8)summaryHistory.pop();
     }

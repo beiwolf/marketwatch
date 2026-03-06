@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "7:56 AM ET",
-  "update_count": 8,
+  "last_updated": "10:15 AM ET",
+  "update_count": 9,
   "breaking": [
+    {
+      "text": "Servier to acquire Day One Biopharmaceuticals (DAWN) for $2.5B at 68% premium",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "Oil surges \u2014 WTI hits $86, Brent nears $90 as Iran conflict chokes Strait of Hormuz shipping",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "February payrolls shock: U.S. economy lost 92,000 jobs vs. +60K expected, worst miss in months",
+      "added_at": "10:15 AM ET"
+    },
     {
       "text": "Crude oil surges past $81/barrel, Brent near $85 \u2014 highest since mid-2024 on Middle East supply disruption fears",
       "added_at": "7:56 AM ET"
@@ -10,22 +22,52 @@
     {
       "text": "February jobs report due at 8:30 AM ET \u2014 consensus expects sharp slowdown to 60K payrolls vs 130K prior",
       "added_at": "7:56 AM ET"
-    },
-    {
-      "text": "Israel launches 'Operation Epic Fury' with direct strikes on Tehran and Qom; Strait of Hormuz shipping corridor closed",
-      "added_at": "7:56 AM ET"
-    },
-    {
-      "text": "U.S. crude surges past $81/barrel, Brent nears $85 as Middle East conflict enters day seven",
-      "added_at": "6:50 AM ET"
-    },
-    {
-      "text": "Iran claims strike on American oil tanker in Persian Gulf; Strait of Hormuz shipping threat escalates",
-      "added_at": "6:50 AM ET"
     }
   ],
-  "summary": "U.S. stock futures are under pressure Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as markets brace for the February employment report amid an escalating Middle East crisis. The Iran-Israel conflict has entered its seventh day with Israel's 'Operation Epic Fury' targeting Tehran directly, triggering closure of the Strait of Hormuz and sending crude oil surging past $81/barrel \u2014 its highest level since mid-2024. Thursday's session saw the Dow plummet 784 points (1.6%) to 47,954 while the S&P 500 fell 0.6% to 6,831, failing at 6,900 resistance and erasing all 2026 gains. Investors now await the jobs report at 8:30 AM ET, where economists expect a sharp deceleration to just 60,000 new jobs, complicated by winter weather and a Kaiser Permanente healthcare workers' strike.",
+  "summary": "U.S. stocks are under heavy pressure Friday morning as a disastrous February jobs report \u2014 the economy lost 92,000 jobs versus expectations for a 60,000 gain \u2014 collides with surging oil prices driven by the escalating U.S.-Iran conflict now in its seventh day. WTI crude has spiked above $86 and Brent is approaching $90 as the Strait of Hormuz faces near-total shipping disruption, with Qatar's energy minister warning prices could hit $150. S&P 500 futures fell roughly 0.5% premarket while the Fed rate-cut timeline has been pushed to October, with a 97% probability the central bank holds rates at its March meeting. On the earnings front, Broadcom beat Q1 estimates with $19.3B revenue and 106% AI revenue growth, while Marvell Technology rallied 12% premarket on strong AI-driven results.",
   "highlights": [
+    {
+      "text": "Fed rate-cut expectations pushed back to October as energy-driven inflation and labor market weakness create a stagflationary dilemma \u2014 97% odds of a March hold",
+      "sentiment": "bearish",
+      "source_url": "https://seekingalpha.com/article/4876884-my-current-view-of-the-s-and-p-500-index-march-2026-edition-technical-analysis",
+      "source_outlet": "Seeking Alpha",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "Servier agreed to acquire Day One Biopharmaceuticals for $2.5B ($21.50/share, 68% premium) to expand its rare oncology portfolio, sending DAWN shares up 65%",
+      "sentiment": "bullish",
+      "source_url": "https://www.stocktitan.net/news/DAWN/servier-and-day-one-biopharmaceuticals-announce-acquisition-to-r6fs0iuc7x22.html",
+      "source_outlet": "StockTitan",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "Marvell Technology rallied 12% premarket after posting record fiscal 2026 revenue of $8.2B (+42% YoY), driven by surging AI data center demand",
+      "sentiment": "bullish",
+      "source_url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+      "source_outlet": "Marvell Investor Relations",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "Broadcom beat Q1 estimates with $19.3B revenue (+29% YoY), AI chip revenue of $8.4B (+106% YoY), guided Q2 to $22B and announced a $10B buyback",
+      "sentiment": "bullish",
+      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
+      "source_outlet": "CNBC",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "WTI crude surged 6.3% to $86.06 and Brent hit $89.23 \u2014 both at 52-week highs \u2014 as the Iran conflict disrupts Strait of Hormuz traffic; Qatar warns crude could reach $150",
+      "sentiment": "bearish",
+      "source_url": "https://www.cnbc.com/2026/03/06/iran-us-war-oil-prices-brent-wti-barrel-futures.html",
+      "source_outlet": "CNBC",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "text": "February nonfarm payrolls plunged by 92,000 \u2014 the third jobs loss in five months \u2014 as healthcare (-28K from strikes), manufacturing (-12K), and federal government (-10K) all contracted sharply",
+      "sentiment": "bearish",
+      "source_url": "https://www.benzinga.com/markets/economic-data/26/03/51093989/nonfarm-payrolls-february-2026-employment-declines-by-92000-unemployment-rises",
+      "source_outlet": "Benzinga",
+      "added_at": "10:15 AM ET"
+    },
     {
       "text": "Costco dips despite strong Q2 results in classic sell-the-news reaction; Walmart up 14% YTD as defensive safe-haven play",
       "sentiment": "neutral",
@@ -123,48 +165,6 @@
       "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
       "source_outlet": "24/7 Wall St.",
       "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "The Trade Desk soars 19% on reports of ad partnership discussions with OpenAI; Tango Therapeutics jumps 25% on cancer drug trial update",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "February jobs report consensus at just 50K payrolls; ADP surprised to upside at 63K vs 48K expected \u2014 rate cut odds pushed past June",
-      "sentiment": "bearish",
-      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-report",
-      "source_outlet": "Benzinga",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "WTI crude oil surged 8.5% Thursday to $81.01 \u2014 biggest weekly gain since 2022 \u2014 as hundreds of ships remain stuck in the Persian Gulf",
-      "sentiment": "bearish",
-      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-report",
-      "source_outlet": "Benzinga",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "S&P 500 now negative for 2026 after failing 6,900 resistance; VIX surges to 22.08 as geopolitical risk reprices equities",
-      "sentiment": "bearish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "Broadcom announces $10B share buyback program and guides Q2 revenue to $22B (+47% YoY) with AI revenue expected to reach $10.7B",
-      "sentiment": "bullish",
-      "source_url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
-      "source_outlet": "PR Newswire",
-      "added_at": "4:30 AM ET"
-    },
-    {
-      "text": "The Trade Desk surged 19% on reports of ad partnership discussions with OpenAI, while Ciena plunged 16.5% on weak 2026 outlook despite strong cloud revenue",
-      "sentiment": "neutral",
-      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "4:30 AM ET"
     }
   ],
   "sources": [
@@ -293,9 +293,41 @@
       "url": "https://www.thestreet.com/latest-news/stock-market-today-mar-5-dow-nasdaq-open-lower-as-iran-conflict-continues",
       "sentiment": "bearish",
       "added_at": "7:56 AM ET"
+    },
+    {
+      "outlet": "Benzinga",
+      "title": "Nonfarm Payrolls February 2026: Employment Declines by 92,000, Unemployment Rises",
+      "url": "https://www.benzinga.com/markets/economic-data/26/03/51093989/nonfarm-payrolls-february-2026-employment-declines-by-92000-unemployment-rises",
+      "sentiment": "bearish",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "outlet": "CNBC",
+      "title": "Global oil benchmark Brent crude breaks above $90 a barrel amid Iran war",
+      "url": "https://www.cnbc.com/2026/03/06/iran-us-war-oil-prices-brent-wti-barrel-futures.html",
+      "sentiment": "bearish",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "outlet": "Marvell Investor Relations",
+      "title": "Marvell Technology Reports Fourth Quarter and Fiscal Year 2026 Financial Results",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+      "sentiment": "bullish",
+      "added_at": "10:15 AM ET"
+    },
+    {
+      "outlet": "StockTitan",
+      "title": "Servier and Day One Biopharmaceuticals announce acquisition to expand rare oncology portfolio",
+      "url": "https://www.stocktitan.net/news/DAWN/servier-and-day-one-biopharmaceuticals-announce-acquisition-to-r6fs0iuc7x22.html",
+      "sentiment": "bullish",
+      "added_at": "10:15 AM ET"
     }
   ],
   "summary_history": [
+    {
+      "time": "7:56 AM ET",
+      "text": "U.S. stock futures are under pressure Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as markets brace for the February employment report amid an escalating Middle East crisis. The Iran-Israel conflict has entered its seventh day with Israel's 'Operation Epic Fury' targeting Tehran directly, triggering closure of the Strait of Hormuz and sending crude oil surging past $81/barrel \u2014 its highest level since mid-2024. Thursday's session saw the Dow plummet 784 points (1.6%) to 47,954 while the S&P 500 fell 0.6% to 6,831, failing at 6,900 resistance and erasing all 2026 gains. Investors now await the jobs report at 8:30 AM ET, where economists expect a sharp deceleration to just 60,000 new jobs, complicated by winter weather and a Kaiser Permanente healthcare workers' strike."
+    },
     {
       "time": "6:50 AM ET",
       "text": "U.S. stock futures are trading lower Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as investors brace for the February employment report amid escalating Middle East tensions. Thursday's session was brutal \u2014 the Dow plunged 784 points (1.6%) to 47,954 while the S&P 500 fell 0.56% to 6,830.71 as crude oil surged over 8% on Iran's claim of striking an American oil tanker in the Persian Gulf. The February jobs report, due at 8:30 AM ET, is expected to show just 60,000 jobs added versus 130,000 in January, with the Kaiser Permanente strike affecting roughly 30,000 positions potentially distorting the data. Bright spots remain in semiconductor earnings with Broadcom jumping 4.8% after hours on a profit beat and Marvell projecting fiscal 2027 revenue approaching $11 billion, though Nvidia faces headwinds from potential AI chip export licensing restrictions."

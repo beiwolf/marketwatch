@@ -1,8 +1,16 @@
 {
   "date": "2026-03-05",
-  "last_updated": "9:59 PM ET",
-  "update_count": 13,
+  "last_updated": "10:59 PM ET",
+  "update_count": 14,
   "breaking": [
+    {
+      "text": "Reports of potential new global AI-chip export rules requiring licenses for worldwide semiconductor sales",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "Iran IRGC Navy strikes American oil tanker in Persian Gulf; WTI crude settles at $81.01, up 8%+",
+      "added_at": "10:59 PM ET"
+    },
     {
       "text": "Reports of new global AI-chip export license requirements pressure Nvidia, Lam Research, Applied Materials",
       "added_at": "9:59 PM ET"
@@ -14,18 +22,52 @@
     {
       "text": "Iran claims missile strike on oil tanker in Persian Gulf \u2014 WTI crude surges 8% past $81/barrel",
       "added_at": "9:59 PM ET"
-    },
-    {
-      "text": "The Trade Desk jumps ~18% on early OpenAI advertising platform integration talks",
-      "added_at": "7:46 PM ET"
-    },
-    {
-      "text": "WTI crude surges 8%+ to $81.01/barrel, highest since July 2024",
-      "added_at": "7:46 PM ET"
     }
   ],
-  "summary": "The S&P 500 fell 0.56% to 6,830.71 on Thursday as geopolitical tensions in the Persian Gulf sent oil prices surging over 8% past $81 per barrel, reigniting inflation fears and hammering airlines and industrials. The Dow bore the brunt of the sell-off, plunging 785 points (1.61%), while the Nasdaq held up relatively better at -0.26% thanks to strength in Broadcom (+4.8% on earnings beat), The Trade Desk (+18% on OpenAI ad platform talks), and Salesforce (+5%). Berkshire Hathaway's surprise resumption of buybacks and CEO Greg Abel's $15 million personal stock purchase provided a sentiment bright spot, while investors braced for Friday's February jobs report with consensus at just 60,000 new positions \u2014 down sharply from January's 130,000.",
+  "summary": "U.S. stocks sold off Thursday as the Iran conflict escalated sharply after Iran's IRGC Navy struck an American oil tanker in the Persian Gulf, sending WTI crude surging over 8% to settle at $81.01 per barrel \u2014 its highest since July 2024. The Dow bore the brunt, plunging 785 points (-1.61%) to 47,955, while the S&P 500 fell 0.58% to 6,830 and the Nasdaq slipped just 0.26% to 22,749 as select tech names provided a counterweight. Airlines were hammered with United and Delta tumbling 7% and American Airlines downgraded by Rothschild, while Broadcom (+4.8%) beat earnings expectations and The Trade Desk surged 18% on OpenAI advertising integration talks. Investors now brace for Friday's February jobs report, with economists forecasting just 60,000 new payrolls amid a cooling labor market.",
   "highlights": [
+    {
+      "text": "China set 2026 GDP growth target at 4.5\u20135%, the lowest since the 1990s, as February jobs report looms Friday with just 60,000 payrolls expected",
+      "sentiment": "bearish",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-high-stakes-for-the-fed-february-jobs-report-looms-amid-geopolitical-turmoil-and-cooling-labor-market",
+      "source_outlet": "FinancialContent",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "Reports of new global AI-chip export rules requiring licenses pressured Nvidia, Lam Research, and Applied Materials while broader tech held up relatively well",
+      "sentiment": "bearish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "Airlines crushed as United and Delta fell 7%, Southwest down 6%; Rothschild downgraded American Airlines to neutral citing negative EPS forecast from rising jet fuel costs",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "Broadcom climbed 4.8% after quarterly earnings beat analyst expectations, emerging as a bright spot in a down market",
+      "sentiment": "bullish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "The Trade Desk surged 18% after announcing early-stage discussions with OpenAI on advertising integration; CEO Jeff Green purchased 6 million shares in open market \u2014 his first buy in years",
+      "sentiment": "bullish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "10:59 PM ET"
+    },
+    {
+      "text": "Iran IRGC Navy hit an American oil tanker in the Persian Gulf, sending WTI crude surging 8%+ to $81.01/bbl \u2014 the highest since July 2024 \u2014 threatening 20% of global oil exports through Strait of Hormuz",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "10:59 PM ET"
+    },
     {
       "text": "China sets 2026 GDP growth target at 4.5-5%, the lowest since at least the 1990s, raising concerns about global demand slowdown",
       "sentiment": "bearish",
@@ -123,48 +165,6 @@
       "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
       "source_outlet": "Motley Fool",
       "added_at": "6:46 PM ET"
-    },
-    {
-      "text": "Dow plunges 785 points (-1.6%) as oil surge past $81/bbl reignites inflation fears; S&P 500 erases 2026 gains at 6,831",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "6:46 PM ET"
-    },
-    {
-      "text": "Salesforce gains 5%, Microsoft and Oracle each add 1% as cloud/enterprise software sector defies broader market weakness",
-      "sentiment": "bullish",
-      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "China sets 2026 GDP growth target at 4.5%-5%, the lowest in over 30 years, raising concerns about global demand outlook",
-      "sentiment": "bearish",
-      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/stock-market-today-dow-s-p-live-updates-",
-      "source_outlet": "Bloomberg",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "Berkshire Hathaway resumes share repurchases for first time since 2024, signaling Buffett sees value in own stock",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
-      "source_outlet": "CNBC",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "Airlines crushed by jet fuel fears \u2014 American Airlines \u22125.4%, United \u22125.0%, Delta \u22124.0% as brokerages warn of extreme fuel cost risk",
-      "sentiment": "bearish",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "Broadcom (AVGO) rallies 4.8% after quarterly earnings beat analyst expectations, leading tech resilience amid broad selloff",
-      "sentiment": "bullish",
-      "source_url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "5:36 PM ET"
     }
   ],
   "sources": [
@@ -510,6 +510,12 @@
       "url": "https://www.thestreet.com/latest-news/stock-market-today-mar-5-dow-nasdaq-open-lower-as-iran-conflict-continues",
       "sentiment": "bearish",
       "added_at": "9:59 PM ET"
+    }
+  ],
+  "summary_history": [
+    {
+      "time": "9:59 PM ET",
+      "text": "The S&P 500 fell 0.56% to 6,830.71 on Thursday as geopolitical tensions in the Persian Gulf sent oil prices surging over 8% past $81 per barrel, reigniting inflation fears and hammering airlines and industrials. The Dow bore the brunt of the sell-off, plunging 785 points (1.61%), while the Nasdaq held up relatively better at -0.26% thanks to strength in Broadcom (+4.8% on earnings beat), The Trade Desk (+18% on OpenAI ad platform talks), and Salesforce (+5%). Berkshire Hathaway's surprise resumption of buybacks and CEO Greg Abel's $15 million personal stock purchase provided a sentiment bright spot, while investors braced for Friday's February jobs report with consensus at just 60,000 new positions \u2014 down sharply from January's 130,000."
     }
   ]
 }

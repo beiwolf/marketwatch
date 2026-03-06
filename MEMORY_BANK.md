@@ -5,12 +5,26 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 10)
-- Latest commit: `a930bc7` — ops: add flow/news/eod runner logic script
+- Last updated: 2026-03-05 (session 11)
+- Latest commit: `790e73b` — fix: hydrate summaryHistory from news.json on page load
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `790e73b`
+**Message:** `fix: hydrate summaryHistory from news.json on page load`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- Summary audit log now survives page refreshes.
+- On the first `renderNews` call, if `summaryHistory[]` is empty and `n.summary_history` exists in the fetched `news.json`, the in-memory array is seeded from JSON (up to 8 entries).
+- Added deduplication guard: `!summaryHistory.some(h=>h.text===_lastSummaryText)` prevents the same summary appearing twice when both JSON hydration and in-session tracking are both active.
+- **Companion change (outside repo):** `/Users/bot1/.openclaw/workspace/scripts/marketwatch_automation.sh` line 274 was patched to archive the old `summary` into `summary_history[]` (newest-first, capped at 8) before overwriting it. This is what populates the `summary_history` field in `news.json` going forward. No restart required — takes effect on next news agent run.
+
+---
 
 ### 2026-03-05 — `a930bc7`
 **Message:** `ops: add flow/news/eod runner logic script`

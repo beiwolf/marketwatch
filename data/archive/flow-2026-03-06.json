@@ -1,0 +1,107 @@
+[
+  {
+    "date": "March 6, 2026",
+    "generated_at": "10:29 AM ET",
+    "sp500_change": -1.03,
+    "market_mood": "Risk-Off",
+    "narrative": "Stagflation fears grip markets as February nonfarm payrolls shocked at -92,000 while Brent crude surges past $87/barrel on Iran-related supply disruptions. Energy is the lone sector in positive territory as financials, consumer discretionary, and materials lead a broad sell-off across all other sectors.",
+    "top_mover": "Energy",
+    "top_mover_reason": "Only advancing sector as surging oil prices on Middle East supply disruptions lift energy stocks while pressuring the rest of the market.",
+    "net_flow_score": -11.75,
+    "net_flow_delta": -1.99,
+    "avg_sector_move": -1.07,
+    "sectors_advancing": 1,
+    "sectors_declining": 10,
+    "flow_regime": "\u26a0 BROAD SELL-OFF \u2014 CASH/BONDS DESTINATION",
+    "sectors": [
+      {
+        "name": "Energy",
+        "etf": "XLE",
+        "change": 0.48,
+        "change_delta": -0.1,
+        "volume_vs_avg": 1.8,
+        "estimated": true
+      },
+      {
+        "name": "Consumer Staples",
+        "etf": "XLP",
+        "change": -0.39,
+        "change_delta": 1.62,
+        "volume_vs_avg": 1.3,
+        "estimated": true
+      },
+      {
+        "name": "Utilities",
+        "etf": "XLU",
+        "change": -0.58,
+        "change_delta": 0.2,
+        "volume_vs_avg": 1.2,
+        "estimated": true
+      },
+      {
+        "name": "Technology",
+        "etf": "XLK",
+        "change": -0.59,
+        "change_delta": -0.82,
+        "volume_vs_avg": 1.4,
+        "estimated": true
+      },
+      {
+        "name": "Industrials",
+        "etf": "XLI",
+        "change": -1.13,
+        "change_delta": 1.09,
+        "volume_vs_avg": 1.5,
+        "estimated": true
+      },
+      {
+        "name": "Communication Services",
+        "etf": "XLC",
+        "change": -1.21,
+        "change_delta": -1.0,
+        "volume_vs_avg": 1.4,
+        "estimated": true
+      },
+      {
+        "name": "Real Estate",
+        "etf": "XLRE",
+        "change": -1.22,
+        "change_delta": -0.26,
+        "volume_vs_avg": 1.3,
+        "estimated": true
+      },
+      {
+        "name": "Healthcare",
+        "etf": "XLV",
+        "change": -1.47,
+        "change_delta": 0.53,
+        "volume_vs_avg": 1.3,
+        "estimated": true
+      },
+      {
+        "name": "Materials",
+        "etf": "XLB",
+        "change": -1.85,
+        "change_delta": 0.18,
+        "volume_vs_avg": 1.5,
+        "estimated": true
+      },
+      {
+        "name": "Consumer Discretionary",
+        "etf": "XLY",
+        "change": -1.88,
+        "change_delta": -2.02,
+        "volume_vs_avg": 1.6,
+        "estimated": true
+      },
+      {
+        "name": "Financials",
+        "etf": "XLF",
+        "change": -1.91,
+        "change_delta": -1.41,
+        "volume_vs_avg": 1.7,
+        "estimated": true
+      }
+    ]
+  }
+]

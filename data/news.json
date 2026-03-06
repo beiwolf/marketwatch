@@ -1,8 +1,20 @@
 {
   "date": "2026-03-05",
-  "last_updated": "6:46 PM ET",
-  "update_count": 11,
+  "last_updated": "7:46 PM ET",
+  "update_count": 12,
   "breaking": [
+    {
+      "text": "The Trade Desk jumps ~18% on early OpenAI advertising platform integration talks",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "WTI crude surges 8%+ to $81.01/barrel, highest since July 2024",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "Iran's IRGC Navy claims missile strike on American oil tanker in Persian Gulf \u2014 vessel reportedly on fire",
+      "added_at": "7:46 PM ET"
+    },
     {
       "text": "Reports of new AI-chip export restrictions requiring licensing hit Nvidia, Lam Research, Applied Materials",
       "added_at": "6:46 PM ET"
@@ -10,22 +22,45 @@
     {
       "text": "Iran claims missile strike on oil tanker in Persian Gulf \u2014 WTI crude surges 8% past $81",
       "added_at": "6:46 PM ET"
-    },
-    {
-      "text": "China sets 2026 GDP growth target at 4.5%-5%, lowest since at least the 1990s",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "Berkshire Hathaway resumes share buybacks for first time since 2024",
-      "added_at": "5:36 PM ET"
-    },
-    {
-      "text": "Dow plunges 785 points as Iran conflict sends oil surging past $80/barrel, settling up 8% at $81.01",
-      "added_at": "5:36 PM ET"
     }
   ],
-  "summary": "U.S. stocks sold off sharply on Thursday as escalating Iran conflict rocked energy markets, with WTI crude surging over 8% past $81 a barrel after Iran claimed it struck an oil tanker in the Persian Gulf. The Dow plunged 785 points (-1.6%) to 47,955 while the S&P 500 fell 0.6% to 6,831, erasing year-to-date gains and failing to breach 6,900 resistance. Airlines led the decline with United and Delta both down over 5%, while Broadcom bucked the trend rising 4.8% on strong earnings and The Trade Desk surged 19% on reported OpenAI ad partnership talks. China set its 2026 GDP target at 4.5-5%, the lowest in decades, and markets now await tomorrow's February nonfarm payrolls report.",
+  "summary": "U.S. stocks sold off sharply on Thursday as escalating Iran conflict rocked energy markets, with WTI crude surging over 8% to $81.01 after Iran's IRGC Navy claimed a missile strike on an American oil tanker in the Persian Gulf. The Dow plunged 785 points (-1.61%) to 47,955 while the S&P 500 fell 0.56% to 6,830 and the Nasdaq dipped 0.26% to 22,749, with airlines and industrials bearing the brunt of losses. Bright spots included Broadcom (+4.8%) on strong earnings, The Trade Desk (+18%) on OpenAI advertising talks, and Berkshire Hathaway resuming share buybacks for the first time since 2024. Markets also contended with AI-chip export regulation fears hitting Nvidia and chip equipment makers, while Friday's February jobs report looms with consensus at just 60,000 new jobs.",
   "highlights": [
+    {
+      "text": "Airlines hammered as jet fuel costs spike \u2014 American Airlines downgraded to neutral by Rothschild on negative EPS forecast; UAL and DAL fall 5%+",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "Nvidia, Lam Research, and Applied Materials retreat on reports of potential new global AI-chip export regulations requiring licenses",
+      "sentiment": "bearish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "Broadcom jumps 4.8% after quarterly earnings beat analyst expectations, a rare bright spot in the sell-off",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "The Trade Desk soars ~18% after announcing early discussions with OpenAI on advertising platform integration; CEO Jeff Green buys 6M shares",
+      "sentiment": "bullish",
+      "source_url": "https://www.fool.com/coverage/stock-market-today/2026/03/05/stock-market-today-mar-5-oil-surge-and-ai-export-fears-drag-down-major-indexes/",
+      "source_outlet": "Motley Fool",
+      "added_at": "7:46 PM ET"
+    },
+    {
+      "text": "Dow plunges 785 points as Iran missile strike on oil tanker sends WTI crude surging 8% to $81.01, highest since July 2024",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "7:46 PM ET"
+    },
     {
       "text": "Berkshire Hathaway resumes share buybacks for first time since 2024",
       "sentiment": "bullish",
@@ -130,41 +165,6 @@
       "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/stock-market-today-dow-s-p-live-updates-",
       "source_outlet": "Bloomberg",
       "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "Airlines crushed as oil spikes \u2014 United and Delta both down 7%, Southwest and American off more than 5%",
-      "sentiment": "bearish",
-      "source_url": "https://www.cnbc.com/2026/03/04/stock-market-today-live-updates-iran-war.html",
-      "source_outlet": "CNBC",
-      "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "Iran missile strike on oil tanker sends WTI crude surging 8% to $81/barrel \u2014 highest since July 2024, reigniting inflation fears",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "4:31 PM ET"
-    },
-    {
-      "text": "Marvell Technology reports Q4 earnings after today's close \u2014 analysts expect EPS of $0.79 on $2.21B revenue amid surging AI networking demand",
-      "sentiment": "neutral",
-      "source_url": "https://www.dailypolitical.com/2026/03/03/marvell-technology-mrvl-to-release-quarterly-earnings-on-thursday.html",
-      "source_outlet": "Daily Political",
-      "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "Iran's intelligence ministry calls NYT report of back-channel CIA peace outreach 'pure falsehood and psychological warfare,' dashing hopes for near-term de-escalation",
-      "sentiment": "bearish",
-      "source_url": "https://www.bloomberg.com/news/articles/2026-03-04/iran-denies-it-reached-out-to-the-us-about-peace-talks",
-      "source_outlet": "Bloomberg",
-      "added_at": "9:02 AM ET"
-    },
-    {
-      "text": "ADP private payrolls beat expectations with 63K jobs added in February vs 48K consensus, rebounding sharply from January's revised 11K \u2014 weekly jobless claims due this morning",
-      "sentiment": "bullish",
-      "source_url": "https://www.investing.com/news/stock-market-news/initial-jobless-claims-highlight-economic-data-due-thursday-93CH-4541934",
-      "source_outlet": "Investing.com",
-      "added_at": "9:02 AM ET"
     }
   ],
   "sources": [
@@ -496,6 +496,13 @@
       "url": "https://www.fx.co/en/analysis/439782",
       "sentiment": "bearish",
       "added_at": "6:46 PM ET"
+    },
+    {
+      "outlet": "FinancialContent",
+      "title": "High Stakes for the Fed: February Jobs Report Looms Amid Geopolitical Turmoil and Cooling Labor Market",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-high-stakes-for-the-fed-february-jobs-report-looms-amid-geopolitical-turmoil-and-cooling-labor-market",
+      "sentiment": "neutral",
+      "added_at": "7:46 PM ET"
     }
   ]
 }

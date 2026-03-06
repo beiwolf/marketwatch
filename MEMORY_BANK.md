@@ -5,12 +5,54 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 8)
-- Latest commit: `f0a19a4` — ux: simplify jargon for basic investors — plain English labels
+- Last updated: 2026-03-05 (session 9)
+- Latest commit: `9410395` — feature: summary audit log + highlight timestamps
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `9410395`
+**Message:** `feature: summary audit log + highlight timestamps`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+
+**Summary Audit Log:**
+- Added `summaryHistory[]` array (max 8 entries, newest-first) and `_lastSummaryText`/`_lastSummaryTime` tracking vars
+- Each time `renderNews` fires with a changed summary, the old summary is archived to `summaryHistory` with its `last_updated` timestamp
+- Rendered as a `<details class="summary-history">` accordion below the current summary — collapsed by default, labeled "Previous summaries (N)" with a rotating ▶ arrow
+- CSS: `.summary-history`, `.summary-history-toggle`, `.sh-toggle-arrow`, `.summary-history-entries`, `.summary-hist-item`, `.shi-time`, `.shi-text`
+
+**Highlight Timestamps:**
+- Each highlight item now shows `added_at` from the matching source (cross-referenced by `source_url → sources[].added_at`)
+- Rendered as `.hi-time` (small muted mono) in the `.hi-meta` row, between the source badge and headline
+- Only shown when a matching source with `added_at` exists
+
+---
+
+### 2026-03-05 — `eee0461`
+**Message:** `feat: market clock, sector watchlist, push alerts`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+Three new features:
+
+1. **Market hours countdown** — New chip in topbar (`#chip-clock`). Uses `America/New_York` timezone. States: "Open · Xh Ym left" (green), "Pre-market · Opens in Xh Ym" (amber), "After Hours · Closed" (dim), "Weekend · Closed" (dim). Updates every 30s.
+
+2. **Sector watchlist** — "My Watchlist" card at top of news column. Users click "+ Add Sector" to open a dropdown picker of available sectors. Pinned sectors show as mini-cards with live name, ETF, and % change. Remove with ✕. Stored in `localStorage` key `mw_watchlist`. Updated on every `renderFlow` call via `latestSectors` array.
+
+3. **Push notifications** — 🔔 bell button in topbar. Click to request browser `Notification` permission. When enabled (green highlight), fires alerts for: regime/market mode flips, any sector moving ≥2% between polls, SPY crossing zero, and new breaking news. State persisted in `localStorage` key `mw_notif`. Breaking news tracked by `mw_last_break` key to avoid duplicates.
+
+**CSS additions:** `.chip-clock/.mkt-open/.mkt-closed/.mkt-pre`, `.wl-card/.wl-empty/.wl-grid/.wl-item/.wl-name/.wl-etf/.wl-pct/.wl-remove/.wl-add-btn/.wl-picker/.wl-picker-item`, `.notif-btn/.notif-on`
+
+**JS additions:** `updateMarketClock()`, `saveWatchlist()`, `renderWatchlist()`, `toggleWatchlistPicker()`, `addToWatchlist()`, `removeFromWatchlist()`, `updateNotifBtn()`, `toggleNotifications()`, `sendNotif()`, `checkAlerts()`. Globals: `watchlist`, `latestSectors`, `notifEnabled`, `prevFlowData`.
+
+---
 
 ### 2026-03-05 — `f0a19a4`
 **Message:** `ux: simplify jargon for basic investors — plain English labels`

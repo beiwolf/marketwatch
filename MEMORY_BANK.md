@@ -5,12 +5,30 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 11)
-- Latest commit: `5ae589f` — fix: archive summary_history in cron runner news merge
+- Last updated: 2026-03-06 (session 12)
+- Latest commit: `e80e189` — feat: cross-day summary history from news archives
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-06 — `e80e189`
+**Message:** `feat: cross-day summary history from news archives`
+
+**Files changed:**
+- `index.html`
+
+**What changed:**
+- The "Previous summaries" accordion now survives midnight resets by also pulling from `data/archive/news-YYYY-MM-DD.json`.
+- New `loadCrossNewsHistory()` async function: on first page load it fetches `news_index.json`, filters to past dates (up to 7 days), fetches each archive in parallel, and extracts the day's final `summary`.
+- New `renderSummaryAccordion()` function extracted from `renderNews` — renders to a dedicated `#summary-history-wrap` div (sibling of `#news-summary-wrap`) so it can be updated independently by both `renderNews` and `loadCrossNewsHistory`.
+- Intra-day entries (from `summaryHistory[]`) show a grey `.shi-time` pill ("2:30 PM ET").
+- Cross-day entries (from `crossDayHistory[]`) show a blue `.shi-date` pill ("Mon Mar 5").
+- A `.shi-divider` "Earlier days" label separates the two groups when both are present.
+- `crossNewsLoaded` flag ensures the archive fetch only runs once per session.
+- Hook: `loadCrossNewsHistory()` called at the end of `loadAll()` (no-op after first run).
+
+---
 
 ### 2026-03-05 — `5ae589f`
 **Message:** `fix: archive summary_history in cron runner news merge`

@@ -331,8 +331,9 @@
 
     /* ── MOBILE RESPONSIVE ── */
     @media(max-width:600px){
-      /* Ensure nothing causes the html/body to grow wider than the viewport */
-      html,body{max-width:100%;overflow-x:hidden;}
+      /* body{overflow-x:hidden} is already in the base CSS.
+         position:relative makes iOS Safari respect it (without clamping html width). */
+      body{overflow-x:hidden;position:relative;}
       .page{padding:0 12px 60px;}
 
       /* ── Topbar ──
@@ -351,7 +352,6 @@
       .net-stats{margin-top:18px;}
       .stats-row{gap:14px;}
       .stat-value{font-size:16px;}
-      /* Keep breadth-row from stretching */
       .breadth-row{flex-wrap:wrap;gap:6px;}
 
       /* ── Sector rows: hide bar + delta to prevent overflow ── */
@@ -386,14 +386,9 @@
       .shi-divider{padding:6px 12px 2px;}
       .wl-card{padding:10px 12px;}
 
-      /* ── Source items: hide read link on very small screens
-         to stop flex row from overflowing ── */
-      .source-link{display:none;}
-
       /* ── Audit entries ── */
       .a-regime{display:none;}
       .a-bread{display:none;}
-      /* Tighter summary row */
       .audit-entry summary{padding:9px 10px;gap:6px;font-size:12px;}
       .a-time{font-size:11px;}
       .a-net{font-size:13px;}
@@ -413,8 +408,10 @@
       .audit-body{padding:10px;}
       .audit-narrative-text{font-size:12px;padding:10px 12px;}
 
-      /* ── Footer: force wrapping so the long line doesn't overflow ── */
-      .footer{font-size:10px;letter-spacing:0;word-break:break-all;overflow-wrap:anywhere;white-space:normal;padding:14px 0;}
+      /* ── Footer: the &nbsp;·&nbsp; separators make it one unbreakable string.
+         Clip it within the footer element itself so it never widens the page. ── */
+      .footer{overflow-x:hidden;font-size:10px;letter-spacing:0;
+              word-break:break-all;overflow-wrap:anywhere;white-space:normal;padding:14px 0;}
 
       /* ── Jump button ── */
       .jump-today-btn{bottom:14px;right:14px;padding:7px 13px;font-size:11px;}

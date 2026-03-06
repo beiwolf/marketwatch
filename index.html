@@ -328,6 +328,62 @@
     .mini-row{display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;align-items:center;}
     .mini-row:last-child{border-bottom:none;}
     .mini-h{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600;}
+
+    /* ── MOBILE RESPONSIVE ── */
+    @media(max-width:600px){
+      .page{padding:0 12px 60px;}
+
+      /* Topbar: hide secondary info chips, keep essentials */
+      #chip-date{display:none!important;}
+      #chip-updated{display:none!important;}
+      .topbar-right{gap:5px;}
+      .chip{font-size:11px;padding:4px 10px;}
+
+      /* Net panel: slightly smaller hero number */
+      .net-panel{padding:20px 16px 18px;}
+      .net-score-value{font-size:52px;letter-spacing:-2px;}
+      .net-stats{margin-top:20px;}
+      .stats-row{gap:16px;}
+      .stat-value{font-size:17px;}
+
+      /* Sector rows: hide bar-wrap and delta to prevent overflow */
+      .s-bar-wrap{display:none;}
+      .s-delta{display:none;}
+      .s-pct{width:60px;font-size:13px;}
+      .sector-row{padding:10px 12px;}
+
+      /* Flow summary: stack columns */
+      .flow-summary-grid{grid-template-columns:1fr;}
+      .flow-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
+
+      /* Mini table: tighten first column */
+      .mini-row{grid-template-columns:80px 1fr 1fr 1fr;gap:6px;font-size:11px;}
+
+      /* Card headers and bodies: tighter padding */
+      .card-header{padding:12px 14px;}
+      .net-panel,.narrative-body,.news-summary,.spotlight-wrap,.hm-wrap,.trend-chart-wrap,.sparkline-wrap{padding-left:14px;padding-right:14px;}
+      .highlight-item,.source-item{padding-left:14px;padding-right:14px;}
+      .news-update-badge{padding-left:14px;}
+      .audit-body{padding:14px 14px;}
+      .summary-history-toggle{padding-left:14px;padding-right:14px;}
+      .summary-hist-item{padding-left:14px;padding-right:14px;}
+
+      /* Audit: hide regime label, tighten layout */
+      .a-regime{display:none;}
+      .a-bread{display:none;}
+      .audit-entry summary{padding:10px 12px;gap:8px;}
+      .audit-day-header{gap:10px;padding:12px 14px;}
+      .audit-day-close{font-size:22px;}
+      .audit-day-entries{margin-left:8px;padding-left:10px;}
+      .mood-arc{margin-left:8px;padding:4px 10px 0;}
+      .regime-timeline{margin-left:8px;padding:2px 10px 8px;}
+
+      /* Jump button: closer to edge */
+      .jump-today-btn{bottom:16px;right:16px;padding:8px 14px;font-size:11px;}
+
+      /* Watchlist items: allow narrower */
+      .wl-item{min-width:90px;}
+    }
   </style>
 </head>
 <body>

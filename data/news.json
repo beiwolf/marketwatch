@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "5:42 AM ET",
-  "update_count": 6,
+  "last_updated": "6:50 AM ET",
+  "update_count": 7,
   "breaking": [
+    {
+      "text": "U.S. crude surges past $81/barrel, Brent nears $85 as Middle East conflict enters day seven",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "Iran claims strike on American oil tanker in Persian Gulf; Strait of Hormuz shipping threat escalates",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "February jobs report due at 8:30 AM ET \u2014 consensus just 60K vs 130K prior, potentially distorted by Kaiser Permanente strike",
+      "added_at": "6:50 AM ET"
+    },
     {
       "text": "Trump administration signals it is considering options to address oil price spike as hundreds of ships remain stuck in Persian Gulf",
       "added_at": "5:42 AM ET"
@@ -10,22 +22,52 @@
     {
       "text": "S&P 500 futures up 0.24% to 6,851 as oil pulls back from Thursday's 8.5% surge",
       "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "February nonfarm payrolls report due at 8:30 AM ET \u2014 consensus expects just 50K jobs amid Iran conflict uncertainty",
-      "added_at": "5:42 AM ET"
-    },
-    {
-      "text": "Oil pulls back to $80.45 after Trump administration signals options to address crude price spike",
-      "added_at": "4:30 AM ET"
-    },
-    {
-      "text": "S&P 500 futures up 0.24% to 6,851 as markets brace for February jobs report at 8:30 AM ET",
-      "added_at": "4:30 AM ET"
     }
   ],
-  "summary": "S&P 500 futures are stabilizing Friday morning after a volatile week dominated by the U.S.-Israeli conflict with Iran that sent oil prices surging and pushed the index negative for 2026. The S&P closed Thursday at 6,830.71 (down 0.56%) after failing to break through 6,900 resistance, with the VIX jumping to 22.08 \u2014 its highest since autumn 2025. WTI crude settled at $81.01 Thursday after an 8.5% single-day spike but is pulling back to $80.45 as the Trump administration signals intervention on energy prices. All eyes now turn to the February jobs report at 8:30 AM ET, where economists expect just 50,000 new payrolls \u2014 a weak print that could further push back already-diminished Fed rate cut expectations.",
+  "summary": "U.S. stock futures are trading lower Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as investors brace for the February employment report amid escalating Middle East tensions. Thursday's session was brutal \u2014 the Dow plunged 784 points (1.6%) to 47,954 while the S&P 500 fell 0.56% to 6,830.71 as crude oil surged over 8% on Iran's claim of striking an American oil tanker in the Persian Gulf. The February jobs report, due at 8:30 AM ET, is expected to show just 60,000 jobs added versus 130,000 in January, with the Kaiser Permanente strike affecting roughly 30,000 positions potentially distorting the data. Bright spots remain in semiconductor earnings with Broadcom jumping 4.8% after hours on a profit beat and Marvell projecting fiscal 2027 revenue approaching $11 billion, though Nvidia faces headwinds from potential AI chip export licensing restrictions.",
   "highlights": [
+    {
+      "text": "Nvidia (NVDA) under pressure from potential new AI chip export licensing restrictions adding to geopolitical uncertainty",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "February nonfarm payrolls consensus at just 60K (vs 130K prior) \u2014 Kaiser Permanente strike affecting ~30K workers may distort data",
+      "sentiment": "neutral",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "Airlines under heavy pressure \u2014 American Airlines (AAL) downgraded to neutral by Rothschild on fuel cost sensitivity, negative EPS now forecast",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "U.S. crude oil spiked over 8% to $81/barrel after Iran claimed strike on American tanker \u2014 20% of global oil transits the threatened Strait of Hormuz",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "Broadcom (AVGO) surged 4.8% after hours on earnings beat; Marvell (MRVL) projects fiscal 2027 revenue approaching $11 billion",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:50 AM ET"
+    },
+    {
+      "text": "S&P 500 futures down 0.29% pre-market as oil shock and jobs report anxiety weigh on sentiment; index closed at 6,830.71 Thursday",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:50 AM ET"
+    },
     {
       "text": "Defensive plays outperforming: Walmart up 14% YTD and Berkshire Hathaway leading as investors rotate to safety",
       "sentiment": "neutral",
@@ -123,48 +165,6 @@
       "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-",
       "source_outlet": "Benzinga",
       "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "S&P 500 hit 6,900 resistance and failed \u2014 2026 year-to-date gains have now completely vanished amid triple threat of sticky inflation, hawkish Fed, and Iran war",
-      "sentiment": "bearish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "Airlines hammered: American Airlines -5.4% on fuel cost downgrade, United -5.0%, Delta -4.0%; Goldman Sachs -3.7% and Caterpillar -3.6% also hit hard",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "Dow plunged 785 points (1.6%) Thursday as oil surged 8.5% to $81/barrel \u2014 biggest weekly crude gain since 2022 amid Strait of Hormuz shipping halt",
-      "sentiment": "bearish",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "Broadcom Q1 AI revenue doubled to $8.4B YoY; CEO Hock Tan projects $100B in AI chip sales by 2027 and confirms OpenAI as sixth major custom silicon customer",
-      "sentiment": "bullish",
-      "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261648292-avgo-broadcom-earnings-ai-revenue-guidance-chip-tradingkey",
-      "source_outlet": "TradingKey",
-      "added_at": "3:23 AM ET"
-    },
-    {
-      "text": "The Trade Desk surges 19% on reports of potential advertising partnership with OpenAI's ChatGPT",
-      "sentiment": "bullish",
-      "source_url": "https://www.stocktitan.net/rankings/top-news/losers/2026-03",
-      "source_outlet": "StockTitan",
-      "added_at": "2:16 AM ET"
-    },
-    {
-      "text": "February jobs report due Friday: economists expect only 50K payrolls added with unemployment at 4.3%; Fed rate cut odds for June fall below 33%",
-      "sentiment": "neutral",
-      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-report",
-      "source_outlet": "Benzinga",
-      "added_at": "2:16 AM ET"
     }
   ],
   "sources": [
@@ -282,6 +282,10 @@
     }
   ],
   "summary_history": [
+    {
+      "time": "5:42 AM ET",
+      "text": "S&P 500 futures are stabilizing Friday morning after a volatile week dominated by the U.S.-Israeli conflict with Iran that sent oil prices surging and pushed the index negative for 2026. The S&P closed Thursday at 6,830.71 (down 0.56%) after failing to break through 6,900 resistance, with the VIX jumping to 22.08 \u2014 its highest since autumn 2025. WTI crude settled at $81.01 Thursday after an 8.5% single-day spike but is pulling back to $80.45 as the Trump administration signals intervention on energy prices. All eyes now turn to the February jobs report at 8:30 AM ET, where economists expect just 50,000 new payrolls \u2014 a weak print that could further push back already-diminished Fed rate cut expectations."
+    },
     {
       "time": "4:30 AM ET",
       "text": "Markets are cautiously optimistic Friday morning after a volatile week driven by the U.S.-Israeli conflict with Iran that sent oil prices surging over 14% and erased the S&P 500's year-to-date gains. The S&P 500 closed Thursday at 6,830.71 (-0.56%) with the Dow dropping 785 points as WTI crude settled at $81.01, its biggest weekly gain since 2022, though prices eased overnight after Washington signaled intervention. Broadcom delivered a blowout Q1 report after the bell \u2014 revenue hit a record $19.3B (+29% YoY) with AI revenue of $8.4B (+106%), and CEO Hock Tan projected $100B in AI chip revenue by 2027. All eyes now turn to the February nonfarm payrolls report due at 8:30 AM, where consensus expects just 50,000 jobs added, potentially depressed by a Kaiser Permanente strike that affected 31,000 workers during the survey week."

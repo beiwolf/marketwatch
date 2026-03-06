@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "12:03 AM ET",
-  "update_count": 1,
+  "last_updated": "1:03 AM ET",
+  "update_count": 2,
   "breaking": [
+    {
+      "text": "VIX spikes to 22.08, highest since autumn 2025, signaling elevated fear",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "S&P 500 cracks 100-day moving average, closes near 6,820 as 2026 gains evaporate",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "Iran claims missile strike on U.S. oil tanker in Persian Gulf; WTI crude surges past $79",
+      "added_at": "1:03 AM ET"
+    },
     {
       "text": "Broadcom beats Q1 estimates with record $19.3B revenue; AI chip revenue doubles to $8.4B",
       "added_at": "12:03 AM ET"
@@ -10,14 +22,45 @@
     {
       "text": "Oil surges 8%+ this week after Iranian IRGC Navy strikes American oil tanker in Persian Gulf",
       "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "February jobs report due at 8:30 AM ET \u2014 economists expect 50K payrolls amid Kaiser Permanente strike drag",
-      "added_at": "12:03 AM ET"
     }
   ],
-  "summary": "The S&P 500 closed near 6,820 on Thursday, down 0.56%, decisively failing the 6,900 resistance level and erasing all 2026 gains as a triple threat of sticky inflation, hawkish Fed policy, and Middle East escalation rattled investors. Oil prices surged over 8% after Iran's Revolutionary Guard Navy struck an American oil tanker in the Persian Gulf, sending crude above $79 and triggering the commodity's biggest weekly gain since 2022. After the bell, Broadcom delivered a blowout Q1 with record revenue of $19.3 billion and AI semiconductor sales doubling year-over-year to $8.4 billion, sending shares up 5% in extended trading. Markets now brace for Friday's February jobs report, where economists expect a modest 50,000 payroll gain weighed down by a Kaiser Permanente strike that affected 31,000 workers during the BLS survey week.",
+  "summary": "U.S. markets suffered another bruising session on March 5 as the S&P 500 fell roughly 0.8% to close near 6,820 after decisively failing to breach 6,900 resistance, with year-to-date gains now fully erased. The selloff was driven by surging crude oil prices\u2014WTI spiked above $79 per barrel after Iran claimed to have struck an American oil tanker near the Strait of Hormuz\u2014stoking inflation fears and pushing the VIX to 22.08. Eight of eleven S&P sectors ended lower, with defensive rotation accelerating as Microsoft dropped 17% YTD and airlines faced downgrades on fuel cost concerns. Investors now turn to Friday's February nonfarm payrolls report amid a Fed stance shifting toward a data-dependent pause with no rate relief expected before June.",
   "highlights": [
+    {
+      "text": "The Trade Desk surged 19% on reports of a potential ad partnership with OpenAI, while Tango Therapeutics jumped 25% on pancreatic cancer drug trial news",
+      "sentiment": "bullish",
+      "source_url": "https://www.stocktitan.net/rankings/top-news/losers/2026-03",
+      "source_outlet": "StockTitan",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "February nonfarm payrolls report due Friday morning \u2014 key labor market test as Fed signals no rate relief before June amid core CPI running 2.5-3.1%",
+      "sentiment": "neutral",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
+      "source_outlet": "MarketMinute",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "Broadcom earnings in focus as chip giant reports solid results; CIENA drops 16.5% on tepid 2026 outlook despite 76% cloud revenue growth",
+      "sentiment": "neutral",
+      "source_url": "https://www.stocktitan.net/rankings/top-news/losers/2026-03",
+      "source_outlet": "StockTitan",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "S&P 500 cracked its 100-day moving average at 6,835, closing near 6,820 with 2026 gains fully erased and next support at the 200-day MA near 6,570-6,590",
+      "sentiment": "bearish",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
+      "source_outlet": "MarketMinute",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "text": "WTI crude surged past $79/barrel after Iran claimed a missile strike on a U.S. oil tanker near the Strait of Hormuz, threatening 20% of global oil exports",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "1:03 AM ET"
+    },
     {
       "text": "Nvidia CEO Jensen Huang says $30B OpenAI investment 'might be the last time' before startup's potential IPO later this year",
       "sentiment": "bullish",
@@ -96,6 +139,26 @@
       "url": "https://stockmarketwatch.com/stock-market-news/tech-resilience-amid-geopolitical-volatility-stock-market-today-march-5-2026/59431/",
       "sentiment": "neutral",
       "added_at": "12:03 AM ET"
+    },
+    {
+      "outlet": "StockTitan",
+      "title": "Market-Moving News March 2026 - Top 100 Ranked by Stock Losses",
+      "url": "https://www.stocktitan.net/rankings/top-news/losers/2026-03",
+      "sentiment": "bearish",
+      "added_at": "1:03 AM ET"
+    },
+    {
+      "outlet": "GlobeNewsWire",
+      "title": "Plug Power to Ring the Nasdaq Stock Market Closing Bell on March 6, 2026",
+      "url": "https://www.globenewswire.com/news-release/2026/03/05/3250005/9619/en/Plug-Power-to-Ring-the-Nasdaq-Stock-Market-Closing-Bell-on-March-6-2026.html",
+      "sentiment": "neutral",
+      "added_at": "1:03 AM ET"
+    }
+  ],
+  "summary_history": [
+    {
+      "time": "12:03 AM ET",
+      "text": "The S&P 500 closed near 6,820 on Thursday, down 0.56%, decisively failing the 6,900 resistance level and erasing all 2026 gains as a triple threat of sticky inflation, hawkish Fed policy, and Middle East escalation rattled investors. Oil prices surged over 8% after Iran's Revolutionary Guard Navy struck an American oil tanker in the Persian Gulf, sending crude above $79 and triggering the commodity's biggest weekly gain since 2022. After the bell, Broadcom delivered a blowout Q1 with record revenue of $19.3 billion and AI semiconductor sales doubling year-over-year to $8.4 billion, sending shares up 5% in extended trading. Markets now brace for Friday's February jobs report, where economists expect a modest 50,000 payroll gain weighed down by a Kaiser Permanente strike that affected 31,000 workers during the BLS survey week."
     }
   ]
 }

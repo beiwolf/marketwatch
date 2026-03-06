@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "2:16 AM ET",
-  "update_count": 3,
+  "last_updated": "3:23 AM ET",
+  "update_count": 4,
   "breaking": [
+    {
+      "text": "Oil pulls back from $81 after Trump administration signals options to address price spike",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "S&P 500 futures up 0.24% to 6,851 in overnight trading after Thursday's 0.56% decline",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "February nonfarm payrolls report due this morning \u2014 economists expect just 50,000 jobs added amid geopolitical uncertainty",
+      "added_at": "3:23 AM ET"
+    },
     {
       "text": "Oil prices remain elevated with WTI at $80.45 and Brent near $85 as ships remain stranded in Persian Gulf",
       "added_at": "2:16 AM ET"
@@ -10,22 +22,52 @@
     {
       "text": "Broadcom surges 5% after-hours on record Q1 revenue of $19.3B, AI chip revenue doubles to $8.4B",
       "added_at": "2:16 AM ET"
-    },
-    {
-      "text": "S&P 500 futures up 0.24% to 6,851 as markets stabilize ahead of critical February jobs report",
-      "added_at": "2:16 AM ET"
-    },
-    {
-      "text": "VIX spikes to 22.08, highest since autumn 2025, signaling elevated fear",
-      "added_at": "1:03 AM ET"
-    },
-    {
-      "text": "S&P 500 cracks 100-day moving average, closes near 6,820 as 2026 gains evaporate",
-      "added_at": "1:03 AM ET"
     }
   ],
-  "summary": "Markets are attempting to stabilize Friday after a punishing week driven by the U.S.-Israeli conflict with Iran that began February 28, which has sent oil prices surging 20% and disrupted shipping through the Strait of Hormuz. The Dow plunged 785 points (1.6%) on Thursday while the S&P 500 fell 0.56% to 6,830.71, failing to hold the 6,900 resistance level and slipping into negative territory for 2026. After hours, Broadcom delivered a bright spot with record Q1 revenue of $19.3B and AI semiconductor revenue doubling to $8.4B, while announcing a $10B buyback program. All eyes now turn to the February nonfarm payrolls report due Friday morning, with expectations for just 50,000 jobs added and unemployment holding at 4.3%, as traders price in less than one-in-three odds for a June Fed rate cut.",
+  "summary": "U.S. markets are bracing for Friday's critical February jobs report after a volatile week dominated by the Iran-Strait of Hormuz crisis that has sent oil prices surging nearly 14% in a week. The S&P 500 closed Thursday at 6,830.71, down 0.56%, after failing to breach 6,900 resistance \u2014 erasing its 2026 gains. Broadcom provided a bright spot with blowout Q1 earnings, reporting AI revenue of $8.4 billion (up 106% YoY) and projecting $100 billion in AI chip revenue by 2027. Overnight futures point to a modest recovery, with prediction markets giving 65% odds of a higher open, though airline and industrial stocks remain under heavy pressure from energy costs.",
   "highlights": [
+    {
+      "text": "10-year Treasury yield climbed to 4.14% as oil-driven inflation fears offset weakening growth signals; Fed rate-cut odds for June below 33%",
+      "sentiment": "bearish",
+      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-",
+      "source_outlet": "Benzinga",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "February jobs report preview: consensus at 50K payrolls with unemployment at 4.3% \u2014 weak print could reopen Fed rate-cut conversation",
+      "sentiment": "neutral",
+      "source_url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-",
+      "source_outlet": "Benzinga",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "S&P 500 hit 6,900 resistance and failed \u2014 2026 year-to-date gains have now completely vanished amid triple threat of sticky inflation, hawkish Fed, and Iran war",
+      "sentiment": "bearish",
+      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
+      "source_outlet": "MarketMinute",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "Airlines hammered: American Airlines -5.4% on fuel cost downgrade, United -5.0%, Delta -4.0%; Goldman Sachs -3.7% and Caterpillar -3.6% also hit hard",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "Dow plunged 785 points (1.6%) Thursday as oil surged 8.5% to $81/barrel \u2014 biggest weekly crude gain since 2022 amid Strait of Hormuz shipping halt",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "text": "Broadcom Q1 AI revenue doubled to $8.4B YoY; CEO Hock Tan projects $100B in AI chip sales by 2027 and confirms OpenAI as sixth major custom silicon customer",
+      "sentiment": "bullish",
+      "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261648292-avgo-broadcom-earnings-ai-revenue-guidance-chip-tradingkey",
+      "source_outlet": "TradingKey",
+      "added_at": "3:23 AM ET"
+    },
     {
       "text": "The Trade Desk surges 19% on reports of potential advertising partnership with OpenAI's ChatGPT",
       "sentiment": "bullish",
@@ -123,27 +165,6 @@
       "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
       "source_outlet": "24/7 Wall St.",
       "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "Iran's IRGC Navy strikes American oil tanker near Strait of Hormuz, sending crude oil above $79 and triggering biggest weekly gain since 2022",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/05/stock-market-live-march-5-2026-sp-500-spy-drops-on-gushing-oil-prices/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "Broadcom Q1 revenue hits record $19.3B (+29% YoY), AI chip revenue doubles to $8.4B; CEO sees path to $100B AI chip revenue by 2027",
-      "sentiment": "bullish",
-      "source_url": "https://www.cnbc.com/2026/03/04/broadcom-avgo-q1-earnings-report-2026.html",
-      "source_outlet": "CNBC",
-      "added_at": "12:03 AM ET"
-    },
-    {
-      "text": "S&P 500 fails 6,900 resistance and turns negative for 2026, closing at 6,820 with VIX surging to 22.08 \u2014 highest since autumn 2025",
-      "sentiment": "bearish",
-      "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-5-s-and-p-500-hits-6900-resistance-why-2026-gains-have-vanished-amid-high-volatility",
-      "source_outlet": "MarketMinute",
-      "added_at": "12:03 AM ET"
     }
   ],
   "sources": [
@@ -223,9 +244,34 @@
       "url": "https://www.morganstanley.com/insights/articles/iran-war-oil-inflation-stock-market-2026",
       "sentiment": "bearish",
       "added_at": "2:16 AM ET"
+    },
+    {
+      "outlet": "Benzinga",
+      "title": "Will S&P 500 Open Up Or Down On March 6? Iran War Jitters Return Ahead Of Critical Jobs Report",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/03/51089261/will-sp-500-open-up-or-down-on-march-6-iran-war-jitters-return-ahead-of-critical-jobs-",
+      "sentiment": "bearish",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "outlet": "Stock Market Watch",
+      "title": "Dow Plunges 780 Points as Oil Surge and Iran Conflict Ignite Inflation Fears",
+      "url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "sentiment": "bearish",
+      "added_at": "3:23 AM ET"
+    },
+    {
+      "outlet": "TradingKey",
+      "title": "Broadcom Q1: AI Revenue Doubles; Eyes $100B AI Chip Sales Next Year as Shares Surge 5%",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261648292-avgo-broadcom-earnings-ai-revenue-guidance-chip-tradingkey",
+      "sentiment": "bullish",
+      "added_at": "3:23 AM ET"
     }
   ],
   "summary_history": [
+    {
+      "time": "2:16 AM ET",
+      "text": "Markets are attempting to stabilize Friday after a punishing week driven by the U.S.-Israeli conflict with Iran that began February 28, which has sent oil prices surging 20% and disrupted shipping through the Strait of Hormuz. The Dow plunged 785 points (1.6%) on Thursday while the S&P 500 fell 0.56% to 6,830.71, failing to hold the 6,900 resistance level and slipping into negative territory for 2026. After hours, Broadcom delivered a bright spot with record Q1 revenue of $19.3B and AI semiconductor revenue doubling to $8.4B, while announcing a $10B buyback program. All eyes now turn to the February nonfarm payrolls report due Friday morning, with expectations for just 50,000 jobs added and unemployment holding at 4.3%, as traders price in less than one-in-three odds for a June Fed rate cut."
+    },
     {
       "time": "1:03 AM ET",
       "text": "U.S. markets suffered another bruising session on March 5 as the S&P 500 fell roughly 0.8% to close near 6,820 after decisively failing to breach 6,900 resistance, with year-to-date gains now fully erased. The selloff was driven by surging crude oil prices\u2014WTI spiked above $79 per barrel after Iran claimed to have struck an American oil tanker near the Strait of Hormuz\u2014stoking inflation fears and pushing the VIX to 22.08. Eight of eleven S&P sectors ended lower, with defensive rotation accelerating as Microsoft dropped 17% YTD and airlines faced downgrades on fuel cost concerns. Investors now turn to Friday's February nonfarm payrolls report amid a Fed stance shifting toward a data-dependent pause with no rate relief expected before June."

@@ -6,11 +6,24 @@ Canonical running memory of repository changes and why they were made.
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
 - Last updated: 2026-03-05 (session 11)
-- Latest commit: `790e73b` — fix: hydrate summaryHistory from news.json on page load
+- Latest commit: `5ae589f` — fix: archive summary_history in cron runner news merge
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `5ae589f`
+**Message:** `fix: archive summary_history in cron runner news merge`
+
+**Files changed:**
+- `scripts/marketwatch_cron_runner.sh`
+
+**What changed:**
+- The repo-tracked cron runner script was missing the `summary_history` archiving patch that had already been applied to the OpenClaw automation script.
+- Replaced the bare `existing['summary'] = new_data.get('summary', existing.get('summary'))` overwrite with the full archiving block: reads old summary into `summary_history[]` (newest-first, capped at 8) before replacing it.
+- Both scripts (repo and OpenClaw) are now in sync on this logic.
+
+---
 
 ### 2026-03-05 — `790e73b`
 **Message:** `fix: hydrate summaryHistory from news.json on page load`

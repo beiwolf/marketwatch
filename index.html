@@ -166,6 +166,20 @@
     .hi-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
     .hi-source{font-size:10px;font-weight:600;color:var(--blue);background:var(--bdim);border:1px solid rgba(96,165,250,0.25);padding:2px 8px;border-radius:var(--r-pill);}
     .hi-new{font-size:10px;font-weight:600;background:var(--bdim);color:var(--blue);padding:1px 7px;border-radius:var(--r-pill);margin-left:6px;flex-shrink:0;}
+    .hi-time{font-size:10px;color:var(--dim);font-family:var(--mono);flex-shrink:0;}
+
+    /* ── SUMMARY HISTORY ── */
+    .summary-history{border-top:1px solid var(--border);}
+    .summary-history-toggle{display:flex;align-items:center;gap:7px;padding:10px 24px;font-size:11px;font-weight:600;color:var(--dim);cursor:pointer;list-style:none;user-select:none;letter-spacing:0.3px;transition:color 0.12s;}
+    .summary-history-toggle::-webkit-details-marker{display:none;}
+    .summary-history-toggle:hover{color:var(--muted);}
+    .sh-toggle-arrow{font-size:8px;transition:transform 0.2s;display:inline-block;}
+    details.summary-history[open] .sh-toggle-arrow{transform:rotate(90deg);}
+    .summary-history-entries{border-top:1px solid var(--border);}
+    .summary-hist-item{padding:14px 24px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:8px;}
+    .summary-hist-item:last-child{border-bottom:none;}
+    .shi-time{font-size:10px;font-weight:600;font-family:var(--mono);color:var(--muted);background:var(--bg3);border:1px solid var(--border2);padding:2px 8px;border-radius:var(--r-pill);display:inline-block;align-self:flex-start;}
+    .shi-text{font-size:12px;line-height:1.75;color:var(--mid);}
     .source-item{display:flex;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);gap:12px;transition:background 0.12s;}
     .source-item:last-child{border-bottom:none;}
     .source-item:hover{background:rgba(255,255,255,0.025);}
@@ -524,6 +538,11 @@ function renderFlow(d){
   document.getElementById('flow-summary-card').innerHTML=`<div class="flow-summary-grid"><div class="flow-col"><div class="flow-col-hd pos">Winners (${adv.length})</div>${adv.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="pos">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div><div class="flow-col"><div class="flow-col-hd neg">Losers (${dec.length})</div>${dec.map(s=>`<div class="flow-item"><span>${s.name}</span><span class="neg">${fmt(s.change)}</span></div>`).join('')||'<div class="flow-item" style="color:var(--dim)">None</div>'}</div></div>`;
 }
 
+// ── Summary history (in-memory audit log) ──
+let summaryHistory=[];   // [{time:'HH:MM ET', text:'...'}]  newest-first
+let _lastSummaryText=null;
+let _lastSummaryTime=null;
+
 function renderNews(n){
   if(!n)return;
   if(n.last_updated){
@@ -542,8 +561,43 @@ function renderNews(n){
   const sourceByUrl=new Map((n.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s]));
   if(n.breaking&&n.breaking.length){const items=[...n.breaking,...n.breaking].map(b=>`<span>${b.text||b}</span>`).join('');document.getElementById('breaking-wrap').innerHTML=`<div class="breaking-bar"><div class="breaking-label">Breaking</div><div class="breaking-ticker"><div class="breaking-track">${items}</div></div></div>`;}
   else document.getElementById('breaking-wrap').innerHTML='';
-  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${n.summary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Last synthesis: ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
-  if(n.highlights&&n.highlights.length){const show=(n.highlights||[]).slice(0,12);document.getElementById('highlights-wrap').innerHTML='<div class="highlights-list">'+show.map((h,i)=>{const isNew=i<3&&n.update_count>1;const hasLink=!!h.source_url;const src=hasLink?sourceByUrl.get(h.source_url):null;const sourceLabel=h.source_outlet||(src&&src.outlet)||'';const sourceHeadline=(src&&src.title)||'';const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;}).join('')+'</div>'+(n.highlights.length>12?`<div class="news-update-badge">Showing latest 12 of ${n.highlights.length} highlights</div>`:'');}
+
+  // ── Summary history tracking ──
+  const newSummary=n.summary||'';
+  if(newSummary&&newSummary!==_lastSummaryText){
+    // Archive the previous summary before replacing it
+    if(_lastSummaryText){
+      summaryHistory.unshift({time:_lastSummaryTime||'—',text:_lastSummaryText});
+      if(summaryHistory.length>8)summaryHistory.pop();
+    }
+    _lastSummaryText=newSummary;
+    _lastSummaryTime=n.last_updated||'—';
+  }
+
+  // Build history accordion (only if we have past summaries)
+  let historyHtml='';
+  if(summaryHistory.length){
+    const entries=summaryHistory.map(h=>`<div class="summary-hist-item"><span class="shi-time">${h.time}</span><p class="shi-text">${h.text}</p></div>`).join('');
+    historyHtml=`<details class="summary-history"><summary class="summary-history-toggle"><span class="sh-toggle-arrow">▶</span> Previous summaries (${summaryHistory.length})</summary><div class="summary-history-entries">${entries}</div></details>`;
+  }
+
+  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${newSummary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Synthesized ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}${historyHtml}`;
+
+  // ── Highlights with timestamps ──
+  if(n.highlights&&n.highlights.length){
+    const show=(n.highlights||[]).slice(0,12);
+    document.getElementById('highlights-wrap').innerHTML='<div class="highlights-list">'+show.map((h,i)=>{
+      const isNew=i<3&&n.update_count>1;
+      const hasLink=!!h.source_url;
+      const src=hasLink?sourceByUrl.get(h.source_url):null;
+      const sourceLabel=h.source_outlet||(src&&src.outlet)||'';
+      const sourceHeadline=(src&&src.title)||'';
+      // Timestamp: prefer source added_at, fall back to nothing
+      const addedAt=(src&&src.added_at)||'';
+      const textHtml=hasLink?`<a class="hi-text" href="${h.source_url}" target="_blank" rel="noopener">${h.text}</a>`:`<span class="hi-text">${h.text}</span>`;
+      return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${addedAt?`<span class="hi-time">${addedAt}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;
+    }).join('')+'</div>'+(n.highlights.length>12?`<div class="news-update-badge">Showing latest 12 of ${n.highlights.length} highlights</div>`:'');
+  }
 }
 
 // ── Feature #4: Mood Arc ──

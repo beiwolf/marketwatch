@@ -5,12 +5,29 @@ Canonical running memory of repository changes and why they were made.
 ## Latest state
 - Branch: `main`
 - Remote: `origin` (`https://github.com/beiwolf/marketwatch.git`)
-- Last updated: 2026-03-05 (session 9)
-- Latest commit: `9410395` — feature: summary audit log + highlight timestamps
+- Last updated: 2026-03-05 (session 10)
+- Latest commit: `a930bc7` — ops: add flow/news/eod runner logic script
 
 ---
 
 ## Change history (newest first)
+
+### 2026-03-05 — `a930bc7`
+**Message:** `ops: add flow/news/eod runner logic script`
+
+**Files changed:**
+- `scripts/marketwatch_cron_runner.sh` (created)
+
+**What changed:**
+- Added the operational runner script that contains the FLOW, NEWS, and EOD logic in one place.
+- Includes:
+  - `flow` task logic (prompt build, Claude call, parse, write flow data, archive/index update, git push)
+  - `news` task logic (prompt build, Claude call, merge/update news, index update, git push)
+  - `eod` task logic (archive + finalize flow index)
+- Added timeout-protected Claude wrapper and debug logging hooks so stalls can be diagnosed.
+- Purpose: keep automation logic visible and versioned in the marketwatch repo.
+
+---
 
 ### 2026-03-05 — `9410395`
 **Message:** `feature: summary audit log + highlight timestamps`

@@ -4,7 +4,9 @@
     "entries": 4,
     "net_open": -11.75,
     "net_close": -7.86,
-    "last_updated": "2:48 PM ET"
+    "last_updated": "2:48 PM ET",
+    "finalized": true,
+    "total_snapshots": 4
   },
   {
     "date": "2026-03-05",

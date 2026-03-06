@@ -179,6 +179,8 @@
     .summary-hist-item{padding:14px 24px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:8px;}
     .summary-hist-item:last-child{border-bottom:none;}
     .shi-time{font-size:10px;font-weight:600;font-family:var(--mono);color:var(--muted);background:var(--bg3);border:1px solid var(--border2);padding:2px 8px;border-radius:var(--r-pill);display:inline-block;align-self:flex-start;}
+    .shi-date{font-size:10px;font-weight:600;font-family:var(--mono);color:var(--blue);background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.2);padding:2px 8px;border-radius:var(--r-pill);display:inline-block;align-self:flex-start;}
+    .shi-divider{padding:8px 24px 2px;font-size:10px;font-weight:700;letter-spacing:0.6px;color:var(--dim);text-transform:uppercase;border-top:1px solid var(--border);}
     .shi-text{font-size:12px;line-height:1.75;color:var(--mid);}
     .source-item{display:flex;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);gap:12px;transition:background 0.12s;}
     .source-item:last-child{border-bottom:none;}
@@ -407,6 +409,7 @@
           <span class="card-meta" id="news-updated-label">—</span>
         </div>
         <div id="news-summary-wrap"><div class="state-box" style="padding:24px"><div class="state-sub">Loading...</div></div></div>
+        <div id="summary-history-wrap"></div>
       </div>
       <div class="card">
         <div class="card-header">
@@ -539,7 +542,9 @@ function renderFlow(d){
 }
 
 // ── Summary history (in-memory audit log) ──
-let summaryHistory=[];   // [{time:'HH:MM ET', text:'...'}]  newest-first
+let summaryHistory=[];    // [{time:'HH:MM ET', text:'...'}]  intra-day, newest-first
+let crossDayHistory=[];   // [{date:'YYYY-MM-DD', label:'Mon Mar 5', time:'HH:MM ET', text:'...'}] cross-day, newest-first
+let crossNewsLoaded=false;
 let _lastSummaryText=null;
 let _lastSummaryTime=null;
 
@@ -563,7 +568,7 @@ function renderNews(n){
   else document.getElementById('breaking-wrap').innerHTML='';
 
   // ── Summary history tracking ──
-  // Hydrate from persisted JSON on first load (survives page refresh)
+  // Hydrate intra-day history from persisted JSON on first load (survives page refresh)
   if(summaryHistory.length===0&&n.summary_history&&n.summary_history.length){
     summaryHistory=n.summary_history.slice(0,8);
   }
@@ -579,14 +584,9 @@ function renderNews(n){
     _lastSummaryTime=n.last_updated||'—';
   }
 
-  // Build history accordion (only if we have past summaries)
-  let historyHtml='';
-  if(summaryHistory.length){
-    const entries=summaryHistory.map(h=>`<div class="summary-hist-item"><span class="shi-time">${h.time}</span><p class="shi-text">${h.text}</p></div>`).join('');
-    historyHtml=`<details class="summary-history"><summary class="summary-history-toggle"><span class="sh-toggle-arrow">▶</span> Previous summaries (${summaryHistory.length})</summary><div class="summary-history-entries">${entries}</div></details>`;
-  }
-
-  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${newSummary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Synthesized ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}${historyHtml}`;
+  // Current summary + update badge (history accordion lives in #summary-history-wrap)
+  document.getElementById('news-summary-wrap').innerHTML=`<div class="news-summary">${newSummary||'No summary yet.'}</div>${n.last_updated?`<span class="news-update-badge">Synthesized ${n.last_updated} · ${n.update_count||0} update${n.update_count!==1?'s':''} today</span>`:''}`;
+  renderSummaryAccordion();
 
   // ── Highlights with timestamps ──
   if(n.highlights&&n.highlights.length){
@@ -603,6 +603,44 @@ function renderNews(n){
       return`<div class="highlight-item"><div class="hi-dot ${h.sentiment==='bullish'?'up':h.sentiment==='bearish'?'down':'neu'}"></div><div class="hi-main">${textHtml}<div class="hi-meta">${sourceLabel?`<span class="hi-source">${sourceLabel}</span>`:''}${addedAt?`<span class="hi-time">${addedAt}</span>`:''}${sourceHeadline?`<span class="card-meta">${sourceHeadline}</span>`:''}${isNew?'<span class="hi-new">New</span>':''}</div></div></div>`;
     }).join('')+'</div>'+(n.highlights.length>12?`<div class="news-update-badge">Showing latest 12 of ${n.highlights.length} highlights</div>`:'');
   }
+}
+
+// ── Summary accordion renderer (intra-day + cross-day) ──
+function renderSummaryAccordion(){
+  const wrap=document.getElementById('summary-history-wrap');
+  if(!wrap)return;
+  const total=summaryHistory.length+crossDayHistory.length;
+  if(!total){wrap.innerHTML='';return;}
+  let items='';
+  if(summaryHistory.length){
+    items+=summaryHistory.map(h=>`<div class="summary-hist-item"><span class="shi-time">${h.time}</span><p class="shi-text">${h.text}</p></div>`).join('');
+  }
+  if(crossDayHistory.length){
+    if(summaryHistory.length)items+=`<div class="shi-divider">Earlier days</div>`;
+    items+=crossDayHistory.map(h=>`<div class="summary-hist-item"><span class="shi-date">${h.label}</span><p class="shi-text">${h.text}</p></div>`).join('');
+  }
+  wrap.innerHTML=`<details class="summary-history"><summary class="summary-history-toggle"><span class="sh-toggle-arrow">▶</span> Previous summaries (${total})</summary><div class="summary-history-entries">${items}</div></details>`;
+}
+
+// ── Cross-day summary loader (reads past news archives) ──
+async function loadCrossNewsHistory(){
+  if(crossNewsLoaded)return;
+  crossNewsLoaded=true;
+  try{
+    const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/New_York'});
+    const idx=await fetch('data/news_index.json?t='+Date.now()).then(r=>r.json());
+    const pastDays=idx.filter(e=>e.date&&e.date!==today).slice(0,7);
+    const results=(await Promise.all(pastDays.map(async e=>{
+      try{
+        const arc=await fetch(`data/archive/news-${e.date}.json?t=${Date.now()}`).then(r=>r.json());
+        if(!arc||!arc.summary)return null;
+        const d=new Date(e.date+'T12:00:00Z');
+        const label=d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+        return{date:e.date,label,time:arc.last_updated||'—',text:arc.summary};
+      }catch{return null;}
+    }))).filter(Boolean);
+    if(results.length){crossDayHistory=results;renderSummaryAccordion();}
+  }catch{}
 }
 
 // ── Feature #4: Mood Arc ──
@@ -766,6 +804,7 @@ async function loadAll(){
       if(!auditInitialized){auditInitialized=true;loadAllAudit(indexData);}
       else{refreshTodayBlock();}
     }
+    loadCrossNewsHistory(); // no-op after first run (crossNewsLoaded flag)
   }catch(e){console.warn('Load error:',e.message);}
 }
 

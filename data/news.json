@@ -1,8 +1,20 @@
 {
   "date": "2026-03-06",
-  "last_updated": "5:27 PM ET",
-  "update_count": 14,
+  "last_updated": "6:40 PM ET",
+  "update_count": 15,
   "breaking": [
+    {
+      "text": "S&P 500 closes down 1.3% at 6,740 in Wall Street's worst weekly performance in months",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "Brent crude surges past $90/barrel as Qatar warns Gulf oil shipments could halt within days",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "U.S. economy shed 92,000 jobs in February \u2014 unemployment rises to 4.4%, highest since 2021",
+      "added_at": "6:40 PM ET"
+    },
     {
       "text": "S&P 500 closes down 1.3% at 6,740 \u2014 Wall Street posts worst week since October",
       "added_at": "5:27 PM ET"
@@ -10,22 +22,52 @@
     {
       "text": "Brent crude surges above $90/barrel on Iran conflict escalation; analysts warn of $100+ scenario",
       "added_at": "5:27 PM ET"
-    },
-    {
-      "text": "U.S. economy lost 92,000 jobs in February \u2014 worst payrolls print since early pandemic, unemployment at 4.4%",
-      "added_at": "5:27 PM ET"
-    },
-    {
-      "text": "Dow plunges 642 points as stagflation fears grip Wall Street",
-      "added_at": "4:16 PM ET"
-    },
-    {
-      "text": "WTI crude breaks above $90/barrel with 35% weekly gain \u2014 biggest since oil futures began trading in 1983",
-      "added_at": "4:16 PM ET"
     }
   ],
-  "summary": "U.S. markets suffered a broad sell-off on Friday as February nonfarm payrolls shocked Wall Street with a loss of 92,000 jobs versus expectations for a 56,000 gain, pushing unemployment to 4.4% \u2014 its highest since 2021. The S&P 500 fell 1.3% to 6,740.02, the Dow dropped 453 points (-0.9%) to 47,501.55, and the Nasdaq slid 1.6% to 22,387.68 as surging oil prices above $90/barrel on Iran-related geopolitical tensions compounded recession fears. Energy was the lone bright spot with Occidental Petroleum rising 3.3% and majors like Exxon and Chevron gaining, while individual winners included Marvell Technology (+10% on record AI chip earnings) and Day One Biopharmaceuticals (+65.6% on a $2.5B acquisition by Servier). The Russell 2000 was hit hardest, falling 2.3%, as risk-off sentiment dominated and investors fled to safe havens amid dual pressures of economic slowdown and elevated inflation concerns.",
+  "summary": "U.S. markets sold off sharply on Friday as a disastrous February jobs report showed the economy unexpectedly lost 92,000 jobs, far worse than the 56,000 gain expected, pushing unemployment to 4.4% \u2014 its highest level since 2021. Escalating Middle East tensions sent Brent crude surging past $90 per barrel after Qatar warned Gulf oil shipments could halt within days, hammering risk sentiment across the board. The S&P 500 fell 1.3% to 6,740.02, the Nasdaq dropped 1.6%, and the Russell 2000 sank 2.3%, while energy was the lone sector in the green with Exxon, Chevron, and Occidental all rallying. Marvell Technology bucked the selloff with a 10%+ surge on record earnings and bullish AI-driven guidance, while investors now look ahead to CPI/PPI data and the March 17 Fed statement.",
   "highlights": [
+    {
+      "text": "Day One Biopharmaceuticals surged on news of $2.5 billion acquisition by Servier for glioma drug Ojemda",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "Dow Inc. (DOW) climbed 4% after JPMorgan upgraded the stock to overweight, bucking the broad market selloff",
+      "sentiment": "bullish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "Russell 2000 plunged 2.3% to 2,525 \u2014 small caps hit hardest as risk-off sentiment dominated the session",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "Marvell Technology (MRVL) soared 10%+ on record Q4 earnings and bullish fiscal 2027 guidance, powered by sustained AI hardware demand",
+      "sentiment": "bullish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "Brent crude surged past $90/barrel as Qatar warned Gulf oil countries could halt shipments within days amid Strait of Hormuz disruption \u2014 analysts warn of potential spike to $100+",
+      "sentiment": "bearish",
+      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
+      "source_outlet": "24/7 Wall St.",
+      "added_at": "6:40 PM ET"
+    },
+    {
+      "text": "February nonfarm payrolls plunged to -92,000, massively missing the +56,000 consensus \u2014 unemployment hit 4.4%, the highest since 2021, fueling Fed rate cut expectations",
+      "sentiment": "bearish",
+      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
+      "source_outlet": "Stock Market Watch",
+      "added_at": "6:40 PM ET"
+    },
     {
       "text": "Dow Inc. (DOW) rises 4% after JPMorgan upgrades to overweight, bucking the broader market decline",
       "sentiment": "bullish",
@@ -123,48 +165,6 @@
       "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
       "source_outlet": "StockMarketWatch",
       "added_at": "2:45 PM ET"
-    },
-    {
-      "text": "Day One Biopharmaceuticals rockets 65.6% after Servier announces $2.5 billion acquisition targeting glioma drug Ojemda",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "2:45 PM ET"
-    },
-    {
-      "text": "Marvell Technology surges ~15-22% after record Q4 earnings beat driven by AI hardware demand, receives fresh analyst upgrades with $114 consensus target",
-      "sentiment": "bullish",
-      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "2:45 PM ET"
-    },
-    {
-      "text": "February payrolls contract by 92,000 jobs \u2014 massive miss vs +59K consensus \u2014 with unemployment ticking up to 4.4%, sparking stagflation fears ahead of March 19 Fed meeting",
-      "sentiment": "bearish",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "StockMarketWatch",
-      "added_at": "2:45 PM ET"
-    },
-    {
-      "text": "Costco (COST) drops 6.1% and HPE plunges 12% on earnings disappointments, while Walgreens jumps 7.5% on Sycamore Partners take-private deal",
-      "sentiment": "neutral",
-      "source_url": "https://stockmarketwatch.com/live/stock-market-today/",
-      "source_outlet": "Stock Market Watch",
-      "added_at": "1:42 PM ET"
-    },
-    {
-      "text": "Brent crude surges 8.8% to $92.93 on escalating Iran conflict \u2014 energy stocks rally with Occidental Petroleum up 3.3%, Exxon and Chevron each gaining over 1%",
-      "sentiment": "bearish",
-      "source_url": "https://247wallst.com/investing/2026/03/06/stock-market-live-march-6-2026-sp-500-spy-sinks-as-oil-spikes/",
-      "source_outlet": "24/7 Wall St.",
-      "added_at": "1:42 PM ET"
-    },
-    {
-      "text": "Day One Biopharmaceuticals soars 65.6% after Servier announces $2.5 billion acquisition for its glioma drug Ojemda",
-      "sentiment": "bullish",
-      "source_url": "https://www.thestreet.com/latest-news/stock-market-today-march-6-2026",
-      "source_outlet": "TheStreet",
-      "added_at": "1:42 PM ET"
     }
   ],
   "sources": [
@@ -367,6 +367,10 @@
   ],
   "summary_history": [
     {
+      "time": "5:27 PM ET",
+      "text": "U.S. markets suffered a broad sell-off on Friday as February nonfarm payrolls shocked Wall Street with a loss of 92,000 jobs versus expectations for a 56,000 gain, pushing unemployment to 4.4% \u2014 its highest since 2021. The S&P 500 fell 1.3% to 6,740.02, the Dow dropped 453 points (-0.9%) to 47,501.55, and the Nasdaq slid 1.6% to 22,387.68 as surging oil prices above $90/barrel on Iran-related geopolitical tensions compounded recession fears. Energy was the lone bright spot with Occidental Petroleum rising 3.3% and majors like Exxon and Chevron gaining, while individual winners included Marvell Technology (+10% on record AI chip earnings) and Day One Biopharmaceuticals (+65.6% on a $2.5B acquisition by Servier). The Russell 2000 was hit hardest, falling 2.3%, as risk-off sentiment dominated and investors fled to safe havens amid dual pressures of economic slowdown and elevated inflation concerns."
+    },
+    {
       "time": "4:16 PM ET",
       "text": "U.S. markets sold off sharply on March 6 as a toxic combination of collapsing employment data and surging oil prices stoked stagflation fears. February nonfarm payrolls came in at a shocking -92,000 \u2014 far below the +50,000 consensus \u2014 while the unemployment rate ticked up to 4.4% and average hourly earnings remained stubbornly elevated at 3.8% annually. The Dow fell 642 points (-1.32%) to 48,097, the S&P 500 lost 0.58% to 6,829, and the Nasdaq slipped 0.33% to 22,732, with energy the lone bright spot as WTI crude surged past $90/barrel on escalating Middle East tensions. Marvell Technology was a standout gainer, surging on blowout AI-driven earnings, while Day One Biopharmaceuticals soared 65% on a $2.5B acquisition deal."
     },
@@ -393,10 +397,6 @@
     {
       "time": "6:50 AM ET",
       "text": "U.S. stock futures are trading lower Friday morning with S&P 500 futures down 0.29%, Nasdaq 100 futures off 0.39%, and Dow futures declining 0.21% as investors brace for the February employment report amid escalating Middle East tensions. Thursday's session was brutal \u2014 the Dow plunged 784 points (1.6%) to 47,954 while the S&P 500 fell 0.56% to 6,830.71 as crude oil surged over 8% on Iran's claim of striking an American oil tanker in the Persian Gulf. The February jobs report, due at 8:30 AM ET, is expected to show just 60,000 jobs added versus 130,000 in January, with the Kaiser Permanente strike affecting roughly 30,000 positions potentially distorting the data. Bright spots remain in semiconductor earnings with Broadcom jumping 4.8% after hours on a profit beat and Marvell projecting fiscal 2027 revenue approaching $11 billion, though Nvidia faces headwinds from potential AI chip export licensing restrictions."
-    },
-    {
-      "time": "5:42 AM ET",
-      "text": "S&P 500 futures are stabilizing Friday morning after a volatile week dominated by the U.S.-Israeli conflict with Iran that sent oil prices surging and pushed the index negative for 2026. The S&P closed Thursday at 6,830.71 (down 0.56%) after failing to break through 6,900 resistance, with the VIX jumping to 22.08 \u2014 its highest since autumn 2025. WTI crude settled at $81.01 Thursday after an 8.5% single-day spike but is pulling back to $80.45 as the Trump administration signals intervention on energy prices. All eyes now turn to the February jobs report at 8:30 AM ET, where economists expect just 50,000 new payrolls \u2014 a weak print that could further push back already-diminished Fed rate cut expectations."
     }
   ]
 }
